@@ -1,0 +1,18 @@
+valor_costo:
+  type:         text
+  function:     validate_precio
+  max_length:   10
+
+moneda:
+  type:         radio
+  value:        "D"
+
+con_igv:
+  type:         checkbox
+  set_value:    "1"
+  unset_value:  "0"
+
+comision:
+  type:         text
+  function:     validate_precio
+  max_length:   10

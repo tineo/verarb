@@ -1,0 +1,4 @@
+cambio:
+  type:         text
+  function:     validate_precio
+  max_length:   10

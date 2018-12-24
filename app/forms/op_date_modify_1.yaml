@@ -1,0 +1,42 @@
+entrega_fecha:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+
+entrega_hora:
+  type:         text
+  function:     validate_texttime
+  max_length:   4
+
+entrega_am_pm:
+  type:         select
+  options:      hora_am_pm_options
+
+auth_exec:
+  type:         text
+  acts_as:      password
+  mandatory:    false
+  function:     validate_op_date_redef_exec
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+auth_op:
+  type:         text
+  acts_as:      password
+  mandatory:    false
+  function:     validate_op_date_redef_op
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+solicitado_por:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+
+motive:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes explicar el motivo"
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

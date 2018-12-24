@@ -1,0 +1,33 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "roles", :action => "list" %>";
+});
+</script>
+
+<h2>Roles y Permisos</h2>
+
+<h3>Editar rol "<%= @role.name %>"</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Nombre</b><br>
+<%= @form.to_html :name %>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= @form.to_html :description %>
+<br>
+
+<h3>Cuadro de Permisos</h3>
+
+<%= render :partial => "table" %>
+
+<%= submit_tag "Guardar cambios" %>
+
+o <%= link_to "Cancelar", :action => "list" %>
+
+</td></tr>
+</table>
+</form>

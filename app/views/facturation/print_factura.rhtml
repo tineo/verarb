@@ -1,0 +1,27 @@
+<%=
+render :partial => "menubar_factura"
+%>
+
+<form method="POST">
+<h3>Imprimir Factura</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="40%">
+
+<b>1.</b> <%= link_to "Haga click aqu&iacute;", { :action => "print_factura_preview", :fid => @factura.id, :preview => 1 }, :target => "pdf_preview", :onclick => "$('two_three').toggle()" %> para ver la Vista Preliminar de impresi&oacute;n. Verifique que los datos sean correctos o <%= link_to "edite la Factura.", :action => "edit_factura", :type => @factura.tipo, :fid => @factura.id %><br>
+<br>
+
+<div id="two_three" style="display: none">
+<b>2.</b> <%= link_to "Haga click aqu&iacute;", { :action => "print_factura_preview", :fid => @factura.id }, :target => "pdf_preview", :onclick => "$('three').toggle()" %> para ver la versi&oacute;n final de impresi&oacute;n e imprima la Factura.<br>
+<br>
+
+<div id="three" style="display: none">
+<b>3.</b> Finalmente, <input type="submit" value="Marque la Factura como impresa" onclick="return confirm('Está seguro de marcar esta Factura?')">
+</div>
+</div>
+
+</form>
+
+</td></tr>
+</table>
+

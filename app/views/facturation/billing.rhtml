@@ -1,0 +1,81 @@
+<%
+headers = OHash.new
+headers["No.Factura"]                     = "no_factura"
+headers["ODT"]                            = "odt"
+headers["Cliente"]                        = "cliente"
+headers["F.Emision"]                      = "femision"
+headers["F.Recepci&oacute;n del Cliente"] = "frecepcion"
+headers["Cond.Pago"]                      = "cond_pago"
+headers["F.Pago"]                         = "fpago"
+headers["D&iacute;as Vencidos"]           = "dias_vencidos"
+headers["F.Probable"]                     = "fprobable"
+headers["Observaciones"]                  = "observaciones"
+headers["D&oacute;lares"]                 = "dolares"
+headers["Soles"]                          = "soles"
+headers["Ejecutivo"]                      = "ejecutivo"
+%>
+
+<%= render :partial => "billing_menu" %>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="panel_title_billing" colspan="<%= headers.size %>">
+<b>PENDIENTES POR COBRAR</b>
+</td></tr>
+<% if @docs.empty? -%>
+<tr bgcolor="#eeeeee"><td>
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<%
+headers.each do |h, f|
+  if session[:billing_sort] == f
+    classn = "panel_field_selected"
+  else
+    classn = "panel_field"
+  end
+-%>
+<td valign="top" align="center">
+<%= link_to h, { :action => "set_billing_sort_field", :field => f }, :class => classn %>
+</td>
+<% end -%>
+</tr>
+<%
+@docs.each do |f|
+  color_on  = "#f7f7f7"
+  color_off = "#eeeeee"
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top">
+<%= link_to f.no_factura, :action => "show_factura", :fid => f.factura_id, :type => f.factura_tipo, :from => "c" %>
+</td><td valign="top">
+<%= linked_list_of_odts f.odts %>
+</td><td valign="top">
+<%= f.cliente %>
+</td><td valign="top">
+<%= format_short_date f.femision unless f.femision.nil? %>
+</td><td valign="top">
+<%= format_short_date f.frecepcion unless f.frecepcion.nil? %>
+</td><td valign="top" align="right">
+<%= f.cond_pago %>
+</td><td valign="top">
+<%= format_short_date f.fpago unless f.fpago.nil? %>
+</td><td valign="top" align="right">
+<font color="#ff0000"><%= f.dias_vencidos %></font>
+</td><td valign="top">
+<%= format_short_date f.fprobable unless f.probable.nil? %>
+</td><td valign="top">
+<%= f.observaciones %>
+</td><td valign="top" align="right">
+<%= format_price f.dolares %>
+</td><td valign="top" align="right">
+<%= format_price f.soles %>
+</td><td valign="top">
+<%= f.ejecutivo %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+

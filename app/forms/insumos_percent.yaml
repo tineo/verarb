@@ -1,0 +1,6 @@
+percent:
+  type:         text
+  function:     validate_number
+  value:        ""
+
+

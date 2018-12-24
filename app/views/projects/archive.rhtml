@@ -1,0 +1,110 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<% if is_supervisor? -%>
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+
+<br>
+<% end -%>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="<%= @panel_fields.length %>" align="center" class="panel_title_archive">
+<b>ARCHIVO DE PROYECTOS</b>
+</td></tr>
+<tr bgcolor="#dddddd">
+<%
+@panel_fields.each do |h|
+  h = "&nbsp;" if h == "DangerFlag"
+  h = "Orden de Trabajo" if h == "OrdenTrabajo"
+-%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<tr id="p_empty" style="display: none;"><td valign="top" colspan="<%= @panel_fields.length %>" align="center" bgcolor="#ffffff">
+<i>No se encontraron proyectos</i>
+</td></tr>
+
+<%
+jslist = {}
+
+@projects.each do |p|
+  status = controller.status_for_this_user(p)
+-%>
+<tr bgcolor="<%= ESTADOS[status][:color_off] %>" onMouseOver="this.style.background='<%= ESTADOS[status][:color_on] %>'" onMouseOut="this.style.background='<%= ESTADOS[status][:color_off] %>'" id="p<%= p.id %>">
+<%
+     @panel_fields.each do |h|
+       align = "left"
+       
+       if h == "ID"
+         content = p.id
+         align   = "center"
+       
+       elsif h == "OrdenTrabajo"
+         align = "center"
+         
+         if p.con_orden_de_trabajo?
+           o = Orden.find_by_proyecto_id p.id
+           unless o.nil?
+             content = o.id.to_s
+           else
+             content = ""
+           end
+         else
+           content = ""
+         end
+       
+       elsif h == "Propuesta"
+         content = link_to p.opportunity.name, :action => "show", :id => p.id
+       
+       elsif h == "Cliente"
+         content = p.account.name
+       
+       elsif h == "Estado"
+         content = ESTADOS[status][:label]
+       
+       elsif h == "Creado"
+         content = p.fecha_creacion_proyecto.strftime "%d/%m/%Y"
+         align   = "center"
+       
+       elsif h == "Ejecutivo"
+         content = p.executive.full_name
+       
+       elsif h == "Entrega"
+         if p.fecha_entrega_diseno == nil
+           content = "&nbsp;"
+         else
+           content = p.fecha_entrega_diseno.strftime "%d/%m/%Y %H:%M"
+           align   = "center"
+         end
+       
+       end
+       
+-%>
+<td align="<%= align %>">
+<%= content %>
+</td>
+<%   end %>
+</tr>
+<% end -%>
+
+</td></tr>
+</table>
+
+<br>

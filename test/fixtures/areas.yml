@@ -1,0 +1,13 @@
+--- 
+areas_001: 
+  nombre: "Dise\xF1o"
+  id: "1"
+  orden: "1"
+areas_002: 
+  nombre: Planeamiento
+  id: "2"
+  orden: "2"
+areas_003: 
+  nombre: Costos
+  id: "3"
+  orden: "3"

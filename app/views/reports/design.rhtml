@@ -1,0 +1,189 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Reportes por Costo de Oportunidad</h2>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<form method="GET">
+<% unless is_supervisor? -%>
+<input type="hidden" name="executive" value="-1">
+<% end -%>
+<% ["sort_odt", "sort_exec", "sort_cat"].each do |s| -%>
+<input type="hidden" name="<%= s %>" value="<%= params[s] %>">
+<% end -%>
+<table border="0" cellpadding="3" cellspacing="0">
+<% if is_supervisor? -%>
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+<% end -%>
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= @form.to_html :client %>
+</td></tr>
+<tr><td valign="top">
+Dise&ntilde;ador
+</td><td valign="top">
+<%= @form.to_html :designer %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Creaci&oacute;n
+</td><td valign="top">
+<select name="fcreate_start_day" id="fcreate_start_day" onChange="relay(this, 'fcreate_end_day')">
+<%= @form.options_for :fcreate_start_day %>
+</select>
+<select name="fcreate_start_month" id="fcreate_start_month" onChange="relay(this, 'fcreate_end_month')">
+<%= @form.options_for :fcreate_start_month %>
+</select>
+<select name="fcreate_start_year" id="fcreate_start_year" onChange="relay(this, 'fcreate_end_year')">
+<%= @form.options_for :fcreate_start_year %>
+</select>
+
+a
+
+<select name="fcreate_end_day" id="fcreate_end_day">
+<%= @form.options_for :fcreate_end_day %>
+</select>
+<select name="fcreate_end_month" id="fcreate_end_month">
+<%= @form.options_for :fcreate_end_month %>
+</select>
+<select name="fcreate_end_year" id="fcreate_end_year">
+<%= @form.options_for :fcreate_end_year %>
+</select>
+
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Cierre
+</td><td valign="top">
+<select name="fclose_start_day" id="fclose_start_day" onChange="relay(this, 'fclose_end_day')">
+<%= @form.options_for :fclose_start_day %>
+</select>
+<select name="fclose_start_month" id="fclose_start_month" onChange="relay(this, 'fclose_end_month')">
+<%= @form.options_for :fclose_start_month %>
+</select>
+<select name="fclose_start_year" id="fclose_start_year" onChange="relay(this, 'fclose_end_year')">
+<%= @form.options_for :fclose_start_year %>
+</select>
+
+a
+
+<select name="fclose_end_day" id="fclose_end_day">
+<%= @form.options_for :fclose_end_day %>
+</select>
+<select name="fclose_end_month" id="fclose_end_month">
+<%= @form.options_for :fclose_end_month %>
+</select>
+<select name="fclose_end_year" id="fclose_end_year">
+<%= @form.options_for :fclose_end_year %>
+</select>
+
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Entrega Dise&ntilde;o
+</td><td valign="top">
+<select name="fdesign_start_day" id="fdesign_start_day" onChange="relay(this, 'fdesign_end_day')">
+<%= @form.options_for :fdesign_start_day %>
+</select>
+<select name="fdesign_start_month" id="fdesign_start_month" onChange="relay(this, 'fdesign_end_month')">
+<%= @form.options_for :fdesign_start_month %>
+</select>
+<select name="fdesign_start_year" id="fdesign_start_year" onChange="relay(this, 'fdesign_end_year')">
+<%= @form.options_for :fdesign_start_year %>
+</select>
+
+a
+
+<select name="fdesign_end_day" id="fdesign_end_day">
+<%= @form.options_for :fdesign_end_day %>
+</select>
+<select name="fdesign_end_month" id="fdesign_end_month">
+<%= @form.options_for :fdesign_end_month %>
+</select>
+<select name="fdesign_end_year" id="fdesign_end_year">
+<%= @form.options_for :fdesign_end_year %>
+</select>
+
+</td></tr>
+
+
+<tr><td valign="top">
+Sales Stage
+</td><td valign="top">
+<%= @form.to_html :estado %>
+</td></tr>
+
+<tr><td valign="top">
+Estado Dise&ntilde;o
+</td><td valign="top">
+<%= @form.to_html :estado_diseno %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["Proyecto", "Cliente", "Nombre", "Descripci&oacute;n", "Fecha Creado", "Fecha Cerrado", "Fecha Entrega Dise&ntilde;o", "Monto", "Ejecutivo", "Dise&ntilde;ador", "Prob.", "Sales Stage", "Next Step", "Estado Dise&ntilde;o"].each_with_index do |f, i|
+-%>
+<td valign="top" align="center">
+<%= render_design_report_sort_field(f, i, "sort", "dir") %>
+</td>
+<% end -%>
+</tr>
+<% if @odt_data.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="9">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<%
+# Alignments
+align = ["center", "left", "left", "left", "left", "left", "left", "right", "left", "left", "right", "left", "left", "left"]
+
+@odt_data.each do |row|
+  if row[8] == 'ANULADA'
+    bgcolor = ESTADOS[E_ANULADO][:color_off]
+  else
+    bgcolor = "#eeeeee"
+  end
+  
+  row[2]  = link_to row[2], :controller => "projects", :action => "show", :id => row[0], :type => "p"
+  row[4]  = row[4].strftime("%d/%m/%Y %I:%M %p")
+  row[5]  = row[5].strftime("%d/%m/%Y") unless row[5].nil?
+  row[6]  = row[6].strftime("%d/%m/%Y %I:%M %p") unless row[6].nil?
+  row[7]  = format_report_price(row[7])
+  row[10] = row[10].round unless row[10].nil?
+  if row[13] == 0
+    row[13] = ""
+  else
+    row[13] = ESTADOS[row[13]][:label]
+  end
+-%>
+<tr bgcolor="<%= bgcolor %>">
+<% row.each_with_index do |r, i| -%>
+<td valign="top" align="<%= align[i] %>">
+<%= r %>
+</td>
+<% end -%>
+</tr>
+<% end -%>
+</table>
+
+<% end -%>

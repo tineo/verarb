@@ -1,0 +1,59 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show_details", :id => @project.uid, :type => @project.type %>"; %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<form name="f" method="POST">
+
+<h3>Editar detalle - Servicio - <%= @service.nombre %></h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>General</h3>
+
+<b>Cantidad</b><br>
+<%= @detail.cantidad %><br>
+<br>
+
+<b>Categor&iacute;a</b><br>
+<%= @service.categoria.nombre %><br>
+<br>
+
+<b>Servicio</b><br>
+<%= @service.nombre %><br>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<%= simple_format @detail.descripcion %>
+</td></tr>
+</table>
+<br>
+
+<b>Observaciones</b><br>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<%= simple_format @detail.observaciones %>
+</td></tr>
+</table>
+<br>
+
+<% if can_access? :executive_tasks -%>
+<b>Precio</b><br>
+<%= "%.2f" % @detail.precio if @detail.precio %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+
+<br>
+
+<%= link_to "Regresar a Detalles", :action => "show_details", :id => @project.uid, :type => @project.type %>
+
+</form>

@@ -1,0 +1,66 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Categor&iacute;as y Productos</h2>
+
+<%= link_to "Crear nueva categor&iacute;a", :action => "new" %><br>
+<br>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<h3>Categor&iacute;as de Productos</h3>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<%
+@prod_cats.each do |c|
+  if c.activo?
+    aclass = "a_enabled"
+    aimg   = "stock_delete-16.gif"
+  else
+    aclass = "a_disabled"
+    aimg   = "stock_undelete-16.gif"
+  end
+-%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= link_to(c.nombre, { :action => "show", :id => c.id }, :class => aclass) %>
+</td><td valign="top">
+<%= link_to image_tag("stock_edit-16.gif", :border => 0), :action => "edit", :id => c.id %>
+</td><td valign="top">
+<%= link_to image_tag(aimg, :border => 0), { :action => "toggle_active", :id => c.id }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+
+</td><td valign="top">
+
+<h3>Categor&iacute;as de Servicios</h3>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<%
+@serv_cats.each do |c|
+  if c.activo?
+    aclass = "a_enabled"
+    aimg   = "stock_delete-16.gif"
+  else
+    aclass = "a_disabled"
+    aimg   = "stock_undelete-16.gif"
+  end
+-%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= link_to(c.nombre, { :action => "show", :id => c.id }, :class => aclass) %>
+</td><td valign="top">
+<%= link_to image_tag("stock_edit-16.gif", :border => 0), :action => "edit", :id => c.id %>
+</td><td valign="top">
+<%= link_to image_tag(aimg, :border => 0), { :action => "toggle_active", :id => c.id }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+
+
+</td></tr>
+</table>
+

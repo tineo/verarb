@@ -1,0 +1,11 @@
+nombre:
+  type:         text
+
+tipo:
+  type:         select
+  options:      lst_categories_tipo_options
+  unset_option: "-1"
+
+descripcion:
+  type:         text
+  acts_as:      textarea

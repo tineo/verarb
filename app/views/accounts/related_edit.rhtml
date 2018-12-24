@@ -1,0 +1,58 @@
+<h2>Cuentas / Clientes</h2>
+
+<h3><%= @account.name %></h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<%= autocomplete_account_field(@form.cuenta) %>
+<input type="submit" value="Relacionar con esta Cuenta">
+o <%= link_to "Regresar", :action => "related_index" %><br>
+<%= @form.e :cuenta %>
+</td></tr>
+</table>
+
+<% unless @account.related_accounts.empty? -%>
+<h3>Cuentas relacionadas:</h3>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<% @account.related_accounts.each do |a| -%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= a.name %>
+</td><td valign="top">
+<%= link_to image_tag("stock_delete-16.gif", :border => 0), { :action => "related_delete", :id => @account.id, :rid => a.id }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+
+<br>
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>Adicionales</h3>
+
+<%
+blocked = (@account.blocked? ? "checked" : "")
+long    = (@account.cobranza_larga? ? "checked" : "")
+-%>
+
+<input type="checkbox" name="blocked" value="1" <%= blocked %>>
+Cuenta bloqueada por falta de pago<br>
+<br>
+
+
+<input type="checkbox" name="long" value="1" <%= long %>>
+Cuenta de Cobranza Larga (para c&aacute;lculo de comisiones de Ejecutivo)<br>
+<br>
+
+<input type="submit" name="extras" value="Actualizar estos datos">
+o <%= link_to "Regresar", :action => "related_index" %>
+
+</td></tr>
+</table>
+
+</form>
+

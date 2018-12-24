@@ -1,0 +1,32 @@
+#nombre:
+#  type:         text
+#  max_length:   255
+
+descripcion:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir una descripci&oacute;n"
+
+cantidad:
+  type:         text
+  function:     validate_number
+  max_length:   5
+  value:        "1"
+  empty_msg:    "Debes escribir una cantidad"
+
+categoria:
+  type:         select
+  options:      "categoria_productos_options"
+  unset_option: "-1"
+  value:        "-1"
+
+producto:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+
+precio:
+  type:         text
+  function:     validate_precio
+  value:        "0.00"
+  empty_msg:    "Debes poner un precio"

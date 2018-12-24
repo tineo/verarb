@@ -1,0 +1,4 @@
+descripcion:
+  type:         text
+  acts_as:      textarea
+

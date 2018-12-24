@@ -1,0 +1,286 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<form method="POST">
+<h2><%= @op.name %></h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Cliente</b>
+
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<a href="<%= crm_url %>index.php?module=Accounts&action=DetailView&record=<%= @client.account_id %>" target="_Blank"><%= @client.name %></a>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @client.ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n</b>
+</td><td valign="top">
+<%= @client.billing_address_street %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono</b>
+</td><td valign="top">
+<%= @client.phone_office %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fax</b>
+</td><td valign="top">
+<%= @client.phone_fax %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Email</b>
+</td><td valign="top">
+<%= @client.email1 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>P&aacute;gina Web</b>
+</td><td valign="top">
+<%= @client.website %>
+</td></tr>
+
+</table>
+<br>
+
+<b>Contacto</b><br>
+<%= @form.to_html :contacto %>
+<br>
+
+<b>Empresa vendedora</b><br>
+<%= @form.to_html :empresa_vendedora %>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<b>Categor&iacute;a de Venta</b><br>
+<%= @form.to_html :tipo_de_venta %>
+
+</td><td valign="top" width="20">
+</td><td valign="top">
+<b>Orden adicional de la ODT nro:</b><br>
+<%= @form.to_html :orden_relacionada, :size => 10 %>
+
+</td></tr>
+</table>
+<br>
+
+<%= @form.to_html :canje %> Es Canje<br>
+<br>
+
+<b>Tipo de Proyecto</b><br>
+<%= @form.to_html :project_type %>
+<br>
+
+Si es Nuevo Proyecto:<br>
+<%= @form.to_html :subtipo_nuevo_proyecto, :value => "0" %><br>
+<%= @form.to_html :subtipo_nuevo_proyecto, :value => "1"%> (Este tipo de proyecto se enviara a la bandeja de Alan Garc&iacute;a)<br>
+<%= @form.e :subtipo_nuevo_proyecto %>
+<br>
+
+Si es Otro:<br>
+<%= @form.to_html :other %>
+<br>
+
+<b>Clave de Autorizaci&oacute;n (Orden Interna/Otro)</b><br>
+<%= @form.to_html :grio_password, :size => 16 %>
+<br>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Generales</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Urgente</b><br>
+<%= @form.to_html :urgente_diseno %> Dise&ntilde;o<br>
+<%= @form.to_html :urgente_planeamiento %> Planeamiento<br>
+<%= @form.to_html :urgente_costos %> Costos<br>
+<br>
+
+<%= @form.to_html :alquiler %>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha de entrega del Dise&ntilde;o</b><br>
+<input type="text" id="fecha_entrega_diseno" name="fecha_entrega_diseno" value="<%= @form.fecha_entrega_diseno %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_d", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_diseno", "hora_entrega_diseno") %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora de entrega del Dise&ntilde;o</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_diseno" maxlength="4" size="4" value="<%= @form.hora_entrega_diseno %>">
+<%= @form.to_html :hora_am_pm_diseno %>
+<%= @form.e :hora_entrega_diseno %>
+
+</td></tr>
+</table>
+<br>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha de entrega de Planeamiento</b><br>
+<input type="text" id="fecha_entrega_planeamiento" name="fecha_entrega_planeamiento" value="<%= @form.fecha_entrega_planeamiento %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_p", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_planeamiento", "hora_entrega_planeamiento") %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora de entrega de Planeamiento</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_planeamiento" maxlength="4" size="4" value="<%= @form.hora_entrega_planeamiento %>">
+<%= @form.to_html :hora_am_pm_planeamiento %>
+<%= @form.e :hora_entrega_planeamiento %>
+
+</td></tr>
+</table>
+<br>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha de entrega de Costos</b><br>
+<input type="text" id="fecha_entrega_costos" name="fecha_entrega_costos" value="<%= @form.fecha_entrega_costos %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_c", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_costos", "hora_entrega_costos") %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora de entrega de Costos</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_costos" maxlength="4" size="4" value="<%= @form.hora_entrega_costos %>">
+<%= @form.to_html :hora_am_pm_costos %>
+<%= @form.e :hora_entrega_costos %>
+
+</td></tr>
+</table>
+<br>
+
+<b>Tipo de Presentaci&oacute;n de Dise&ntilde;o</b><br>
+<%= @form.to_html :tipo_de_presentacion %>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<%= @form.to_html :solo_entrega %> S&oacute;lo entrega<br>
+<%= @form.to_html :con_instalacion %> Con instalaci&oacute;n<br>
+</td><td valign="top" width="50">
+</td><td valign="top">
+<%= @form.to_html :entrega_en_un_punto %>
+</td><td valign="top" width="50">
+</td><td valign="top">
+<b>Lugar(es) de Entrega:</b><br>
+<%= @form.to_html :lugares_de_entrega %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+
+<h3>Forma</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Caracter&iacute;sticas del Entorno</b><br>
+<%= @form.to_html :caracteristicas_entorno, :size => 60 %>
+<br>
+
+<b>P&uacute;blico objetivo</b><br>
+<%= @form.to_html :publico_objetivo, :size => 60 %>
+<br>
+
+<b>Dimensiones del espacio</b><br>
+<span class="weak">Ancho x Alto x Profundidad, d&oacute;nde estar&aacute; el producto</span><br>
+<%= @form.to_html :dimensiones_espacio %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :observaciones, :cols => 60 %>
+<br>
+
+</td></tr>
+</table>
+
+<!--
+
+<h3>Caracter&iacute;sticas Espec&iacute;ficas</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Nivel de Seguridad del mueble</b><br>
+<%= @form.to_html :nivel_seguridad %>
+<br>
+
+<b>Materiales</b><br>
+<%= @form.to_html :materiales, :size => 60 %>
+<br>
+
+<b>Acabado</b><br>
+<%= @form.to_html :acabado, :size => 60 %>
+<br>
+
+<b>C&oacute;mo se ver&aacute;</b><br>
+<%= @form.to_html :como_se_vera %>
+
+</td></tr>
+</table>
+-->
+
+<br>
+
+<input type="submit" name="button" value="Crear Proyecto">
+o <%= link_to "Cancelar", :action => "panel" %>
+</form>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_entrega_diseno",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_d"
+});
+
+Calendar.setup({
+    inputField : "fecha_entrega_planeamiento",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_p"
+});
+
+Calendar.setup({
+    inputField : "fecha_entrega_costos",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_c"
+});
+
+</script>

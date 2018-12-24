@@ -1,0 +1,13 @@
+client:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+
+contact:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+
+project_type:
+  type:         radio
+  value:        "0"

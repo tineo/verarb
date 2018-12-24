@@ -1,0 +1,605 @@
+<%
+# Special Fields are when the Executive calls the Order panel and we get those
+# stupid fields which span multiple rows. I hate those, but such is a
+# developer's life.
+if @tab == "orders" && is_executive?
+  special_fields_mode = true
+else
+  special_fields_mode = false
+end
+-%>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="<%= PanelHeader.length @panel_headers %>" align="center" class="<%= @core_class %>">
+<b><%= @title %></b>
+</td></tr>
+<tr bgcolor="#dddddd">
+<%
+@panel_headers.each do |h|
+  # If we are on "special fields mode," then each "normal" field should
+  # span two rows, except the special ones.
+  if special_fields_mode
+    if h.two_rows?
+      rowspan = 1
+    else
+      rowspan = 2
+    end
+  else
+    rowspan = 1
+  end
+-%>
+<td valign="top" align="center" rowspan = "<%= rowspan %>" colspan="<%= h.colspan %>">
+<%= panel_header_as_html h %>
+</td>
+<% end -%>
+</tr>
+<%
+if special_fields_mode
+  # Ok, let's add the fields that go down. This is very "special-casey" for
+  # my taste but OH WELL.
+-%>
+<tr bgcolor="#dddddd"><td valign="top" align="center">
+Cant.
+</td><td valign="top" align="center">
+Detalle
+</td><td valign="top" align="center">
+Cant.
+</td><td valign="top" align="center">
+Fecha
+</td><td valign="top" align="center">
+Cant.
+</td><td valign="top" align="center">
+Fecha
+</td><td valign="top" align="center">
+Gu&iacute;as
+</td></tr>
+<% end -%>
+
+<% if @projects.empty? -%>
+<tr ><td valign="top" colspan="<%= PanelHeader.length @panel_headers %>" align="center" bgcolor="#eeeeee">
+No hay entradas para listar.
+</td></tr>
+<% end -%>
+
+<%
+@projects.each do |p|
+  status  = controller.status_for_this_user(p)
+  
+  if p.with_fecha_de_entrega_modified?
+    class_name = "fecha_de_entrega_modified"
+  else
+    class_name = ""
+  end
+  
+  # Calculate Rowspans!
+  @dates = p.fechas_de_entrega
+  
+  if @dates.empty?
+    dates_rowspan = 1
+    date = false
+  else
+    dates_rowspan = @dates.inject(0) do |sum, d|
+      sum + max_in(d.terminados_en_planta.size, d.active_guias.size)
+    end
+    
+    # Due to the table-building HTML thing, we do a first rendering with only
+    # the first date item. We'll do later passes with the remaning ones.
+    date                  = @dates.first
+    rowspan_for_this_date = max_in(date.terminados_en_planta.size, date.active_guias.size)
+  end
+-%>
+<tr bgcolor="<%= ESTADOS[status][:color_off] %>" onMouseOver="this.style.background='<%= ESTADOS[status][:color_on] %>'" onMouseOut="this.style.background='<%= ESTADOS[status][:color_off] %>'" id="p<%= p.id %>">
+
+
+<%
+    @panel_headers.each do |header|
+      h = header.type
+      
+      align   = "left"
+      content = "&nbsp;"
+      
+      # Rowspans!
+      if special_fields_mode
+        unless ["FechasDeEntrega", "FechasDeEntregaDescripciones", "FechasDeEntregaMod", "ReporteDeCumplimiento"].include? h
+          rowspan = dates_rowspan
+        end
+      else
+        rowspan = 1
+      end
+      
+      if h == "ID"
+        if @tab == "projects"
+          content = p.id
+        else
+          content = p.orden_id
+        end
+        align   = "center"
+
+      #empresas en panel
+      elsif h == "Empresa"
+        if  p.empresa_vendedora == 0
+          content = "APY"
+        elsif  p.empresa_vendedora == 1
+          content = "ARQ"
+        elsif  p.empresa_vendedora == 3
+          content = "EST"
+        else
+          content = p.empresa_vendedora
+        end
+        align   = "center"
+      
+      elsif h == "DangerFlag"
+        if p.in_danger?
+          content = image_tag "dialog_warning.gif", :alt => "En peligro por retraso", :title => "En peligro por retraso"
+        end
+        
+        if p.muy_urgente?
+          content = image_tag "dialog_warning2.gif", :alt => "MUY URGENTE", :title => "MUY URGENTE"
+        end
+        
+        align   = "center"
+      
+      elsif h == "OrdenTrabajo"
+        align = "center"
+        
+        if p.con_orden_de_trabajo?
+          o = Orden.find_by_proyecto_id p.id
+          unless o.nil?
+            content = o.id.to_s
+          else
+            content = ""
+          end
+        else
+          content = ""
+        end
+      
+      elsif h == "Propuesta"
+        if is_facturation?
+          content = link_to p.opportunity.name, { :controller => "projects", :action => "show", :id => p.uid, :type => p.type }, :class => class_name
+        else
+          content = link_to p.opportunity.name, { :controller => "projects", :action => "show", :id => p.uid, :type => p.type }, :class => class_name
+        end
+      
+      elsif h == "Cliente"
+        content = p.account.name
+      
+      elsif h == "Ejecutivo"
+        if p.opportunity.assigned_user_id.nil?
+          content = ""
+        else
+          content = p.executive.full_name
+        end
+      
+      elsif h == "Estado"
+        content = ESTADOS[status][:label]
+      
+      elsif h == "Estado_Diseno"
+        content = ESTADOS[status][:label]
+      
+      elsif h == "Creado"
+        align   = "center"
+        if is_executive?
+          if @tab == "projects"
+            content = format_date(p.fecha_creacion_proyecto)
+          else
+            content = format_date(p.fecha_creacion_odt)
+          end
+        elsif is_chief_designer? || is_designer?
+          content = format_date(p.area.ingreso_diseno)
+        elsif is_chief_planning? || is_planner?
+          content = format_date(p.area.ingreso_planeamiento)
+        elsif is_costs?
+          content = format_date(p.area.ingreso_costos)
+        elsif is_facturation?
+          content = format_date(p.fecha_creacion_odt)
+        else
+          if p.fecha_creacion_odt.nil?
+            content = ""
+          else
+            content = p.fecha_creacion_odt.long_format
+          end
+        end
+      
+      elsif h == "FechasDeEntrega"
+        if date
+          rowspan = rowspan_for_this_date
+          content = date.fecha.long_format
+        else
+          content = "&nbsp;"
+          rowspan = 1
+        end
+      
+      elsif h == "FechasDeEntregaDescripciones"
+        if date
+          rowspan = rowspan_for_this_date
+          content = date.cantidad.to_s + "</td><td valign=\"top\" rowspan=\"#{rowspan_for_this_date}\">" + date.detalle
+          align="right"
+        else
+          content = "&nbsp;</td><td>&nbsp;"
+          rowspan = 1
+        end
+      
+      elsif h == "FechasDeEntregaMod"
+        if date
+          rowspan = rowspan_for_this_date
+          content = (date.fecha_original.nil? ? "&nbsp;" : date.fecha_original.long_format)
+        else
+          content = "&nbsp;"
+          rowspan = 1
+        end
+      
+      elsif h == "TerminadoEnPlanta"
+        # Only the first item
+        if date && !date.terminados_en_planta.empty?
+          i = date.terminados_en_planta.first
+          
+          rowspan = 1
+          content = i.cantidad.to_s + "</td><td valign=\"top\">" + i.fecha.long_format
+          align   = "right"
+        else
+          content = "&nbsp;</td><td>&nbsp;"
+          rowspan = 1
+        end
+      
+      elsif h == "EntregadoAlCliente"
+        # Only the first item
+        if date && !date.active_guias.empty?
+          i = date.active_guias.first
+          
+          if i.fecha_despacho
+            f = format_date(i.fecha_despacho)
+          else
+            f = ""
+          end
+          
+          rowspan = 1
+          content = i.all_quantities.to_s + "</td><td valign=\"top\">" + f + "</td><td valign=\"top\">" + i.formatted_number
+          align   = "right"
+        else
+          content = "&nbsp;</td><td>&nbsp;</td><td>&nbsp;"
+          rowspan = 1
+        end
+      
+      elsif h == "ReporteDeCumplimiento"
+        if date
+          content = (date.reporte_de_cumplimiento ? "SI" : "NO")
+        else
+          content = ""
+        end
+        rowspan = rowspan_for_this_date
+      
+      elsif h == "op_creado"
+        align   = "center"
+        content = format_date(p.fecha_creacion_proyecto)
+      
+      elsif h == "op_recibido"
+        align   = "center"
+        content = format_date(p.area.ingreso_operaciones)
+      
+      elsif h == "OPFechasDeEntrega"
+        if p.fechas_de_entrega.empty?
+          content = "&nbsp;"
+        else
+          content = ""
+          
+          p.fechas_de_entrega.each do |f|
+            unless f.fecha.nil?
+              content += "-&nbsp;" + link_to(f.fecha.long_format.gsub(/ /, "&nbsp;"), :action => "op_date_item", :fid => f.id, :id => p.uid, :type => p.type) + (" - " + f.status_to_s).gsub(/ /, "&nbsp;") + "<br>"
+            end
+          end
+        end
+      
+      elsif h == "Entrega_ODT"
+        align = "center"
+        if p.fecha_de_entrega_odt.nil?
+          content = "&nbsp;"
+        else
+          content = format_date(p.fecha_de_entrega_odt)
+        end
+      
+      elsif h == "op_entrega"
+        align = "center"
+        if p.fecha_de_entrega_odt.nil?
+          content = "&nbsp;"
+        else
+          content = link_to format_date(p.fecha_de_entrega_odt), :action => "op_date", :id => p.uid, :type => p.type
+        end
+      
+      elsif h == "Entrega_Diseno"
+        unless p.fecha_entrega_diseno.nil?
+          content = format_date(p.fecha_entrega_diseno)
+        end
+        align   = "center"
+      
+      elsif h == "Entrega_Costos"
+        unless p.fecha_entrega_costos.nil?
+          content = format_date(p.fecha_entrega_costos)
+        end
+        align   = "center"
+      
+      elsif h == "Entrega"
+        if (is_chief_planning? || is_planner?) && !p.fecha_entrega_planeamiento.nil?
+          content = format_date(p.fecha_entrega_planeamiento)
+        elsif is_costs? && !p.fecha_entrega_costos.nil?
+          content = format_date(p.fecha_entrega_costos)
+        elsif (is_executive? || is_chief_designer? || is_designer?) && !p.fecha_entrega_diseno.nil?
+          content = format_date(p.fecha_entrega_diseno)
+        elsif is_facturation?
+          content = format_date(p.fecha_de_entrega_odt)
+        end
+        
+        align = "center"
+      
+      # EXECUTIVE FIELDS
+      
+      elsif h == "Area"
+        content = link_to image_tag("insert-table-16.gif", :alt => "Areas asignadas a este Proyecto", :border => 0), :action => "areas", :id => p.uid, :type => p.type
+        align   = "center"
+      
+      elsif h == "Cierre"
+        content = format_short_date(p.opportunity.date_closed)
+        align   = "center"
+      
+      elsif h == "Enviar"
+        if p.active?
+          content = link_to image_tag("folder-move-16.gif", :alt => "Enviar a una Area", :border => 0), :action => "send_to_area", :id => p.uid, :type => p.type
+        end
+        align = "center"
+      
+      elsif h == "Facturar"
+        if p.active? && !p.anulado?
+          if p.tipo_proyecto == T_NUEVO_PROYECTO
+            if !p.autorizado_para_facturar?
+              content = link_to image_tag("entry-string.gif", :alt => "Autorizar para Facturar", :border => 0), { :action => "invoice", :id => p.orden_id }, :confirm => "Esta seguro de marcar para Facturar esta ODT?"
+            elsif p.factura_parcial?
+              content = image_tag("factura_parcial.gif", :alt => "Factura Parcial", :border => 0)
+            elsif p.facturado?
+              content = image_tag("facturado.gif", :alt => "Facturado", :border => 0)
+            else
+              content = ""
+            end
+          else
+            content = link_to image_tag("entry-bool-alt.gif", :alt => "Marcar como Atendida", :border => 0), { :action => "invoice", :id => p.orden_id }, :confirm => "Esta seguro que desea marcar como atendida?"
+          end
+        end
+        align = "center"
+      
+      elsif h == "PostVenta"
+        if p.active? && !p.anulado? && !p.postvendido?
+          content = link_to image_tag("outbox-16.gif", :alt => "Post-Venta", :border => 0), { :action => "mark_post_venta", :id => p.orden_id }, :confirm => "Esta seguro que desea marcar esta Orden como Post-Venta?"
+        end
+        align = "center"
+      
+      # CHIEF DESIGNER FIELDS
+      
+      elsif h == "Dise&ntilde;ador"
+        if p.area.encargado_diseno == ""
+          label = image_tag("16_user2.gif", :border => 0, :alt => "Asignar", :title => "Asignar")
+        else
+          label = User.find(p.area.encargado_diseno).user_name
+        end
+        
+        if p.active?
+          content = link_to label, :action => "assign_designer", :id => p.uid, :type => p.type
+        else
+          content = label
+        end
+        align = "center"
+      
+      # CHIEF PLANNING FIELDS
+      
+      elsif h == "Personal"
+        if p.area.encargado_planeamiento == ""
+          label = image_tag("16_user2.gif", :border => 0, :alt => "Asignar", :title => "Asignar")
+        else
+          label = User.find(p.area.encargado_planeamiento).user_name
+        end
+        
+        if p.active?
+          content = link_to label, :controller => "projects", :action => "assign_planner", :id => p.uid, :type => p.type
+        else
+          content = label
+        end
+        align = "center"
+      
+      # DESIGNER / PLANNER / COSTS FIELDS
+      
+      elsif h == "Notificar"
+        if p.active?
+          if is_chief_designer? || is_designer?
+            if [E_DISENO_EN_PROCESO, E_DISENO_OBSERVADO].include? p.area.estado_diseno
+              content = link_to image_tag("hand-16.gif", :alt => "Notificar", :border => 0), { :action => "notify_design", :id => p.uid, :type => p.type }, :confirm => "Se notificara al Ejecutivo para revision"
+              align   = "center"
+            end
+          elsif is_chief_planning? || is_planner?
+            if [E_PLANEAMIENTO_EN_PROCESO, E_PLANEAMIENTO_OBSERVADO].include? p.area.estado_planeamiento
+              content = link_to image_tag("hand-16.gif", :border => 0), { :action => "notify_plan", :id => p.uid, :type => p.type }, :confirm => "Esta seguro?"
+              align   = "center"
+            end
+          elsif is_costs?
+            if p.area.estado_costos == E_COSTOS_EN_PROCESO
+              content = link_to image_tag("hand-16.gif", :border => 0), { :action => "notify_costs", :id => p.uid, :type => p.type }, :confirm => "Esta seguro?"
+              align   = "center"
+            end
+          end
+        end
+      
+      elsif h == "Notificar_Desarrollo"
+        if p.active?
+          if is_chief_designer? || is_designer?
+            if !p.area.en_desarrollo?
+              content = link_to image_tag("hand-16.gif", :alt => "Notificar a Desarrollo", :border => 0), { :action => "notify_design_development", :id => p.uid, :type => p.type }, :confirm => "Se notificara a Desarrollo para revision"
+              align   = "center"
+            end
+          end
+        end
+      
+      # FACTURATION
+        
+      elsif h == "Monto_Dolares"
+        if p.tipo_proyecto == T_ORDEN_INTERNA
+          content = "N/A"
+        else
+          content = format_price(p.monto_de_venta_as_dollars)
+        end
+        align = "right"
+      
+      elsif h == "Monto_Soles"
+        if p.tipo_proyecto == T_ORDEN_INTERNA
+          content = "N/A"
+        else
+          content = format_price(p.monto_de_venta_as_soles)
+        end
+        align = "right"
+      
+      elsif h == "Saldo_Pendiente"
+        align = "right"
+	content = p.billed_remainder
+      
+      elsif h == "Status_Facturacion"
+	content = p.facturation_status
+      
+      elsif h == "Status_Entrega"
+        content = STATUS_ENTREGA[p.status_de_entrega_total]
+      
+      elsif h == "Autorizado_Ejecutivo"
+        if p.facturado?
+          align   = "center"
+          content = "<img src=\"/images/stock_ok-16.gif\">"
+        else
+          content = "&nbsp;"
+        end
+      
+      elsif h == "Dias_de_Retraso"
+        begin
+          days = (Date.parse(p.fecha_de_entrega_odt.to_s) - Date.today).to_i
+        rescue
+          days = 0
+        end
+        
+        if days < 0
+          content = '<span style="color: #ff0000">' + days.to_s + '</span>'
+        else
+          content = days.to_s
+        end
+        align = "center"
+      
+      # INSTALLATIONS
+        
+      elsif h == "Instalaciones_Fecha"
+        content = "De " + format_date(p.instalaciones_fecha_visita_inicio) + " a " + format_date(p.instalaciones_fecha_visita_fin)
+      
+      else
+        content = "ERR"
+      end
+
+
+-%>
+<td align="<%= align %>" valign="top" rowspan="<%= rowspan %>">
+<%= content %>
+</td>
+<%
+    end
+-%>
+</tr>
+<%
+
+# If we are in the Special Fields mode, then we get to put the rest of the
+# entries down here. HTML things.
+if special_fields_mode && @dates.empty? == false
+  pass = 1
+  
+  @dates.each do |date|
+    plants = date.terminados_en_planta
+    guias  = date.active_guias
+    
+    rowspan = max_in(plants.size, guias.size)
+    
+    (pass...rowspan).each do |p|
+-%>
+<% if p == 0 -%>
+<tr bgcolor="#eeeeee">
+<td valign="top" rowspan="<%= rowspan %>">
+<%= date.fecha.long_format %>
+<td valign="top" rowspan="<%= rowspan %>" align="right">
+<%= date.cantidad %>
+<td valign="top" rowspan="<%= rowspan %>">
+<%= date.detalle %>
+<td valign="top" rowspan="<%= rowspan %>">
+
+
+<%= (date.fecha_original.nil? ? "&nbsp;" : date.fecha_original.long_format) %>
+<% end -%>
+
+<%= "<tr bgcolor=\"#eeeeee\">" if p > 0 -%>
+
+<%
+if plants[p]
+  i = plants[p]
+-%>
+<td valign="top" align="right">
+<%= i.cantidad %>
+</td><td valign="top">
+<%= i.fecha.long_format %>
+</td>
+<%
+else
+-%>
+<td valign="top" align="right">
+&nbsp;
+</td><td valign="top">
+&nbsp;
+</td>
+<% end -%>
+
+<%
+if guias[p]
+  i = guias[p]
+-%>
+<td valign="top" align="right">
+<%= i.all_quantities %>
+</td><td valign="top">
+<%= (i.fecha_despacho ? format_date(i.fecha_despacho) : "") %>
+</td><td valign="top">
+<%= i.formatted_number %>
+</td>
+<%
+else
+-%>
+<td valign="top" align="right">
+&nbsp;
+</td><td valign="top">
+&nbsp;
+</td><td valign="top">
+&nbsp;
+</td>
+<% end -%>
+
+<% if p == 0 -%>
+<td valign="top" rowspan="<%= rowspan %>">
+<%= (date.reporte_de_cumplimiento ? "SI" : "NO") %>
+</td>
+<% end -%>
+
+<%= "</tr>" if p > 0 %>
+</tr>
+<%
+  end
+  
+  pass = 0
+end
+-%>
+<% end -%>
+<% end -%>
+
+</table>
+
+<div align="right">
+<% if @show_all -%>
+<%= link_to "Mostrar paginado", :action => @tab %>
+<% elsif @total_pages > 1 -%>
+<a href="?show_all=1">Mostrar una sola p&aacute;gina</a>
+<% end -%>
+</div>
+<br>
+

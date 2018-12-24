@@ -1,0 +1,29 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "groups", :action => "list" %>";
+});
+</script>
+
+<h2>Grupos</h2>
+
+<h3>Editar grupo "<%= @group.name %>"</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Nombre</b><br>
+<%= @form.to_html :name %>
+<br>
+
+<b>Meta</b><br>
+<%= @form.to_html :goal %>
+<br>
+
+<%= submit_tag "Aceptar" %>
+
+o <%= link_to "Cancelar", :action => "list" %>
+
+</td></tr>
+</table>
+</form>

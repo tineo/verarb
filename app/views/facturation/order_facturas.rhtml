@@ -1,0 +1,94 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "facturation", :action => "order_facturation", :id => @project.orden_id %>";
+});
+</script>
+
+<%= render :partial => "projects/menubar" %>
+
+<h3><%= @document_label_plural %></h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if @ofs.empty? -%>
+<i>No hay <%= @document_label_plural %> creadas para listar.</i><br>
+
+<% else -%>
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d">
+<%
+["No.", "Raz&oacute;n Social", "Status", "Doc.Acept.Cliente", "Emisi&oacute;n", "Recep.", "Monto", ""].each do |h| -%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<%
+@ofs.each do |of|
+  f = of.factura
+  
+  if f.anulada?
+    color = "#ff7479"
+  else
+    color = "#ffffff"
+  end
+-%>
+<tr bgcolor="<%= color %>"><td valign="top">
+<%= link_to format_factura_number(f), :action => "show_factura", :id => @project.orden_id, :fid => f.id, :type => f.tipo, :from => "o" %>
+</td><td valign="top">
+<%= f.razon_social %>
+</td><td valign="top">
+<%= f.status %>
+</td><td valign="top">
+<%= f.numero_orden_de_compra %>
+</td><td valign="top" align="center">
+<%= f.fecha_emision.strftime "%d/%m/%y" unless f.fecha_emision.nil? %>
+</td><td valign="top" align="center">
+<%= f.fecha_recepcion.strftime "%d/%m/%y" unless f.fecha_recepcion.nil? %>
+</td><td valign="top" align="right">
+<%= currency(of.factura.moneda) %> <%= format_price(of.monto_activo_in_factura_currency) %>
+</td><td valign="top">
+<%=
+if of.adelanto?
+  "Adelanto"
+elsif @project.factura_contraentrega?
+  "Contraent."
+else
+  "#{@project.dias_plazo} d&iacute;as"
+end
+%>
+</td></tr>
+<% end -%>
+
+<tr><td colspan="6" align="right">
+<b>Total facturado</b>
+</td><td valign="top" bgcolor="#ffffff" align="right">
+<%= currency(@project.moneda_odt) %> <%= format_price(@project.monto_facturado) %>
+</td></tr>
+
+<tr><td colspan="6" align="right">
+<b>Saldo ODT</b>
+</td><td valign="top" bgcolor="#ffffff" align="right">
+<%= currency(@project.moneda_odt) %> <%= format_price(@project.facturated_remainder) %>
+</td></tr>
+
+</table>
+<% end -%>
+
+<br>
+
+<% if @project.is_facturable? -%>
+<%= link_to "Agregar #{@document_label_singular}", :action => "new_factura", :id => @project.orden_id, :type => @type %>
+o
+<% else -%>
+<b>Orden no facturable:</b> <%= @project.is_facturable?(:with_motive) %><br>
+<br>
+<% end -%>
+
+<%= link_to "Regresar a Facturaci&oacute;n", :action => "order_facturation", :id => @project.orden_id %>
+<br>
+
+</td></tr>
+</table>
+

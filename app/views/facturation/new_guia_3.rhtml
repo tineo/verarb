@@ -1,0 +1,157 @@
+<%= render :partial => "projects/menubar" %>
+
+<h3>Nueva Gu&iacute;a</h3>
+
+<form method="POST">
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Empresa Vendedora</b>
+</td><td valign="top">
+<%= EMPRESA_VENDEDORA[@project.empresa_vendedora] %>
+</td></tr>
+
+<tr><td valign="top">
+<b>N&uacute;mero</b>
+</td><td valign="top">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<%= format_new_guia_number(@serie, @number) %>
+</td></tr>
+</table>
+
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%= autocomplete_account_field(@form.razon_social) %>
+o <a href="<%= crm_url %>index.php?module=Accounts&action=EditView" target="_blank">Crear nuevo</a><br>
+<%= @form.e :razon_social %><br>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Emisi&oacute;n</b>
+</td><td valign="top">
+<input type="text" id="fecha_emision" name="fecha_emision" value="<%= @form.fecha_emision %>" size="8">
+<%= image_tag "calendar.gif", :id => "trigger_e", :border => 0 %><br>
+<%= @form.e :fecha_emision %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Recepci&oacute;n del Cliente</b>
+</td><td valign="top">
+<input type="text" id="fecha_despacho" name="fecha_despacho" value="<%= @form.fecha_despacho %>" size="8">
+<%= image_tag "calendar.gif", :id => "trigger_d", :border => 0 %><br>
+<%= @form.e :fecha_despacho %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Retorno</b>
+</td><td valign="top">
+<input type="text" id="fecha_retorno" name="fecha_retorno" value="<%= @form.fecha_retorno %>" size="8">
+<%= image_tag "calendar.gif", :id => "trigger_r", :border => 0 %><br>
+<%= @form.e :fecha_retorno %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Responsable</b>
+</td><td valign="top">
+<%= @form.to_html :responsable %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Lugar de Entrega</b>
+</td><td valign="top">
+<%= @form.to_html :lugar_de_entrega %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Localidad</b>
+</td><td valign="top">
+<%= @form.to_html :localidad %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= @form.to_html :observaciones %>
+</td></tr>
+</table>
+
+<h3>Detalles</h3>
+
+Se incluir&aacute;n en la Gu&iacute;a de Remisi&oacute;n aquellos detalles que especifiquen una Cantidad.<br>
+Si no desea incluir uno de los detalles listados, deja el campo de Cantidad en blanco.<br>
+<br>
+<% if @empty_details_error -%>
+<span class="error_msg">Debes incluir al menos un Detalle especificando una Cantidad</span><br>
+<br>
+<% end -%>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top" align="center">
+<b>Fecha de Entrega</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Medida</b>
+</td></tr>
+
+<% @details.each_with_index do |f, i| -%>
+<tr><td valign="top">
+<%= @fechas[i].fecha.long_format %>
+</td><td valign="top">
+<textarea name="descripcion[<%= i %>]" cols="60" rows="7"><%= f.descripcion %></textarea><br>
+<%= f.e :descripcion %>
+</td><td valign="top">
+<input type="text" name="cantidad[<%= i %>]" value="<%= f.cantidad %>" size="4"> / <%= @fechas[i].quantity_available_for_guia %><br>
+<%= f.e :cantidad %>
+</td><td valign="top">
+<select name="medida[<%= i %>]">
+<%= f.options_for :medida %>
+</select><br>
+<%= f.e :medida %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<%= @form.to_html :ultima_guia %>
+Ultima Gu&iacute;a emitida para esta ODT<br>
+<br>
+
+<input type="submit" name="go" value="Grabar">
+o <%= link_to "Cancelar", :action => "order_guias", :id => @project.orden_id %>
+
+</td></tr>
+</table>
+</form>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_emision",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_e"
+});
+
+Calendar.setup({
+    inputField : "fecha_despacho",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_d"
+});
+
+Calendar.setup({
+    inputField : "fecha_retorno",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_r"
+});
+
+</script>
+

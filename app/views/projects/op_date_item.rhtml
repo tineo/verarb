@@ -1,0 +1,67 @@
+<%= render :partial => "menubar" %>
+
+<h3>Operaciones - Fecha parcial de Entrega al Cliente</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Estado</b><br>
+<%= @date.status_to_s %><br>
+<br>
+
+<b>Fecha y Hora de Entrega parcial</b><br>
+<%= format_date @date.fecha %>
+<% if @date.can_be_modified? && (is_executive? || is_operations?) -%>
+(<%= link_to "Modificar Fecha Parcial", :controller => "projects", :action => "op_date_modify", :id => @project.uid, :type => @project.type, :fid => @date.id %>)
+<% end -%><br>
+<br>
+
+<b>Cantidad</b><br>
+<%= @date.cantidad %><br>
+<br>
+
+<b>Detalle</b><br>
+<%= simple_format @date.detalle %>
+<br>
+
+<b>Observaciones</b><br>
+<%= simple_format @date.observaciones %>
+<br>
+
+<% if @date.can_be_defined? && ((is_executive? && @date.can_be_defined_by_executive?) || (is_operations? && @date.can_be_defined_by_operations?)) %>
+
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td valign="top">
+<input type="submit" name="a" value="Aceptar esta fecha"> o replantear una nueva:
+
+</td><td valign="top">
+
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#FFE698">
+<tr><td valign="top">
+
+<%= calendar_field_with_time(@form, "entrega", { :no_clear_button => true}) %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :observaciones %>
+
+</td><td valign="top">
+<input type="submit" name="r" value="Replantear">
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+<%= calendar_javascripts ["entrega_fecha"] %>
+<% end -%>
+
+<%= link_to "Regresar", :action => "op_date", :id => @project.id, :type => @project.type %>
+
+</td></tr>
+</table>
+</form>
+
+

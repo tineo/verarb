@@ -1,0 +1,30 @@
+<form method="POST" enctype="multipart/form-data">
+<h2><%= @project.nombre_proyecto %></h2>
+
+<h3>Estructuras de Costos ewerew</h3>
+
+<% if @docs.empty? -%>
+<i>No hay Documentos anexados</i><br>
+<br>
+<% else -%>
+<table border="0" cellpadding="3" cellspacing="2">
+<% @docs.each do |f| -%>
+<tr bgcolor="#fff8c2"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top" align="right">
+<%= size_of_file(f.size) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :action => "get_costs_file", :id => @project.uid, :fid => f.filename, :type => @project.type %>
+</td><td valign="top">
+<%= link_to image_tag("stock_delete-16.gif", :border => 0), { :action => "delete_costs_doc", :id => @project.id, :fid => f.filename, :type => @project.type }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<% end -%>
+<%= file_field_tag "file" %>
+<input type="submit" name="upload" value="Aceptar">
+o <a href="#" OnClick="window.close(); return false">Cerrar</a>
+</form>
+
+

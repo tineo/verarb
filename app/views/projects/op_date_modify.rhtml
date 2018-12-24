@@ -1,0 +1,93 @@
+<%= render :partial => "menubar" %>
+
+<h3>Modificar Fecha de Entrega al Cliente</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<%
+if @stage == 1
+  # STAGE 1 --------------------------------------------------------------------
+-%>
+<tr><td valign="top" width="25%">
+<b>Nueva Fecha de Entrega al Cliente</b>
+</td><td valign="top">
+
+<%= calendar_field_with_time(@form, "entrega", { :no_clear_button => true}) %>
+
+</td></tr>
+<tr><td valign="top">
+<b>Autorizaci&oacute;n Ejecutivo</b>
+</td><td valign="top">
+<%= @form.to_html :auth_exec, :size => 16 %>
+</td></tr>
+<tr><td valign="top">
+<b>Autorizaci&oacute;n Operaciones</b>
+</td><td valign="top">
+<%= @form.to_html :auth_op, :size => 16 %>
+</td></tr>
+<tr><td valign="top">
+<b>Solicitado por</b>
+</td><td valign="top">
+<%= @form.to_html :solicitado_por %>
+</td></tr>
+<tr><td valign="top">
+<b>Motivo del cambio</b>
+</td><td valign="top">
+<%= @form.to_html :motive %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" value="Aceptar" onclick="return confirm('Verifique bien la nueva Fecha y pulse Aceptar')">
+o <%= link_to "Cancelar", :controller => "projects", :action => "op_date", :id => @project.uid, :type => @project.type %>
+</td></tr>
+<%
+
+
+else
+# STAGE 2 ----------------------------------------------------------------------
+-%>
+<tr><td valign="top" width="25%">
+<b>Nueva Fecha de Entrega al Cliente</b>
+</td><td valign="top">
+<%= format_date @date.mod_fecha %>
+</td></tr>
+<tr><td valign="top">
+<b>Cambio propuesto por</b>
+</td><td valign="top">
+<%= @date.modification_proposed_by_user.full_name %>
+</td></tr>
+<tr><td valign="top">
+<b>Fecha original de Entrega al Cliente</b>
+</td><td valign="top">
+<%= @date.fecha_original.long_format unless @date.fecha_original.nil? %>
+</td></tr>
+<tr><td valign="top">
+<b>Autorizaci&oacute;n <%= @label %></b>
+</td><td valign="top">
+<%= @form.to_html :auth, :size => 16 %>
+</td></tr>
+<tr><td valign="top">
+<b>Solicitado por</b>
+</td><td valign="top">
+<%= @date.modification_solicited_by %>
+</td></tr>
+<tr><td valign="top">
+<b>Motivo del cambio</b>
+</td><td valign="top">
+<%= simple_format @date.mod_motivo %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" value="Autorizar esta Fecha de Entrega">
+o <%= link_to "Cancelar", :controller => "projects", :action => "op_date", :id => @project.uid, :type => @project.type %>
+</td></tr>
+<% end -%>
+</table>
+
+</td></tr>
+</table>
+
+<%= calendar_javascripts(["entrega_fecha"]) if @stage == 1 %>
+</form>

@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title><%= "* " unless ENV['RAILS_ENV'] == 'production' %><%= @HTML_TITLE || "Vera - Apoyo Publicitario" %></title>
+<%= stylesheet_link_tag "styles" %>
+<%= javascript_include_tag "prototype" %>
+<%= javascript_include_tag "shortcuts" %>
+<%= javascript_include_tag "scriptaculous" %>
+<%= javascript_include_tag "controls" %>
+<%= javascript_include_tag "effects" %>
+<%= javascript_include_tag "overlib" %>
+
+<%= stylesheet_link_tag "calendar-win2k-1" %>
+<%= javascript_include_tag "calendar" %>
+<%= javascript_include_tag "calendar-es" %>
+<%= javascript_include_tag "calendar-setup" %>
+
+<script type="text/javascript">
+shortcut("CTRL+1", function() {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+
+shortcut("CTRL+Q", function() {
+  document.qsf.qs.focus();  
+});
+
+function ticker () {
+  w                            = $('ticker_contents').getWidth() + 350;
+  $('ticker_inside').innerHTML = $('ticker_contents').innerHTML;
+  
+  for (var i = 0; i < 10; i++) {
+    new Effect.Appear('ticker_inside',{duration: 1, delay: 2, queue: 'end'});
+    new Effect.Move('ticker_inside', { x: (w * -1), y: 0, transition: Effect.Transitions.linear, duration: (w / 30), delay: 2, queue: 'end' });
+    new Effect.Fade('ticker_inside',{duration: 0, delay: 0.5, queue: 'end'});
+    new Effect.Move('ticker_inside', { x: w, y: 0, duration: 0, queue: 'end' });
+  }
+}
+</script>
+
+</head>
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" bgcolor="#5A0000" background="/images/tile.gif" onload="ticker();">
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+
+<table width="930" border="0" cellpadding="10" cellspacing="0" bgcolor="#A50000" align="center">
+<tr><td valign="top" class="top_data" width="600">
+<b>Usuario:</b> <%= session[:user].user_name %> (<%=
+if controller.user_has_more_than_one_role?
+  link_to controller.role().name, {:controller => "users", :action => "change_role"}, :class => "top_data"
+else
+  controller.role().name
+end
+%><%= " / Supervisor" if controller.is_supervisor? %><%= " / Administrador" if controller.is_admin? %>)
+</td><td valign="top" class="top_data" align="right">
+<form name="qsf" method="GET" action="/quicksearch">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<input type="text" name="qs" value="" size="6" class="quicksearch">
+</td><td valign="top">
+<a href="#" onClick="document.qsf.submit(); return false"><img src="/images/stock_search-16.gif" border="0" alt="B&uacute;squeda R&aacute;pida" title="B&uacute;squeda R&aacute;pida"></a>
+</td></tr>
+</table>
+</form>
+</td><td valign="top" class="top_data" align="right">
+<b>Fecha:</b> <%= Time.now.strftime "%d/%m/%Y" %> |
+<%= link_to "Cerrar sesi&oacute;n", { :controller => "users", :action => "logout" }, :class => "top_data" %>
+</td></tr>
+</table>
+
+<table width="930" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#A50000">
+<tr><td valign="top" align="center">
+<div id="ticker" style="overflow: hidden; width: 700px; height: 30px; white-space: nowrap;">
+<div id="ticker_inside" style="font-family: verdana; font-size: 11px; color: #FFF77A; display: none;">
+</div>
+</div>
+<% unless in_development? -%>
+<div id="ticker_contents" style="white-space: nowrap; display:none;">
+<%= Ticker.get %>
+</div>
+<% end -%>
+
+</td></tr>
+</table>
+
+<table width="930" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#A50000">
+<tr><td valign="top">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top" bgcolor="#A50000">
+<%
+TABS.each do |i, t|
+  allowed = false
+  
+  t[:requirement].each do |r|
+    if can_access? r
+      allowed = true
+    end
+  end
+  
+  if allowed
+    if controller.current_tab == i
+      tab_class = "tab_focus"
+      tab_color = "#ffffff"
+    else
+      tab_class = "tab_blur"
+      tab_color = "#bbbbbb"
+    end
+-%>
+</td><td valign="top" bgcolor="<%= tab_color %>">
+&nbsp;&nbsp;<%= link_to t[:name], { :controller => t[:controller], :action => t[:action]}, :class => tab_class %>&nbsp;&nbsp;
+</td><td valign="top" bgcolor="#A50000">
+<%
+  end
+end
+-%>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+<table width="930" border="0" cellpadding="10" cellspacing="0" align="center" bgcolor="#ffffff">
+<tr><td valign="top">
+<%= yield %>
+<br>
+</td></tr>
+</table>
+
+<br>
+
+<div class="version" align="center">Vera <%= VERA_VERSION %></div><br>
+<br>
+
+</body>
+</html>

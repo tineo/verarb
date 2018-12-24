@@ -1,0 +1,5587 @@
+--- 
+acl_roles_actions_241: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 28bbfb2b-d5c3-49c7-cfa7-453d3f849670
+  deleted: "0"
+  action_id: 79169c35-123e-46bb-23e6-448de3328317
+acl_roles_actions_373: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4315c5b5-897c-b276-c794-453d4a2dd438
+  deleted: "0"
+  action_id: 7a6c5a2e-5991-3a87-36e8-448de3e3cdd6
+acl_roles_actions_110: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1634596b-c734-07c5-7c5b-448efb811841
+  deleted: "1"
+  action_id: 7ba55915-bab3-7ba7-53d8-448de335c50a
+acl_roles_actions_242: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2995c679-a20a-14bb-7580-453d3feb5f15
+  deleted: "0"
+  action_id: 7cf9f015-95ef-341c-ebc3-448de372bd7a
+acl_roles_actions_374: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4400132e-3c5d-3f70-15ec-453d4ae8d65e
+  deleted: "0"
+  action_id: 79169c35-123e-46bb-23e6-448de3328317
+acl_roles_actions_111: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 17167253-acd2-4839-b392-448efbfaebdc
+  deleted: "1"
+  action_id: 77bd44ca-072a-1f81-3214-448de3285e86
+acl_roles_actions_243: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2a808abd-1039-c07e-4258-453d3fdaae36
+  deleted: "0"
+  action_id: 7ba55915-bab3-7ba7-53d8-448de335c50a
+acl_roles_actions_375: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 44efdd4e-376a-165b-71c4-453d4ac856c0
+  deleted: "0"
+  action_id: 7cf9f015-95ef-341c-ebc3-448de372bd7a
+acl_roles_actions_112: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 17df59a0-550b-d95c-a697-448efb8376e3
+  deleted: "1"
+  action_id: 767f43e7-8743-7cc2-4226-448de33c7b17
+acl_roles_actions_244: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2b6e5442-430f-9416-d5b7-453d3f9332c1
+  deleted: "0"
+  action_id: 77bd44ca-072a-1f81-3214-448de3285e86
+acl_roles_actions_376: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 45d5a325-10ed-7d9a-dc74-453d4aad564c
+  deleted: "0"
+  action_id: 7ba55915-bab3-7ba7-53d8-448de335c50a
+acl_roles_actions_113: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 18c0bcc7-5c7b-486b-318b-448efb91f21e
+  deleted: "1"
+  action_id: e2133efb-3c3c-fa7f-0cff-448de3e797cf
+acl_roles_actions_245: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2c55880d-e5f0-5987-75bf-453d3f033c51
+  deleted: "0"
+  action_id: 767f43e7-8743-7cc2-4226-448de33c7b17
+acl_roles_actions_377: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 46c239fd-4855-0e17-369c-453d4a18ef86
+  deleted: "0"
+  action_id: 77bd44ca-072a-1f81-3214-448de3285e86
+acl_roles_actions_114: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 19a2adcb-f24e-e525-5ec4-448efb878e1b
+  deleted: "1"
+  action_id: e761e465-d870-12ce-40e4-448de3db9436
+acl_roles_actions_246: 
+  access_override: "-98"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2d37e559-4cce-964f-a715-453d3fb3803d
+  deleted: "0"
+  action_id: e2133efb-3c3c-fa7f-0cff-448de3e797cf
+acl_roles_actions_378: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 47ac05b2-b567-c764-8169-453d4a349b2c
+  deleted: "0"
+  action_id: 767f43e7-8743-7cc2-4226-448de33c7b17
+acl_roles_actions_115: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1a833708-4fb7-6b95-5c6e-448efbbcb3a5
+  deleted: "1"
+  action_id: e61c07b4-863b-5b5a-6757-448de35b1bcf
+acl_roles_actions_247: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2e2235e0-da5b-9de0-e8b8-453d3f389fe1
+  deleted: "0"
+  action_id: e761e465-d870-12ce-40e4-448de3db9436
+acl_roles_actions_379: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 48890625-7a01-2ce8-b976-453d4a0f8c67
+  deleted: "0"
+  action_id: e2133efb-3c3c-fa7f-0cff-448de3e797cf
+acl_roles_actions_116: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1b4a2b3e-078a-f1a2-6756-448efb534afb
+  deleted: "1"
+  action_id: ea20b67b-2d0a-b9eb-9c64-448de3941db0
+acl_roles_actions_248: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2f12e2ad-828c-f15d-d0c5-453d3f2a8498
+  deleted: "0"
+  action_id: e61c07b4-863b-5b5a-6757-448de35b1bcf
+acl_roles_actions_117: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1c2b83de-a993-c24b-f420-448efb495fec
+  deleted: "1"
+  action_id: e8bd95d8-8718-01cb-c2b4-448de361e082
+acl_roles_actions_249: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2fee914c-7a93-43b6-d903-453d3f47a23c
+  deleted: "0"
+  action_id: ea20b67b-2d0a-b9eb-9c64-448de3941db0
+acl_roles_actions_380: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4976dd47-c264-034a-c80a-453d4a826a50
+  deleted: "0"
+  action_id: e761e465-d870-12ce-40e4-448de3db9436
+acl_roles_actions_118: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1d12d365-447f-43d9-f9c7-448efb421aaf
+  deleted: "1"
+  action_id: e4c0e467-1184-4239-c61e-448de386e504
+acl_roles_actions_381: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4a67d59d-e8d0-93d7-2f36-453d4ac1df52
+  deleted: "0"
+  action_id: e61c07b4-863b-5b5a-6757-448de35b1bcf
+acl_roles_actions_250: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 30d8e4b4-a2b8-3464-92d7-453d3f1a1c5b
+  deleted: "0"
+  action_id: e8bd95d8-8718-01cb-c2b4-448de361e082
+acl_roles_actions_382: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4b53fa57-672a-255f-3785-453d4a22563c
+  deleted: "0"
+  action_id: ea20b67b-2d0a-b9eb-9c64-448de3941db0
+acl_roles_actions_119: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1df09cc9-b906-5255-2392-448efb29182e
+  deleted: "1"
+  action_id: e3708a50-c3ea-838a-9152-448de3fd5898
+acl_roles_actions_251: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 31c311a5-6e1b-7e68-9b0d-453d3fece34b
+  deleted: "0"
+  action_id: e4c0e467-1184-4239-c61e-448de386e504
+acl_roles_actions_383: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4c2027a5-9799-4fc1-7c75-453d4a82b544
+  deleted: "0"
+  action_id: e8bd95d8-8718-01cb-c2b4-448de361e082
+acl_roles_actions_252: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 32ab53ac-d9ae-bd2c-0a9b-453d3ffb19af
+  deleted: "0"
+  action_id: e3708a50-c3ea-838a-9152-448de3fd5898
+acl_roles_actions_384: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4d01b72a-c0b8-3edd-a5d5-453d4aa2397a
+  deleted: "0"
+  action_id: e4c0e467-1184-4239-c61e-448de386e504
+acl_roles_actions_120: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1eb71ac1-e7aa-4224-b10b-448efbeef15e
+  deleted: "1"
+  action_id: 64900e81-97f2-2ea9-c91c-448de31f66f7
+acl_roles_actions_253: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 337f13d7-f13c-2090-e232-453d3fd36cf4
+  deleted: "0"
+  action_id: 64900e81-97f2-2ea9-c91c-448de31f66f7
+acl_roles_actions_385: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4de305e5-9afe-0c5e-fa3a-453d4a0e697d
+  deleted: "0"
+  action_id: e3708a50-c3ea-838a-9152-448de3fd5898
+acl_roles_actions_121: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1f9b6877-0080-53c3-d9f5-448efb7150c2
+  deleted: "1"
+  action_id: 5b2f0b29-f309-9e36-890a-448de395a7a2
+acl_roles_actions_254: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 346db9d8-534f-c254-f507-453d3ffd3200
+  deleted: "0"
+  action_id: 5b2f0b29-f309-9e36-890a-448de395a7a2
+acl_roles_actions_386: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4ecca38b-d827-66f3-3258-453d4a3fce7b
+  deleted: "0"
+  action_id: 64900e81-97f2-2ea9-c91c-448de31f66f7
+acl_roles_actions_122: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 207c81d5-8065-4bc8-588d-448efb189fb5
+  deleted: "1"
+  action_id: 45dd05a2-bfee-d3f2-b743-448de3c78c1e
+acl_roles_actions_255: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 355f888d-2117-acfd-9f65-453d3f296a5d
+  deleted: "0"
+  action_id: 45dd05a2-bfee-d3f2-b743-448de3c78c1e
+acl_roles_actions_387: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 4f970d36-5e6c-1c39-93cb-453d4ad38692
+  deleted: "0"
+  action_id: 5b2f0b29-f309-9e36-890a-448de395a7a2
+acl_roles_actions_123: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 215a2db7-30fe-9223-7c5b-448efb1de311
+  deleted: "1"
+  action_id: 85f100f4-de58-6865-8068-448de33fc34b
+acl_roles_actions_256: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3651096a-f818-df77-478b-453d3f33a6b7
+  deleted: "0"
+  action_id: 85f100f4-de58-6865-8068-448de33fc34b
+acl_roles_actions_388: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 5080e39b-6391-4d2d-2aff-453d4a527b76
+  deleted: "0"
+  action_id: 45dd05a2-bfee-d3f2-b743-448de3c78c1e
+acl_roles_actions_124: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 222343a4-df82-e0b9-5efd-448efb3ce974
+  deleted: "1"
+  action_id: 71540262-c819-5e1e-befb-448de3963659
+acl_roles_actions_257: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 372a6458-bff7-5c9b-c017-453d3fb5c17f
+  deleted: "0"
+  action_id: 71540262-c819-5e1e-befb-448de3963659
+acl_roles_actions_389: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 51665e4e-48e3-43fe-b5c4-453d4a21e47e
+  deleted: "0"
+  action_id: 85f100f4-de58-6865-8068-448de33fc34b
+acl_roles_actions_125: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 23048ab1-b597-979b-fea1-448efb6cca9d
+  deleted: "1"
+  action_id: 31380dd9-951d-8006-11bb-448de3fd8c9e
+acl_roles_actions_258: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3822165d-763e-cfe2-9541-453d3f91d2ff
+  deleted: "0"
+  action_id: 31380dd9-951d-8006-11bb-448de3fd8c9e
+acl_roles_actions_126: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 23df64b5-e706-9872-24e9-448efbb12d81
+  deleted: "1"
+  action_id: 1b8b05f8-2d89-d0dc-30ec-448de3fa37df
+acl_roles_actions_259: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 39105d6a-973f-114a-cc51-453d3fc29b49
+  deleted: "0"
+  action_id: 1b8b05f8-2d89-d0dc-30ec-448de3fa37df
+acl_roles_actions_127: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 24c0abad-ee03-5f9b-1136-448efbec3430
+  deleted: "1"
+  action_id: 26f4b89a-eb29-cec9-a8ae-448de3bd3229
+acl_roles_actions_390: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 524b1fb4-131a-458d-d68b-453d4a297633
+  deleted: "0"
+  action_id: 71540262-c819-5e1e-befb-448de3963659
+acl_roles_actions_128: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 258a3a99-0e29-b3b2-d9d1-448efb039514
+  deleted: "1"
+  action_id: 2c1298a9-0002-50fd-93bd-448de3912cec
+acl_roles_actions_391: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 5317793a-ddc7-9275-9b03-453d4ae195fc
+  deleted: "0"
+  action_id: 31380dd9-951d-8006-11bb-448de3fd8c9e
+acl_roles_actions_129: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 266c7b0f-dda7-52ea-9781-448efba5d72a
+  deleted: "1"
+  action_id: 2ad8d4cc-c6ee-c398-b910-448de32ce969
+acl_roles_actions_260: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 39fbfde6-7e34-ed10-6040-453d3fa5a187
+  deleted: "0"
+  action_id: 26f4b89a-eb29-cec9-a8ae-448de3bd3229
+acl_roles_actions_392: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 54007dc5-9eff-862d-bcff-453d4a030309
+  deleted: "0"
+  action_id: 1b8b05f8-2d89-d0dc-30ec-448de3fa37df
+acl_roles_actions_261: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3acffa71-d7ad-d433-7a45-453d3fbced0e
+  deleted: "0"
+  action_id: 2c1298a9-0002-50fd-93bd-448de3912cec
+acl_roles_actions_393: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 54eb7a2a-a995-43f6-5421-453d4a473464
+  deleted: "0"
+  action_id: 26f4b89a-eb29-cec9-a8ae-448de3bd3229
+acl_roles_actions_130: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 27513efc-7583-442b-49bb-448efb63456d
+  deleted: "1"
+  action_id: 2eb94fb8-0e61-8e41-effb-448de3baa54b
+acl_roles_actions_262: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3bbf8dad-8cdd-304d-a652-453d3f852774
+  deleted: "0"
+  action_id: 2ad8d4cc-c6ee-c398-b910-448de32ce969
+acl_roles_actions_394: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 55d19067-2a6b-195c-ddee-453d4a6079a2
+  deleted: "0"
+  action_id: 2c1298a9-0002-50fd-93bd-448de3912cec
+acl_roles_actions_131: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 282fde68-9231-1a63-f6d1-448efbbafd77
+  deleted: "1"
+  action_id: 2d660969-d98e-3e2b-83b1-448de3006cc7
+acl_roles_actions_263: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3caeecb1-7dfc-aa05-553e-453d3f6962ac
+  deleted: "0"
+  action_id: 2eb94fb8-0e61-8e41-effb-448de3baa54b
+acl_roles_actions_395: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 569cc2f0-899f-c269-33db-453d4acde48e
+  deleted: "0"
+  action_id: 2ad8d4cc-c6ee-c398-b910-448de32ce969
+acl_roles_actions_132: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 28fc348d-124e-ab6b-d95f-448efb0767ab
+  deleted: "1"
+  action_id: 2986075e-1768-0b7b-cbea-448de3ab5ef3
+acl_roles_actions_264: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3d9cd0e3-c061-d4c1-3fac-453d3fd93e46
+  deleted: "0"
+  action_id: 2d660969-d98e-3e2b-83b1-448de3006cc7
+acl_roles_actions_396: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 5784fdd0-9289-211e-222f-453d4a33b4dc
+  deleted: "0"
+  action_id: 2eb94fb8-0e61-8e41-effb-448de3baa54b
+acl_roles_actions_001: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: af209c7c-efe8-5942-4c55-448efba84ba6
+  deleted: "1"
+  action_id: c71a3a4a-b40f-d972-a4bf-448de3aa06cd
+acl_roles_actions_133: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 29d98b6b-5326-009b-3d70-448efbb209b5
+  deleted: "1"
+  action_id: 283450b5-5f79-01ff-a0e8-448de3de304e
+acl_roles_actions_265: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3e7691b9-ac79-d6b7-a6fc-453d3fbd818a
+  deleted: "0"
+  action_id: 2986075e-1768-0b7b-cbea-448de3ab5ef3
+acl_roles_actions_397: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 5869750f-e448-aabe-78c9-453d4a5903a1
+  deleted: "0"
+  action_id: 2d660969-d98e-3e2b-83b1-448de3006cc7
+acl_roles_actions_002: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: afee9caa-3993-ff1a-a272-448efbbd12ea
+  deleted: "1"
+  action_id: cc22dfe0-7d6a-c7ed-3181-448de3860840
+acl_roles_actions_134: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: b98e789c-ebc9-7089-295c-453d3fc456a9
+  deleted: "0"
+  action_id: c71a3a4a-b40f-d972-a4bf-448de3aa06cd
+acl_roles_actions_266: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3f68a1b4-3611-78e5-56d7-453d3fcd2501
+  deleted: "0"
+  action_id: 283450b5-5f79-01ff-a0e8-448de3de304e
+acl_roles_actions_398: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 595044bb-585f-dfc1-7e2f-453d4a9ad366
+  deleted: "0"
+  action_id: 2986075e-1768-0b7b-cbea-448de3ab5ef3
+acl_roles_actions_003: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b0c01dc5-d8a6-6e65-a088-448efbfbe857
+  deleted: "1"
+  action_id: cad560f2-5e17-b913-0e6e-448de3ec950d
+acl_roles_actions_135: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: bc256ccb-f925-0e07-1caf-453d3f21217b
+  deleted: "0"
+  action_id: cc22dfe0-7d6a-c7ed-3181-448de3860840
+acl_roles_actions_267: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: d8b14a43-e1ef-011e-5c5d-453d4aa7f517
+  deleted: "0"
+  action_id: c71a3a4a-b40f-d972-a4bf-448de3aa06cd
+acl_roles_actions_399: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 5a2e1452-57ac-ecf6-4d2c-453d4a1918ba
+  deleted: "0"
+  action_id: 283450b5-5f79-01ff-a0e8-448de3de304e
+acl_roles_actions_004: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b175db64-14f2-2260-2b33-448efbce09ca
+  deleted: "1"
+  action_id: cea42929-edbb-7f4d-d175-448de331f153
+acl_roles_actions_136: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: bd312813-55a8-5512-b2b9-453d3f24e417
+  deleted: "0"
+  action_id: cad560f2-5e17-b913-0e6e-448de3ec950d
+acl_roles_actions_268: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: d99cbe5d-e7cb-2a7b-57fb-453d4a2e745f
+  deleted: "0"
+  action_id: cc22dfe0-7d6a-c7ed-3181-448de3860840
+acl_roles_actions_005: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b2481a9b-6ab4-ce47-9be9-448efbdcf12a
+  deleted: "1"
+  action_id: cd5e9874-115c-ee98-5895-448de34249d9
+acl_roles_actions_137: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: be213d48-b869-afdf-52d5-453d3f253ea7
+  deleted: "0"
+  action_id: cea42929-edbb-7f4d-d175-448de331f153
+acl_roles_actions_269: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: da90ae74-1dfa-3b4b-8f9d-453d4a88007f
+  deleted: "0"
+  action_id: cad560f2-5e17-b913-0e6e-448de3ec950d
+acl_roles_actions_006: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b3176973-0685-75de-cb41-448efb839c47
+  deleted: "1"
+  action_id: c9921ea4-9dc0-1161-39c4-448de34d4b5e
+acl_roles_actions_138: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: bf00dc82-2870-313d-518c-453d3f13f89e
+  deleted: "0"
+  action_id: cd5e9874-115c-ee98-5895-448de34249d9
+acl_roles_actions_007: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b3e53298-592a-927c-ae49-448efb5dea56
+  deleted: "1"
+  action_id: c86503d2-d83e-6689-b3d2-448de31bffe9
+acl_roles_actions_139: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: bfe4b552-aedd-b2d4-16ef-453d3f771f41
+  deleted: "0"
+  action_id: c9921ea4-9dc0-1161-39c4-448de34d4b5e
+acl_roles_actions_270: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: db5bdd21-ae32-15c9-5119-453d4a2dbaac
+  deleted: "0"
+  action_id: cea42929-edbb-7f4d-d175-448de331f153
+acl_roles_actions_008: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b4a573f3-8376-1a38-4f9f-448efbdc095b
+  deleted: "1"
+  action_id: a433d2ba-8cac-29c8-80d7-448de3f18be1
+acl_roles_actions_271: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: dc41afc2-c44b-5f47-218a-453d4a6583e6
+  deleted: "0"
+  action_id: cd5e9874-115c-ee98-5895-448de34249d9
+acl_roles_actions_140: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c0d0b7db-d37f-e2e7-0860-453d3fd5f358
+  deleted: "0"
+  action_id: c86503d2-d83e-6689-b3d2-448de31bffe9
+acl_roles_actions_272: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: dd241eb4-e553-3a4c-6e54-453d4af0c88b
+  deleted: "0"
+  action_id: c9921ea4-9dc0-1161-39c4-448de34d4b5e
+acl_roles_actions_009: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b573be7a-8184-2434-cf95-448efb3b2861
+  deleted: "1"
+  action_id: a949b969-c5c9-480f-9aad-448de3b22620
+acl_roles_actions_141: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c1bbf8e5-b41e-71e9-5dcc-453d3f51bb61
+  deleted: "0"
+  action_id: a433d2ba-8cac-29c8-80d7-448de3f18be1
+acl_roles_actions_273: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: de059185-9c11-2a3f-54c1-453d4ae82a3e
+  deleted: "0"
+  action_id: c86503d2-d83e-6689-b3d2-448de31bffe9
+acl_roles_actions_010: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b643a6a5-7494-a880-6861-448efbb9631a
+  deleted: "1"
+  action_id: a814fee4-f7a1-4587-e48e-448de3382617
+acl_roles_actions_142: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c29860af-9d99-9bc6-524f-453d3ff89e05
+  deleted: "0"
+  action_id: a949b969-c5c9-480f-9aad-448de3b22620
+acl_roles_actions_274: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: ded1483d-919a-62d2-58a2-453d4a8a1c09
+  deleted: "0"
+  action_id: a433d2ba-8cac-29c8-80d7-448de3f18be1
+acl_roles_actions_011: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b71465a1-9005-ddf0-6ea0-448efb35f216
+  deleted: "1"
+  action_id: abeead0e-b3c4-6b44-f855-448de37ca52c
+acl_roles_actions_143: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c38ef5fe-e032-1419-62c6-453d3fe22743
+  deleted: "0"
+  action_id: a814fee4-f7a1-4587-e48e-448de3382617
+acl_roles_actions_275: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: dfb52615-e7c0-dc71-d028-453d4ad9abad
+  deleted: "0"
+  action_id: a949b969-c5c9-480f-9aad-448de3b22620
+acl_roles_actions_012: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b7e65524-ca06-f7c3-c6a1-448efb8b1394
+  deleted: "1"
+  action_id: aa9ad294-aac7-441c-e0fd-448de37bfd6f
+acl_roles_actions_144: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c48667f7-714b-47aa-5a31-453d3f5ea9e4
+  deleted: "0"
+  action_id: abeead0e-b3c4-6b44-f855-448de37ca52c
+acl_roles_actions_276: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e096422f-f479-1a77-8121-453d4a12c6e1
+  deleted: "0"
+  action_id: a814fee4-f7a1-4587-e48e-448de3382617
+acl_roles_actions_013: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b8a2af6b-5a70-c014-0de7-448efb1edc4a
+  deleted: "1"
+  action_id: a6c5ad8b-3b7b-add7-a93e-448de3ef4a3a
+acl_roles_actions_145: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c5746b61-c48f-9296-b112-453d3f46bb97
+  deleted: "0"
+  action_id: aa9ad294-aac7-441c-e0fd-448de37bfd6f
+acl_roles_actions_277: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e178894c-02e8-dc3a-0616-453d4a5eb4fc
+  deleted: "0"
+  action_id: abeead0e-b3c4-6b44-f855-448de37ca52c
+acl_roles_actions_014: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b974c0eb-93f2-7d2a-c56c-448efbbdf060
+  deleted: "1"
+  action_id: a5754f70-5f74-8c1a-627c-448de371c63e
+acl_roles_actions_146: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c64b737d-9d8c-f82e-df76-453d3fdc34d3
+  deleted: "0"
+  action_id: a6c5ad8b-3b7b-add7-a93e-448de3ef4a3a
+acl_roles_actions_278: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e247c5cc-6ccd-f39b-25f3-453d4afc31ec
+  deleted: "0"
+  action_id: aa9ad294-aac7-441c-e0fd-448de37bfd6f
+acl_roles_actions_015: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ba443def-d552-2678-edb3-448efb5b533d
+  deleted: "1"
+  action_id: 9cc24d89-7944-46b2-99bc-448de3463b05
+acl_roles_actions_147: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c737a196-7943-5355-d435-453d3fb03f6a
+  deleted: "0"
+  action_id: a5754f70-5f74-8c1a-627c-448de371c63e
+acl_roles_actions_279: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e32f62c2-69df-a709-6870-453d4ad3486b
+  deleted: "0"
+  action_id: a6c5ad8b-3b7b-add7-a93e-448de3ef4a3a
+acl_roles_actions_700: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ccbd9150-f72a-5b28-c5ca-45c3d04eabfc
+  deleted: "0"
+  action_id: 236bdc15-30b1-9763-b2bf-448de3f2be2f
+acl_roles_actions_016: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: bb17f951-ac69-5770-f892-448efb6f4d25
+  deleted: "1"
+  action_id: a1e23fdb-4f8c-a802-bfaa-448de38ea58b
+acl_roles_actions_148: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c824c767-4bce-446a-3fd0-453d3fb36870
+  deleted: "0"
+  action_id: 9cc24d89-7944-46b2-99bc-448de3463b05
+acl_roles_actions_701: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: cdb19338-f6b8-ea62-3f96-45c3d0f6ce70
+  deleted: "0"
+  action_id: 8f5655ed-e50f-ca5f-e1a0-448de3e1de15
+acl_roles_actions_017: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: bbd1a5e8-5e25-8b99-1e2d-448efbb6306a
+  deleted: "1"
+  action_id: a08db623-5232-0be3-35b5-448de3c56f1a
+acl_roles_actions_149: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c910e805-8b48-72aa-534f-453d3fef5217
+  deleted: "0"
+  action_id: a1e23fdb-4f8c-a802-bfaa-448de38ea58b
+acl_roles_actions_018: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: bca64a2a-f74f-f648-01cd-448efbe12dd2
+  deleted: "1"
+  action_id: a46bbb84-aea3-3fa3-b91d-448de335ce11
+acl_roles_actions_702: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ce9a9890-fcf1-6138-7f4c-45c3d037e4eb
+  deleted: "0"
+  action_id: 94502fc9-f65e-dc03-e85f-448de398b0a2
+acl_roles_actions_280: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e41294cd-e8ef-f428-155a-453d4a2ab60a
+  deleted: "0"
+  action_id: a5754f70-5f74-8c1a-627c-448de371c63e
+acl_roles_actions_019: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: bd7afca5-4c68-18dc-0ed8-448efb7e00ad
+  deleted: "1"
+  action_id: a3232668-49ee-21ee-1593-448de31c8f05
+acl_roles_actions_703: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: cf803032-69f4-5b08-a06d-45c3d03deec1
+  deleted: "0"
+  action_id: 930a32fa-6627-f361-b498-448de30fca51
+acl_roles_actions_281: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e4f591fb-e4d1-3ea9-9b81-453d4a61e572
+  deleted: "0"
+  action_id: 9cc24d89-7944-46b2-99bc-448de3463b05
+acl_roles_actions_704: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d0593db0-cdba-bcc9-cf17-45c3d0bd17f7
+  deleted: "0"
+  action_id: 96c3bb39-4fd8-6d2b-a178-448de3a2d636
+acl_roles_actions_150: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: c9e7cf36-bd9f-411d-2ba5-453d3f208a9c
+  deleted: "0"
+  action_id: a08db623-5232-0be3-35b5-448de3c56f1a
+acl_roles_actions_282: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e5c4d668-7b77-4f71-f31d-453d4ae16c06
+  deleted: "0"
+  action_id: a1e23fdb-4f8c-a802-bfaa-448de38ea58b
+acl_roles_actions_705: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d142e8bf-46f4-8e20-f5e3-45c3d0200491
+  deleted: "0"
+  action_id: 9581b1d7-a089-fb38-57f6-448de33e8ffd
+acl_roles_actions_151: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: cad7deb1-e975-6e6c-8d6a-453d3fb06dfc
+  deleted: "0"
+  action_id: a46bbb84-aea3-3fa3-b91d-448de335ce11
+acl_roles_actions_283: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e6af62bc-d19c-c5a8-201e-453d4a248d70
+  deleted: "0"
+  action_id: a08db623-5232-0be3-35b5-448de3c56f1a
+acl_roles_actions_706: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d232739d-9af9-5b42-662e-45c3d01da23f
+  deleted: "0"
+  action_id: 91c861d6-3f27-d37f-578e-448de30cb6c6
+acl_roles_actions_020: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: be4db332-af9a-2c57-d375-448efbaf9aaf
+  deleted: "1"
+  action_id: 9f44b29b-2dca-85f9-b31f-448de39dc9aa
+acl_roles_actions_152: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: cbc2e68e-ac3b-ad26-b853-453d3f7059b1
+  deleted: "0"
+  action_id: a3232668-49ee-21ee-1593-448de31c8f05
+acl_roles_actions_284: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e791a018-3ae5-2a70-8f84-453d4a46bde7
+  deleted: "0"
+  action_id: a46bbb84-aea3-3fa3-b91d-448de335ce11
+acl_roles_actions_707: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d31e899e-f76e-1395-ea0b-45c3d06c3d60
+  deleted: "0"
+  action_id: 90a09b18-89b8-6cb1-6170-448de38a9c12
+acl_roles_actions_021: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: bf13695d-1b27-e8b8-59b9-448efb725274
+  deleted: "1"
+  action_id: 9e14a8a5-e239-d28e-4e46-448de30dd423
+acl_roles_actions_153: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ccaf5a29-ff2b-0d7e-fca7-453d3f6d577e
+  deleted: "0"
+  action_id: 9f44b29b-2dca-85f9-b31f-448de39dc9aa
+acl_roles_actions_285: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e8761f22-dfff-7f3d-82a6-453d4ab93c97
+  deleted: "0"
+  action_id: a3232668-49ee-21ee-1593-448de31c8f05
+acl_roles_actions_708: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d3f7e584-9619-569d-c44e-45c3d0651a7d
+  deleted: "0"
+  action_id: 1450f102-780a-716e-1643-448de31f2938
+acl_roles_actions_022: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: bfe3a247-b14e-9585-1aad-448efb880d43
+  deleted: "1"
+  action_id: c5615cbb-5852-f362-2c78-448de3f2af58
+acl_roles_actions_154: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: cd869f51-b6d5-663e-4b2a-453d3f75edde
+  deleted: "0"
+  action_id: 9e14a8a5-e239-d28e-4e46-448de30dd423
+acl_roles_actions_286: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e94827ba-fd8a-a094-05ec-453d4a88cf55
+  deleted: "0"
+  action_id: 9f44b29b-2dca-85f9-b31f-448de39dc9aa
+acl_roles_actions_709: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d4dc2f47-4bed-85e2-cd2f-45c3d01c81c3
+  deleted: "0"
+  action_id: 19ae1a8e-033f-4746-c434-448de33fb80d
+acl_roles_actions_023: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c0baff6e-3875-fc0a-1be6-448efbd05112
+  deleted: "1"
+  action_id: cab28c73-6052-5bf1-e7f9-448de3b81d69
+acl_roles_actions_155: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ce7262c7-ef03-d13c-761b-453d3fc1fd33
+  deleted: "0"
+  action_id: c5615cbb-5852-f362-2c78-448de3f2af58
+acl_roles_actions_287: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: ea312713-f2e2-8351-038a-453d4a49a573
+  deleted: "0"
+  action_id: 9e14a8a5-e239-d28e-4e46-448de30dd423
+acl_roles_actions_024: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c1935221-027e-f20a-9ac6-448efbe04110
+  deleted: "1"
+  action_id: c95b359b-529b-3948-ceb6-448de34b57e2
+acl_roles_actions_156: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: cf671fea-2c12-45a8-f088-453d3f217833
+  deleted: "0"
+  action_id: cab28c73-6052-5bf1-e7f9-448de3b81d69
+acl_roles_actions_288: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: eb15b8eb-6fae-4293-b06a-453d4a949efc
+  deleted: "0"
+  action_id: c5615cbb-5852-f362-2c78-448de3f2af58
+acl_roles_actions_710: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d5cbf395-85c3-0b52-aea5-45c3d09bc48a
+  deleted: "0"
+  action_id: 186d49d0-16fd-4b4f-9e76-448de3b50d84
+acl_roles_actions_025: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c26924a5-568d-a7ea-6140-448efb2727c4
+  deleted: "1"
+  action_id: cd4acd6d-276b-6b97-1552-448de3039203
+acl_roles_actions_157: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d0524baf-a2d8-fa4f-f9f2-453d3ff11767
+  deleted: "0"
+  action_id: c95b359b-529b-3948-ceb6-448de34b57e2
+acl_roles_actions_289: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: ebf82209-3258-fdfd-b5cc-453d4afe1fb8
+  deleted: "0"
+  action_id: cab28c73-6052-5bf1-e7f9-448de3b81d69
+acl_roles_actions_711: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d6a828b5-bc36-645e-8957-45c3d01c4866
+  deleted: "0"
+  action_id: 1c68c433-f088-a343-774f-448de36d3750
+acl_roles_actions_026: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c33074a4-46fc-b50f-f349-448efb9defc9
+  deleted: "1"
+  action_id: cbf45b99-2808-72ce-9379-448de30dca3f
+acl_roles_actions_158: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d13149d2-3acc-fe4a-66f0-453d3f443728
+  deleted: "0"
+  action_id: cd4acd6d-276b-6b97-1552-448de3039203
+acl_roles_actions_712: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d7831f8b-a12e-caab-7c14-45c3d038d45f
+  deleted: "0"
+  action_id: 1b09877a-7141-b383-85bc-448de3bedba7
+acl_roles_actions_027: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c410ea7c-e63f-bf4a-90f9-448efbe5c2b8
+  deleted: "1"
+  action_id: c802ca32-2308-d05e-7de1-448de3eb08e9
+acl_roles_actions_159: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d22314c4-a5cb-2c6f-e14d-453d3f8d8200
+  deleted: "0"
+  action_id: cbf45b99-2808-72ce-9379-448de30dca3f
+acl_roles_actions_290: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: ecce816d-27f7-e0ae-6875-453d4a384308
+  deleted: "0"
+  action_id: c95b359b-529b-3948-ceb6-448de34b57e2
+acl_roles_actions_028: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c4e53333-72b1-1086-6cfb-448efbf55249
+  deleted: "1"
+  action_id: c6c182e0-cc75-caf2-3b3c-448de31f3e19
+acl_roles_actions_713: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d869a2bd-2759-6cda-0c2b-45c3d0ffb473
+  deleted: "0"
+  action_id: 17086691-bdc2-db53-c433-448de33045a4
+acl_roles_actions_291: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: edb89a4d-5a44-7872-ee56-453d4a565ff0
+  deleted: "0"
+  action_id: cd4acd6d-276b-6b97-1552-448de3039203
+acl_roles_actions_029: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c5bcbe7f-599d-7f4f-e1f6-448efbe6645c
+  deleted: "1"
+  action_id: 221f663f-82f0-2200-89a0-448de3ddd8c9
+acl_roles_actions_714: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: d955b8ed-feba-9e5f-4809-45c3d094d67e
+  deleted: "0"
+  action_id: 15ac01f1-a021-18df-c0d3-448de3112d55
+acl_roles_actions_160: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d310f1b6-cd23-541b-bb21-453d3fb43a46
+  deleted: "0"
+  action_id: c802ca32-2308-d05e-7de1-448de3eb08e9
+acl_roles_actions_292: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: eea3e357-eba6-ee01-377b-453d4a5fd318
+  deleted: "0"
+  action_id: cbf45b99-2808-72ce-9379-448de30dca3f
+acl_roles_actions_715: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: da30df1c-9acf-1364-4d00-45c3d05201b9
+  deleted: "0"
+  action_id: a4d7c647-cae6-c0f6-70ea-448de35efa9e
+acl_roles_actions_161: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d3f31283-1464-98c0-81cd-453d3fda9a52
+  deleted: "0"
+  action_id: c6c182e0-cc75-caf2-3b3c-448de31f3e19
+acl_roles_actions_293: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: ef8a452a-141d-f7f4-dc53-453d4a3af757
+  deleted: "0"
+  action_id: c802ca32-2308-d05e-7de1-448de3eb08e9
+acl_roles_actions_716: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: db128fb9-8ecb-e201-0bc1-45c3d04784e3
+  deleted: "0"
+  action_id: aa0f326b-5ebb-8016-6e1a-448de3a11854
+acl_roles_actions_030: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c678c7e5-8a92-ba25-e760-448efb50eecb
+  deleted: "1"
+  action_id: 273f2627-c096-442d-96c0-448de3a20eea
+acl_roles_actions_162: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d4e28cae-5619-4e39-bc8b-453d3fa4dffe
+  deleted: "0"
+  action_id: 221f663f-82f0-2200-89a0-448de3ddd8c9
+acl_roles_actions_294: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: f057729b-eb0f-92e6-d171-453d4a371b78
+  deleted: "0"
+  action_id: c6c182e0-cc75-caf2-3b3c-448de31f3e19
+acl_roles_actions_717: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: dc05803b-5ed1-878b-7b51-45c3d019128e
+  deleted: "0"
+  action_id: a8bc5e79-2d47-165a-cdff-448de33524ee
+acl_roles_actions_031: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c750a4b4-9fb3-5db5-d346-448efb6acccd
+  deleted: "1"
+  action_id: 25f40d55-a7f7-a562-72b5-448de3b48bb1
+acl_roles_actions_163: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d5d2b226-ba92-a584-9520-453d3f6c37cd
+  deleted: "0"
+  action_id: 273f2627-c096-442d-96c0-448de3a20eea
+acl_roles_actions_295: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: f14ba79f-a66a-aa45-4ca7-453d4a3f037b
+  deleted: "0"
+  action_id: 221f663f-82f0-2200-89a0-448de3ddd8c9
+acl_roles_actions_718: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: dcf02236-2959-f3e1-e997-45c3d0b3e1cc
+  deleted: "0"
+  action_id: acb96b37-7df0-83f7-e25f-448de33612dc
+acl_roles_actions_032: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c8263504-ed4d-9e17-1187-448efb199463
+  deleted: "1"
+  action_id: 29c1c8c2-17da-915b-fe12-448de364bf96
+acl_roles_actions_164: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d6c14e7f-4cd6-d775-7c37-453d3f8be97b
+  deleted: "0"
+  action_id: 25f40d55-a7f7-a562-72b5-448de3b48bb1
+acl_roles_actions_296: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: f231f572-e9b3-c5bd-7548-453d4a7c279b
+  deleted: "0"
+  action_id: 273f2627-c096-442d-96c0-448de3a20eea
+acl_roles_actions_719: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ddc6a8c3-3adf-ebf4-1910-45c3d021b144
+  deleted: "0"
+  action_id: ab710276-ba94-6374-4c56-448de300c478
+acl_roles_actions_033: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c8fccad3-10d2-e94a-71dc-448efb0824a9
+  deleted: "1"
+  action_id: 2878c403-10a9-a6ce-7d2b-448de3f50b87
+acl_roles_actions_165: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d79a4c79-855e-885b-1014-453d3ff69052
+  deleted: "0"
+  action_id: 29c1c8c2-17da-915b-fe12-448de364bf96
+acl_roles_actions_297: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: f318b4a5-da61-a9fe-6c24-453d4a5653ae
+  deleted: "0"
+  action_id: 25f40d55-a7f7-a562-72b5-448de3b48bb1
+acl_roles_actions_034: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c9beceb2-9f6c-46d6-eb13-448efb98bbd0
+  deleted: "1"
+  action_id: 24b5f92a-3a6c-93bb-cf1f-448de37d5174
+acl_roles_actions_166: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:06
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d8adb023-0793-16a6-8971-453d3f6e0466
+  deleted: "0"
+  action_id: 2878c403-10a9-a6ce-7d2b-448de3f50b87
+acl_roles_actions_298: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:19
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: f3e46b2b-0ccf-51fe-c92b-453d4af1cfc9
+  deleted: "0"
+  action_id: 29c1c8c2-17da-915b-fe12-448de364bf96
+acl_roles_actions_035: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ca96b59a-51b7-cc7a-b0f5-448efb479be8
+  deleted: "1"
+  action_id: 236bdc15-30b1-9763-b2bf-448de3f2be2f
+acl_roles_actions_167: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: d99edc1f-8ad4-96fa-5e8b-453d3f5f27fd
+  deleted: "0"
+  action_id: 24b5f92a-3a6c-93bb-cf1f-448de37d5174
+acl_roles_actions_299: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: a3500425-48e0-9977-b894-453d4a8343ec
+  deleted: "0"
+  action_id: 2878c403-10a9-a6ce-7d2b-448de3f50b87
+acl_roles_actions_720: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: deb7785c-6cc3-620b-2462-45c3d0d7d643
+  deleted: "0"
+  action_id: a7837957-4de8-03ae-6634-448de3cf2264
+acl_roles_actions_036: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cb6f262d-6a2f-c888-3177-448efb3dc1ae
+  deleted: "1"
+  action_id: 8f5655ed-e50f-ca5f-e1a0-448de3e1de15
+acl_roles_actions_168: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: da8baa13-7c75-603c-79ac-453d3fb8e85d
+  deleted: "0"
+  action_id: 236bdc15-30b1-9763-b2bf-448de3f2be2f
+acl_roles_actions_721: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: dfa2f871-a1ea-342a-5afd-45c3d0223c40
+  deleted: "0"
+  action_id: a62b90fc-596f-2c35-b6bd-448de34f49e8
+acl_roles_actions_037: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cc46073a-1aed-3d50-b0c5-448efbe155b4
+  deleted: "1"
+  action_id: 94502fc9-f65e-dc03-e85f-448de398b0a2
+acl_roles_actions_169: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: db643c50-e93b-3a8f-68bd-453d3fa95a4c
+  deleted: "0"
+  action_id: 8f5655ed-e50f-ca5f-e1a0-448de3e1de15
+acl_roles_actions_722: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e08afc82-20fe-6b75-d93a-45c3d0bcfdce
+  deleted: "0"
+  action_id: c36afa15-6f87-556b-d903-448de37d033c
+acl_roles_actions_038: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cd0bea35-07ee-088b-fa3d-448efb5c3ce6
+  deleted: "1"
+  action_id: 930a32fa-6627-f361-b498-448de30fca51
+acl_roles_actions_723: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e1612760-f51b-f14e-a694-45c3d0e05417
+  deleted: "0"
+  action_id: c89f2a38-ebcc-ae07-a2fd-448de3de579a
+acl_roles_actions_039: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cde471d9-ba2e-9b8e-134b-448efb9167d3
+  deleted: "1"
+  action_id: 96c3bb39-4fd8-6d2b-a178-448de3a2d636
+acl_roles_actions_724: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e257611a-d660-66be-6d44-45c3d0dfaa7f
+  deleted: "0"
+  action_id: c760f376-97b6-a13b-0a9a-448de36854cb
+acl_roles_actions_170: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: dc851441-cabf-1a64-cdd3-453d3f9909fc
+  deleted: "0"
+  action_id: 94502fc9-f65e-dc03-e85f-448de398b0a2
+acl_roles_actions_725: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e33eda76-4b9f-9bb5-69fc-45c3d01b0441
+  deleted: "0"
+  action_id: cb4320b9-78a6-37d6-21cc-448de3d05ebc
+acl_roles_actions_171: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: dd74b2a6-5465-c2b4-9a7f-453d3f7416bb
+  deleted: "0"
+  action_id: 930a32fa-6627-f361-b498-448de30fca51
+acl_roles_actions_726: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e422d35d-9d77-71e0-1a38-45c3d02f4e77
+  deleted: "0"
+  action_id: c9f023fa-0214-6ba3-4863-448de32c7ed2
+acl_roles_actions_040: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cebcb6db-0161-1699-8887-448efb29b2d4
+  deleted: "1"
+  action_id: 9581b1d7-a089-fb38-57f6-448de33e8ffd
+acl_roles_actions_172: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: de58f687-fb0b-2e85-66c8-453d3f767721
+  deleted: "0"
+  action_id: 96c3bb39-4fd8-6d2b-a178-448de3a2d636
+acl_roles_actions_727: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e4f64824-0d7b-d47b-802c-45c3d0a3983a
+  deleted: "0"
+  action_id: c6159955-285f-8ad6-ed62-448de3cc9d96
+acl_roles_actions_041: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cf97e6ff-2db7-0599-355c-448efb7ff183
+  deleted: "1"
+  action_id: 91c861d6-3f27-d37f-578e-448de30cb6c6
+acl_roles_actions_173: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: df41b8ef-eb84-d926-8fe6-453d3f7099de
+  deleted: "0"
+  action_id: 9581b1d7-a089-fb38-57f6-448de33e8ffd
+acl_roles_actions_728: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e5dc1828-ecdb-3d35-0196-45c3d07bb628
+  deleted: "0"
+  action_id: c4d33ed9-9c07-6fd6-ceba-448de369f95a
+acl_roles_actions_042: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d06d1be5-5b4d-f928-2097-448efb72211f
+  deleted: "1"
+  action_id: 90a09b18-89b8-6cb1-6170-448de38a9c12
+acl_roles_actions_174: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e0354895-db82-2d5e-b256-453d3fd36e3c
+  deleted: "0"
+  action_id: 91c861d6-3f27-d37f-578e-448de30cb6c6
+acl_roles_actions_729: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e6c20c7c-ba75-c9fb-3c19-45c3d0b5076e
+  deleted: "0"
+  action_id: 76fd3d48-db99-5cb5-1eb8-448de3cfb476
+acl_roles_actions_043: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d139db90-ec7c-00df-3eff-448efbbf8693
+  deleted: "1"
+  action_id: 1450f102-780a-716e-1643-448de31f2938
+acl_roles_actions_175: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e1274928-b3ae-a99d-cbaa-453d3ffb10e8
+  deleted: "0"
+  action_id: 90a09b18-89b8-6cb1-6170-448de38a9c12
+acl_roles_actions_044: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d211d981-4b70-28fe-70c8-448efbf96bc9
+  deleted: "1"
+  action_id: 19ae1a8e-033f-4746-c434-448de33fb80d
+acl_roles_actions_176: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e1fe6ae1-c37b-f6aa-8122-453d3f37bf8d
+  deleted: "0"
+  action_id: 1450f102-780a-716e-1643-448de31f2938
+acl_roles_actions_730: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e7b70afd-7107-4454-cacd-45c3d0fa57ea
+  deleted: "0"
+  action_id: 7c125815-661c-4a4a-986c-448de3f24e23
+acl_roles_actions_045: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d2e7a098-4129-943c-0539-448efbfe96ac
+  deleted: "1"
+  action_id: 186d49d0-16fd-4b4f-9e76-448de3b50d84
+acl_roles_actions_177: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e2ee895d-cc84-0453-4d4f-453d3f8bc7e7
+  deleted: "0"
+  action_id: 19ae1a8e-033f-4746-c434-448de33fb80d
+acl_roles_actions_731: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e882ab81-0f01-5c2c-6d9d-45c3d06c41d7
+  deleted: "0"
+  action_id: 7ade86ae-3a25-0cc7-0dad-448de3e61622
+acl_roles_actions_046: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d3bfae90-95df-863c-45cd-448efbc2b3d1
+  deleted: "1"
+  action_id: 1c68c433-f088-a343-774f-448de36d3750
+acl_roles_actions_178: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e3deec5d-4a23-1e6e-9373-453d3f140d8a
+  deleted: "0"
+  action_id: 186d49d0-16fd-4b4f-9e76-448de3b50d84
+acl_roles_actions_600: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8f167fcd-ed5f-f1c7-c4ca-456217429d68
+  deleted: "0"
+  action_id: 7d5d3539-9243-d0bb-c89e-448de3c4e852
+acl_roles_actions_732: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: e96bfe14-3073-5d56-16a1-45c3d05d1309
+  deleted: "0"
+  action_id: 7eab9a35-30b8-7b5e-7aea-448de3d3f87e
+acl_roles_actions_047: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d482bc22-f224-8435-a68a-448efb308343
+  deleted: "1"
+  action_id: 1b09877a-7141-b383-85bc-448de3bedba7
+acl_roles_actions_179: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e4cf3d56-06dd-71d7-4b74-453d3f9929ed
+  deleted: "0"
+  action_id: 1c68c433-f088-a343-774f-448de36d3750
+acl_roles_actions_601: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8ffe6f47-db54-5d11-1547-4562176028df
+  deleted: "0"
+  action_id: 79921138-f2a2-74b4-48d4-448de3312f4b
+acl_roles_actions_733: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ea5617c6-7266-1f93-e095-45c3d0ad4607
+  deleted: "0"
+  action_id: 7d5d3539-9243-d0bb-c89e-448de3c4e852
+acl_roles_actions_048: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d55958ac-3583-a660-8bc3-448efb6e353c
+  deleted: "1"
+  action_id: 17086691-bdc2-db53-c433-448de33045a4
+acl_roles_actions_602: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 90d33ff7-11c4-29e4-2a08-456217accade
+  deleted: "0"
+  action_id: 784f7bf8-72ff-d2a8-20c1-448de36ad460
+acl_roles_actions_734: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: eb39d1c6-1228-9f11-8bb8-45c3d0189bb8
+  deleted: "0"
+  action_id: 79921138-f2a2-74b4-48d4-448de3312f4b
+acl_roles_actions_049: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d631c952-ea28-eed3-d29d-448efb588f59
+  deleted: "1"
+  action_id: 15ac01f1-a021-18df-c0d3-448de3112d55
+acl_roles_actions_180: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e5a58cf1-9dcc-ce00-9799-453d3f17c03f
+  deleted: "0"
+  action_id: 1b09877a-7141-b383-85bc-448de3bedba7
+acl_roles_actions_603: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 91bad701-7f93-be4e-f9c0-456217975d79
+  deleted: "0"
+  action_id: 7726b4e2-23cb-6df1-3607-448de36a28f2
+acl_roles_actions_735: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ec01b6cf-aa71-d2d9-e854-45c3d0bc8a85
+  deleted: "0"
+  action_id: 784f7bf8-72ff-d2a8-20c1-448de36ad460
+acl_roles_actions_181: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e699328b-56f7-6dd9-6cb8-453d3f766a2c
+  deleted: "0"
+  action_id: 17086691-bdc2-db53-c433-448de33045a4
+acl_roles_actions_604: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 92a4536c-6581-384f-f112-45621751f648
+  deleted: "0"
+  action_id: 7c217d92-6119-ff60-8815-448de3fc7868
+acl_roles_actions_736: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ece52937-cfcd-0670-3fea-45c3d07feef3
+  deleted: "0"
+  action_id: 7726b4e2-23cb-6df1-3607-448de36a28f2
+acl_roles_actions_050: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d7091a04-07ed-277e-5669-448efb54004e
+  deleted: "1"
+  action_id: a4d7c647-cae6-c0f6-70ea-448de35efa9e
+acl_roles_actions_182: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e7886594-0a90-8a34-d6b6-453d3f929469
+  deleted: "0"
+  action_id: 15ac01f1-a021-18df-c0d3-448de3112d55
+acl_roles_actions_605: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 938d1d6c-497d-3487-1a0f-45621740eb14
+  deleted: "0"
+  action_id: 7add6c46-89b5-1600-821e-448de3665c06
+acl_roles_actions_737: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: edd24696-6439-0ca7-dca5-45c3d03e6e9c
+  deleted: "0"
+  action_id: 7c217d92-6119-ff60-8815-448de3fc7868
+acl_roles_actions_051: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d7c9c15f-ab24-fa47-c198-448efb5465b7
+  deleted: "1"
+  action_id: aa0f326b-5ebb-8016-6e1a-448de3a11854
+acl_roles_actions_183: 
+  access_override: "-98"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e879ce00-b15a-ab82-52cc-453d3ff86e08
+  deleted: "0"
+  action_id: a4d7c647-cae6-c0f6-70ea-448de35efa9e
+acl_roles_actions_606: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 946355fd-f4ba-174a-e1a1-456217b442d5
+  deleted: "0"
+  action_id: 7e990ab1-a5ec-6049-c05f-448de30d28cf
+acl_roles_actions_738: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: eebd95a7-a8ce-6da8-976c-45c3d0b718bb
+  deleted: "0"
+  action_id: 7add6c46-89b5-1600-821e-448de3665c06
+acl_roles_actions_052: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d8a7a435-afb1-a47c-f811-448efb6c121f
+  deleted: "1"
+  action_id: a8bc5e79-2d47-165a-cdff-448de33524ee
+acl_roles_actions_184: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: e955c1c0-150a-7413-e385-453d3f536bc9
+  deleted: "0"
+  action_id: aa0f326b-5ebb-8016-6e1a-448de3a11854
+acl_roles_actions_607: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9553d2b2-1d22-51ef-34af-456217be54d1
+  deleted: "0"
+  action_id: 7d591598-1963-02c0-bb06-448de341b55e
+acl_roles_actions_739: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ef8be67f-9e55-479f-a654-45c3d02bb528
+  deleted: "0"
+  action_id: 7e990ab1-a5ec-6049-c05f-448de30d28cf
+acl_roles_actions_053: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: d97f08bc-29f7-45e8-05c8-448efb2fd3b5
+  deleted: "1"
+  action_id: acb96b37-7df0-83f7-e25f-448de33612dc
+acl_roles_actions_185: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ea4a7491-7195-0d54-6b4f-453d3f52e478
+  deleted: "0"
+  action_id: a8bc5e79-2d47-165a-cdff-448de33524ee
+acl_roles_actions_608: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 963de932-b423-a0a4-083f-456217011719
+  deleted: "0"
+  action_id: 799f6bbb-99ae-b094-a471-448de314f847
+acl_roles_actions_054: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: da58a5ee-be3e-ccf3-ce0e-448efb5f0bd8
+  deleted: "1"
+  action_id: ab710276-ba94-6374-4c56-448de300c478
+acl_roles_actions_186: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: eb387d80-efc1-2e98-9c10-453d3ff346ce
+  deleted: "0"
+  action_id: acb96b37-7df0-83f7-e25f-448de33612dc
+acl_roles_actions_609: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 971f27ac-9358-c016-3125-456217a7f4d5
+  deleted: "0"
+  action_id: 78722de2-08cc-a796-48f3-448de313580f
+acl_roles_actions_055: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: db1a883e-9623-4115-2fae-448efb94f38d
+  deleted: "1"
+  action_id: a7837957-4de8-03ae-6634-448de3cf2264
+acl_roles_actions_187: 
+  access_override: "90"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ec24a556-ed1a-35d2-1f72-453d3fc24af6
+  deleted: "0"
+  action_id: ab710276-ba94-6374-4c56-448de300c478
+acl_roles_actions_740: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: f07e8b6c-0b47-e425-96e3-45c3d03846ae
+  deleted: "0"
+  action_id: 7d591598-1963-02c0-bb06-448de341b55e
+acl_roles_actions_056: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: dbf5c21d-05cf-786b-7bb6-448efb4c7b99
+  deleted: "1"
+  action_id: a62b90fc-596f-2c35-b6bd-448de34f49e8
+acl_roles_actions_188: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ed0689b9-4790-6daa-8b73-453d3fc7705b
+  deleted: "0"
+  action_id: a7837957-4de8-03ae-6634-448de3cf2264
+acl_roles_actions_741: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: f186328f-2403-4401-cc72-45c3d09a390b
+  deleted: "0"
+  action_id: 799f6bbb-99ae-b094-a471-448de314f847
+acl_roles_actions_057: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: dcf1745d-ddaf-1758-b923-448efb2c696e
+  deleted: "1"
+  action_id: c36afa15-6f87-556b-d903-448de37d033c
+acl_roles_actions_189: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ee03e775-c434-e1b0-5922-453d3f88ec69
+  deleted: "0"
+  action_id: a62b90fc-596f-2c35-b6bd-448de34f49e8
+acl_roles_actions_610: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 98066c63-88be-536f-5f55-456217d110f3
+  deleted: "0"
+  action_id: f0c75ff0-1d48-f0c6-5e13-448de3240d0a
+acl_roles_actions_742: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: f27c5959-b04a-4f63-8b04-45c3d027e503
+  deleted: "0"
+  action_id: 78722de2-08cc-a796-48f3-448de313580f
+acl_roles_actions_058: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ddccc4ed-bd21-90df-2587-448efb0c48da
+  deleted: "1"
+  action_id: c89f2a38-ebcc-ae07-a2fd-448de3de579a
+acl_roles_actions_611: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 98f08923-d45c-c531-6ed9-456217c5fba4
+  deleted: "0"
+  action_id: 1d090043-6f9e-1937-2d70-448de38080f1
+acl_roles_actions_743: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: f388c1ce-c76e-8bcc-fce4-45c3d00763f5
+  deleted: "0"
+  action_id: f0c75ff0-1d48-f0c6-5e13-448de3240d0a
+acl_roles_actions_059: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: de91b822-5a44-dd94-80a6-448efb96879a
+  deleted: "1"
+  action_id: c760f376-97b6-a13b-0a9a-448de36854cb
+acl_roles_actions_612: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 99e07e53-7f0b-a603-cca5-456217788820
+  deleted: "0"
+  action_id: 93200816-85fa-ed1e-1abb-448de3ee663e
+acl_roles_actions_744: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 791002ce-3405-e8af-05e9-45c3d081bb7b
+  deleted: "0"
+  action_id: 1d090043-6f9e-1937-2d70-448de38080f1
+acl_roles_actions_190: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: eef6e968-21e0-8862-c789-453d3ff8f254
+  deleted: "0"
+  action_id: c36afa15-6f87-556b-d903-448de37d033c
+acl_roles_actions_613: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9ac07ec2-5a26-7a34-4821-4562170f0bce
+  deleted: "0"
+  action_id: 4720007f-b001-a6b4-f89d-448de38ca8f6
+acl_roles_actions_745: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 169a04ab-967e-d988-a70a-45c3d0b63f8f
+  deleted: "0"
+  action_id: 93200816-85fa-ed1e-1abb-448de3ee663e
+acl_roles_actions_191: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: efd75366-e840-7b72-5714-453d3fe89431
+  deleted: "0"
+  action_id: c89f2a38-ebcc-ae07-a2fd-448de3de579a
+acl_roles_actions_060: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: df7b14e8-8afe-8a1b-8cca-448efbd81143
+  deleted: "1"
+  action_id: cb4320b9-78a6-37d6-21cc-448de3d05ebc
+acl_roles_actions_192: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: f0c74f67-3271-e967-5534-453d3f2181aa
+  deleted: "0"
+  action_id: c760f376-97b6-a13b-0a9a-448de36854cb
+acl_roles_actions_614: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9ba8c388-4592-2e7b-8b78-456217b5a98f
+  deleted: "0"
+  action_id: 31ed051b-f4c2-52f8-2eb4-448de38edd55
+acl_roles_actions_746: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 24b50d29-19be-2d52-9dcc-45c3d073cc75
+  deleted: "0"
+  action_id: 4720007f-b001-a6b4-f89d-448de38ca8f6
+acl_roles_actions_061: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e0569c6a-0195-13d0-f018-448efb83baa1
+  deleted: "1"
+  action_id: c9f023fa-0214-6ba3-4863-448de32c7ed2
+acl_roles_actions_193: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: f1b0dafb-d3f3-dac3-b856-453d3f84c2b7
+  deleted: "0"
+  action_id: cb4320b9-78a6-37d6-21cc-448de3d05ebc
+acl_roles_actions_615: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9c9241be-573b-7b2c-cd88-456217722f26
+  deleted: "0"
+  action_id: f3658060-60d2-fb15-b64f-448de3a5b626
+acl_roles_actions_747: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 33440eb8-97a0-e068-b09b-45c3d0c28ec0
+  deleted: "0"
+  action_id: 31ed051b-f4c2-52f8-2eb4-448de38edd55
+acl_roles_actions_062: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e12fdf42-0819-117e-01e8-448efb8a5153
+  deleted: "1"
+  action_id: c6159955-285f-8ad6-ed62-448de3cc9d96
+acl_roles_actions_194: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: f29f8c9c-6c53-c9b0-6150-453d3fc95a9b
+  deleted: "0"
+  action_id: c9f023fa-0214-6ba3-4863-448de32c7ed2
+acl_roles_actions_616: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9d7d3b38-d29e-7f85-453c-4562176bc39a
+  deleted: "0"
+  action_id: f21c09e4-f78d-d16b-fb6c-448de36a5c45
+acl_roles_actions_748: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 41ae0d34-f158-f188-2188-45c3d0439fc6
+  deleted: "0"
+  action_id: f3658060-60d2-fb15-b64f-448de3a5b626
+acl_roles_actions_063: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e1f65258-9a96-4ae6-97b0-448efb3dc444
+  deleted: "1"
+  action_id: c4d33ed9-9c07-6fd6-ceba-448de369f95a
+acl_roles_actions_195: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: f370e591-96a7-77a7-e757-453d3fbf1320
+  deleted: "0"
+  action_id: c6159955-285f-8ad6-ed62-448de3cc9d96
+acl_roles_actions_617: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9e4f59ff-d310-dd5c-a3b7-456217635095
+  deleted: "0"
+  action_id: 42f241d2-c441-947e-899b-448de3282c8f
+acl_roles_actions_749: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 50ca0532-092c-a16d-2e2c-45c3d00d5ce7
+  deleted: "0"
+  action_id: f21c09e4-f78d-d16b-fb6c-448de36a5c45
+acl_roles_actions_064: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e2d27c68-97ac-0962-ff20-448efb3cbbab
+  deleted: "1"
+  action_id: 76fd3d48-db99-5cb5-1eb8-448de3cfb476
+acl_roles_actions_196: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3a200b9b-5b9f-ab3d-9fb3-453d3f67dee4
+  deleted: "0"
+  action_id: c4d33ed9-9c07-6fd6-ceba-448de369f95a
+acl_roles_actions_618: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 9f3c6ee4-052a-aa03-2568-456217b8ed33
+  deleted: "0"
+  action_id: 47f43bf4-104b-aeb4-c813-448de369586e
+acl_roles_actions_065: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e3adac8d-dc56-5a88-92d1-448efb733b59
+  deleted: "1"
+  action_id: 7c125815-661c-4a4a-986c-448de3f24e23
+acl_roles_actions_197: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 12ef08f7-081c-97b6-d2ba-453d3f858afb
+  deleted: "0"
+  action_id: 76fd3d48-db99-5cb5-1eb8-448de3cfb476
+acl_roles_actions_750: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 5dbc0058-f613-6328-ec14-45c3d024c73c
+  deleted: "0"
+  action_id: 42f241d2-c441-947e-899b-448de3282c8f
+acl_roles_actions_619: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a02401c0-49a0-822b-6e3f-45621778e3d6
+  deleted: "0"
+  action_id: 46bf1730-5756-6b34-26b6-448de3286fa4
+acl_roles_actions_066: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e48ebecc-fa98-19ea-2350-448efbbcfaa2
+  deleted: "1"
+  action_id: 7ade86ae-3a25-0cc7-0dad-448de3e61622
+acl_roles_actions_198: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 219f0b71-59b6-5b21-4b9e-453d3f27c577
+  deleted: "0"
+  action_id: 7c125815-661c-4a4a-986c-448de3f24e23
+acl_roles_actions_751: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 6c4807e6-eaa4-5226-c753-45c3d003d948
+  deleted: "0"
+  action_id: 47f43bf4-104b-aeb4-c813-448de369586e
+acl_roles_actions_067: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e5602c83-e39d-ca0c-d136-448efbcfb5a0
+  deleted: "1"
+  action_id: 7eab9a35-30b8-7b5e-7aea-448de3d3f87e
+acl_roles_actions_199: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2ef506ed-af9b-23ac-730a-453d3f6074fb
+  deleted: "0"
+  action_id: 7ade86ae-3a25-0cc7-0dad-448de3e61622
+acl_roles_actions_620: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a10e5c7f-eca1-22f9-3efd-456217215ed5
+  deleted: "0"
+  action_id: 4a8b9c1b-3953-f4b6-8c6a-448de3e82800
+acl_roles_actions_752: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 7b2f027b-0370-9cfe-36aa-45c3d053fa78
+  deleted: "0"
+  action_id: 46bf1730-5756-6b34-26b6-448de3286fa4
+acl_roles_actions_068: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e634ee37-b518-7d5c-d2fa-448efbc9ff92
+  deleted: "1"
+  action_id: 7d5d3539-9243-d0bb-c89e-448de3c4e852
+acl_roles_actions_621: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a1e16f86-68a7-e1f0-c1d1-45621701d6ba
+  deleted: "0"
+  action_id: 493e5b5f-d5c2-c5b9-c8a9-448de3317484
+acl_roles_actions_753: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 89b50fa6-6c42-d8b0-5e38-45c3d02c6e74
+  deleted: "0"
+  action_id: 4a8b9c1b-3953-f4b6-8c6a-448de3e82800
+acl_roles_actions_069: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e7158020-8f79-efe9-524d-448efbdcefce
+  deleted: "1"
+  action_id: 79921138-f2a2-74b4-48d4-448de3312f4b
+acl_roles_actions_622: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a2cc5691-6bf6-c3be-1c5e-4562171a3b25
+  deleted: "0"
+  action_id: 456fb2d0-e090-9e53-bf83-448de3935cf1
+acl_roles_actions_754: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 96e8009a-5f14-ae2d-5771-45c3d06d3764
+  deleted: "0"
+  action_id: 493e5b5f-d5c2-c5b9-c8a9-448de3317484
+acl_roles_actions_623: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a3b51100-bf97-f1c3-b33d-4562172fd41d
+  deleted: "0"
+  action_id: 4434f392-d93e-e1e8-cbfa-448de32e1a8d
+acl_roles_actions_755: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: a5540ef6-7ec4-29ed-e6cf-45c3d0ded022
+  deleted: "0"
+  action_id: 456fb2d0-e090-9e53-bf83-448de3935cf1
+acl_roles_actions_624: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a49fefc4-eddc-fcd4-98dd-45621732bf49
+  deleted: "0"
+  action_id: f12a1037-c29a-5809-2bed-448de3e17420
+acl_roles_actions_756: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b453008a-d3ae-2c58-f638-45c3d0fc015a
+  deleted: "0"
+  action_id: 4434f392-d93e-e1e8-cbfa-448de32e1a8d
+acl_roles_actions_070: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e7ed453f-d0ad-69bb-c319-448efb883043
+  deleted: "1"
+  action_id: 784f7bf8-72ff-d2a8-20c1-448de36ad460
+acl_roles_actions_625: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a5716ddd-7956-e879-bf89-456217039536
+  deleted: "0"
+  action_id: 29b20168-8cad-a5b2-a18e-448de303b168
+acl_roles_actions_757: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c29c0a98-d090-71ce-d11b-45c3d057a7b5
+  deleted: "0"
+  action_id: f12a1037-c29a-5809-2bed-448de3e17420
+acl_roles_actions_071: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e8c2c295-36ca-fad1-2b91-448efbc6f6d8
+  deleted: "1"
+  action_id: 7726b4e2-23cb-6df1-3607-448de36a28f2
+acl_roles_actions_626: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a65aaad8-b01d-6420-02e7-456217d82caa
+  deleted: "0"
+  action_id: 145f01fd-3f8e-64db-54cb-448de3363ed8
+acl_roles_actions_758: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: cfd305bf-3ff1-de7a-b75f-45c3d04c0fc2
+  deleted: "0"
+  action_id: 29b20168-8cad-a5b2-a18e-448de303b168
+acl_roles_actions_072: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e98fc988-12e4-af91-5512-448efb869f61
+  deleted: "1"
+  action_id: 7c217d92-6119-ff60-8815-448de3fc7868
+acl_roles_actions_627: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a749efec-68cc-d4fd-28b8-456217ec1679
+  deleted: "0"
+  action_id: 54250fe2-3517-099e-1108-448de3ae057e
+acl_roles_actions_759: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ded8007d-3cfb-9b89-5cb7-45c3d0701c73
+  deleted: "0"
+  action_id: 145f01fd-3f8e-64db-54cb-448de3363ed8
+acl_roles_actions_073: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ea6b5ebb-7fb4-9d88-0c5d-448efb71b465
+  deleted: "1"
+  action_id: 7add6c46-89b5-1600-821e-448de3665c06
+acl_roles_actions_628: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a831fd7d-2b08-9d9b-aec6-45621768a90d
+  deleted: "0"
+  action_id: 3f690132-fa11-be79-bd99-448de3716fa7
+acl_roles_actions_074: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: eb44f481-b121-b709-01f7-448efb629b4c
+  deleted: "1"
+  action_id: 7e990ab1-a5ec-6049-c05f-448de30d28cf
+acl_roles_actions_760: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ed5906a3-bce8-6946-425f-45c3d08b091b
+  deleted: "0"
+  action_id: 54250fe2-3517-099e-1108-448de3ae057e
+acl_roles_actions_629: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a909ab49-af0c-e9c5-62e6-456217ddeeef
+  deleted: "0"
+  action_id: f3f0f075-c73f-28bc-cabe-448de3e74652
+acl_roles_actions_075: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ec209656-6ddf-7f22-2905-448efb64c4c6
+  deleted: "1"
+  action_id: 7d591598-1963-02c0-bb06-448de341b55e
+acl_roles_actions_761: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: fb520db0-77fc-fee5-ddc8-45c3d08ecf8e
+  deleted: "0"
+  action_id: 3f690132-fa11-be79-bd99-448de3716fa7
+acl_roles_actions_076: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ece71251-5caa-20d4-c9d0-448efb25325d
+  deleted: "1"
+  action_id: 799f6bbb-99ae-b094-a471-448de314f847
+acl_roles_actions_630: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: a9fd2e8d-3861-458c-d0b4-4562172db5ae
+  deleted: "0"
+  action_id: f2a15d69-e258-9b38-d14f-448de3731c09
+acl_roles_actions_762: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1098d085-5573-b48f-cc5c-45c3d053ac4e
+  deleted: "0"
+  action_id: f3f0f075-c73f-28bc-cabe-448de3e74652
+acl_roles_actions_077: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: edc40c17-7841-799e-946f-448efb27a0f9
+  deleted: "1"
+  action_id: 78722de2-08cc-a796-48f3-448de313580f
+acl_roles_actions_631: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: aadfcd99-18c2-9d30-4c44-4562178208aa
+  deleted: "0"
+  action_id: 60a14ba0-4ab1-8738-f1c7-448de382f9d1
+acl_roles_actions_763: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 11819cf8-04f3-bd08-8b56-45c3d0eca6b0
+  deleted: "0"
+  action_id: f2a15d69-e258-9b38-d14f-448de3731c09
+acl_roles_actions_078: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: eea08b86-b0be-91d1-ca4a-448efb773e23
+  deleted: "1"
+  action_id: f0c75ff0-1d48-f0c6-5e13-448de3240d0a
+acl_roles_actions_632: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: abc5ee20-9072-99fd-189c-45621742390a
+  deleted: "0"
+  action_id: 6601d1ac-0192-4055-3774-448de3cd79db
+acl_roles_actions_764: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 126a7499-df34-a0ff-3b4d-45c3d0a16968
+  deleted: "0"
+  action_id: 60a14ba0-4ab1-8738-f1c7-448de382f9d1
+acl_roles_actions_079: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: ef7a692c-2102-3e06-9b51-448efb95c708
+  deleted: "1"
+  action_id: 1d090043-6f9e-1937-2d70-448de38080f1
+acl_roles_actions_500: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e21a99ac-1e3d-8b12-6138-454a91cc5229
+  deleted: "0"
+  action_id: 64a1e347-d12a-0536-bd0d-448de3bc19d9
+acl_roles_actions_633: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: ac8f2388-07e5-c5fd-67b8-4562174f1202
+  deleted: "0"
+  action_id: 64a1e347-d12a-0536-bd0d-448de3bc19d9
+acl_roles_actions_765: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 13445fe3-cdbe-21cc-db1b-45c3d058b9e2
+  deleted: "0"
+  action_id: 6601d1ac-0192-4055-3774-448de3cd79db
+acl_roles_actions_501: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e300e307-05d5-5d4b-dd34-454a9131c785
+  deleted: "0"
+  action_id: 68adb089-50ee-de43-90b8-448de3f59a7f
+acl_roles_actions_634: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: ad76baa4-8dce-c152-34de-456217048f6e
+  deleted: "0"
+  action_id: 68adb089-50ee-de43-90b8-448de3f59a7f
+acl_roles_actions_766: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 142f6259-0a51-a661-4709-45c3d0e36a22
+  deleted: "0"
+  action_id: 64a1e347-d12a-0536-bd0d-448de3bc19d9
+acl_roles_actions_502: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e3e70051-da41-e878-69f5-454a9176e5ac
+  deleted: "0"
+  action_id: 67505940-65b4-7302-1d82-448de31f065c
+acl_roles_actions_635: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: ae5f0a97-d353-29e2-6c01-456217da632c
+  deleted: "0"
+  action_id: 67505940-65b4-7302-1d82-448de31f065c
+acl_roles_actions_767: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 15192b5f-0618-a9f5-a90e-45c3d0f7f73c
+  deleted: "0"
+  action_id: 68adb089-50ee-de43-90b8-448de3f59a7f
+acl_roles_actions_080: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f040c5f3-b77e-b959-c09a-448efbf943e5
+  deleted: "1"
+  action_id: 93200816-85fa-ed1e-1abb-448de3ee663e
+acl_roles_actions_503: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e4c7e59d-f400-107b-28ed-454a91ce047c
+  deleted: "0"
+  action_id: 634cb2d4-cbe1-ceb2-99de-448de39d5696
+acl_roles_actions_081: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f11d7afb-d722-10e6-e387-448efb723c88
+  deleted: "1"
+  action_id: 4720007f-b001-a6b4-f89d-448de38ca8f6
+acl_roles_actions_636: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: af428169-e63e-9471-b0eb-456217b73f14
+  deleted: "0"
+  action_id: 634cb2d4-cbe1-ceb2-99de-448de39d5696
+acl_roles_actions_768: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 16023bd7-3481-8381-2713-45c3d04d8897
+  deleted: "0"
+  action_id: 67505940-65b4-7302-1d82-448de31f065c
+acl_roles_actions_082: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f22de6ea-46c9-abde-b96a-448efbcfb0a2
+  deleted: "1"
+  action_id: 31ed051b-f4c2-52f8-2eb4-448de38edd55
+acl_roles_actions_504: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e58df4b4-7b91-e900-ce13-454a91f39644
+  deleted: "0"
+  action_id: 62064c5a-ba61-9232-5f5d-448de3007d3a
+acl_roles_actions_637: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b0106a14-edc3-6498-f1b8-4562179f9e5f
+  deleted: "0"
+  action_id: 62064c5a-ba61-9232-5f5d-448de3007d3a
+acl_roles_actions_769: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 16ddcef7-4b4d-2c47-17f1-45c3d01b46f8
+  deleted: "0"
+  action_id: 634cb2d4-cbe1-ceb2-99de-448de39d5696
+acl_roles_actions_083: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f31fdf43-cf7b-5ded-1af5-448efbff9a78
+  deleted: "1"
+  action_id: f3658060-60d2-fb15-b64f-448de3a5b626
+acl_roles_actions_505: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e66e974d-6822-b26c-fda1-454a9184ab66
+  deleted: "0"
+  action_id: 752bd83a-5f58-70f4-634a-448de31e06cf
+acl_roles_actions_638: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b0f79290-3784-f525-d0ca-456217d14bbd
+  deleted: "0"
+  action_id: 752bd83a-5f58-70f4-634a-448de31e06cf
+acl_roles_actions_084: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f40e81d4-ed52-663a-ba6f-448efb9b0300
+  deleted: "1"
+  action_id: f21c09e4-f78d-d16b-fb6c-448de36a5c45
+acl_roles_actions_506: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e753b88c-e8cf-23dd-34f0-454a91a73123
+  deleted: "0"
+  action_id: 7a6c5a2e-5991-3a87-36e8-448de3e3cdd6
+acl_roles_actions_639: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b1e5caa1-8479-90e2-f8fd-456217c9dd9d
+  deleted: "0"
+  action_id: 7a6c5a2e-5991-3a87-36e8-448de3e3cdd6
+acl_roles_actions_085: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f2a00b16-0a97-9f81-4ee0-448efbed3125
+  deleted: "1"
+  action_id: 42f241d2-c441-947e-899b-448de3282c8f
+acl_roles_actions_770: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 17ca3524-8231-f4b8-d527-45c3d0e784bf
+  deleted: "0"
+  action_id: 62064c5a-ba61-9232-5f5d-448de3007d3a
+acl_roles_actions_507: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e839738b-2bee-c10e-fcd5-454a9101c81d
+  deleted: "0"
+  action_id: 79169c35-123e-46bb-23e6-448de3328317
+acl_roles_actions_086: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1cec0a2d-b6b8-1b66-bee9-448efbd3e52e
+  deleted: "1"
+  action_id: 47f43bf4-104b-aeb4-c813-448de369586e
+acl_roles_actions_771: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 18b3ea3d-e22e-cdb4-507c-45c3d0b8e69d
+  deleted: "0"
+  action_id: 752bd83a-5f58-70f4-634a-448de31e06cf
+acl_roles_actions_508: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e901b0fc-6169-f39d-3946-454a91386fc4
+  deleted: "0"
+  action_id: 7cf9f015-95ef-341c-ebc3-448de372bd7a
+acl_roles_actions_087: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 2a3c09d0-0f05-be49-f52f-448efb75d941
+  deleted: "1"
+  action_id: 46bf1730-5756-6b34-26b6-448de3286fa4
+acl_roles_actions_640: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b2cf4558-df6d-a63c-cdd9-456217171a06
+  deleted: "0"
+  action_id: 79169c35-123e-46bb-23e6-448de3328317
+acl_roles_actions_772: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 19aa2482-71ed-2e0d-c950-45c3d0c3900a
+  deleted: "0"
+  action_id: 7a6c5a2e-5991-3a87-36e8-448de3e3cdd6
+acl_roles_actions_509: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e9e5c866-f3eb-bf40-0131-454a919bddbb
+  deleted: "0"
+  action_id: 7ba55915-bab3-7ba7-53d8-448de335c50a
+acl_roles_actions_088: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 38020761-d8b3-2157-46b0-448efb00ea8e
+  deleted: "1"
+  action_id: 4a8b9c1b-3953-f4b6-8c6a-448de3e82800
+acl_roles_actions_641: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b39dfb58-5e84-4fc1-be04-4562178919cc
+  deleted: "0"
+  action_id: 7cf9f015-95ef-341c-ebc3-448de372bd7a
+acl_roles_actions_773: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1a81b5f0-de8c-ae92-0268-45c3d0937113
+  deleted: "0"
+  action_id: 79169c35-123e-46bb-23e6-448de3328317
+acl_roles_actions_089: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 45c20614-533f-acea-0db2-448efb0d96e0
+  deleted: "1"
+  action_id: 493e5b5f-d5c2-c5b9-c8a9-448de3317484
+acl_roles_actions_510: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: eac7d22c-2704-84a3-e7aa-454a917c74f4
+  deleted: "0"
+  action_id: 77bd44ca-072a-1f81-3214-448de3285e86
+acl_roles_actions_642: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b48a336e-dba5-b45a-3bb0-45621752c21d
+  deleted: "0"
+  action_id: 7ba55915-bab3-7ba7-53d8-448de335c50a
+acl_roles_actions_774: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1b6b2d16-ba51-b75d-10c1-45c3d087ccea
+  deleted: "0"
+  action_id: 7cf9f015-95ef-341c-ebc3-448de372bd7a
+acl_roles_actions_511: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ebaff56a-a28c-8a3e-2d10-454a91410087
+  deleted: "0"
+  action_id: 767f43e7-8743-7cc2-4226-448de33c7b17
+acl_roles_actions_643: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b57166ab-b006-a878-9a0c-4562170f7b99
+  deleted: "0"
+  action_id: 77bd44ca-072a-1f81-3214-448de3285e86
+acl_roles_actions_775: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1c5d3bcb-a58f-ffd2-4577-45c3d060c0b9
+  deleted: "0"
+  action_id: 7ba55915-bab3-7ba7-53d8-448de335c50a
+acl_roles_actions_512: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ec7d3595-4a4a-a998-fb43-454a912e121f
+  deleted: "0"
+  action_id: e2133efb-3c3c-fa7f-0cff-448de3e797cf
+acl_roles_actions_644: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b65b2158-8a0a-e0b2-35d9-45621788fc10
+  deleted: "0"
+  action_id: 767f43e7-8743-7cc2-4226-448de33c7b17
+acl_roles_actions_776: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1d46476a-f73e-404d-0262-45c3d0a9bdb8
+  deleted: "0"
+  action_id: 77bd44ca-072a-1f81-3214-448de3285e86
+acl_roles_actions_513: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ed629551-e368-b5e2-8f7d-454a911776c0
+  deleted: "0"
+  action_id: e761e465-d870-12ce-40e4-448de3db9436
+acl_roles_actions_645: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b72e3c3d-9a3c-a99f-40ba-45621778a168
+  deleted: "0"
+  action_id: e2133efb-3c3c-fa7f-0cff-448de3e797cf
+acl_roles_actions_777: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1e1a019f-dee0-62da-0ef9-45c3d081dbab
+  deleted: "0"
+  action_id: 767f43e7-8743-7cc2-4226-448de33c7b17
+acl_roles_actions_090: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 539802ff-031a-4fdc-e44c-448efb2e3e0f
+  deleted: "1"
+  action_id: 456fb2d0-e090-9e53-bf83-448de3935cf1
+acl_roles_actions_514: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ee4aa26c-4796-bce7-a324-454a91069ef7
+  deleted: "0"
+  action_id: e61c07b4-863b-5b5a-6757-448de35b1bcf
+acl_roles_actions_646: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b818ddaa-29aa-79a1-9a7e-45621725f1f8
+  deleted: "0"
+  action_id: e761e465-d870-12ce-40e4-448de3db9436
+acl_roles_actions_778: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1f0ebc38-c3fa-fe04-ccb3-45c3d0bd6f69
+  deleted: "0"
+  action_id: e2133efb-3c3c-fa7f-0cff-448de3e797cf
+acl_roles_actions_091: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 60ca0e83-9096-bcf3-d421-448efb0287d6
+  deleted: "1"
+  action_id: 4434f392-d93e-e1e8-cbfa-448de32e1a8d
+acl_roles_actions_092: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 6de4066c-a0bf-9c3b-ca4b-448efb2de003
+  deleted: "1"
+  action_id: f12a1037-c29a-5809-2bed-448de3e17420
+acl_roles_actions_515: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ef2d68ac-efb7-13ec-29a2-454a915d1ae3
+  deleted: "0"
+  action_id: ea20b67b-2d0a-b9eb-9c64-448de3941db0
+acl_roles_actions_647: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b8fe4d47-1ed8-bc39-917b-456217bf7b69
+  deleted: "0"
+  action_id: e61c07b4-863b-5b5a-6757-448de35b1bcf
+acl_roles_actions_779: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 1ffc5e7b-cf7a-6659-3343-45c3d0417f49
+  deleted: "0"
+  action_id: e761e465-d870-12ce-40e4-448de3db9436
+acl_roles_actions_093: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 7b9303d1-1edb-8354-83e5-448efbf7b09c
+  deleted: "1"
+  action_id: 29b20168-8cad-a5b2-a18e-448de303b168
+acl_roles_actions_516: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: effc29a7-f8e9-94c9-6657-454a91a887b2
+  deleted: "0"
+  action_id: e8bd95d8-8718-01cb-c2b4-448de361e082
+acl_roles_actions_648: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: b9e35ad9-209e-a2c3-6865-45621707156e
+  deleted: "0"
+  action_id: ea20b67b-2d0a-b9eb-9c64-448de3941db0
+acl_roles_actions_094: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 896b0b7e-0a86-0762-9637-448efbc0ced0
+  deleted: "1"
+  action_id: 145f01fd-3f8e-64db-54cb-448de3363ed8
+acl_roles_actions_780: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 20e51664-efc6-7dd7-1737-45c3d0b1cfde
+  deleted: "0"
+  action_id: e61c07b4-863b-5b5a-6757-448de35b1bcf
+acl_roles_actions_517: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: f0df4254-380c-6606-ea54-454a91b519a2
+  deleted: "0"
+  action_id: e4c0e467-1184-4239-c61e-448de386e504
+acl_roles_actions_649: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: babb7457-da87-0dc1-141f-456217dcb028
+  deleted: "0"
+  action_id: e8bd95d8-8718-01cb-c2b4-448de361e082
+acl_roles_actions_095: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 97100444-4b04-56f4-1506-448efbf10c29
+  deleted: "1"
+  action_id: 54250fe2-3517-099e-1108-448de3ae057e
+acl_roles_actions_781: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 21b730af-47ac-cb27-f96f-45c3d07fcfb0
+  deleted: "0"
+  action_id: ea20b67b-2d0a-b9eb-9c64-448de3941db0
+acl_roles_actions_518: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: f1c0527e-0240-17e5-7fe5-454a91ba169e
+  deleted: "0"
+  action_id: e3708a50-c3ea-838a-9152-448de3fd5898
+acl_roles_actions_096: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: a3ce0b0f-bad7-8982-a88b-448efbdd18fa
+  deleted: "1"
+  action_id: 3f690132-fa11-be79-bd99-448de3716fa7
+acl_roles_actions_650: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: bba1ad0f-5fae-1062-5e5e-456217e1f66f
+  deleted: "0"
+  action_id: e4c0e467-1184-4239-c61e-448de386e504
+acl_roles_actions_782: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 22b4940f-3f51-54fb-d7a1-45c3d09b28fa
+  deleted: "0"
+  action_id: e8bd95d8-8718-01cb-c2b4-448de361e082
+acl_roles_actions_519: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: f2a095e8-8312-e8e7-cf03-454a91b3c3d8
+  deleted: "0"
+  action_id: 64900e81-97f2-2ea9-c91c-448de31f66f7
+acl_roles_actions_097: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: b1f807a7-7d8e-b6fa-f08a-448efb1cbf82
+  deleted: "1"
+  action_id: f3f0f075-c73f-28bc-cabe-448de3e74652
+acl_roles_actions_651: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: bc88cd7b-b3ae-6ad2-209f-4562177caa05
+  deleted: "0"
+  action_id: e3708a50-c3ea-838a-9152-448de3fd5898
+acl_roles_actions_783: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 239d785c-599f-da77-63c4-45c3d0243ff6
+  deleted: "0"
+  action_id: e4c0e467-1184-4239-c61e-448de386e504
+acl_roles_actions_098: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: c00d0f9c-4ee7-99ef-a5f8-448efb91c0a4
+  deleted: "1"
+  action_id: f2a15d69-e258-9b38-d14f-448de3731c09
+acl_roles_actions_520: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: f36bf842-04d5-6e56-878a-454a91fe687e
+  deleted: "0"
+  action_id: 5b2f0b29-f309-9e36-890a-448de395a7a2
+acl_roles_actions_652: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: bd6854e2-840b-fb06-3ab5-456217377b89
+  deleted: "0"
+  action_id: 64900e81-97f2-2ea9-c91c-448de31f66f7
+acl_roles_actions_784: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 248527f4-b006-59a5-af9e-45c3d06905e0
+  deleted: "0"
+  action_id: e3708a50-c3ea-838a-9152-448de3fd5898
+acl_roles_actions_099: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: cdc80c6e-ed1c-6210-c78d-448efb09352c
+  deleted: "1"
+  action_id: 60a14ba0-4ab1-8738-f1c7-448de382f9d1
+acl_roles_actions_521: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 28800550-253e-5d62-f6c2-454a91153a99
+  deleted: "0"
+  action_id: 45dd05a2-bfee-d3f2-b743-448de3c78c1e
+acl_roles_actions_653: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: be425ac0-dac2-48c3-1ff3-4562176841c2
+  deleted: "0"
+  action_id: 5b2f0b29-f309-9e36-890a-448de395a7a2
+acl_roles_actions_785: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2565bd4a-1df0-87c9-379e-45c3d0f4d320
+  deleted: "0"
+  action_id: 64900e81-97f2-2ea9-c91c-448de31f66f7
+acl_roles_actions_522: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 111a0f6c-9b65-7f71-fd60-454a91f94ae3
+  deleted: "0"
+  action_id: 85f100f4-de58-6865-8068-448de33fc34b
+acl_roles_actions_654: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: bf27ad8f-f017-b531-4879-4562170d2743
+  deleted: "0"
+  action_id: 45dd05a2-bfee-d3f2-b743-448de3c78c1e
+acl_roles_actions_786: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 264ddbb8-45db-185a-e20b-45c3d088f5f7
+  deleted: "0"
+  action_id: 5b2f0b29-f309-9e36-890a-448de395a7a2
+acl_roles_actions_787: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2737392d-2ef8-de6d-28c7-45c3d03df299
+  deleted: "0"
+  action_id: 45dd05a2-bfee-d3f2-b743-448de3c78c1e
+acl_roles_actions_523: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 1f890128-25c2-9091-6128-454a913ac24e
+  deleted: "0"
+  action_id: 71540262-c819-5e1e-befb-448de3963659
+acl_roles_actions_655: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c010e1ed-a2e9-de06-eda3-456217d0c014
+  deleted: "0"
+  action_id: 85f100f4-de58-6865-8068-448de33fc34b
+acl_roles_actions_788: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 281e14e5-4cf8-44f5-57d2-45c3d0bc947d
+  deleted: "0"
+  action_id: 85f100f4-de58-6865-8068-448de33fc34b
+acl_roles_actions_524: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 2c9c0b0a-e6db-d968-d5ea-454a914fdb33
+  deleted: "0"
+  action_id: 31380dd9-951d-8006-11bb-448de3fd8c9e
+acl_roles_actions_656: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c0f2d371-f3fb-fabe-3157-456217a915c0
+  deleted: "0"
+  action_id: 71540262-c819-5e1e-befb-448de3963659
+acl_roles_actions_789: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 28fbb9aa-9437-12ab-dbad-45c3d0e7db8f
+  deleted: "0"
+  action_id: 71540262-c819-5e1e-befb-448de3963659
+acl_roles_actions_525: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 3aeb08b6-d3d6-7041-9677-454a91e92903
+  deleted: "0"
+  action_id: 1b8b05f8-2d89-d0dc-30ec-448de3fa37df
+acl_roles_actions_657: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c1cf74ae-6c86-55d1-dee5-45621713e860
+  deleted: "0"
+  action_id: 31380dd9-951d-8006-11bb-448de3fd8c9e
+acl_roles_actions_526: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 49450116-6804-cdf4-4669-454a91c20e8d
+  deleted: "0"
+  action_id: 26f4b89a-eb29-cec9-a8ae-448de3bd3229
+acl_roles_actions_658: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c2b8e238-7dd1-7102-0bb7-456217165be4
+  deleted: "0"
+  action_id: 1b8b05f8-2d89-d0dc-30ec-448de3fa37df
+acl_roles_actions_790: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 29e7d573-1c47-eda6-b077-45c3d0a72525
+  deleted: "0"
+  action_id: 31380dd9-951d-8006-11bb-448de3fd8c9e
+acl_roles_actions_527: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 577c04be-2e9b-a02c-bd1f-454a91d95e81
+  deleted: "0"
+  action_id: 2c1298a9-0002-50fd-93bd-448de3912cec
+acl_roles_actions_659: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c3a9df59-a97e-83eb-47a7-456217e80ec7
+  deleted: "0"
+  action_id: 26f4b89a-eb29-cec9-a8ae-448de3bd3229
+acl_roles_actions_791: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2adb3504-98f5-6fd6-f592-45c3d08fb78c
+  deleted: "0"
+  action_id: 1b8b05f8-2d89-d0dc-30ec-448de3fa37df
+acl_roles_actions_528: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 63f50c2e-1b5c-1392-9678-454a91cde3bb
+  deleted: "0"
+  action_id: 2ad8d4cc-c6ee-c398-b910-448de32ce969
+acl_roles_actions_792: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2bb823bc-e689-2b83-be8a-45c3d066be17
+  deleted: "0"
+  action_id: 26f4b89a-eb29-cec9-a8ae-448de3bd3229
+acl_roles_actions_529: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 724207f2-ff7f-187c-47e2-454a911a48ae
+  deleted: "0"
+  action_id: 2eb94fb8-0e61-8e41-effb-448de3baa54b
+acl_roles_actions_660: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c480d1e8-a580-b7d6-fbc9-456217e56efa
+  deleted: "0"
+  action_id: 2c1298a9-0002-50fd-93bd-448de3912cec
+acl_roles_actions_793: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2c9ba6df-b871-77e7-6b19-45c3d04d8fce
+  deleted: "0"
+  action_id: 2c1298a9-0002-50fd-93bd-448de3912cec
+acl_roles_actions_661: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c563e4ae-920f-3793-eafd-456217a9de74
+  deleted: "0"
+  action_id: 2ad8d4cc-c6ee-c398-b910-448de32ce969
+acl_roles_actions_794: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2d83ba4d-cc09-e6f2-d115-45c3d0da9dbf
+  deleted: "0"
+  action_id: 2ad8d4cc-c6ee-c398-b910-448de32ce969
+acl_roles_actions_530: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 805406a3-1528-1263-17ea-454a91bcac80
+  deleted: "0"
+  action_id: 2d660969-d98e-3e2b-83b1-448de3006cc7
+acl_roles_actions_662: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c64d22d1-6f4f-0732-d1df-45621711204a
+  deleted: "0"
+  action_id: 2eb94fb8-0e61-8e41-effb-448de3baa54b
+acl_roles_actions_795: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2e73d236-0be9-8f95-aba8-45c3d03ca29f
+  deleted: "0"
+  action_id: 2eb94fb8-0e61-8e41-effb-448de3baa54b
+acl_roles_actions_531: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8ea60783-bc70-a62a-9b21-454a91a3bb54
+  deleted: "0"
+  action_id: 2986075e-1768-0b7b-cbea-448de3ab5ef3
+acl_roles_actions_663: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c73cbd19-bb76-dbaa-9afd-45621702f493
+  deleted: "0"
+  action_id: 2d660969-d98e-3e2b-83b1-448de3006cc7
+acl_roles_actions_796: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 2f4687ab-a895-4ff1-4ed5-45c3d0cd9492
+  deleted: "0"
+  action_id: 2d660969-d98e-3e2b-83b1-448de3006cc7
+acl_roles_actions_400: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 857fe431-04d1-a210-e743-454a91695529
+  deleted: "0"
+  action_id: c71a3a4a-b40f-d972-a4bf-448de3aa06cd
+acl_roles_actions_532: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9b4d09e1-fe11-3496-f226-454a9117dcf6
+  deleted: "0"
+  action_id: 283450b5-5f79-01ff-a0e8-448de3de304e
+acl_roles_actions_664: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c80d5acb-0cf1-875b-554a-456217bd4361
+  deleted: "0"
+  action_id: 2986075e-1768-0b7b-cbea-448de3ab5ef3
+acl_roles_actions_797: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 302ead5c-39e4-7baf-e185-45c3d071cee4
+  deleted: "0"
+  action_id: 2986075e-1768-0b7b-cbea-448de3ab5ef3
+acl_roles_actions_401: 
+  access_override: "-99"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 866ffdb7-2301-5efc-9490-454a911b9e78
+  deleted: "0"
+  action_id: cc22dfe0-7d6a-c7ed-3181-448de3860840
+acl_roles_actions_533: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:18
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 53c8d198-c9e5-320f-9c47-4562171198ae
+  deleted: "0"
+  action_id: c71a3a4a-b40f-d972-a4bf-448de3aa06cd
+acl_roles_actions_665: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:21
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: c8f69bd1-fe50-971c-6a02-456217b2142c
+  deleted: "0"
+  action_id: 283450b5-5f79-01ff-a0e8-448de3de304e
+acl_roles_actions_798: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:16
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: 31208f57-13b2-1c3d-a79c-45c3d0b8b9b3
+  deleted: "0"
+  action_id: 283450b5-5f79-01ff-a0e8-448de3de304e
+acl_roles_actions_402: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 87460ba3-f20b-3c46-9515-454a91076cd2
+  deleted: "0"
+  action_id: cad560f2-5e17-b913-0e6e-448de3ec950d
+acl_roles_actions_534: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:18
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 54be2499-a98c-59b4-461f-4562175789a6
+  deleted: "0"
+  action_id: cc22dfe0-7d6a-c7ed-3181-448de3860840
+acl_roles_actions_666: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: acb4c25e-ec2c-1731-ae9f-45c3d05e94f2
+  deleted: "0"
+  action_id: c71a3a4a-b40f-d972-a4bf-448de3aa06cd
+acl_roles_actions_403: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8819f3f5-a743-ce7f-1646-454a91e3df58
+  deleted: "0"
+  action_id: cea42929-edbb-7f4d-d175-448de331f153
+acl_roles_actions_535: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:18
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5586ba00-d970-0094-5d05-4562170e18da
+  deleted: "0"
+  action_id: cad560f2-5e17-b913-0e6e-448de3ec950d
+acl_roles_actions_667: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ad92190c-3016-172b-6233-45c3d03b7754
+  deleted: "0"
+  action_id: cc22dfe0-7d6a-c7ed-3181-448de3860840
+acl_roles_actions_404: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 88f834c4-689f-a432-e0b3-454a91845070
+  deleted: "0"
+  action_id: cd5e9874-115c-ee98-5895-448de34249d9
+acl_roles_actions_536: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:18
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 566c1251-2426-2606-392d-456217f60f5a
+  deleted: "0"
+  action_id: cea42929-edbb-7f4d-d175-448de331f153
+acl_roles_actions_668: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ae7d14b3-2c14-3c0a-d740-45c3d0be2ccc
+  deleted: "0"
+  action_id: cad560f2-5e17-b913-0e6e-448de3ec950d
+acl_roles_actions_405: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 89d2da85-7b13-143b-8753-454a910b37b9
+  deleted: "0"
+  action_id: c9921ea4-9dc0-1161-39c4-448de34d4b5e
+acl_roles_actions_537: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:18
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 57514c2b-e84d-bd1f-14af-456217692996
+  deleted: "0"
+  action_id: cd5e9874-115c-ee98-5895-448de34249d9
+acl_roles_actions_669: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: af624f15-bfa4-4025-079e-45c3d016cd07
+  deleted: "0"
+  action_id: cea42929-edbb-7f4d-d175-448de331f153
+acl_roles_actions_406: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8aa92248-3d5d-7127-e696-454a91641f0f
+  deleted: "0"
+  action_id: c86503d2-d83e-6689-b3d2-448de31bffe9
+acl_roles_actions_538: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:18
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5833b5d4-c588-fd45-f8c3-456217b61abe
+  deleted: "0"
+  action_id: c9921ea4-9dc0-1161-39c4-448de34d4b5e
+acl_roles_actions_670: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b1e508d1-1d7d-8423-6558-45c3d0e5aa60
+  deleted: "0"
+  action_id: cd5e9874-115c-ee98-5895-448de34249d9
+acl_roles_actions_407: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8b854836-962a-8935-4cc0-454a91841fe6
+  deleted: "0"
+  action_id: a433d2ba-8cac-29c8-80d7-448de3f18be1
+acl_roles_actions_539: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 58f8e6b4-75a5-b379-bab5-4562170f4ec4
+  deleted: "0"
+  action_id: c86503d2-d83e-6689-b3d2-448de31bffe9
+acl_roles_actions_671: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b2d5e21a-69f4-f552-788e-45c3d0b574ba
+  deleted: "0"
+  action_id: c9921ea4-9dc0-1161-39c4-448de34d4b5e
+acl_roles_actions_408: 
+  access_override: "-99"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8c69f994-609a-9908-ac90-454a917446ae
+  deleted: "0"
+  action_id: a949b969-c5c9-480f-9aad-448de3b22620
+acl_roles_actions_540: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 59e3ea47-afe3-6820-d7d2-456217334fdf
+  deleted: "0"
+  action_id: a433d2ba-8cac-29c8-80d7-448de3f18be1
+acl_roles_actions_672: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b3b9822c-31d9-a6e3-a791-45c3d020ed0b
+  deleted: "0"
+  action_id: c86503d2-d83e-6689-b3d2-448de31bffe9
+acl_roles_actions_409: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8d491f5f-a9ba-4f92-814b-454a917f115a
+  deleted: "0"
+  action_id: a814fee4-f7a1-4587-e48e-448de3382617
+acl_roles_actions_541: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5accb47d-781e-2908-1eac-456217b66df3
+  deleted: "0"
+  action_id: a949b969-c5c9-480f-9aad-448de3b22620
+acl_roles_actions_673: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b48b5aa5-9974-3484-72fb-45c3d01697f1
+  deleted: "0"
+  action_id: a433d2ba-8cac-29c8-80d7-448de3f18be1
+acl_roles_actions_410: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8e2b8f89-d52b-6b32-bd4a-454a915ab461
+  deleted: "0"
+  action_id: abeead0e-b3c4-6b44-f855-448de37ca52c
+acl_roles_actions_542: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5bb291fe-415d-d9d9-2750-4562177e575c
+  deleted: "0"
+  action_id: a814fee4-f7a1-4587-e48e-448de3382617
+acl_roles_actions_674: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b5845b11-00a4-8be4-9971-45c3d0fd8c8f
+  deleted: "0"
+  action_id: a949b969-c5c9-480f-9aad-448de3b22620
+acl_roles_actions_411: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8efab445-8af0-5afa-a68f-454a91279256
+  deleted: "0"
+  action_id: aa9ad294-aac7-441c-e0fd-448de37bfd6f
+acl_roles_actions_543: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5c77e157-3155-a48d-42dd-456217b140ba
+  deleted: "0"
+  action_id: abeead0e-b3c4-6b44-f855-448de37ca52c
+acl_roles_actions_675: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b66a0e65-bc0e-68b0-0e71-45c3d0b95746
+  deleted: "0"
+  action_id: a814fee4-f7a1-4587-e48e-448de3382617
+acl_roles_actions_412: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 8fd8c4e5-5240-852a-699d-454a917a6dcc
+  deleted: "0"
+  action_id: a6c5ad8b-3b7b-add7-a93e-448de3ef4a3a
+acl_roles_actions_544: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5d5ea88e-edd8-617c-b9c2-4562176f4141
+  deleted: "0"
+  action_id: aa9ad294-aac7-441c-e0fd-448de37bfd6f
+acl_roles_actions_676: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b7455a40-1298-cee4-f9a3-45c3d09d49b3
+  deleted: "0"
+  action_id: abeead0e-b3c4-6b44-f855-448de37ca52c
+acl_roles_actions_413: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 90b68078-58f6-bf98-7a54-454a91dd31b8
+  deleted: "0"
+  action_id: a5754f70-5f74-8c1a-627c-448de371c63e
+acl_roles_actions_545: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5e46cfd3-ff91-242c-f3a2-4562177efed9
+  deleted: "0"
+  action_id: a6c5ad8b-3b7b-add7-a93e-448de3ef4a3a
+acl_roles_actions_677: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b81ee0d1-d061-be4a-eef2-45c3d0bd38ee
+  deleted: "0"
+  action_id: aa9ad294-aac7-441c-e0fd-448de37bfd6f
+acl_roles_actions_414: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 919186fa-c02e-0135-f2e6-454a9199a2a5
+  deleted: "0"
+  action_id: 9cc24d89-7944-46b2-99bc-448de3463b05
+acl_roles_actions_546: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 5f33720f-59eb-cc65-1101-456217dbfaba
+  deleted: "0"
+  action_id: a5754f70-5f74-8c1a-627c-448de371c63e
+acl_roles_actions_678: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b90a8d8f-c258-fee7-6ca6-45c3d0e52638
+  deleted: "0"
+  action_id: a6c5ad8b-3b7b-add7-a93e-448de3ef4a3a
+acl_roles_actions_415: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 925b3d8a-93a0-ee6d-4999-454a91865e22
+  deleted: "0"
+  action_id: a1e23fdb-4f8c-a802-bfaa-448de38ea58b
+acl_roles_actions_547: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 600dc7fa-5ee9-ba2f-9fb7-4562177ae4d9
+  deleted: "0"
+  action_id: 9cc24d89-7944-46b2-99bc-448de3463b05
+acl_roles_actions_679: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: b9fada61-25e6-0433-9a87-45c3d07a582c
+  deleted: "0"
+  action_id: a5754f70-5f74-8c1a-627c-448de371c63e
+acl_roles_actions_416: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 93393213-b5a6-239f-6d27-454a9198df82
+  deleted: "0"
+  action_id: a08db623-5232-0be3-35b5-448de3c56f1a
+acl_roles_actions_548: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 60f4d319-e810-3e4a-58cb-456217f0cdb4
+  deleted: "0"
+  action_id: a1e23fdb-4f8c-a802-bfaa-448de38ea58b
+acl_roles_actions_680: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: bad38ff1-0343-d654-c5f1-45c3d083a9ef
+  deleted: "0"
+  action_id: 9cc24d89-7944-46b2-99bc-448de3463b05
+acl_roles_actions_417: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9417957a-2229-32be-ed11-454a9138380d
+  deleted: "0"
+  action_id: a46bbb84-aea3-3fa3-b91d-448de335ce11
+acl_roles_actions_549: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 61d8b79a-c78d-1a53-7e8a-456217f770ca
+  deleted: "0"
+  action_id: a08db623-5232-0be3-35b5-448de3c56f1a
+acl_roles_actions_681: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: bbba6891-7b39-67d7-9e8d-45c3d000f0ff
+  deleted: "0"
+  action_id: a1e23fdb-4f8c-a802-bfaa-448de38ea58b
+acl_roles_actions_418: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 94ffec55-4c59-e636-2f06-454a9111b700
+  deleted: "0"
+  action_id: a3232668-49ee-21ee-1593-448de31c8f05
+acl_roles_actions_682: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: bca140f0-a1e0-d0b2-b168-45c3d053bd30
+  deleted: "0"
+  action_id: a08db623-5232-0be3-35b5-448de3c56f1a
+acl_roles_actions_419: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9b5c11ad-c982-5bd1-5a20-454a91b0e4b7
+  deleted: "0"
+  action_id: 9f44b29b-2dca-85f9-b31f-448de39dc9aa
+acl_roles_actions_550: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 62bdcade-93ee-334e-7736-456217bd5071
+  deleted: "0"
+  action_id: a46bbb84-aea3-3fa3-b91d-448de335ce11
+acl_roles_actions_683: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: bd8580fd-984f-e5a3-16ce-45c3d0ecd54f
+  deleted: "0"
+  action_id: a46bbb84-aea3-3fa3-b91d-448de335ce11
+acl_roles_actions_551: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 638bcfc3-b03e-6c1a-bc3b-456217548a1e
+  deleted: "0"
+  action_id: a3232668-49ee-21ee-1593-448de31c8f05
+acl_roles_actions_684: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: be63faca-f443-4a4c-f4e7-45c3d0fb0082
+  deleted: "0"
+  action_id: a3232668-49ee-21ee-1593-448de31c8f05
+acl_roles_actions_420: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9c2f60e9-032a-e7cd-6e03-454a917147a0
+  deleted: "0"
+  action_id: 9e14a8a5-e239-d28e-4e46-448de30dd423
+acl_roles_actions_552: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 64729fb0-5744-6763-36cc-4562177ea373
+  deleted: "0"
+  action_id: 9f44b29b-2dca-85f9-b31f-448de39dc9aa
+acl_roles_actions_685: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: bf481fd3-3782-dcb1-dfd1-45c3d094dee8
+  deleted: "0"
+  action_id: 9f44b29b-2dca-85f9-b31f-448de39dc9aa
+acl_roles_actions_421: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9d0f0b31-fa6e-8aa8-cb14-454a916fabcd
+  deleted: "0"
+  action_id: c5615cbb-5852-f362-2c78-448de3f2af58
+acl_roles_actions_553: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 655a205e-b4d0-cb10-77ee-4562171de419
+  deleted: "0"
+  action_id: 9e14a8a5-e239-d28e-4e46-448de30dd423
+acl_roles_actions_686: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c02c6fb7-05dd-4341-8307-45c3d01dda8d
+  deleted: "0"
+  action_id: 9e14a8a5-e239-d28e-4e46-448de30dd423
+acl_roles_actions_422: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9ded0b50-0c41-ebf6-d429-454a91fd7ef6
+  deleted: "0"
+  action_id: cab28c73-6052-5bf1-e7f9-448de3b81d69
+acl_roles_actions_554: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6642dfb8-023b-b7cc-cbdc-45621711c8da
+  deleted: "0"
+  action_id: c5615cbb-5852-f362-2c78-448de3f2af58
+acl_roles_actions_687: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c11508d2-89c6-5c2a-7524-45c3d0882369
+  deleted: "0"
+  action_id: c5615cbb-5852-f362-2c78-448de3f2af58
+acl_roles_actions_423: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9ecdde9e-d146-703f-829e-454a91422371
+  deleted: "0"
+  action_id: c95b359b-529b-3948-ceb6-448de34b57e2
+acl_roles_actions_555: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6715da97-9ab5-d65f-cf3e-456217367a65
+  deleted: "0"
+  action_id: cab28c73-6052-5bf1-e7f9-448de3b81d69
+acl_roles_actions_424: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: 9fab0f11-62ac-06e7-713d-454a919de52c
+  deleted: "0"
+  action_id: cd4acd6d-276b-6b97-1552-448de3039203
+acl_roles_actions_556: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 67f99ffd-463f-c63e-d640-456217d50b7d
+  deleted: "0"
+  action_id: c95b359b-529b-3948-ceb6-448de34b57e2
+acl_roles_actions_688: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c1f3dd5a-c32a-1e3b-3979-45c3d0240f26
+  deleted: "0"
+  action_id: cab28c73-6052-5bf1-e7f9-448de3b81d69
+acl_roles_actions_425: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a085c48e-a71a-79e9-8599-454a91f3e02a
+  deleted: "0"
+  action_id: cbf45b99-2808-72ce-9379-448de30dca3f
+acl_roles_actions_557: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 68e273ca-830a-aa28-3006-4562179bf249
+  deleted: "0"
+  action_id: cd4acd6d-276b-6b97-1552-448de3039203
+acl_roles_actions_689: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c2db26ff-a3a8-27a2-d322-45c3d0611b78
+  deleted: "0"
+  action_id: c95b359b-529b-3948-ceb6-448de34b57e2
+acl_roles_actions_426: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a166eabd-0181-c662-936d-454a911a90f5
+  deleted: "0"
+  action_id: c802ca32-2308-d05e-7de1-448de3eb08e9
+acl_roles_actions_558: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 69c80da3-3160-759d-ba62-456217b3e7aa
+  deleted: "0"
+  action_id: cbf45b99-2808-72ce-9379-448de30dca3f
+acl_roles_actions_690: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c3c47888-a08f-9465-b9c8-45c3d0644ee7
+  deleted: "0"
+  action_id: cd4acd6d-276b-6b97-1552-448de3039203
+acl_roles_actions_427: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a2490b36-941b-95e4-b9e8-454a911d343f
+  deleted: "0"
+  action_id: c6c182e0-cc75-caf2-3b3c-448de31f3e19
+acl_roles_actions_559: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6a98951a-aa29-0f89-6691-45621730ae48
+  deleted: "0"
+  action_id: c802ca32-2308-d05e-7de1-448de3eb08e9
+acl_roles_actions_691: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c4b5e946-89a1-b327-1240-45c3d03f07a8
+  deleted: "0"
+  action_id: cbf45b99-2808-72ce-9379-448de30dca3f
+acl_roles_actions_428: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a31e4c9e-1e8e-74c9-0d7b-454a9180b961
+  deleted: "0"
+  action_id: 221f663f-82f0-2200-89a0-448de3ddd8c9
+acl_roles_actions_560: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6b7f6130-cd22-eb33-e175-45621743b3ca
+  deleted: "0"
+  action_id: c6c182e0-cc75-caf2-3b3c-448de31f3e19
+acl_roles_actions_692: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c589883c-c5d9-43ca-d898-45c3d0667590
+  deleted: "0"
+  action_id: c802ca32-2308-d05e-7de1-448de3eb08e9
+acl_roles_actions_429: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a3f5b728-0032-5186-5d40-454a913a623d
+  deleted: "0"
+  action_id: 273f2627-c096-442d-96c0-448de3a20eea
+acl_roles_actions_561: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6c665c9b-a5ed-0b5c-840e-4562176b9b86
+  deleted: "0"
+  action_id: 221f663f-82f0-2200-89a0-448de3ddd8c9
+acl_roles_actions_693: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c6708911-ec8d-7ec2-9316-45c3d0ca4b27
+  deleted: "0"
+  action_id: c6c182e0-cc75-caf2-3b3c-448de31f3e19
+acl_roles_actions_430: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a4d6844c-bc70-1e93-b1ef-454a91091767
+  deleted: "0"
+  action_id: 25f40d55-a7f7-a562-72b5-448de3b48bb1
+acl_roles_actions_562: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6d4a0982-2467-4198-2286-456217e3c0e4
+  deleted: "0"
+  action_id: 273f2627-c096-442d-96c0-448de3a20eea
+acl_roles_actions_694: 
+  access_override: "-98"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c77e727d-7fc5-7871-7035-45c3d051b56f
+  deleted: "0"
+  action_id: 221f663f-82f0-2200-89a0-448de3ddd8c9
+acl_roles_actions_431: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a5b4f89d-ecb9-634e-4726-454a9116757e
+  deleted: "0"
+  action_id: 29c1c8c2-17da-915b-fe12-448de364bf96
+acl_roles_actions_563: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6e1b40c1-443c-6702-232f-45621762abf2
+  deleted: "0"
+  action_id: 25f40d55-a7f7-a562-72b5-448de3b48bb1
+acl_roles_actions_695: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c872018a-7f0c-b4be-c1b4-45c3d0916581
+  deleted: "0"
+  action_id: 273f2627-c096-442d-96c0-448de3a20eea
+acl_roles_actions_300: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1887044a-eaff-bcf7-b927-453d4a4b6ec4
+  deleted: "0"
+  action_id: 24b5f92a-3a6c-93bb-cf1f-448de37d5174
+acl_roles_actions_432: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a68ca7f0-4fae-de5e-873d-454a913295bd
+  deleted: "0"
+  action_id: 2878c403-10a9-a6ce-7d2b-448de3f50b87
+acl_roles_actions_564: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6f068b41-120a-1bba-eeb0-456217a047f3
+  deleted: "0"
+  action_id: 29c1c8c2-17da-915b-fe12-448de364bf96
+acl_roles_actions_696: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: c93b4146-b9a6-5955-482a-45c3d0f57ec9
+  deleted: "0"
+  action_id: 25f40d55-a7f7-a562-72b5-448de3b48bb1
+acl_roles_actions_301: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 271c0905-66e0-7956-64e7-453d4a60de9d
+  deleted: "0"
+  action_id: 236bdc15-30b1-9763-b2bf-448de3f2be2f
+acl_roles_actions_433: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a75f9dc4-4fb8-e6ad-3eb0-454a91aa9e0b
+  deleted: "0"
+  action_id: 24b5f92a-3a6c-93bb-cf1f-448de37d5174
+acl_roles_actions_565: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 6feebc93-b996-1cb6-576e-456217a9a9c3
+  deleted: "0"
+  action_id: 2878c403-10a9-a6ce-7d2b-448de3f50b87
+acl_roles_actions_697: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: ca2b7d5d-2310-7820-1d29-45c3d0b17991
+  deleted: "0"
+  action_id: 29c1c8c2-17da-915b-fe12-448de364bf96
+acl_roles_actions_302: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 33e1007e-f88d-863a-b6f0-453d4aa87acd
+  deleted: "0"
+  action_id: 8f5655ed-e50f-ca5f-e1a0-448de3e1de15
+acl_roles_actions_434: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a83fd38b-d31b-12e6-b959-454a9173335d
+  deleted: "0"
+  action_id: 236bdc15-30b1-9763-b2bf-448de3f2be2f
+acl_roles_actions_566: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 70cee81f-c194-1272-5394-4562179b65ac
+  deleted: "0"
+  action_id: 24b5f92a-3a6c-93bb-cf1f-448de37d5174
+acl_roles_actions_698: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: cb10364b-2726-c417-aa18-45c3d0427afb
+  deleted: "0"
+  action_id: 2878c403-10a9-a6ce-7d2b-448de3f50b87
+acl_roles_actions_303: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 42e30368-dea6-9145-ff1a-453d4a41148c
+  deleted: "0"
+  action_id: 94502fc9-f65e-dc03-e85f-448de398b0a2
+acl_roles_actions_435: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a91f6878-31a5-ed9c-c70d-454a91cbcffe
+  deleted: "0"
+  action_id: 8f5655ed-e50f-ca5f-e1a0-448de3e1de15
+acl_roles_actions_567: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 71a3f890-6375-0a28-94ae-456217f67a60
+  deleted: "0"
+  action_id: 236bdc15-30b1-9763-b2bf-448de3f2be2f
+acl_roles_actions_699: 
+  access_override: "90"
+  date_modified: 2007-02-07 23:53:15
+  role_id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  id: cbf46ff5-43e2-c5e3-9d60-45c3d083e4c7
+  deleted: "0"
+  action_id: 24b5f92a-3a6c-93bb-cf1f-448de37d5174
+acl_roles_actions_304: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 519400de-1e27-4f1a-39a8-453d4a1acbb0
+  deleted: "0"
+  action_id: 930a32fa-6627-f361-b498-448de30fca51
+acl_roles_actions_436: 
+  access_override: "-99"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: a9fd1695-f6d7-6c97-ccaf-454a91529a62
+  deleted: "0"
+  action_id: 94502fc9-f65e-dc03-e85f-448de398b0a2
+acl_roles_actions_568: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 728d717d-9630-7e42-50f5-456217fc2c21
+  deleted: "0"
+  action_id: 8f5655ed-e50f-ca5f-e1a0-448de3e1de15
+acl_roles_actions_305: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 606b0019-8d07-1143-a225-453d4acd4405
+  deleted: "0"
+  action_id: 96c3bb39-4fd8-6d2b-a178-448de3a2d636
+acl_roles_actions_437: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: aacde203-a2fe-ce03-e00f-454a918a9a16
+  deleted: "0"
+  action_id: 930a32fa-6627-f361-b498-448de30fca51
+acl_roles_actions_569: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7375ffbd-3ae1-b29f-b090-456217c942c3
+  deleted: "0"
+  action_id: 94502fc9-f65e-dc03-e85f-448de398b0a2
+acl_roles_actions_306: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 6e7d07b2-1d4d-c552-897e-453d4a638eee
+  deleted: "0"
+  action_id: 9581b1d7-a089-fb38-57f6-448de33e8ffd
+acl_roles_actions_438: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: abb187ba-36e0-103a-8f4d-454a91ed4abd
+  deleted: "0"
+  action_id: 96c3bb39-4fd8-6d2b-a178-448de3a2d636
+acl_roles_actions_570: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 745df399-0fdc-2ec8-997f-45621702c56b
+  deleted: "0"
+  action_id: 930a32fa-6627-f361-b498-448de30fca51
+acl_roles_actions_307: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 7d3a05c2-fd4e-cc81-f5a2-453d4a2db3c6
+  deleted: "0"
+  action_id: 91c861d6-3f27-d37f-578e-448de30cb6c6
+acl_roles_actions_439: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ac939163-6aa1-f59e-698c-454a9193b6d7
+  deleted: "0"
+  action_id: 9581b1d7-a089-fb38-57f6-448de33e8ffd
+acl_roles_actions_571: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 753e35f6-22c8-aa2d-f408-456217a4eb19
+  deleted: "0"
+  action_id: 96c3bb39-4fd8-6d2b-a178-448de3a2d636
+acl_roles_actions_308: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 8c230801-9943-8d7f-d0b4-453d4a3e4dfd
+  deleted: "0"
+  action_id: 90a09b18-89b8-6cb1-6170-448de38a9c12
+acl_roles_actions_440: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ad744f3a-a042-63dc-99b3-454a9189d6e7
+  deleted: "0"
+  action_id: 91c861d6-3f27-d37f-578e-448de30cb6c6
+acl_roles_actions_572: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7627aeb4-1ce2-c19f-0cb7-456217e87e3f
+  deleted: "0"
+  action_id: 9581b1d7-a089-fb38-57f6-448de33e8ffd
+acl_roles_actions_309: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 9a3702eb-6c54-ac9b-d0b0-453d4ac95388
+  deleted: "0"
+  action_id: 1450f102-780a-716e-1643-448de31f2938
+acl_roles_actions_441: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ae45ff3f-9abf-6886-4f86-454a9101f043
+  deleted: "0"
+  action_id: 90a09b18-89b8-6cb1-6170-448de38a9c12
+acl_roles_actions_573: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7712dde3-996f-a859-5dab-45621740d5a5
+  deleted: "0"
+  action_id: 91c861d6-3f27-d37f-578e-448de30cb6c6
+acl_roles_actions_442: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: af2703a3-ff38-1a96-6402-454a914a8ad5
+  deleted: "0"
+  action_id: 1450f102-780a-716e-1643-448de31f2938
+acl_roles_actions_574: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 77ed28a3-ba4f-6451-2ae0-456217205c8b
+  deleted: "0"
+  action_id: 90a09b18-89b8-6cb1-6170-448de38a9c12
+acl_roles_actions_310: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: a79f0ec5-8eb9-0219-2e16-453d4aeb9116
+  deleted: "0"
+  action_id: 19ae1a8e-033f-4746-c434-448de33fb80d
+acl_roles_actions_443: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b0287dda-06f7-0017-a594-454a91746bb1
+  deleted: "0"
+  action_id: 19ae1a8e-033f-4746-c434-448de33fb80d
+acl_roles_actions_575: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 78cd9ed8-7565-7bdc-0031-456217c2ae51
+  deleted: "0"
+  action_id: 1450f102-780a-716e-1643-448de31f2938
+acl_roles_actions_311: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: b6c70f46-d860-7884-9268-453d4a338e6d
+  deleted: "0"
+  action_id: 186d49d0-16fd-4b4f-9e76-448de3b50d84
+acl_roles_actions_444: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b0fe78e5-b59e-b2c2-416a-454a916e80d6
+  deleted: "0"
+  action_id: 186d49d0-16fd-4b4f-9e76-448de3b50d84
+acl_roles_actions_576: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 79b29782-ad50-a8ce-52a7-456217051cc0
+  deleted: "0"
+  action_id: 19ae1a8e-033f-4746-c434-448de33fb80d
+acl_roles_actions_312: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: c52e0495-3c04-76ca-4fee-453d4ae6fce3
+  deleted: "0"
+  action_id: 1c68c433-f088-a343-774f-448de36d3750
+acl_roles_actions_445: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b1d142ab-319c-20da-8e2e-454a91c43b43
+  deleted: "0"
+  action_id: 1c68c433-f088-a343-774f-448de36d3750
+acl_roles_actions_577: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7a9ab2b6-c92f-aa36-7d84-456217595442
+  deleted: "0"
+  action_id: 186d49d0-16fd-4b4f-9e76-448de3b50d84
+acl_roles_actions_313: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: d31002bf-e323-8a58-a0ba-453d4a0cba4e
+  deleted: "0"
+  action_id: 1b09877a-7141-b383-85bc-448de3bedba7
+acl_roles_actions_446: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b2b0d3c6-7ee9-fa05-4582-454a917c1e8e
+  deleted: "0"
+  action_id: 1b09877a-7141-b383-85bc-448de3bedba7
+acl_roles_actions_578: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7b726454-9b99-114b-4bae-4562179a7b7f
+  deleted: "0"
+  action_id: 1c68c433-f088-a343-774f-448de36d3750
+acl_roles_actions_314: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: e124068e-e6f1-a000-6306-453d4a688883
+  deleted: "0"
+  action_id: 17086691-bdc2-db53-c433-448de33045a4
+acl_roles_actions_447: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b395a7e4-c3e9-281a-2eb8-454a91f36caa
+  deleted: "0"
+  action_id: 17086691-bdc2-db53-c433-448de33045a4
+acl_roles_actions_579: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7c5acbfb-8c23-9cad-142a-4562172c3c0d
+  deleted: "0"
+  action_id: 1b09877a-7141-b383-85bc-448de3bedba7
+acl_roles_actions_315: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: efc30f24-9558-160b-4069-453d4a8fa8e9
+  deleted: "0"
+  action_id: 15ac01f1-a021-18df-c0d3-448de3112d55
+acl_roles_actions_448: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b46f3fc0-ac98-beed-e2aa-454a9126af8b
+  deleted: "0"
+  action_id: 15ac01f1-a021-18df-c0d3-448de3112d55
+acl_roles_actions_316: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: fe6209a1-b744-9cef-0d71-453d4a2fa3b9
+  deleted: "0"
+  action_id: a4d7c647-cae6-c0f6-70ea-448de35efa9e
+acl_roles_actions_449: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b5413053-f51c-41ad-72bc-454a9162ac46
+  deleted: "0"
+  action_id: a4d7c647-cae6-c0f6-70ea-448de35efa9e
+acl_roles_actions_580: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7d4230b1-f9ce-1c61-53e5-456217eb3207
+  deleted: "0"
+  action_id: 17086691-bdc2-db53-c433-448de33045a4
+acl_roles_actions_317: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 10c7aae7-0d28-aa78-ac27-453d4a88dd66
+  deleted: "0"
+  action_id: aa0f326b-5ebb-8016-6e1a-448de3a11854
+acl_roles_actions_581: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7e27b12f-aa47-98e8-490f-456217224db5
+  deleted: "0"
+  action_id: 15ac01f1-a021-18df-c0d3-448de3112d55
+acl_roles_actions_318: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 11b209c3-fa10-bbcc-bac3-453d4a997051
+  deleted: "0"
+  action_id: a8bc5e79-2d47-165a-cdff-448de33524ee
+acl_roles_actions_450: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b62a8eee-afc7-fd25-1871-454a91089a7c
+  deleted: "0"
+  action_id: aa0f326b-5ebb-8016-6e1a-448de3a11854
+acl_roles_actions_582: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7ef91319-2696-e82e-2b22-45621789b751
+  deleted: "0"
+  action_id: a4d7c647-cae6-c0f6-70ea-448de35efa9e
+acl_roles_actions_319: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 129a269d-f6d5-c7e5-fd15-453d4a45af3d
+  deleted: "0"
+  action_id: acb96b37-7df0-83f7-e25f-448de33612dc
+acl_roles_actions_451: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b70ed4ee-8085-9d0f-f7f7-454a912ff0fb
+  deleted: "0"
+  action_id: a8bc5e79-2d47-165a-cdff-448de33524ee
+acl_roles_actions_583: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 7fe5ade8-d1db-dff7-cd10-4562173e9515
+  deleted: "0"
+  action_id: aa0f326b-5ebb-8016-6e1a-448de3a11854
+acl_roles_actions_320: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1380489e-22a2-15b2-1abd-453d4a4ee71e
+  deleted: "0"
+  action_id: ab710276-ba94-6374-4c56-448de300c478
+acl_roles_actions_452: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b7ea9e06-1a07-328b-4904-454a91a376b4
+  deleted: "0"
+  action_id: acb96b37-7df0-83f7-e25f-448de33612dc
+acl_roles_actions_584: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 80ce2a98-9e61-8077-cf06-456217b7840e
+  deleted: "0"
+  action_id: a8bc5e79-2d47-165a-cdff-448de33524ee
+acl_roles_actions_321: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 14544133-c727-a667-c2b4-453d4a645eab
+  deleted: "0"
+  action_id: a7837957-4de8-03ae-6634-448de3cf2264
+acl_roles_actions_453: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b8be80e5-1138-d1d8-d6a8-454a918d6af0
+  deleted: "0"
+  action_id: ab710276-ba94-6374-4c56-448de300c478
+acl_roles_actions_585: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 81b80745-a0a9-d81f-60e1-4562173ed4be
+  deleted: "0"
+  action_id: acb96b37-7df0-83f7-e25f-448de33612dc
+acl_roles_actions_322: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 15410df2-04c6-bbbd-9051-453d4aaed211
+  deleted: "0"
+  action_id: a62b90fc-596f-2c35-b6bd-448de34f49e8
+acl_roles_actions_454: 
+  access_override: "75"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: b9a8eb1b-696b-73de-f55a-454a919fdffa
+  deleted: "0"
+  action_id: a7837957-4de8-03ae-6634-448de3cf2264
+acl_roles_actions_586: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 82861d7a-07cc-de78-b99a-45621719bd43
+  deleted: "0"
+  action_id: ab710276-ba94-6374-4c56-448de300c478
+acl_roles_actions_323: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 16294723-78ca-6bf9-e547-453d4ad7f9cf
+  deleted: "0"
+  action_id: c36afa15-6f87-556b-d903-448de37d033c
+acl_roles_actions_455: 
+  access_override: "75"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ba8fc278-7084-6ec3-057c-454a91810711
+  deleted: "0"
+  action_id: a62b90fc-596f-2c35-b6bd-448de34f49e8
+acl_roles_actions_587: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8370406a-2d31-028c-5d6f-4562174b42ca
+  deleted: "0"
+  action_id: a7837957-4de8-03ae-6634-448de3cf2264
+acl_roles_actions_324: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1710503a-8ea0-ac25-8316-453d4a487051
+  deleted: "0"
+  action_id: c89f2a38-ebcc-ae07-a2fd-448de3de579a
+acl_roles_actions_456: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: bb6a271d-f126-e8bb-8767-454a91553a08
+  deleted: "0"
+  action_id: c36afa15-6f87-556b-d903-448de37d033c
+acl_roles_actions_588: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 845825dd-dafb-de5f-104f-456217a2bad5
+  deleted: "0"
+  action_id: a62b90fc-596f-2c35-b6bd-448de34f49e8
+acl_roles_actions_325: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 17e3275d-0260-a4bd-980d-453d4a7a6169
+  deleted: "0"
+  action_id: c760f376-97b6-a13b-0a9a-448de36854cb
+acl_roles_actions_457: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: bc413224-90df-0410-e836-454a91dea11f
+  deleted: "0"
+  action_id: c89f2a38-ebcc-ae07-a2fd-448de3de579a
+acl_roles_actions_589: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 85409677-70a6-0b09-4444-45621738e019
+  deleted: "0"
+  action_id: c36afa15-6f87-556b-d903-448de37d033c
+acl_roles_actions_326: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 18cb7466-a4b3-5ea7-fba6-453d4aec9586
+  deleted: "0"
+  action_id: cb4320b9-78a6-37d6-21cc-448de3d05ebc
+acl_roles_actions_458: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: bd2d58b6-bd43-622c-7408-454a913c1566
+  deleted: "0"
+  action_id: c760f376-97b6-a13b-0a9a-448de36854cb
+acl_roles_actions_327: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 19b549b7-37f9-746e-d8a6-453d4a476861
+  deleted: "0"
+  action_id: c9f023fa-0214-6ba3-4863-448de32c7ed2
+acl_roles_actions_459: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: be11338f-e310-c596-36a8-454a919d5bbd
+  deleted: "0"
+  action_id: cb4320b9-78a6-37d6-21cc-448de3d05ebc
+acl_roles_actions_590: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 861363f2-6020-50f3-b20d-456217b059a2
+  deleted: "0"
+  action_id: c89f2a38-ebcc-ae07-a2fd-448de3de579a
+acl_roles_actions_591: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:19
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 870146fc-b767-75eb-22a6-4562178b874b
+  deleted: "0"
+  action_id: c760f376-97b6-a13b-0a9a-448de36854cb
+acl_roles_actions_328: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1a9db020-f5f1-c755-92c9-453d4a6296d7
+  deleted: "0"
+  action_id: c6159955-285f-8ad6-ed62-448de3cc9d96
+acl_roles_actions_460: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: beebc9a4-c142-5041-28d1-454a91d12352
+  deleted: "0"
+  action_id: c9f023fa-0214-6ba3-4863-448de32c7ed2
+acl_roles_actions_592: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 87edc63e-0ba4-1f58-64de-456217d03e6e
+  deleted: "0"
+  action_id: cb4320b9-78a6-37d6-21cc-448de3d05ebc
+acl_roles_actions_329: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1b70dfe1-b30c-4684-082d-453d4a60979b
+  deleted: "0"
+  action_id: c4d33ed9-9c07-6fd6-ceba-448de369f95a
+acl_roles_actions_461: 
+  access_override: "75"
+  date_modified: 2006-11-03 00:46:57
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: bfc1d059-318b-dcdb-3f05-454a9133b6a9
+  deleted: "0"
+  action_id: c6159955-285f-8ad6-ed62-448de3cc9d96
+acl_roles_actions_593: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 88d5db7f-be28-1c9d-d231-4562173c647c
+  deleted: "0"
+  action_id: c9f023fa-0214-6ba3-4863-448de32c7ed2
+acl_roles_actions_330: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1c5bc0b1-0021-f80f-6e7c-453d4a2f0362
+  deleted: "0"
+  action_id: 76fd3d48-db99-5cb5-1eb8-448de3cfb476
+acl_roles_actions_462: 
+  access_override: "75"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c0a67c97-c321-1065-916b-454a91c689df
+  deleted: "0"
+  action_id: c4d33ed9-9c07-6fd6-ceba-448de369f95a
+acl_roles_actions_594: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 89a4225a-f903-e6d8-171c-456217463817
+  deleted: "0"
+  action_id: c6159955-285f-8ad6-ed62-448de3cc9d96
+acl_roles_actions_331: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1d42a50b-e284-7266-901a-453d4ade1117
+  deleted: "0"
+  action_id: 7c125815-661c-4a4a-986c-448de3f24e23
+acl_roles_actions_463: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c18a6d5f-68d1-8af7-52c5-454a91d399b8
+  deleted: "0"
+  action_id: 76fd3d48-db99-5cb5-1eb8-448de3cfb476
+acl_roles_actions_595: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8a91efb2-e572-0f78-d5f4-456217ee79c2
+  deleted: "0"
+  action_id: c4d33ed9-9c07-6fd6-ceba-448de369f95a
+acl_roles_actions_200: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 3dc10a72-76dc-3d8a-762e-453d3f3b7e8c
+  deleted: "0"
+  action_id: 7eab9a35-30b8-7b5e-7aea-448de3d3f87e
+acl_roles_actions_332: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1e2a27a2-c655-a3b9-ccaa-453d4a9d4c27
+  deleted: "0"
+  action_id: 7ade86ae-3a25-0cc7-0dad-448de3e61622
+acl_roles_actions_464: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c2688ee5-da38-84ea-5063-454a91120d23
+  deleted: "0"
+  action_id: 7c125815-661c-4a4a-986c-448de3f24e23
+acl_roles_actions_596: 
+  access_override: "89"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8b8024aa-4363-12f6-fe21-456217001f11
+  deleted: "0"
+  action_id: 76fd3d48-db99-5cb5-1eb8-448de3cfb476
+acl_roles_actions_201: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 4c630cf2-fafe-6d1b-81cf-453d3f291efc
+  deleted: "0"
+  action_id: 7d5d3539-9243-d0bb-c89e-448de3c4e852
+acl_roles_actions_333: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1efd4115-7e22-1810-782b-453d4aa054a0
+  deleted: "0"
+  action_id: 7eab9a35-30b8-7b5e-7aea-448de3d3f87e
+acl_roles_actions_465: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c3438897-f6c9-eeaa-bae6-454a9117f489
+  deleted: "0"
+  action_id: 7ade86ae-3a25-0cc7-0dad-448de3e61622
+acl_roles_actions_597: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8c6bd490-b8d1-8872-74c4-456217ca8031
+  deleted: "0"
+  action_id: 7c125815-661c-4a4a-986c-448de3f24e23
+acl_roles_actions_202: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 5b56057a-0122-03b6-4085-453d3f554346
+  deleted: "0"
+  action_id: 79921138-f2a2-74b4-48d4-448de3312f4b
+acl_roles_actions_334: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 1fe78a80-3351-f393-8714-453d4a412030
+  deleted: "0"
+  action_id: 7d5d3539-9243-d0bb-c89e-448de3c4e852
+acl_roles_actions_466: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c42eef50-2960-3871-7ab9-454a9183786c
+  deleted: "0"
+  action_id: 7eab9a35-30b8-7b5e-7aea-448de3d3f87e
+acl_roles_actions_598: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8d39a3c9-0551-44f0-45dd-4562170a5b22
+  deleted: "0"
+  action_id: 7ade86ae-3a25-0cc7-0dad-448de3e61622
+acl_roles_actions_203: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 686f07dc-75df-6dcd-f4c8-453d3fdfc02b
+  deleted: "0"
+  action_id: 784f7bf8-72ff-d2a8-20c1-448de36ad460
+acl_roles_actions_335: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 20cd9099-432e-f18e-1971-453d4a306161
+  deleted: "0"
+  action_id: 79921138-f2a2-74b4-48d4-448de3312f4b
+acl_roles_actions_467: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c512fb19-9cbd-bec2-8ef3-454a91318308
+  deleted: "0"
+  action_id: 7d5d3539-9243-d0bb-c89e-448de3c4e852
+acl_roles_actions_599: 
+  access_override: "90"
+  date_modified: 2007-04-19 17:21:20
+  role_id: 52834e79-60ff-d285-acaa-4562175cebb8
+  id: 8e2ab066-c9e2-db55-2b01-4562170516a7
+  deleted: "0"
+  action_id: 7eab9a35-30b8-7b5e-7aea-448de3d3f87e
+acl_roles_actions_204: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 76e90f53-2b09-ba70-fa2a-453d3fcf4c49
+  deleted: "0"
+  action_id: 7726b4e2-23cb-6df1-3607-448de36a28f2
+acl_roles_actions_336: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 21b5d9e1-83ff-d6e1-49b0-453d4a33f9ad
+  deleted: "0"
+  action_id: 784f7bf8-72ff-d2a8-20c1-448de36ad460
+acl_roles_actions_468: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c5ec912d-50b9-7724-6762-454a916aa001
+  deleted: "0"
+  action_id: 79921138-f2a2-74b4-48d4-448de3312f4b
+acl_roles_actions_205: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 85790b37-3357-afe2-b9d4-453d3f78aca5
+  deleted: "0"
+  action_id: 7c217d92-6119-ff60-8815-448de3fc7868
+acl_roles_actions_337: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 228b651d-cf46-00b8-8d24-453d4a44e052
+  deleted: "0"
+  action_id: 7726b4e2-23cb-6df1-3607-448de36a28f2
+acl_roles_actions_469: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c6c84a11-9396-c04f-d60b-454a9124885c
+  deleted: "0"
+  action_id: 784f7bf8-72ff-d2a8-20c1-448de36ad460
+acl_roles_actions_206: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 943c0b58-a33b-601f-1035-453d3fab4af9
+  deleted: "0"
+  action_id: 7add6c46-89b5-1600-821e-448de3665c06
+acl_roles_actions_338: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2377e09d-646c-e424-89f0-453d4a4386d8
+  deleted: "0"
+  action_id: 7c217d92-6119-ff60-8815-448de3fc7868
+acl_roles_actions_207: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: a1800426-6860-24e9-5d25-453d3fe96574
+  deleted: "0"
+  action_id: 7e990ab1-a5ec-6049-c05f-448de30d28cf
+acl_roles_actions_339: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2460cb57-83cf-abe3-93a1-453d4a6b6464
+  deleted: "0"
+  action_id: 7add6c46-89b5-1600-821e-448de3665c06
+acl_roles_actions_470: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c7a9ae42-96ac-bc27-c277-454a91a536da
+  deleted: "0"
+  action_id: 7726b4e2-23cb-6df1-3607-448de36a28f2
+acl_roles_actions_208: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: b02c00f8-06f1-e3eb-4a3b-453d3f3b5f8e
+  deleted: "0"
+  action_id: 7d591598-1963-02c0-bb06-448de341b55e
+acl_roles_actions_471: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c88d35c1-86b3-2a89-17f1-454a91c3ea72
+  deleted: "0"
+  action_id: 7c217d92-6119-ff60-8815-448de3fc7868
+acl_roles_actions_209: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: befc0c6f-1627-e813-db0e-453d3f5abb01
+  deleted: "0"
+  action_id: 799f6bbb-99ae-b094-a471-448de314f847
+acl_roles_actions_340: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 254b80b6-5b3a-325f-5420-453d4a56685b
+  deleted: "0"
+  action_id: 7e990ab1-a5ec-6049-c05f-448de30d28cf
+acl_roles_actions_472: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: c9648a85-29a2-37a7-b615-454a918e88f8
+  deleted: "0"
+  action_id: 7add6c46-89b5-1600-821e-448de3665c06
+acl_roles_actions_341: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 261fdaf8-0381-7852-b518-453d4a27f2e9
+  deleted: "0"
+  action_id: 7d591598-1963-02c0-bb06-448de341b55e
+acl_roles_actions_473: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ca407c22-bd8e-55c9-8534-454a91c4e148
+  deleted: "0"
+  action_id: 7e990ab1-a5ec-6049-c05f-448de30d28cf
+acl_roles_actions_210: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: cda60580-d097-922f-e5d4-453d3fc42cb3
+  deleted: "0"
+  action_id: 78722de2-08cc-a796-48f3-448de313580f
+acl_roles_actions_342: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 27081e24-a01d-0d76-3f9d-453d4ac5db34
+  deleted: "0"
+  action_id: 799f6bbb-99ae-b094-a471-448de314f847
+acl_roles_actions_474: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: cb24d5fa-b3d2-9a78-a451-454a91e16f16
+  deleted: "0"
+  action_id: 7d591598-1963-02c0-bb06-448de341b55e
+acl_roles_actions_211: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: db7a0a37-14c1-c47b-d95c-453d3f2d2ae1
+  deleted: "0"
+  action_id: f0c75ff0-1d48-f0c6-5e13-448de3240d0a
+acl_roles_actions_343: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 27f50cc2-ae5c-f79e-127a-453d4a8db7c8
+  deleted: "0"
+  action_id: 78722de2-08cc-a796-48f3-448de313580f
+acl_roles_actions_475: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: cc08a740-e977-cbcc-bb74-454a91717e9b
+  deleted: "0"
+  action_id: 799f6bbb-99ae-b094-a471-448de314f847
+acl_roles_actions_212: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: ea2f04c9-4ca8-b5bc-044d-453d3ffdbea3
+  deleted: "0"
+  action_id: 1d090043-6f9e-1937-2d70-448de38080f1
+acl_roles_actions_344: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 28de1fba-791d-5ef3-288c-453d4a192798
+  deleted: "0"
+  action_id: f0c75ff0-1d48-f0c6-5e13-448de3240d0a
+acl_roles_actions_476: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: cce37252-70c3-4187-3c01-454a91c8e5b1
+  deleted: "0"
+  action_id: 78722de2-08cc-a796-48f3-448de313580f
+acl_roles_actions_213: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: f8f10c57-e1e7-df1a-e67a-453d3f4b33a6
+  deleted: "0"
+  action_id: 93200816-85fa-ed1e-1abb-448de3ee663e
+acl_roles_actions_345: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 29bb1cd0-11fb-577b-9fa0-453d4a1cb0e5
+  deleted: "0"
+  action_id: 1d090043-6f9e-1937-2d70-448de38080f1
+acl_roles_actions_477: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: cdc01862-2005-9fb2-3c76-454a9193c857
+  deleted: "0"
+  action_id: f0c75ff0-1d48-f0c6-5e13-448de3240d0a
+acl_roles_actions_214: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 107136ae-1df9-9b42-ba68-453d3fa0616a
+  deleted: "0"
+  action_id: 4720007f-b001-a6b4-f89d-448de38ca8f6
+acl_roles_actions_346: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2aae5a15-420d-274e-5c9b-453d4ac86e48
+  deleted: "0"
+  action_id: 93200816-85fa-ed1e-1abb-448de3ee663e
+acl_roles_actions_478: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: cea2438a-c838-5b70-476b-454a91cdcfc5
+  deleted: "0"
+  action_id: 1d090043-6f9e-1937-2d70-448de38080f1
+acl_roles_actions_215: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 114f25dc-ca3c-0a8a-8451-453d3ff2167d
+  deleted: "0"
+  action_id: 31ed051b-f4c2-52f8-2eb4-448de38edd55
+acl_roles_actions_347: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2b9f671d-b6b6-fcf9-267c-453d4a9bfd15
+  deleted: "0"
+  action_id: 4720007f-b001-a6b4-f89d-448de38ca8f6
+acl_roles_actions_479: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: cf8a5948-891d-e1f3-82c9-454a910926c6
+  deleted: "0"
+  action_id: 93200816-85fa-ed1e-1abb-448de3ee663e
+acl_roles_actions_216: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 123e1606-89e5-d5a0-3640-453d3fd3159c
+  deleted: "0"
+  action_id: f3658060-60d2-fb15-b64f-448de3a5b626
+acl_roles_actions_348: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2c817780-f108-4104-c366-453d4a3d300a
+  deleted: "0"
+  action_id: 31ed051b-f4c2-52f8-2eb4-448de38edd55
+acl_roles_actions_217: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1327ccf4-1c7e-3036-a34a-453d3fe4a4fe
+  deleted: "0"
+  action_id: f21c09e4-f78d-d16b-fb6c-448de36a5c45
+acl_roles_actions_349: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2d628dfd-eb77-f94c-ae3f-453d4a3320d6
+  deleted: "0"
+  action_id: f3658060-60d2-fb15-b64f-448de3a5b626
+acl_roles_actions_480: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d0673a16-6fe6-2793-076f-454a91306bac
+  deleted: "0"
+  action_id: 4720007f-b001-a6b4-f89d-448de38ca8f6
+acl_roles_actions_481: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d14e14fe-f0e6-f4fd-1168-454a91c01e16
+  deleted: "0"
+  action_id: 31ed051b-f4c2-52f8-2eb4-448de38edd55
+acl_roles_actions_218: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 14063048-70e5-7c4b-58a9-453d3f766f26
+  deleted: "0"
+  action_id: 42f241d2-c441-947e-899b-448de3282c8f
+acl_roles_actions_350: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2e4dfde8-8459-758d-1a84-453d4a2e8ea4
+  deleted: "0"
+  action_id: f21c09e4-f78d-d16b-fb6c-448de36a5c45
+acl_roles_actions_482: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d23abfaf-d654-aa0f-5c5f-454a91ccb63c
+  deleted: "0"
+  action_id: f3658060-60d2-fb15-b64f-448de3a5b626
+acl_roles_actions_219: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 14ec5867-0798-8128-5ab5-453d3f78384b
+  deleted: "0"
+  action_id: 47f43bf4-104b-aeb4-c813-448de369586e
+acl_roles_actions_351: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 2f3bc625-8992-a2f9-c87c-453d4a47c152
+  deleted: "0"
+  action_id: 42f241d2-c441-947e-899b-448de3282c8f
+acl_roles_actions_483: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d34b6373-8039-ff47-3b81-454a91bfee7a
+  deleted: "0"
+  action_id: f21c09e4-f78d-d16b-fb6c-448de36a5c45
+acl_roles_actions_220: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 15d5b860-500c-a231-16d9-453d3fd143a1
+  deleted: "0"
+  action_id: 46bf1730-5756-6b34-26b6-448de3286fa4
+acl_roles_actions_352: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 301c7c4e-3c12-a3a0-42bb-453d4a90cd4d
+  deleted: "0"
+  action_id: 47f43bf4-104b-aeb4-c813-448de369586e
+acl_roles_actions_484: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d416952b-38d2-654c-dd4f-454a91105a3c
+  deleted: "0"
+  action_id: 42f241d2-c441-947e-899b-448de3282c8f
+acl_roles_actions_221: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 16c2988f-f929-b9e9-9985-453d3fc671c1
+  deleted: "0"
+  action_id: 4a8b9c1b-3953-f4b6-8c6a-448de3e82800
+acl_roles_actions_353: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 31081ee9-29e5-835f-5eb8-453d4a25b827
+  deleted: "0"
+  action_id: 46bf1730-5756-6b34-26b6-448de3286fa4
+acl_roles_actions_485: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d4fbb261-048b-8bf4-194c-454a9172611f
+  deleted: "0"
+  action_id: 47f43bf4-104b-aeb4-c813-448de369586e
+acl_roles_actions_222: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 17986a19-cbb4-4d58-c004-453d3fba2aa0
+  deleted: "0"
+  action_id: 493e5b5f-d5c2-c5b9-c8a9-448de3317484
+acl_roles_actions_354: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 320038a7-870a-a57f-4402-453d4ab7e4fc
+  deleted: "0"
+  action_id: 4a8b9c1b-3953-f4b6-8c6a-448de3e82800
+acl_roles_actions_486: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d5dfe588-6abe-7c85-1684-454a91462ba5
+  deleted: "0"
+  action_id: 46bf1730-5756-6b34-26b6-448de3286fa4
+acl_roles_actions_223: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1885a7b6-a1c5-ed23-5732-453d3f04d3de
+  deleted: "0"
+  action_id: 456fb2d0-e090-9e53-bf83-448de3935cf1
+acl_roles_actions_355: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 32ee77af-8b47-7681-93b3-453d4a75a19d
+  deleted: "0"
+  action_id: 493e5b5f-d5c2-c5b9-c8a9-448de3317484
+acl_roles_actions_487: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d6c509e1-65ad-4371-e190-454a91ecc0c4
+  deleted: "0"
+  action_id: 4a8b9c1b-3953-f4b6-8c6a-448de3e82800
+acl_roles_actions_224: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 19714a66-7c64-899c-0c25-453d3f23d1b2
+  deleted: "0"
+  action_id: 4434f392-d93e-e1e8-cbfa-448de32e1a8d
+acl_roles_actions_356: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 33c3f55d-c242-e51d-7982-453d4abf6031
+  deleted: "0"
+  action_id: 456fb2d0-e090-9e53-bf83-448de3935cf1
+acl_roles_actions_488: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d794b4c5-f65d-c5cc-474b-454a91c9d2a8
+  deleted: "0"
+  action_id: 493e5b5f-d5c2-c5b9-c8a9-448de3317484
+acl_roles_actions_225: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1a58f5d1-fbbd-70aa-d7f3-453d3fc709c4
+  deleted: "0"
+  action_id: f12a1037-c29a-5809-2bed-448de3e17420
+acl_roles_actions_357: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 34b3a889-3ef4-ba54-6fbf-453d4a1af3e1
+  deleted: "0"
+  action_id: 4434f392-d93e-e1e8-cbfa-448de32e1a8d
+acl_roles_actions_489: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d87ae504-539f-bc85-061f-454a918920d4
+  deleted: "0"
+  action_id: 456fb2d0-e090-9e53-bf83-448de3935cf1
+acl_roles_actions_226: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1b31c72e-0b0b-5445-aa1a-453d3fa0a04d
+  deleted: "0"
+  action_id: 29b20168-8cad-a5b2-a18e-448de303b168
+acl_roles_actions_358: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 35a0b499-813b-37d8-010f-453d4a66b854
+  deleted: "0"
+  action_id: f12a1037-c29a-5809-2bed-448de3e17420
+acl_roles_actions_227: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1c1ed8cc-fe24-b723-fcb7-453d3f27e3b1
+  deleted: "0"
+  action_id: 145f01fd-3f8e-64db-54cb-448de3363ed8
+acl_roles_actions_359: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3688b26a-bba7-3501-75d3-453d4a1f49be
+  deleted: "0"
+  action_id: 29b20168-8cad-a5b2-a18e-448de303b168
+acl_roles_actions_490: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: d95da6c6-5f57-1785-67b7-454a9142651b
+  deleted: "0"
+  action_id: 4434f392-d93e-e1e8-cbfa-448de32e1a8d
+acl_roles_actions_228: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1d0aff59-1965-d2a4-fd33-453d3f4b2ecf
+  deleted: "0"
+  action_id: 54250fe2-3517-099e-1108-448de3ae057e
+acl_roles_actions_491: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: da420893-38f3-a439-6bf2-454a91d5ba7c
+  deleted: "0"
+  action_id: f12a1037-c29a-5809-2bed-448de3e17420
+acl_roles_actions_492: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: db0ef10f-436e-668a-893d-454a916e7bb7
+  deleted: "0"
+  action_id: 29b20168-8cad-a5b2-a18e-448de303b168
+acl_roles_actions_229: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1df6cf3d-ddcc-d0df-a736-453d3fd992a0
+  deleted: "0"
+  action_id: 3f690132-fa11-be79-bd99-448de3716fa7
+acl_roles_actions_360: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 375f4f73-71e9-088f-7034-453d4a04ab45
+  deleted: "0"
+  action_id: 145f01fd-3f8e-64db-54cb-448de3363ed8
+acl_roles_actions_493: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: dbf59533-8e63-63fa-85c4-454a9151c00a
+  deleted: "0"
+  action_id: 145f01fd-3f8e-64db-54cb-448de3363ed8
+acl_roles_actions_361: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3848f4d8-7a29-a22a-2026-453d4aa62b9e
+  deleted: "0"
+  action_id: 54250fe2-3517-099e-1108-448de3ae057e
+acl_roles_actions_494: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: dcdd3d20-ee6a-039d-e9bb-454a916f98a0
+  deleted: "0"
+  action_id: 54250fe2-3517-099e-1108-448de3ae057e
+acl_roles_actions_230: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1ec74f06-3714-1fe6-5aa1-453d3f255340
+  deleted: "0"
+  action_id: f3f0f075-c73f-28bc-cabe-448de3e74652
+acl_roles_actions_362: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3937982e-1baa-5219-945d-453d4a3815ad
+  deleted: "0"
+  action_id: 3f690132-fa11-be79-bd99-448de3716fa7
+acl_roles_actions_495: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: ddc228a4-f38e-a794-2669-454a917f37c8
+  deleted: "0"
+  action_id: 3f690132-fa11-be79-bd99-448de3716fa7
+acl_roles_actions_231: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 1fb322ef-d905-4ae7-e496-453d3faf0c57
+  deleted: "0"
+  action_id: f2a15d69-e258-9b38-d14f-448de3731c09
+acl_roles_actions_363: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3a242108-f5be-c16b-5fb2-453d4ac685c9
+  deleted: "0"
+  action_id: f3f0f075-c73f-28bc-cabe-448de3e74652
+acl_roles_actions_496: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: de96e591-e753-2214-e9b9-454a91ff195c
+  deleted: "0"
+  action_id: f3f0f075-c73f-28bc-cabe-448de3e74652
+acl_roles_actions_100: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: da650026-0bb2-bca7-c237-448efbf0e146
+  deleted: "1"
+  action_id: 6601d1ac-0192-4055-3774-448de3cd79db
+acl_roles_actions_232: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 209ef1b7-f3ad-2877-52e6-453d3f469e0e
+  deleted: "0"
+  action_id: 60a14ba0-4ab1-8738-f1c7-448de382f9d1
+acl_roles_actions_364: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3af671ac-dcf3-50f4-67c0-453d4a14c2f7
+  deleted: "0"
+  action_id: f2a15d69-e258-9b38-d14f-448de3731c09
+acl_roles_actions_497: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: df7e2399-075c-6870-292d-454a914b2e7d
+  deleted: "0"
+  action_id: f2a15d69-e258-9b38-d14f-448de3731c09
+acl_roles_actions_101: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: e86a0f13-7f10-5d7e-b369-448efbc273c5
+  deleted: "1"
+  action_id: 64a1e347-d12a-0536-bd0d-448de3bc19d9
+acl_roles_actions_233: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 218c847e-2809-f5c5-4ece-453d3fdd19cc
+  deleted: "0"
+  action_id: 6601d1ac-0192-4055-3774-448de3cd79db
+acl_roles_actions_365: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3be0fe4c-77eb-d225-7f2d-453d4a87603d
+  deleted: "0"
+  action_id: 60a14ba0-4ab1-8738-f1c7-448de382f9d1
+acl_roles_actions_102: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: f67a01d5-3f31-9022-7d34-448efb419991
+  deleted: "1"
+  action_id: 68adb089-50ee-de43-90b8-448de3f59a7f
+acl_roles_actions_234: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2261153a-a220-f662-da8d-453d3fff19bb
+  deleted: "0"
+  action_id: 64a1e347-d12a-0536-bd0d-448de3bc19d9
+acl_roles_actions_366: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3ccbde2e-42e2-78a8-7e92-453d4a4c380a
+  deleted: "0"
+  action_id: 6601d1ac-0192-4055-3774-448de3cd79db
+acl_roles_actions_498: 
+  access_override: "89"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e063f6c4-76e1-3b4b-7f02-454a915423ad
+  deleted: "0"
+  action_id: 60a14ba0-4ab1-8738-f1c7-448de382f9d1
+acl_roles_actions_103: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 104647be-3da3-7bed-5e42-448efbb62175
+  deleted: "1"
+  action_id: 67505940-65b4-7302-1d82-448de31f065c
+acl_roles_actions_235: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 234c2f70-f8cc-237e-e27c-453d3f3767ce
+  deleted: "0"
+  action_id: 68adb089-50ee-de43-90b8-448de3f59a7f
+acl_roles_actions_367: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3db720e5-39b0-56de-cd6a-453d4a90d9f2
+  deleted: "0"
+  action_id: 64a1e347-d12a-0536-bd0d-448de3bc19d9
+acl_roles_actions_499: 
+  access_override: "90"
+  date_modified: 2006-11-03 00:46:58
+  role_id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  id: e14ab76e-6e7f-8d1f-fdae-454a917ce38b
+  deleted: "0"
+  action_id: 6601d1ac-0192-4055-3774-448de3cd79db
+acl_roles_actions_104: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 110dd68d-8ab0-7728-d040-448efbc0b32d
+  deleted: "1"
+  action_id: 634cb2d4-cbe1-ceb2-99de-448de39d5696
+acl_roles_actions_236: 
+  access_override: "-99"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 2438c075-25d3-eea3-9a73-453d3f73269b
+  deleted: "0"
+  action_id: 67505940-65b4-7302-1d82-448de31f065c
+acl_roles_actions_368: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3e8d7e35-f2bc-d771-0a1c-453d4acf4ded
+  deleted: "0"
+  action_id: 68adb089-50ee-de43-90b8-448de3f59a7f
+acl_roles_actions_105: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 11f2ac2d-6e73-02ec-480a-448efb7a6c1f
+  deleted: "1"
+  action_id: 62064c5a-ba61-9232-5f5d-448de3007d3a
+acl_roles_actions_237: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 252270a5-4868-384c-9155-453d3fcf7147
+  deleted: "0"
+  action_id: 634cb2d4-cbe1-ceb2-99de-448de39d5696
+acl_roles_actions_369: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 3f785657-89a2-66c0-2124-453d4ad10610
+  deleted: "0"
+  action_id: 67505940-65b4-7302-1d82-448de31f065c
+acl_roles_actions_106: 
+  access_override: "89"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 12d00c79-935c-9512-e50a-448efbccf72e
+  deleted: "1"
+  action_id: 752bd83a-5f58-70f4-634a-448de31e06cf
+acl_roles_actions_238: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 25f3ca90-9a30-2238-1d34-453d3ffe807b
+  deleted: "0"
+  action_id: 62064c5a-ba61-9232-5f5d-448de3007d3a
+acl_roles_actions_107: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 13b2ab16-a7a7-ecb8-0673-448efb0160ed
+  deleted: "1"
+  action_id: 7a6c5a2e-5991-3a87-36e8-448de3e3cdd6
+acl_roles_actions_239: 
+  access_override: "89"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 26e0a3c4-fb49-97c0-6e8f-453d3f131bfe
+  deleted: "0"
+  action_id: 752bd83a-5f58-70f4-634a-448de31e06cf
+acl_roles_actions_370: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 40664a8d-1fe1-f495-7de8-453d4a2edaca
+  deleted: "0"
+  action_id: 634cb2d4-cbe1-ceb2-99de-448de39d5696
+acl_roles_actions_371: 
+  access_override: "90"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 414b8b02-56f0-bdb5-567d-453d4a6df6fd
+  deleted: "0"
+  action_id: 62064c5a-ba61-9232-5f5d-448de3007d3a
+acl_roles_actions_108: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 1477fc38-bca2-053f-7e0b-448efb07a1d3
+  deleted: "1"
+  action_id: 79169c35-123e-46bb-23e6-448de3328317
+acl_roles_actions_240: 
+  access_override: "75"
+  date_modified: 2006-11-22 18:05:07
+  role_id: b8220ff2-6cff-615a-0fd5-453d3f9e6e06
+  id: 27ce58c8-e6b7-5ee4-3e28-453d3f0ce20e
+  deleted: "0"
+  action_id: 7a6c5a2e-5991-3a87-36e8-448de3e3cdd6
+acl_roles_actions_372: 
+  access_override: "89"
+  date_modified: 2006-10-23 23:03:20
+  role_id: d77cb2c9-c3d8-1dc4-ac2b-453d4a7edd1a
+  id: 422665a3-b43e-f851-ed30-453d4ad8e371
+  deleted: "0"
+  action_id: 752bd83a-5f58-70f4-634a-448de31e06cf
+acl_roles_actions_109: 
+  access_override: "90"
+  date_modified: 2006-06-13 17:52:22
+  role_id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  id: 155677ea-ca13-d0e0-f5fe-448efb1e2b6f
+  deleted: "1"
+  action_id: 7cf9f015-95ef-341c-ebc3-448de372bd7a

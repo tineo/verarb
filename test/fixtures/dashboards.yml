@@ -1,0 +1,155 @@
+--- 
+dashboards_013: 
+  name: Home
+  created_by: ab4812c6-f2fa-762b-e287-448ef9d7c7ec
+  date_modified: 2006-11-07 23:59:19
+  id: 51eec679-8f75-636c-28d7-45511d1e2f99
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: ab4812c6-f2fa-762b-e287-448ef9d7c7ec
+  deleted: "0"
+  assigned_user_id: ab4812c6-f2fa-762b-e287-448ef9d7c7ec
+  date_entered: 2006-11-07 23:59:19
+dashboards_002: 
+  name: Home
+  created_by: "1"
+  date_modified: 2006-06-19 21:41:24
+  id: 93295cd6-4a28-14e3-a3e4-44971a7711d5
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: "1"
+  deleted: "0"
+  assigned_user_id: "1"
+  date_entered: 2006-06-19 21:41:24
+dashboards_014: 
+  name: Home
+  created_by: 74536180-2a01-c001-097c-448ef9a719c5
+  date_modified: 2006-11-22 18:12:35
+  id: 74bee984-22b2-b367-af17-456492008c90
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 74536180-2a01-c001-097c-448ef9a719c5
+  deleted: "0"
+  assigned_user_id: 74536180-2a01-c001-097c-448ef9a719c5
+  date_entered: 2006-11-22 18:10:35
+dashboards_003: 
+  name: Home
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_modified: 2006-11-16 16:10:01
+  id: f28f52fb-7e50-0258-f372-453d4bb31917
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  deleted: "0"
+  assigned_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_entered: 2006-10-23 23:08:10
+dashboards_004: 
+  name: Home
+  created_by: 38d8748e-d749-ec57-6de0-448ef88b1c63
+  date_modified: 2006-10-24 15:03:32
+  id: 75e00634-e9b2-425d-6562-453e2b9f536a
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 38d8748e-d749-ec57-6de0-448ef88b1c63
+  deleted: "0"
+  assigned_user_id: 38d8748e-d749-ec57-6de0-448ef88b1c63
+  date_entered: 2006-10-24 15:03:32
+dashboards_005: 
+  name: Home
+  created_by: d45b1f07-d675-e54a-18b0-448ef860668d
+  date_modified: 2006-11-16 04:03:15
+  id: 8e6dbf1c-8591-d98a-9ab5-453e47abfd0d
+  description: 
+  content: a:0:{}
+  modified_user_id: d45b1f07-d675-e54a-18b0-448ef860668d
+  deleted: "0"
+  assigned_user_id: d45b1f07-d675-e54a-18b0-448ef860668d
+  date_entered: 2006-10-24 17:04:13
+dashboards_006: 
+  name: Home
+  created_by: a1b10be3-1a2a-6abf-75c7-448ef85cf17d
+  date_modified: 2007-01-23 21:34:42
+  id: 2c519117-ef53-c40c-601d-45621dd85f12
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: a1b10be3-1a2a-6abf-75c7-448ef85cf17d
+  deleted: "0"
+  assigned_user_id: a1b10be3-1a2a-6abf-75c7-448ef85cf17d
+  date_entered: 2006-11-20 21:27:03
+dashboards_007: 
+  name: Home
+  created_by: 91b91ac5-2901-bb55-c168-448ef9536533
+  date_modified: 2006-11-16 01:38:18
+  id: 68b64112-369e-9d00-ab8b-455bc112dd6a
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 91b91ac5-2901-bb55-c168-448ef9536533
+  deleted: "0"
+  assigned_user_id: 91b91ac5-2901-bb55-c168-448ef9536533
+  date_entered: 2006-11-16 01:38:18
+dashboards_008: 
+  name: Home
+  created_by: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  date_modified: 2006-10-26 17:33:33
+  id: e7f70a89-1ac3-bd24-ce5a-4540f12f3580
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  deleted: "0"
+  assigned_user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  date_entered: 2006-10-26 17:33:33
+dashboards_009: 
+  name: Home
+  created_by: c809c8f8-52ef-e291-8de7-44f74467079e
+  date_modified: 2006-11-07 18:04:23
+  id: 6f220176-68cf-565f-fd1f-4541160e6dc3
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: c809c8f8-52ef-e291-8de7-44f74467079e
+  deleted: "0"
+  assigned_user_id: c809c8f8-52ef-e291-8de7-44f74467079e
+  date_entered: 2006-10-26 20:12:19
+dashboards_010: 
+  name: Home
+  created_by: a72d2922-feda-34ca-9631-448f19c8611e
+  date_modified: 2006-10-27 23:43:33
+  id: be00df78-4248-43ac-a672-454299df1cc5
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: a72d2922-feda-34ca-9631-448f19c8611e
+  deleted: "0"
+  assigned_user_id: a72d2922-feda-34ca-9631-448f19c8611e
+  date_entered: 2006-10-27 23:43:33
+dashboards_011: 
+  name: Home
+  created_by: 9ad75681-f72e-925b-1963-44ac3faafe8c
+  date_modified: 2006-10-28 15:04:59
+  id: b04e2c72-dd3b-4888-119b-454371889f91
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 9ad75681-f72e-925b-1963-44ac3faafe8c
+  deleted: "0"
+  assigned_user_id: 9ad75681-f72e-925b-1963-44ac3faafe8c
+  date_entered: 2006-10-28 15:04:59
+dashboards_012: 
+  name: Home
+  created_by: 524928cf-9c64-e699-a3b1-448efcf53ef7
+  date_modified: 2006-10-28 18:37:56
+  id: 3eab94d3-7803-0f0f-378d-4543a37ceae6
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 524928cf-9c64-e699-a3b1-448efcf53ef7
+  deleted: "0"
+  assigned_user_id: 524928cf-9c64-e699-a3b1-448efcf53ef7
+  date_entered: 2006-10-28 18:37:56
+dashboards_001: 
+  name: Home
+  created_by: 1c46fb01-0441-60f8-d2fd-448ef6b832df
+  date_modified: 2006-06-19 21:38:40
+  id: e0ce5246-4dcb-284c-9feb-4497194e7439
+  description: 
+  content: a:4:{i:0;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_sales_stage";}i:1;a:2:{s:4:"type";s:4:"code";s:2:"id";s:28:"Chart_lead_source_by_outcome";}i:2;a:2:{s:4:"type";s:4:"code";s:2:"id";s:22:"Chart_outcome_by_month";}i:3;a:2:{s:4:"type";s:4:"code";s:2:"id";s:29:"Chart_pipeline_by_lead_source";}}
+  modified_user_id: 1c46fb01-0441-60f8-d2fd-448ef6b832df
+  deleted: "0"
+  assigned_user_id: 1c46fb01-0441-60f8-d2fd-448ef6b832df
+  date_entered: 2006-06-19 21:38:40

@@ -1,0 +1,72 @@
+<%= render :partial => "billing_menu" %>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<h3>Cargo de Facturas</h3>
+</td><td valign="top" align="right">
+<%= link_to "Hist&oacute;rico", :action => "load_history" %>
+</td></tr>
+</table>
+
+
+
+<table border="0" cellpadding="3" cellspacing="1">
+<% if @facturas.empty? -%>
+<tr bgcolor="#eeeeee"><td>
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#FFE47A">
+<% ["", "Factura", "Fecha Emisi&oacute;n", "Raz&oacute;n Social", "Estado"].each do |h, f| -%>
+<td valign="top" align="center">
+<%= h %>
+</td>
+<% end -%>
+
+<% @facturas.each do |f| -%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top" align="center">
+<% if f.loadable? -%>
+<input type="checkbox" name="facturas[]" value="<%= f.id %>">
+<% end -%>
+
+</td><td valign="top">
+<%= f.formatted_factura_number %>
+
+</td><td valign="top" align="center">
+<%= format_short_date(f.fecha_emision) unless f.fecha_emision.nil? %>
+
+</td><td valign="top">
+<%= f.razon_social %>
+
+</td><td valign="top">
+<%= f.status %>
+
+</td></tr>
+<% end -%>
+</tr>
+</table>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<b>Cobranza:</b>
+</td><td valign="top">
+<%= @form.to_html :cobranza, :size => 24 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Facturaci&oacute;n:</b>
+</td><td valign="top">
+<%= @form.to_html :facturacion, :size => 24 %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" value="Recibir Facturas">
+</td></tr>
+
+</table>
+</form>
+
+<% end -%>

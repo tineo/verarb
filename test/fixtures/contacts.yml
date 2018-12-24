@@ -1,0 +1,43 @@
+--- 
+for_new_op: 
+  primary_address_postalcode: 
+  primary_address_street: 
+  department: 
+  portal_name: 
+  primary_address_city: 
+  phone_fax: 
+  phone_mobile: 9735-0689
+  do_not_call: "off"
+  invalid_email: "0"
+  primary_address_state: 
+  phone_other: 818*9025
+  birthdate: 
+  title: 
+  salutation: 
+  portal_app: 
+  portal_active: "0"
+  alt_address_postalcode: 
+  primary_address_country: 
+  email1: mpazos@elektra.com.mx
+  created_by: cefba3d8-bdca-1738-cd86-462e6abe5131
+  email2: mpazos@hotmail.com
+  date_modified: 2007-05-08 16:38:00
+  alt_address_state: 
+  alt_address_city: 
+  phone_home: 
+  id: 1
+  description: 
+  assistant_phone: 
+  phone_work: 
+  modified_user_id: cefba3d8-bdca-1738-cd86-462e6abe5131
+  deleted: "0"
+  alt_address_street: 
+  assistant: 
+  lead_source: 
+  first_name: Miguel
+  assigned_user_id: cefba3d8-bdca-1738-cd86-462e6abe5131
+  email_opt_out: "off"
+  reports_to_id: 
+  last_name: Pazos
+  alt_address_country: 
+  date_entered: 2007-05-08 16:26:07

@@ -1,0 +1,316 @@
+--- 
+proyectos_001: 
+  opportunity_id: a9d8f608-b35e-bf5d-cdf4-46210c94fcf9
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-04-16 17:56:57
+  tiene_cotizaciones: "1"
+  sugerencias: ""
+  vista_abajo: "0"
+  vista_izquierda: "0"
+  fecha_entrega_diseno: 
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "0"
+  dimensiones_espacio: ""
+  vista_arriba: "0"
+  observaciones: ""
+  vista_derecha: "0"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: ""
+  tipo_proyecto: "0"
+  id: "13"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "0"
+  ejecutivo_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "0"
+  acabado: ""
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: ""
+  publico_objetivo: ""
+proyectos_002: 
+  opportunity_id: d5728cb0-c157-9f64-d593-4628e12d1b94
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-04-20 10:54:02
+  tiene_cotizaciones: "1"
+  sugerencias: ""
+  vista_abajo: "0"
+  vista_izquierda: "0"
+  fecha_entrega_diseno: 
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "0"
+  dimensiones_espacio: ""
+  vista_arriba: "0"
+  observaciones: ""
+  vista_derecha: "0"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: ""
+  tipo_proyecto: "0"
+  id: "14"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "7040000"
+  ejecutivo_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "0"
+  acabado: ""
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: ""
+  publico_objetivo: ""
+proyectos_003: 
+  opportunity_id: db7e128e-976d-c11f-48d9-461e4f0c00d2
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-04-23 12:50:22
+  tiene_cotizaciones: "1"
+  sugerencias: ""
+  vista_abajo: "0"
+  vista_izquierda: "1"
+  fecha_entrega_diseno: 2007-04-23 00:00:00
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "1"
+  dimensiones_espacio: 0.60x2.10
+  vista_arriba: "1"
+  observaciones: Presentar opcion de exhibidor TRIANGULAR de 0.60 m ancho
+  vista_derecha: "1"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: autoservicio
+  tipo_proyecto: "0"
+  id: "15"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "0"
+  ejecutivo_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "1"
+  acabado: al duco
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: MDF, impresiones
+  publico_objetivo: ""
+proyectos_004: 
+  opportunity_id: ca6df35a-710e-5039-32e4-46337e5aa060
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-04-28 12:03:22
+  tiene_cotizaciones: "1"
+  sugerencias: ""
+  vista_abajo: "0"
+  vista_izquierda: "1"
+  fecha_entrega_diseno: 
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "1"
+  dimensiones_espacio: ""
+  vista_arriba: "0"
+  observaciones: ""
+  vista_derecha: "1"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: ""
+  tipo_proyecto: "0"
+  id: "16"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "0"
+  ejecutivo_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "1"
+  acabado: ""
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: ""
+  publico_objetivo: ""
+proyectos_005: 
+  opportunity_id: d7965ca4-aa3d-8a8e-68a7-463bba6787f8
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-05-04 18:07:04
+  tiene_cotizaciones: "1"
+  sugerencias: ""
+  vista_abajo: "0"
+  vista_izquierda: "1"
+  fecha_entrega_diseno: 2007-05-05 00:00:00
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "1"
+  dimensiones_espacio: 3x2x3
+  vista_arriba: "1"
+  observaciones: ""
+  vista_derecha: "1"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: jockey
+  tipo_proyecto: "0"
+  id: "17"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "7040001"
+  ejecutivo_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "0"
+  acabado: al horno
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: mdf
+  publico_objetivo: a.b
+proyectos_006: 
+  opportunity_id: ee09dd75-079d-9cd4-7bc4-463f68066399
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-05-08 11:11:54
+  tiene_cotizaciones: "1"
+  sugerencias: ""
+  vista_abajo: "0"
+  vista_izquierda: "0"
+  fecha_entrega_diseno: 
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "0"
+  dimensiones_espacio: ""
+  vista_arriba: "0"
+  observaciones: ""
+  vista_derecha: "0"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: ""
+  tipo_proyecto: "0"
+  id: "18"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "0"
+  ejecutivo_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "0"
+  acabado: ""
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: ""
+  publico_objetivo: ""
+proyectos_007: 
+  opportunity_id: a421e9ae-b605-2276-56ec-4624ff693a18
+  moneda: 
+  valor_costo: 
+  quien_paga_recojo: 
+  fecha_creacion_proyecto: 2007-05-08 15:19:49
+  tiene_cotizaciones: "0"
+  sugerencias: sugerir medidas
+  vista_abajo: "0"
+  vista_izquierda: "0"
+  fecha_entrega_diseno: 2007-05-08 00:00:00
+  perdido: "0"
+  lugar_recojo: 
+  vista_frente: "1"
+  dimensiones_espacio: ""
+  vista_arriba: "0"
+  observaciones: ira encima de un counter
+  vista_derecha: "0"
+  con_igv: 
+  hora_entrega_hasta: 
+  caracteristicas_entorno: agencia de banco
+  tipo_proyecto: "0"
+  id: "19"
+  referencia_recojo: 
+  hora_recojo: 
+  fecha_recojo: 
+  que_se_recojera: 
+  comision: 
+  referencia_entregar: 
+  hora_entrega_desde: 
+  orden_de_trabajo: "0"
+  ejecutivo_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  ubigeo_entregar: 
+  recojo: 
+  nivel_seguridad: "1"
+  urgente: "0"
+  terminado: "0"
+  direccion_entregar: 
+  vista_atras: "1"
+  acabado: vinil
+  otro_tipo: ""
+  fecha_entregar: 
+  desc_pago_recojo: 
+  materiales: celtec
+  publico_objetivo: usuarios del banco

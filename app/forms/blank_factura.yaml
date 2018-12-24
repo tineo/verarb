@@ -1,0 +1,9 @@
+clave:
+  type:         text
+  acts_as:      password
+  function:     validate_blank_factura_password
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

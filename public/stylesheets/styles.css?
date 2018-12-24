@@ -1,0 +1,199 @@
+body, td {
+  font-family: Arial, Helvetica, "Sans-serif";
+  font-size: 12px;
+  color: #222;
+}
+
+a {
+  color: #2B2BC2;
+}
+
+.a_enabled {
+  color: #2B2BC2;
+}
+
+.a_disabled {
+  color: #999;
+}
+
+.error_msg {
+  color: #f00;
+}
+
+.weak {
+  color: #777;
+}
+
+.version {
+  font-size: 10px;
+  color: #fff;
+}
+
+.index_title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.panel_field {
+  font-weight: bold;
+  color: #222;
+}
+
+.panel_field a {
+  font-weight: bold;
+  color: #222;
+}
+
+.panel_field_selected {
+  font-weight: bold;
+  color: #b22;
+}
+
+.panel_title_projects_progress {
+  background: #3B0671;
+  color: #fff;
+}
+
+.panel_title_orders_progress {
+  background: #047212;
+  color: #fff;
+}
+
+.panel_title_opportunities {
+  background: #7D5AA1;
+  color: #fff;
+}
+
+.panel_title_orders {
+  background: #58A162;
+  color: #fff;
+}
+
+.panel_title_archive {
+  background: #8A74A0;
+  color: #fff;
+}
+
+.panel_title_archive_orders {
+  background: #73A079;
+  color: #fff;
+}
+
+.panel_title_facturas {
+  background: #045C72;
+  color: #fff;
+}
+
+.panel_title_boletas {
+  background: #723504;
+  color: #fff;
+}
+
+.panel_title_guias {
+  background: #4A7204;
+  color: #fff;
+}
+
+.panel_title_billing {
+  background: #045C72;
+  color: #fff;
+}
+
+.panel_title_notes {
+  background: #045C72;
+  color: #fff;
+}
+
+.top_data {
+  color: #fff;
+}
+
+.tab_blur {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.tab_focus {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.project_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.project_exec {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.project_void {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.main_id {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sub_id {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.panel_pages {
+  font-size: 11px;
+}
+
+.quicksearch {
+  border: 1px solid;
+  font-size: 10px;
+}
+
+.roles_user_important {
+  color: #ff0000;
+}
+
+.mega_warning {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.factura_add_guias_odt_title {
+  background: #047212;
+  color: #fff;
+}
+
+.fecha_de_entrega_modified {
+  color: #f00;
+}
+
+.truput_header {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.report_estimado_cierre_highlight {
+  color: #a00;
+  font-weight: bold;
+}
+
+.alert {
+  color: #f00;
+  font-weight: bold;
+}
+
+.obligatory {
+  font-weight: bold;
+  color: #f00;
+}

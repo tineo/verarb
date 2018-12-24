@@ -1,0 +1,14 @@
+<h2>Datos de Facturaci&oacute;n de Clientes</h2>
+
+<h3>Buscar Cuenta</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<%= autocomplete_account_field(@form.cuenta) %>
+<input type="submit" value="Buscar"><br>
+<%= @form.e :cuenta %>
+</td></tr>
+</table>
+</form>
+

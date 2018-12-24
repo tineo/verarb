@@ -1,0 +1,55 @@
+<h3>Nueva Gu&iacute;a de Remisi&oacute;n</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<b>ID de Orden</b>
+<%= @form.to_html :order, :size => 8 %>
+</td><td valign="top">
+<input type="submit" value="Buscar">
+o <%= link_to "Cancelar", :action => "guias" %>
+</td></tr>
+</table>
+
+<br>
+
+<% if @searched -%>
+<% if @order_found -%>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<h3>ODT <%= @order.orden_id %> - <%= @order.nombre_proyecto %></h3>
+<b>Cliente:</b> <%= @order.account.name %><br>
+<b>Ejecutivo:</b> <%= @order.executive.full_name %><br>
+<b>Empresa vendedora:</b> <%= EMPRESA_VENDEDORA[@order.empresa_vendedora] %><br>
+<b>Tipo de Proyecto:</b> <%= TIPO_PROYECTO[@order.tipo_proyecto] %><br>
+<br>
+<%
+unless can_see_company? @order.empresa_vendedora
+  m = "Pertenece a la empresa \"#{EMPRESA_VENDEDORA[@order.empresa_vendedora]}\" a la cual no tienes acceso"
+else
+  m = @order.can_have_guias?(:with_motive)
+end
+
+if m == ""
+-%>
+<%= link_to "Usar esta Orden", :action => "new_guia_2", :id => @order.orden_id, :serie => 1 %>
+<% else -%>
+<span class="error_msg">Esta Orden no se puede usar: <%= m %></span>
+<% end -%>
+
+</td></tr>
+</table>
+
+<% else -%>
+<span class="error_msg">La Orden <%= @form.order %> no existe. Verifique si el n&uacute;mero es correcto y reintente nuevamente.</span>
+<% end -%>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+
+

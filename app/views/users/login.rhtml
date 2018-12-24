@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Apoyo Publicitario</title>
+<%= stylesheet_link_tag "styles" %>
+</head>
+<body bgcolor="#5A0000" background="/images/tile.gif">
+<center>
+<br>
+
+<span class="index_title">Apoyo Publicitario</span><br>
+<br>
+
+<form method="POST">
+
+<% if @show_login_error_msg -%>
+<div class="error_msg">Nombre de usuario o contrase&ntilde;a inv&aacute;lida<br><br></div>
+<% end -%>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top" bgcolor="#A50000">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="#ffffff">
+<tr><td valign="top">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+Usuario:
+</td><td valign="top">
+<%= @form.to_html :username, :size => 16 %>
+</td></tr>
+
+<tr><td valign="top">
+Contrase&ntilde;a:
+</td><td valign="top">
+<%= @form.to_html :password, :size => 16 %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= submit_tag "Ingresar" %>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+<span class="version">Vera <%= VERA_VERSION %></span>
+
+</form>
+
+</center>
+
+</body>
+</html>

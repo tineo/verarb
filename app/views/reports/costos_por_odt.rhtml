@@ -1,0 +1,43 @@
+<h2>Costos por ODT</h2>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["ODT", "Cliente", "Descripci&oacute;n", "Precio USD<br>sin IGV", "Costo Variable<br>Real", "Truput<br>USD real", "%<br>Margen"].each do |i|
+-%>
+<td valign="top" align="center">
+<%= i -%>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="7">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+gtotal = 0.00
+ototal = 0
+
+@data.each do |p|
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" align="center">
+<%= link_to p.orden_id, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= p.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= format_price p.monto_de_venta_as_dollars %>
+</td><td valign="top" align="right">
+<%= format_price p.costo_variable %>
+</td><td valign="top" align="right">
+<%= format_price p.truput %>
+</td><td valign="top" align="right">
+<%= format_price p.margen %>
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+
+

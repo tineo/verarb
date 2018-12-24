@@ -1,0 +1,30 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Grupos</h2>
+
+<%= link_to "Crear nuevo grupo", :action => "new" %>
+o <%= link_to "Regresar", :controller => "admin", :action => "index" %><br>
+<br>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<table border="0" cellpadding="5" cellspacing="1">
+<% @groups.each do |g| -%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= link_to(g.name, { :action => "show", :id => g.id }) %>
+</td><td valign="top">
+<%= link_to image_tag("stock_edit-16.gif", :border => 0), :action => "edit", :id => g.id %>
+</td><td valign="top">
+<%= link_to image_tag("stock_delete-16.gif", :border => 0), { :action => "delete", :id => g.id }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+
+</td></tr>
+</table>
+

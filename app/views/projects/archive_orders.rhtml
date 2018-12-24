@@ -1,0 +1,113 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<% if is_supervisor? -%>
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+
+<br>
+<% end -%>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="<%= @panel_fields.length %>" align="center" class="panel_title_archive_orders">
+<b>ARCHIVO DE ORDENES</b>
+</td></tr>
+<tr bgcolor="#dddddd">
+<%
+@panel_fields.each do |h|
+  h = "&nbsp;" if h == "DangerFlag"
+  h = "Fecha de Entrega" if h == "Entrega_ODT"
+  h = "Fecha P.Venta" if h == "Fecha_PVenta"
+-%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<tr id="p_empty" style="display: none;"><td valign="top" colspan="<%= @panel_fields.length %>" align="center" bgcolor="#ffffff">
+<i>No se encontraron proyectos</i>
+</td></tr>
+
+<% if @projects.empty? -%>
+<tr><td align="center" bgcolor="#eeeeee" colspan="<%= @panel_fields.size %>">
+No hay nada que ver aqu&iacute;. Circulen, circulen.
+</td></tr>
+<% end -%>
+
+<% @projects.each do |p| -%>
+<tr bgcolor="<%= ESTADOS[p.status][:color_off] %>" onMouseOver="this.style.background='<%= ESTADOS[p.status][:color_on] %>'" onMouseOut="this.style.background='<%= ESTADOS[p.status][:color_off] %>'">
+<%
+     @panel_fields.each do |h|
+       align = "left"
+       
+       if h == "ID"
+         content = p.orden_id
+         align   = "center"
+       
+       elsif h == "OrdenTrabajo"
+         align = "center"
+         
+         if p.con_orden_de_trabajo?
+           o = Orden.find_by_proyecto_id p.id
+           unless o.nil?
+             content = o.id.to_s
+           else
+             content = ""
+           end
+         else
+           content = ""
+         end
+       
+       elsif h == "Propuesta"
+         content = link_to p.opportunity.name, :action => "show", :id => p.id
+       
+       elsif h == "Cliente"
+         content = p.account.name
+       
+       elsif h == "Estado"
+         content = ESTADOS[p.status][:label]
+       
+       elsif h == "Creado"
+         content = p.fecha_creacion_proyecto.strftime "%d/%m/%Y"
+         align   = "center"
+       
+       elsif h == "Entrega_ODT"
+         if p.fecha_de_entrega_odt == nil
+           content = "&nbsp;"
+         else
+           content = p.fecha_de_entrega_odt.strftime "%d/%m/%Y %I:%M %p"
+           align   = "center"
+         end
+       
+      elsif h == "Fecha_PVenta"
+        align   = "center"
+        content = p.fecha_pventa.strftime "%d/%m/%Y %I:%M %p" unless p.fecha_pventa.nil?
+      
+      end
+       
+-%>
+<td align="<%= align %>">
+<%= content %>
+</td>
+<%   end %>
+</tr>
+<% end -%>
+
+</td></tr>
+</table>
+
+<br>

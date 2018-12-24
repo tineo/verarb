@@ -1,0 +1,76 @@
+<form method="POST">
+<%= render :partial => "menubar" %>
+
+<h3>Enviar a Area</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" align="center">
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Area</b>
+</td><td valign="top" align="center">
+<b>Fecha de Ingreso</b>
+</td></tr>
+
+<tr bgcolor="#ffffff"><td valign="top">
+<% if @area.en_diseno? -%>
+<b>Dise&ntilde;o</b>
+<% else -%>
+<%= link_to "Dise&ntilde;o", { :action => "send_to", :id => @project.uid, :type => @project.type, :aid => A_DISENO }, :confirm => "Esta seguro?" %>
+<% end -%>
+</td><td valign="top">
+<% if @area.ingreso_diseno? -%>
+<%= @area.ingreso_diseno.strftime "%d/%m/%Y %H:%M" %>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="#ffffff"><td valign="top">
+<% if @area.en_planeamiento? -%>
+<b>Desarrollo</b>
+<% else -%>
+<%= link_to "Desarrollo", { :action => "send_to", :id => @project.uid, :type => @project.type, :aid => A_PLANEAMIENTO }, :confirm => "Esta seguro?" %>
+<% end -%>
+</td><td valign="top">
+<% if @area.ingreso_planeamiento? -%>
+<%= @area.ingreso_planeamiento.strftime "%d/%m/%Y %H:%M" %>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="#ffffff"><td valign="top">
+<% if @area.en_costos? -%>
+<b>Costos</b>
+<% else -%>
+<%= link_to "Costos", { :action => "send_to", :id => @project.uid, :type => @project.type, :aid => A_COSTOS }, :confirm => "Esta seguro?" %>
+<% end -%>
+</td><td valign="top">
+<% if @area.ingreso_costos? -%>
+<%= @area.ingreso_costos.strftime "%d/%m/%Y %H:%M" %>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="#ffffff"><td valign="top">
+<% if @area.en_innovaciones? -%>
+<b>Innovaciones</b>
+<% else -%>
+<%= link_to "innovaciones", { :action => "send_to", :id => @project.uid, :type => @project.type, :aid => A_INNOVACIONES }, :confirm => "Esta seguro?" %>
+<% end -%>
+</td><td valign="top">
+<% if @area.ingreso_innovaciones? -%>
+<%= @area.ingreso_innovaciones.strftime "%d/%m/%Y %H:%M" %>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+<br>

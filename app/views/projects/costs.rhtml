@@ -1,0 +1,112 @@
+<%= render :partial => "menubar" %>
+
+<h3>Costos</h3>
+
+<%= form_tag %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if controller.costs_are_editable? -%>
+<b>Valor Costo:</b><br>
+<%= @form.to_html :valor_costo, :size => 10 %>
+<br>
+<%= @form.to_html :moneda %>
+<br>
+<%= @form.to_html :con_igv %> Con IGV<br>
+<br>
+<b>Comisi&oacute;n Ext.</b><br>
+<%= @form.to_html :comision, :size => 10 %>
+<br>
+
+<input type="submit" name="b" value="Guardar cambios">
+
+<% else -%>
+
+<b>Valor Costo:</b><br>
+<%= crm_currency(@project.opportunity.currency_id) + (" %.2f" % (@project.opportunity.amount || 0)) %><br>
+<br>
+<%= (@project.con_igv? ? "Con IGV": "No incluye IGV") %><br>
+<br>
+<b>Comisi&oacute;n Ext.</b><br>
+<%= "%.2f" % (@project.comision || 0) %><br>
+<br>
+
+<% end -%>
+
+
+</td></tr>
+</table>
+<%= end_form_tag %>
+
+<br>
+
+<h3>Adjuntos de Costos</h3>
+
+<%= start_form_tag({:action => 'costs', :id => @project.uid }, :multipart => true) %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="10" cellspacing="0">
+<tr><td valign="top" width="50%">
+<b>Lista de ficheros adjuntos</b><br>
+<br>
+
+<% if @files.empty? -%>
+<i>No hay ficheros adjuntos</i><br>
+<br>
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<% @files.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :action => "get_costs_file", :id => @project.uid, :fid => f.filename, :type => @project.type %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<% end -%>
+
+</td><td valign="top" width="50%">
+<b>Anexar nuevo fichero</b><br>
+<br>
+<%= file_field_tag "file" %>
+<input type="submit" name="b" value="Transferir"><br>
+<br>
+
+</td></tr>
+</table>
+<%= end_form_tag %>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Observaciones</h3>
+
+<%= form_tag :action=> "post_message", :id => @project.uid, :aid => A_COSTOS, :type => @project.type %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form2.to_html :mensaje, :cols => 60 %>
+<br>
+<%= submit_tag "Publicar" %><br>
+<br>
+<br>
+
+<b>Observaciones</b> (M&aacute;s recientes primero)<br>
+<br>
+
+<% @messages.each do |m| -%>
+<span class="weak">
+<%= m.fecha.strftime "%d/%m/%Y %H:%M" %><br>
+<%= m.user.user_name %> escribi&oacute;:
+</span>
+<%= simple_format(h(m.mensaje)) %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+</form>

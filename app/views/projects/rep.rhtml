@@ -1,0 +1,3 @@
+<% @projects.each do |p| -%>
+"<%= p.id %>","<%= ESTADOS[p.status][:label] %>","<%= p.opportunity.name %>","<%= p.account.name %>","<%= p.executive.full_name %>","<%= p.fecha_creacion_proyecto %>","<%= p.fecha_entrega_diseno %>","<%= User.find(p.area.encargado_diseno).full_name %>","<%= p.opportunity.amount %>"
+<% end -%>

@@ -1,0 +1,236 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+<form method="POST">
+
+<%= render :partial => "menubar" %>
+
+<h3>Editar proyecto</h3>
+
+<h3>Generales</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Contacto</b><br>
+<%= @form.to_html :contacto %>
+<br>
+
+<b>Urgente</b><br>
+<%= @form.to_html :urgente_diseno %> Dise&ntilde;o<br>
+<%= @form.to_html :urgente_planeamiento %> Planeamiento<br>
+<%= @form.to_html :urgente_costos %> Costos<br>
+<br>
+
+<%= @form.to_html :alquiler %>
+<br>
+
+<b>Categor&iacute;a de Venta</b><br>
+<%= @form.to_html :tipo_de_venta %>
+<br>
+
+<%= @form.to_html :canje %> Es Canje<br>
+<br>
+
+<b>Tipo de Proyecto</b><br>
+<%= TIPO_PROYECTO[@project.tipo_proyecto] %><br>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha de entrega del Dise&ntilde;o</b><br>
+<input type="text" id="fecha_entrega_diseno" name="fecha_entrega_diseno" value="<%= @form.fecha_entrega_diseno %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_d", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_diseno", "hora_entrega_diseno") %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora de entrega del Dise&ntilde;o</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_diseno" maxlength="4" size="4" value="<%= @form.hora_entrega_diseno %>">
+<%= @form.to_html :hora_am_pm_diseno %>
+<%= @form.e :hora_entrega_diseno %>
+
+</td></tr>
+</table>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha de entrega de Planeamiento</b><br>
+<input type="text" id="fecha_entrega_planeamiento" name="fecha_entrega_planeamiento" value="<%= @form.fecha_entrega_planeamiento %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_p", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_planeamiento", "hora_entrega_planeamiento") %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora de entrega de Planeamiento</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_planeamiento" maxlength="4" size="4" value="<%= @form.hora_entrega_planeamiento %>">
+<%= @form.to_html :hora_am_pm_planeamiento %>
+<%= @form.e :hora_entrega_planeamiento %>
+
+</td></tr>
+</table>
+<br>
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha de entrega de Costos</b><br>
+<input type="text" id="fecha_entrega_costos" name="fecha_entrega_costos" value="<%= @form.fecha_entrega_costos %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_c", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_costos", "hora_entrega_costos") %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora de entrega de Costos</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_costos" maxlength="4" size="4" value="<%= @form.hora_entrega_costos %>">
+<%= @form.to_html :hora_am_pm_costos %>
+<%= @form.e :hora_entrega_costos %>
+
+</td></tr>
+</table>
+<br>
+
+<% if @entrega_editable -%>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<b>Fecha tentativa de entrega al Cliente</b><br>
+<input type="text" id="fecha_entrega_odt" name="fecha_entrega_odt" value="<%= @form.fecha_entrega_odt %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_o", :border => 0 %>
+<%= calendar_hour_clear_button("fecha_entrega_odt", "hora_entrega_odt") %><br>
+<br>
+<%= @form.e :fecha_entrega_odt %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+
+<b>Hora tentativa de entrega al Cliente</b><br>
+<span class="weak">Formato: hhmm. Ej: 0900, 1130, 0545</span><br>
+<input type="text" name="hora_entrega_odt" maxlength="4" size="4" value="<%= @form.hora_entrega_odt %>">
+<%= @form.to_html :hora_am_pm_odt %>
+<%= @form.e :hora_entrega_odt %>
+
+</td></tr>
+</table>
+<br>
+<% end -%>
+
+
+<b>Tipo de Presentaci&oacute;n de Dise&ntilde;o</b><br>
+<%= @form.to_html :tipo_de_presentacion %>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<%= @form.to_html :solo_entrega %> S&oacute;lo entrega<br>
+<%= @form.to_html :con_instalacion %> Con instalaci&oacute;n<br>
+</td><td valign="top" width="50">
+</td><td valign="top">
+<%= @form.to_html :entrega_en_un_punto %>
+</td><td valign="top" width="50">
+</td><td valign="top">
+<b>Lugar(es) de Entrega:</b><br>
+<%= @form.to_html :lugares_de_entrega %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+
+<h3>Forma</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Caracter&iacute;sticas del Entorno</b><br>
+<%= @form.to_html :caracteristicas_entorno, :size => 60 %>
+<br>
+
+<b>P&uacute;blico objetivo</b><br>
+<%= @form.to_html :publico_objetivo, :size => 60 %>
+<br>
+
+<b>Dimensiones del espacio</b><br>
+<span class="weak">Ancho x Alto x Profundidad, d&oacute;nde estar&aacute; el producto</span><br>
+<%= @form.to_html :dimensiones_espacio %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :observaciones, :cols => 60 %>
+<br>
+
+</td></tr>
+</table>
+
+<!--
+<h3>Caracter&iacute;sticas Espec&iacute;ficas</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Nivel de Seguridad</b><br>
+<%= @form.to_html :nivel_seguridad %>
+<br>
+
+<b>Materiales</b><br>
+<%= @form.to_html :materiales, :size => 60 %>
+<br>
+
+<b>Acabado</b><br>
+<%= @form.to_html :acabado, :size => 60 %>
+<br>
+
+<b>C&oacute;mo se ver&aacute;</b><br>
+<%= @form.to_html :como_se_vera %>
+
+</td></tr>
+</table>
+-->
+
+<br>
+
+<input type="submit" name="button" value="Guardar cambios">
+o <%= link_to "Cancelar", :action => "show", :id => @project.uid, :type => @project.type %>
+</form>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_entrega_diseno",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_d"
+});
+
+Calendar.setup({
+    inputField : "fecha_entrega_planeamiento",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_p"
+});
+
+Calendar.setup({
+    inputField : "fecha_entrega_costos",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_c"
+});
+
+<% if @entrega_editable -%>
+Calendar.setup({
+    inputField : "fecha_entrega_odt",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_o"
+});
+<% end -%>
+</script>

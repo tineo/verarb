@@ -1,0 +1,147 @@
+--- 
+detalles_005: 
+  descripcion: .
+  proyecto_id: "15"
+  aprobado: "1"
+  observaciones: 
+  id: "28"
+  precio: "0"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "6"
+  tipo: P
+detalles_006: 
+  descripcion: .
+  proyecto_id: "15"
+  aprobado: "0"
+  observaciones: 
+  id: "29"
+  precio: "0"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "18"
+  tipo: P
+detalles_007: 
+  descripcion: .
+  proyecto_id: "16"
+  aprobado: "0"
+  observaciones: 
+  id: "30"
+  precio: "80"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "35"
+  tipo: P
+detalles_008: 
+  descripcion: .
+  proyecto_id: "17"
+  aprobado: "1"
+  observaciones: 
+  id: "31"
+  precio: "120"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "67"
+  tipo: P
+detalles_009: 
+  descripcion: .
+  proyecto_id: "17"
+  aprobado: "1"
+  observaciones: 
+  id: "32"
+  precio: "150"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+detalles_010: 
+  descripcion: .
+  proyecto_id: "17"
+  aprobado: "1"
+  observaciones: 
+  id: "33"
+  precio: "60"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "22"
+  tipo: P
+detalles_011: 
+  descripcion: .
+  proyecto_id: "18"
+  aprobado: "1"
+  observaciones: 
+  id: "34"
+  precio: "100"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+detalles_012: 
+  descripcion: .
+  proyecto_id: "18"
+  aprobado: "1"
+  observaciones: 
+  id: "35"
+  precio: "40"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "73"
+  tipo: P
+detalles_001: 
+  descripcion: .
+  proyecto_id: "13"
+  aprobado: "0"
+  observaciones: 
+  id: "23"
+  precio: "0"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "4"
+  tipo: P
+detalles_013: 
+  descripcion: "Se\xC3\xB1aletica de atencion preferencial\r\n\
+    \r\n\
+    \r\n\
+    SUGERIR MEDIDAS"
+  proyecto_id: "19"
+  aprobado: "0"
+  observaciones: 
+  id: "36"
+  precio: "6.5"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "52"
+  tipo: P
+detalles_002: 
+  descripcion: .
+  proyecto_id: "14"
+  aprobado: "1"
+  observaciones: 
+  id: "26"
+  precio: "40"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "6"
+  tipo: P
+detalles_003: 
+  descripcion: .
+  proyecto_id: "14"
+  aprobado: "1"
+  observaciones: 
+  id: "25"
+  precio: "150"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+detalles_004: 
+  descripcion: "Similar a dise\xC3\xB1o anterior adjunto"
+  proyecto_id: "15"
+  aprobado: "1"
+  observaciones: 
+  id: "27"
+  precio: "0"
+  cantidad: "1"
+  servicio_id: "0"
+  producto_id: "22"
+  tipo: P

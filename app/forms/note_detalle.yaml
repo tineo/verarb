@@ -1,0 +1,13 @@
+descripcion:
+  type:         text
+  acts_as:      textarea
+
+cantidad:
+  type:         text
+  function:     validate_precio
+
+valor_unitario:
+  type:         text
+  function:     validate_precio
+
+

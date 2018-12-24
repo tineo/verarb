@@ -1,0 +1,123 @@
+<%= render :partial => "menubar" %>
+
+<h2>Costo Variable ODT - <%= @oid %></h2>
+
+<h3>Insumos</h3>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb"><td valign="top" align="center">
+<b>Insumo</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Costo</b>
+</td><td valign="top" align="center">
+<b>Costo Total</b>
+</td></tr>
+
+<%
+it = 0.00
+@project.each_sispre_insumo do |d, dollars, soles, costo, total|
+  it += total
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= d.insumo.Cod_Ins %>
+</td><td valign="top">
+<%= d.insumo.Dsc_Ins %>
+</td><td valign="top" align="right">
+<%= format_price d.Cant_Sal %>
+</td><td valign="top" align="right">
+<%= format_price costo %>
+</td><td valign="top" align="right">
+<%= format_price total %>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" align="right" colspan="5">
+<b><%= format_price(it) %></b>
+</td></tr>
+
+</table>
+
+<br>
+
+<h3>Servicios</h3>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb"><td valign="top" align="center">
+<b>Servicio</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Costo</b>
+</td><td valign="top" align="center">
+<b>Costo Total</b>
+</td></tr>
+
+<%
+st = 0.00
+@project.each_sispre_service do |d, costo, total|
+  st += total
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= d.Cod_Servicio %>
+</td><td valign="top">
+<%= d.Descripcion %>
+</td><td valign="top" align="right">
+<%= format_price d.Cantidad %>
+</td><td valign="top" align="right">
+<%= format_price costo %>
+</td><td valign="top" align="right">
+<%= format_price total %>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" align="right" colspan="5">
+<b><%= format_price(st) %></b>
+</td></tr>
+
+</table>
+
+<br>
+
+<h3>Compras Libres</h3>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb"><td valign="top" align="center">
+<b>Compra</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Costo Total</b>
+</td></tr>
+
+<%
+ct = 0.00
+@project.each_sispre_compras_libres do |d, total|
+  ct += total
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= d.Cod_Compra %>
+</td><td valign="top">
+<%= d.Glosa %>
+</td><td valign="top" align="right">
+<%= format_price total %>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" align="right" colspan="5">
+<b><%= format_price(ct) %></b>
+</td></tr>
+
+</table>
+
+<br>
+
+<h3>Gran Total: <%= format_price((it + st + ct)) %></h3>
+
+
+

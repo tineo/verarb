@@ -1,0 +1,37 @@
+--- 
+jpuppo: 
+  id: 19
+  messenger_id: 
+  address_country: 
+  address_city: 
+  status: Active
+  department: Cuentas
+  phone_fax: 
+  phone_mobile: 
+  receive_notifications: "1"
+  portal_only: "0"
+  phone_other: 
+  title: Ejecutivo
+  user_hash: 24af2ffa39de4b8126105a18548e9f59
+  is_group: "0"
+  address_street: 
+  email1: jpuppo@apoyopublicitario.com
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  email2: 
+  date_modified: 2007-05-17 18:23:13
+  is_admin: "on"
+  phone_home: 
+  address_state: 
+  phone_work: 
+  description: 
+  employee_status: Active
+  deleted: "0"
+  address_postalcode: 
+  modified_user_id: cefba3d8-bdca-1738-cd86-462e6abe5131
+  user_preferences: blah
+  first_name: Javier
+  reports_to_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  last_name: Puppo
+  user_name: jpuppo
+  messenger_type: MSN
+  date_entered: 2007-04-24 20:35:26

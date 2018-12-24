@@ -1,0 +1,121 @@
+<%= render :partial => "menubar_guia" %>
+
+<h3>Datos</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if @guia.en_blanco? -%>
+<i>Esta Gu&iacute;a est&aacute; en blanco</i>
+<% else -%>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>N&uacute;mero</b>
+</td><td valign="top">
+<%= @guia.formatted_number %>
+</td></tr>
+
+<tr><td valign="top">
+<b>ODT</b>
+</td><td valign="top">
+<%= @guia.proyecto.orden_id %> - <%= link_to @guia.proyecto.nombre_proyecto, :controller => "projects", :action => "show", :id => @guia.proyecto.uid, :type => @guia.proyecto.type %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%= @guia.account.name if @guia.account %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @guia.account.ruc if @guia.account %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Emisi&oacute;n</b>
+</td><td valign="top">
+<%= @guia.fecha_emision.strftime "%d/%m/%Y" %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Recepci&oacute;n del Cliente</b>
+</td><td valign="top">
+<%= @guia.fecha_despacho.strftime "%d/%m/%Y" if @guia.fecha_despacho %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Retorno</b>
+</td><td valign="top">
+<%= @guia.fecha_retorno.strftime("%d/%m/%Y") if @guia.fecha_retorno %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Responsable</b>
+</td><td valign="top">
+<%= @guia.responsable %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Lugar de Entrega</b>
+</td><td valign="top">
+<%= @guia.lugar_de_entrega %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Localidad</b>
+</td><td valign="top">
+<%= @guia.localidad %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= simple_format(@guia.observaciones) %>
+</td></tr>
+</table>
+
+<% end -%>
+
+</td></tr>
+</table>
+<br>
+
+<h3>Detalles</h3>
+
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Medida</b>
+</td></tr>
+
+<% @guia.detalles.each do |d| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= simple_format(d.descripcion) %>
+</td><td valign="top" align="right">
+<%= d.cantidad %>
+</td><td valign="top">
+<%= d.medida %>
+</td></tr>
+<% end -%>
+
+</table>
+
+
+</td></tr>
+</table>
+<br>
+
+<% unless @guia.anulada? || @guia.en_blanco? -%>
+<%= link_to "Editar Gu&iacute;a", :action => "edit_guia", :id => @guia.id %>
+<% end -%>
+

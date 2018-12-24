@@ -1,0 +1,103 @@
+<h2>Flujo de Cobranza</h2>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= @form.to_html :client %>
+</td></tr>
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa_vendedora %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+<br>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#eebbbb"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Soles</b>
+</td><td valign="top" align="center">
+<b>D&oacute;lares</b>
+</td></tr>
+
+<% if @list.empty? -%>
+<tr><td valign="top" colspan="3" bgcolor="#eeeeee">
+<i>No hay resultados</i>
+</td></tr>
+<%
+else
+  current = @start_date
+  totals  = []
+  gtotal  = 0.00
+  
+  EMPRESA_VENDEDORA.size.times do
+    totals << 0.00
+  end
+
+  while current <= @end_date do
+    if @list[current.strftime("%Y%m%d")]
+      entry   = @list[current.strftime("%Y%m%d")]
+      soles   = entry[:soles]
+      dollars = entry[:dollars]
+    else
+      soles   = 0.00
+      dollars = 0.00
+    end
+    
+    unless soles + dollars == 0.00
+-%>
+<tr><td valign="top" bgcolor="#eebbbb">
+<%= link_to current.strftime("%d/%m/%Y"), :action => "facturation_flow_details", :date => current.to_i, :client => @form.client, :empresa => @form.empresa_vendedora %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+<%= format_price(soles) %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+<%= format_price(dollars) %><br>
+<% entry[:facturas].each do |f| -%>
+<%= link_to f.formatted_factura_number, :controller => "facturation", :action => "show_factura", :fid => f.id, :type => f.tipo, :from => "f" %> = <%= f.monto_activo_as_dollars %><br>
+<% end -%>
+
+</td></tr>
+<%
+    end
+    
+    current += 1.day
+  end
+end
+-%>
+</table>
+
+<br>
+<br>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<% @totals.each_with_index do |t, i| -%>
+<tr bgcolor="#eeeeee"><td valign="top" bgcolor="#eebbbb">
+<%= EMPRESA_VENDEDORA[i] %>
+</td><td valign="top" align="right">
+$ <%= format_price t %>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" bgcolor="#eebbbb">
+<b>Total pendiente por cobrar</b>
+</td><td valign="top" align="right">
+<b>$ <%= format_price @gtotal %></b>
+</td></tr>
+</table>
+
+

@@ -1,0 +1,39 @@
+exec:
+  type:         select
+  options:      "wo_exec_options"
+  value:        "-1"
+
+client:
+  type:         select
+  options:      "wo_client_options"
+  value:        "-1"
+
+month_creado:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+year_creado:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+month_entrega:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+year_entrega:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+month_creado:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+year_creado:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"

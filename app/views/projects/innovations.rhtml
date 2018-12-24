@@ -1,0 +1,73 @@
+<%= render :partial => "menubar" %>
+
+<h3>Innovaciones</h3>
+
+<%= start_form_tag({:action => 'innovations', :id => @project.uid }, :multipart => true) %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="10" cellspacing="0">
+<tr><td valign="top" width="50%">
+<b>Lista de ficheros adjuntos</b><br>
+<br>
+
+<% if @files.empty? -%>
+<i>No hay ficheros adjuntos</i><br>
+<br>
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<% @files.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :action => "get_innovations_file", :id => @project.uid, :fid => f.filename, :type => @project.type %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<% end -%>
+
+</td><td valign="top" width="50%">
+<b>Anexar nuevo fichero</b><br>
+<br>
+<%= file_field_tag "file" %>
+<input type="submit" name="b" value="Transferir"><br>
+<br>
+
+</td></tr>
+</table>
+<%= end_form_tag %>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Observaciones</h3>
+
+<%= form_tag :action=> "post_message", :id => @project.uid, :aid => A_INNOVACIONES, :type => @project.type %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form2.to_html :mensaje, :cols => 60 %>
+<br>
+<%= submit_tag "Publicar" %><br>
+<br>
+<br>
+
+<b>Observaciones</b> (M&aacute;s recientes primero)<br>
+<br>
+
+<% @messages.each do |m| -%>
+<span class="weak">
+<%= m.fecha.strftime "%d/%m/%Y %H:%M" %><br>
+<%= m.user.user_name %> escribi&oacute;:
+</span>
+<%= simple_format(h(m.mensaje)) %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+

@@ -1,0 +1,59 @@
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#7D5AA1">
+<tr><td valign="top">
+<span class="project_title"><%= @opp.name %></span><br>
+<span class="project_exec">Ejecutivo: <%= @opp.executive.full_name %></span><br>
+</td><td valign="top" align="right">
+&nbsp;
+</td></tr>
+</table>
+<br>
+
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Cliente</b><br>
+<a href="<%= crm_url %>index.php?module=Accounts&action=DetailView&record=<%= @account.id %>" target="_Blank"><%= @account.name %></a><br>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= simple_format @opp.description unless @opp.description.nil? %>
+
+<b>Tipo</b><br>
+<%= @opp.opportunity_type %><br>
+<br>
+
+<b>Toma de Contacto</b><br>
+<%= @opp.lead_source %><br>
+<br>
+
+<b>Precio</b><br>
+<%= crm_currency(@opp.currency_id) %> <%= format_price @opp.amount %><br>
+<br>
+
+<b>Fecha de Cierre</b><br>
+<%= format_short_date(@opp.date_closed) unless @opp.date_closed.nil? %><br>
+<br>
+
+<b>Etapa de Ventas</b><br>
+<%= @opp.sales_stage %><br>
+<br>
+
+<b>Probabilidad (%)</b><br>
+<%= @opp.probability %><br>
+<br>
+
+<% unless @opp.project.nil? -%>
+Con Proyecto (<%= link_to @opp.project.id, :controller => "projects", :action => "show", :id => @opp.project.id, :type => "p" %>)
+
+<% if @opp.project.con_orden_de_trabajo? -%>
+y Orden (<%= link_to @opp.project.orden_id, :controller => "projects", :action => "show", :id => @opp.project.orden_id, :type => "o" %>)
+<% end -%>
+
+
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+

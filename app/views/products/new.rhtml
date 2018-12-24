@@ -1,0 +1,34 @@
+<h2>Categor&iacute;as y Productos</h2>
+
+<h3>Categor&iacute;a "<%= @category.nombre %>" &gt; Nuevo producto</h3>
+
+<form action="<%= url_for :controller => "products", :action => "new", :cid => @category.id %>" method="POST">
+<b>Nombre</b><br>
+<%= @form.to_html :nombre %>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= @form.to_html :descripcion %>
+<br>
+
+<b>Costo Variable</b><br>
+<%= @form.to_html :costo_variable, :size => 16 %>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<b>Atributos</b><br>
+<%= @form.to_html :atributos %>
+<br>
+<%= submit_tag "Aceptar" %>
+
+o <%= link_to "Cancelar", :controller => "categories", :action => "show", :id => @category.id %>
+
+</td><td valign="top" width="30">
+</td><td valign="top">
+<%= render :partial => "format" %>
+</td></tr>
+</table>
+
+<%= end_form_tag %>
+

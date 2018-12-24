@@ -1,0 +1,5 @@
+cuenta:
+  function:     validate_ajax_account
+  type:         text
+
+

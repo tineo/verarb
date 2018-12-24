@@ -1,0 +1,158 @@
+<script type="text/javascript">
+function toggle_view(a) {
+  if (a) {
+    document.getElementById('extra').style.display = "";
+  }
+  else {
+    document.getElementById('extra').style.display = "none";
+  }
+}
+
+function mark_cotization(id) {
+<%
+unless @cotizaciones.empty?
+  @cotizaciones.each do |c|
+-%>
+  document.getElementById('star_' + <%= c.id %>).src = "/images/star-off.gif";
+<%
+  end
+end
+-%>
+  document.getElementById('star_' + id).src = "/images/star-on.gif";
+}
+</script>
+
+
+<%= render :partial => "menubar" %>
+
+<h3>Cotizaciones</h3>
+
+<%= form_tag %>
+<table width="100%" border="0" cellpadding="15" cellspacing="2">
+<tr bgcolor="#fff8c2"><td valign="top">
+
+<% if @project.con_orden_de_trabajo? || can_access?(:cotizations) -%>
+&nbsp;
+
+<% else -%>
+
+<% unless @c.nil? -%>
+<span class="error_msg">Se cargaron datos de la cotizaci&oacute;n <b>"<%= @c.codigo %>"</b></span><br>
+<br>
+<% end -%>
+
+<b>Tiempo de Entrega</b><br>
+<input type="text" name="tiempo_de_entrega" value="<%= @form.tiempo_de_entrega %>" size="2" maxlength="2"> d&iacute;as &uacute;tiles<br>
+<%= @form.e :tiempo_de_entrega %>
+<br>
+
+<b>Forma de Pago</b><br>
+<%= @form.to_html :forma_de_pago %>
+<br>
+
+<b>Moneda</b><br>
+<%= @form.to_html :moneda %>
+<br>
+
+<b>Contacto</b><br>
+<%= @form.to_html :contacto %>
+<br>
+
+<b>Validez de Oferta</b><br>
+<input type="text" name="validez_de_oferta" value="<%= @form.validez_de_oferta %>" size="2" maxlength="2"> d&iacute;as<br>
+<%= @form.e :validez_de_oferta %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :notas %>
+<br>
+<%= @form.to_html :incluir_gran_total %> Incluir gran total<br>
+<br>
+
+<input type="checkbox" name="especificar_detalles" value="1" <%= (@form.especificar_detalles == "1" ? "checked" : "") %> onClick="toggle_view(this.checked)"> Escribir detalle<br>
+<br>
+
+<div id="extra" style="display: <%= (@form.especificar_detalles == "1" ? "" : "none") %>">
+
+<table width="100%" border="0" cellpadding="10" cellspacing="3">
+<% @detalles.each_with_index do |f, i| -%>
+<tr><td valign="top" bgcolor="#ffe698">
+<b>Detalle</b><br>
+<textarea name="detalles[<%= i %>]" cols="40" rows="15"><%= f.detalles %></textarea><br>
+<%= f.e :detalles %>
+<br>
+
+<b>Cantidad</b><br>
+<input type="text" name="cantidad[<%= i %>]" value="<%= f.cantidad %>" size="10" maxlength="10"><br>
+<%= f.e :cantidad %>
+<br>
+
+<b>Precio Unitario</b><br>
+<input type="text" name="precio[<%= i %>]" value="<%= f.precio %>" size="16" maxlength="128"><br>
+<%= f.e :precio %>
+<br>
+<% unless i == 0 -%>
+<input type="submit" name="delete[<%= i %>]" value="Eliminar este detalle">
+<% end -%>
+</td></tr>
+<% end -%>
+<tr><td valign="top" bgcolor="#ffe698">
+<input type="submit" name="more" value="Agregar otra fila de detalle">
+</td></tr>
+</table>
+<br>
+
+</div>
+
+
+<input type="submit" name="ok" value="Generar nueva cotizaci&oacute;n">
+o <%= link_to "Cancelar", :action => "panel" %>
+
+<% end -%>
+
+</td><td valign="top" width="30%">
+
+<h3>Cotizaciones generadas</h3>
+
+<% if @cotizaciones.size == 0 -%>
+<i>No hay cotizaciones generadas para este proyecto.</i>
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<%
+  @cotizaciones.each do |c|
+    if c.marked?
+      star_status = "on"
+    else
+      star_status = "off"
+    end
+-%>
+<tr bgcolor="#fffbdf">
+<% if @project.can_create_cotizations? && can_access?(:cotizations) == false -%>
+<td valign="top" align="center">
+<%= link_to_remote('<img id="star_' + c.id.to_s + '" src="/images/star-' + star_status + '.gif" border="0">', :url => { :controller => "projects", :action => "mark_cotization", :id => @project.id, :cid => c.id }, :success => "mark_cotization(" + c.id.to_s + ")") %>
+</td>
+<% end -%>
+<td valign="top">
+<%=
+if @project.can_create_cotizations? && can_access?(:cotizations) == false
+  link_to c.codigo, :action => "cotization", :id => @project.id, :cid => c.id
+else
+  c.codigo
+end
+%>
+</td><td valign="top" align="center">
+<%= link_to image_tag("stock_print-16.gif", :alt => "Imprimir", :border => 0), { :action => "view_cotizacion", :id => @project.id, :cid => c.id }, :target => "_blank" %>
+<% unless can_access?(:cotizations) -%>
+</td><td valign="top" align="center">
+<%= link_to image_tag("link-email-16.gif", :alt => "Enviar por E-Mail", :border => 0), { :action => "email_cotizacion", :id => @project.id, :cid => c.id } %>
+<% end -%>
+</td><td valign="top" align="center">
+<%= link_to image_tag("stock_save-16.gif", :alt => "Descargar en HTML", :border => 0), { :action => "view_cotizacion", :id => @project.id, :cid => c.id, :save => "1", :filename => c.codigo + ".html" } %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+<%= end_form_tag %>

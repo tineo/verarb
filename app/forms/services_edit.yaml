@@ -1,0 +1,10 @@
+nombre:
+  type:         text
+
+categoria:
+  type:         select
+  options:      lst_categorias_servicios_options
+
+descripcion:
+  type:         text
+  acts_as:      textarea

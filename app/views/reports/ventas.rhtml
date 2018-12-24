@@ -1,0 +1,179 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Reportes de Ventas por ODT</h2>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<form method="GET">
+<% unless is_supervisor? -%>
+<input type="hidden" name="executive" value="-1">
+<% end -%>
+<% ["sort_odt", "sort_exec", "sort_cat"].each do |s| -%>
+<input type="hidden" name="<%= s %>" value="<%= params[s] %>">
+<% end -%>
+<table border="0" cellpadding="3" cellspacing="0">
+<% if is_supervisor? -%>
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+<% end -%>
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= @form.to_html :client %>
+</td></tr>
+<tr><td valign="top">
+Categor&iacute;a
+</td><td valign="top">
+<%= @form.to_html :category %>
+</td></tr>
+<tr><td valign="top">
+Tipo
+</td><td valign="top">
+<%= @form.to_html :project_type %>
+</td></tr>
+
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<select name="start_day" id="start_day" onChange="relay(this, 'end_day')">
+
+<%= @form.options_for :start_day %>
+</select>
+<select name="start_month" id="start_month" onChange="relay(this, 'end_month')">
+
+<%= @form.options_for :start_month %>
+</select>
+<select name="start_year" id="start_year" onChange="relay(this, 'end_year')">
+<%= @form.options_for :start_year %>
+</select>
+
+a
+
+<select name="end_day" id="end_day">
+<%= @form.options_for :end_day %>
+</select>
+<select name="end_month" id="end_month">
+<%= @form.options_for :end_month %>
+</select>
+<select name="end_year" id="end_year">
+<%= @form.options_for :end_year %>
+</select>
+
+</td></tr>
+
+<tr><td valign="top">
+Facturadas
+</td><td valign="top">
+<%= @form.to_html :facturada %>
+</td></tr>
+
+<tr><td valign="top">
+Estado
+</td><td valign="top">
+<%= @form.to_html :estado %>
+</td></tr>
+
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa_vendedora %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["ODT", "Cliente", "Descripci&oacute;n", "Monto S/.", "Monto $", "Ejecutivo", "Fecha de Emisi&oacute;n", "Fecha de Entrega", "Categor&iacute;a", "Tipo"].each_with_index do |f, i|
+-%>
+<td valign="top" align="center">
+<%= render_exec_report_sort_field(f, i, "sort_odt", "dir_odt") %>
+</td>
+<% end -%>
+</tr>
+<% if @odt_data.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="10">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<%
+# Alignments
+align = ["center", "left", "left", "right", "right", "left", "left", "left", "left", "left"]
+
+@odt_data.each do |row|
+  if row[8] == 'ANULADA'
+    bgcolor = ESTADOS[E_ANULADO][:color_off]
+  else
+    bgcolor = "#eeeeee"
+  end
+  
+  row[2] = link_to row[2], :controller => "projects", :action => "show", :id => row[0], :type => "o"
+  row[3] = format_report_price(row[3])
+  row[4] = format_report_price(row[4])
+  row[6] = format_date(row[6])
+  row[7] = format_date(row[7])
+-%>
+<tr bgcolor="<%= bgcolor %>">
+<% row.each_with_index do |r, i| -%>
+<td valign="top" align="<%= align[i] %>">
+<%= r %>
+</td>
+<% end -%>
+</tr>
+<% end -%>
+</table>
+
+<% end -%>
+
+<br>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["Categor&iacute;a", "Total", "%"].each_with_index do |f, i|
+-%>
+<td valign="top" align="center">
+<%= render_exec_report_sort_field(f, i, "sort_cat", "dir_cat") %>
+</td>
+<% end -%>
+
+<%
+@cat_data.each do |c|
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= c[0] %>
+</td><td valign="top" align="right">
+<%= format_report_price(c[1]) %>
+</td><td valign="top" align="right">
+<%= c[2] %>%
+</td></tr>
+<% end -%>
+
+<tr><td valign="top" bgcolor="#ffffff" align="right">
+<b>Total</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(@cat_total) %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+&nbsp;
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</div>
+

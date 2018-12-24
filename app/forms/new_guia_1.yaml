@@ -1,0 +1,5 @@
+order:
+  type:         text
+  function:     validate_number
+  max_length:   10
+

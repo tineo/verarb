@@ -1,0 +1,92 @@
+--- 
+mensajes_006: 
+  fecha: 2007-04-20 17:26:49
+  proyecto_id: "14"
+  id: "14"
+  area_id: "1"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  mensaje: ok
+mensajes_007: 
+  fecha: 2007-04-20 17:27:41
+  proyecto_id: "14"
+  id: "15"
+  area_id: "1"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  mensaje: aprobado
+mensajes_008: 
+  fecha: 2007-04-20 17:49:20
+  proyecto_id: "14"
+  id: "16"
+  area_id: "3"
+  user_id: 29a5e483-a5d8-7c0d-3751-45c3d4524adb
+  mensaje: juana
+mensajes_009: 
+  fecha: 2007-05-04 19:00:50
+  proyecto_id: "17"
+  id: "17"
+  area_id: "2"
+  user_id: 559eb62e-7145-25e7-8a37-45ca55edd360
+  mensaje: es factible todo
+mensajes_010: 
+  fecha: 2007-05-04 19:18:09
+  proyecto_id: "17"
+  id: "18"
+  area_id: "1"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  mensaje: hola
+mensajes_011: 
+  fecha: 2007-05-08 16:05:30
+  proyecto_id: "19"
+  id: "19"
+  area_id: "1"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  mensaje: oe tia meli
+mensajes_012: 
+  fecha: 2007-05-08 16:29:18
+  proyecto_id: "19"
+  id: "20"
+  area_id: "1"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  mensaje: "Colocar medidas en se\xC3\xB1aletica"
+mensajes_001: 
+  fecha: 2007-04-20 17:10:27
+  proyecto_id: "14"
+  id: "9"
+  area_id: "1"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  mensaje: probando comentario
+mensajes_013: 
+  fecha: 2007-05-08 16:38:00
+  proyecto_id: "19"
+  id: "21"
+  area_id: "3"
+  user_id: 29a5e483-a5d8-7c0d-3751-45c3d4524adb
+  mensaje: meli te envi el archivo
+mensajes_002: 
+  fecha: 2007-04-20 17:13:50
+  proyecto_id: "14"
+  id: "10"
+  area_id: "1"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  mensaje: johan
+mensajes_003: 
+  fecha: 2007-04-20 17:18:03
+  proyecto_id: "14"
+  id: "11"
+  area_id: "2"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  mensaje: wilmer
+mensajes_004: 
+  fecha: 2007-04-20 17:20:35
+  proyecto_id: "14"
+  id: "12"
+  area_id: "2"
+  user_id: 559eb62e-7145-25e7-8a37-45ca55edd360
+  mensaje: liliana
+mensajes_005: 
+  fecha: 2007-04-20 17:25:26
+  proyecto_id: "14"
+  id: "13"
+  area_id: "1"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  mensaje: observado

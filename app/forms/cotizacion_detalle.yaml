@@ -1,0 +1,17 @@
+detalles:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir el texto del detalle"
+  max_length:   65535
+
+cantidad:
+  type:         text
+  function:     validate_number
+  max_length:   10
+  empty_msg:    "Debes especificar una cantidad"
+
+precio:
+  type:         text
+  function:     validate_precio
+  max_length:   128
+  empty_msg:    "Debes especificar el precio"

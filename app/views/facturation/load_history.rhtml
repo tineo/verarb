@@ -1,0 +1,49 @@
+<%= render :partial => "billing_menu" %>
+
+<h3>Cargo de Facturas - Hist&oacute;rico</h3>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= autocomplete_account_field(@form.client) %><br>
+<%= @form.e :client %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#FFE47A">
+<% ["Factura", "Raz&oacute;n Social", "Recibido"].each do |h, f| -%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+
+<% if @facturas.empty? -%>
+<tr bgcolor="#eeeeee" ><td colspan="3">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<% @facturas.each do |f| -%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top" align="center" width="20%">
+<%= f.formatted_factura_number %>
+
+</td><td valign="top" width="60%">
+<%= f.razon_social %>
+
+</td><td valign="top" align="center" width="20%">
+<%= format_date f.fecha_cargo_cobranza %>
+
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+

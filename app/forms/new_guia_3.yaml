@@ -1,0 +1,40 @@
+razon_social:
+  function:     validate_ajax_account
+  type:         text
+
+ultima_guia:
+  type:         checkbox
+
+fecha_emision:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    true
+
+fecha_despacho:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+
+fecha_retorno:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+
+responsable:
+  type:         text
+
+lugar_de_entrega:
+  type:         text
+  acts_as:      textarea
+
+localidad:
+  type:         text
+
+observaciones:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+

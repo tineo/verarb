@@ -1,0 +1,24 @@
+punto:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir un punto de entrega"
+  max_length:   65535
+
+contacto:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir un contacto"
+  max_length:   65535
+
+telefono:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir el tel&eacute;fono y/o correo del contacto"
+  max_length:   65535
+
+hora:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir el rango de Hora de Entrega"
+  max_length:   65535
+  mandatory:    false

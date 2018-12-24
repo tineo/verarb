@@ -1,0 +1,13 @@
+report_monthly_client_year:
+  type:         select
+  value:        "-1"
+  unset_option: "-1"
+  empty_msg:    "Debes elegir un a&ntilde;o"
+
+executive:
+  type:         select
+  value:        "-1"
+
+tipo_de_venta:
+  type:         select
+  value:        "-1"

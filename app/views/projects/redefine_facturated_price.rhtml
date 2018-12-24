@@ -1,0 +1,99 @@
+<%= render :partial => "menubar" %>
+
+<h3>Modificar Monto de ODT ya Facturada</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="25%">
+<table border="0" cellpadding="5" cellspacing="0">
+
+<%
+# STAGE 1
+if @stage == 1
+-%>
+
+<tr><td valign="top">
+<b>Precio original (sin IGV)</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= format_price(@project.monto_de_venta_sin_igv) %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Monto Facturado</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= format_price(@project.monto_facturado) %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Nuevo Precio</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= @form.to_html :monto_de_venta, :size => 10 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Motivo de cambio</b><br>
+</td><td valign="top">
+<%= @form.to_html :motivo, :rows => 5 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Autorizaci&oacute;n Ejecutivo</b>
+</td><td valign="top">
+<%= @form.to_html :auth_exec, :size => 16 %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" value="Aceptar">
+o <%= link_to "Cancelar", :controller => "projects", :action => "show", :id => @project.id %>
+</td></tr>
+
+<%
+else
+# STAGE 2
+-%>
+
+<tr><td valign="top">
+<b>Precio original (sin IGV)</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= format_price(@project.monto_de_venta_sin_igv) %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Monto Facturado</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= format_price(@project.monto_facturado) %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Nuevo Precio</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= @redef.new_monto %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Motivo de cambio</b><br>
+</td><td valign="top">
+<%= simple_format @redef.motivo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Autorizaci&oacute;n Facturaci&oacute;n</b>
+</td><td valign="top">
+<%= @form.to_html :auth_fact, :size => 16 %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" value="Aceptar">
+o <%= link_to "Regresar", :controller => "projects", :action => "show", :id => @project.id %>
+</td></tr>
+
+<% end -%>
+
+</table>
+</td></tr>
+</table>
+
+</form>
+

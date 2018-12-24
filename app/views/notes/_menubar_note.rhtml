@@ -1,0 +1,24 @@
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#A20455">
+<tr><td valign="top">
+<span class="project_title"><%= @note.razon_social %></span><br>
+<span class="project_exec">RUC: <%= @note.ruc %></span>
+</td><td valign="top" align="right">
+<span class="main_id">
+Nota de Cr&eacute;dito <%= @note.formatted_number %>
+</span>
+</td></tr>
+<% if @note.anulada? -%>
+<tr><td valign="top" bgcolor="#cc0000" colspan="2" class="project_void" align="center">
+NOTA ANULADA
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Datos", :controller => "notes", :action => "show", :nid => @note.id %>
+</td></tr>
+</table>
+
+

@@ -1,0 +1,181 @@
+<%=
+render :partial => "menubar_note"
+%>
+
+<h3>Datos</h3>
+
+<% if @note.en_blanco? -%>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="40%">
+<i>Esta <%= @document_label_singular %> est&aacute; en blanco.</i><br>
+</td></tr>
+</table>
+<br>
+
+<%
+else #not a blank factura
+-%>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="40%">
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>No. de Nota de Cr&eacute;dito</b>
+</td><td valign="top">
+<%= @note.formatted_number %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Factura asociada</b>
+</td><td valign="top">
+<%= link_to @note.factura.formatted_factura_number, :controller => "facturation", :action => "show_factura", :fid => @note.factura.id, :type => @note.factura.tipo, :from => @note.factura.tipo %>
+</td></tr>
+
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%= @note.razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @note.ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Estado</b>
+</td><td valign="top">
+<%= @note.status %>
+</td></tr>
+
+<tr><td valign="top">
+<b>N&uacute;mero de Orden de Compra</b>
+</td><td valign="top">
+<%= @note.numero_orden_de_compra %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Emisi&oacute;n</b>
+</td><td valign="top">
+<%= @note.fecha_emision.strftime("%d/%m/%Y") unless @note.fecha_emision.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Recepci&oacute;n del Cliente</b>
+</td><td valign="top">
+<%= @note.fecha_recepcion.strftime("%d/%m/%Y") unless @note.fecha_recepcion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Qui&eacute;n lo dej&oacute;</b>
+</td><td valign="top">
+<%= @note.quien_lo_dejo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Monto</b>
+</td><td valign="top">
+<%= currency(@note.moneda) %> <%= format_price(@note.monto) %>
+</td></tr>
+
+<% if @note.canje? -%>
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+Es Canje
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>Comentarios</b>
+</td><td valign="top">
+<%= @note.comentarios %>
+</td></tr>
+
+</table>
+
+</td><td valign="top">
+
+
+</td></tr>
+</table>
+
+<%
+end # if @note.en_blanco?
+-%>
+<br>
+
+<h3>Detalles</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Valor Unitario</b>
+</td><td valign="top" align="center">
+<b>Valor de Venta</b>
+</td></tr>
+
+<% @note.details.each do |d| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= simple_format d.descripcion %>
+</td><td valign="top" align="right">
+<%= d.cantidad %>
+</td><td valign="top" align="right">
+<%= format_price(d.valor_unitario) %>
+</td><td valign="top" align="right">
+<%= format_price(d.valor_de_venta) %>
+</td></tr>
+<% end -%>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+<h3>Montos descontados de Ordenes</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Orden</b>
+</td><td valign="top">
+<b>Descripci&oacute;n</b>
+</td><td valign="top">
+<b>Monto Facturado</b>
+</td><td valign="top">
+<b>Monto Descontado</b>
+</td></tr>
+<% @note.factura.of.each do |o| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= link_to o.proyecto.orden_id, :controller => "projects", :action => "show", :id => o.proyecto.uid, :type => o.proyecto.type %>
+</td><td valign="top">
+<%= o.proyecto.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= currency(o.moneda_odt) %> <%= o.monto_odt %>
+</td><td valign="top" align="right">
+<%= currency(o.moneda_odt) %> <%= o.monto_credito %>
+</td></tr>
+<% end -%>
+</table>
+
+</td></tr>
+</table>
+
+<br>
+
+<% unless @note.anulada? || @note.imprimida? -%>
+<%= link_to "Editar", :action => "edit", :nid => @note.id %>, 
+<%= link_to "Anular", :action => "void", :nid => @note.id %>
+<% end -%>
+

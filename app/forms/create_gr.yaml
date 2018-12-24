@@ -1,0 +1,19 @@
+gr_type:
+  type:         radio
+  value:        ""
+
+description:
+  type:         text
+  value:        ""
+  maxlength:    50
+  
+
+grio_password:
+  type:         text
+  acts_as:      password
+  function:     validate_grio_password
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

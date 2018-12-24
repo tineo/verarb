@@ -1,0 +1,14 @@
+quota:
+  type:         text
+  function:     validate_precio
+  max_length:   60
+
+comission:
+  type:         text
+  function:     validate_precio
+  max_length:   5
+
+bonus:
+  type:         text
+  function:     validate_precio
+  max_length:   60

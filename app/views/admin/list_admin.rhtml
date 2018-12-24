@@ -1,0 +1,56 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Administraci&oacute;n de notificaciones</h2>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="30%">
+
+<b>Notificaciones</b><br>
+<br>
+<%
+NOTIFICACION.each do |i, label|
+  label = "<b>" + label + "</b>" if i == @lid
+-%>
+<%= link_to label, :controller => "admin", :action => "list_admin", :lid => i %><br>
+<% end -%>
+
+</td><td valign="top">
+
+Para <b><%= NOTIFICACION[@lid] %></b> los siguientes usuarios ser&aacute;n notificados :<br>
+<br>
+<table border="0" cellpadding="3" cellspacing="0">
+<%
+@users.each do |u|
+  if @list.include? u.id
+    checked = " checked"
+  else
+    checked = ""
+  end
+-%>
+<tr><td valign="top">
+<input type="checkbox" name="uids[]" value="<%= u.id %>"<%= checked %>>
+</td><td valign="top">
+<%= u.full_name %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<input type="submit" value="Guardar cambios">
+o <%= link_to "Cancelar", :controller => "admin", :action => "index" %><br>
+<br>
+
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</form>

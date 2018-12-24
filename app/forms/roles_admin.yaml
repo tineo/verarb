@@ -1,0 +1,7 @@
+name:
+  type:         text
+
+description:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false

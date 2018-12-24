@@ -1,0 +1,400 @@
+--- 
+proyecto_areas_014: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 2007-04-20 17:49:30
+  estado_planeamiento: "9"
+  ingreso_planeamiento: 2007-04-20 17:15:57
+  observaciones_diseno: 
+  ingreso_costos: 2007-04-20 17:48:32
+  en_diseno: "1"
+  proyecto_id: "14"
+  salida_diseno: 2007-04-20 17:59:23
+  en_planeamiento: "1"
+  id: "14"
+  ingreso_diseno: 2007-04-20 16:28:00
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado_costos: "11"
+  salida_planeamiento: 2007-04-20 17:23:37
+  estado_diseno: "6"
+proyecto_areas_003: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "9"
+  ingreso_planeamiento: 2007-02-01 17:03:23
+  observaciones_diseno: 
+  ingreso_costos: 2007-02-01 17:03:24
+  en_diseno: "1"
+  proyecto_id: "3"
+  salida_diseno: 
+  en_planeamiento: "1"
+  id: "3"
+  ingreso_diseno: 2007-02-01 17:03:21
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado_costos: "10"
+  salida_planeamiento: 2007-02-08 11:55:18
+  estado_diseno: "3"
+proyecto_areas_015: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: 199d72e5-f0ea-c28f-2fa7-4640e8d1f631
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "1"
+  proyecto_id: "15"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "15"
+  ingreso_diseno: 2007-04-23 13:02:13
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "4"
+proyecto_areas_004: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 2007-02-02 19:22:26
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 2007-02-02 19:20:28
+  en_diseno: "1"
+  proyecto_id: "4"
+  salida_diseno: 2007-02-02 19:23:28
+  en_planeamiento: "0"
+  id: "4"
+  ingreso_diseno: 2007-02-02 18:51:51
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "11"
+  salida_planeamiento: 
+  estado_diseno: "6"
+proyecto_areas_016: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "16"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "16"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_005: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "1"
+  proyecto_id: "5"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "5"
+  ingreso_diseno: 2007-02-08 12:07:05
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "4"
+proyecto_areas_017: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 
+  estado_planeamiento: "9"
+  ingreso_planeamiento: 2007-05-04 18:36:18
+  observaciones_diseno: 
+  ingreso_costos: 2007-05-04 18:36:17
+  en_diseno: "1"
+  proyecto_id: "17"
+  salida_diseno: 2007-05-04 19:26:09
+  en_planeamiento: "1"
+  id: "17"
+  ingreso_diseno: 2007-05-04 18:36:14
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado_costos: "10"
+  salida_planeamiento: 2007-05-04 19:01:00
+  estado_diseno: "6"
+proyecto_areas_006: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "6"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "6"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_018: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "18"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "18"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_007: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "7"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "7"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_019: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  salida_costos: 2007-05-08 16:38:17
+  estado_planeamiento: "7"
+  ingreso_planeamiento: 2007-05-08 15:40:44
+  observaciones_diseno: 
+  ingreso_costos: 2007-05-08 15:40:42
+  en_diseno: "1"
+  proyecto_id: "19"
+  salida_diseno: 
+  en_planeamiento: "1"
+  id: "19"
+  ingreso_diseno: 2007-05-08 15:28:09
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "11"
+  salida_planeamiento: 
+  estado_diseno: "5"
+proyecto_areas_008: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "8"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "8"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_010: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "7"
+  ingreso_planeamiento: 2007-03-02 18:56:19
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "10"
+  salida_diseno: 
+  en_planeamiento: "1"
+  id: "10"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_009: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 2007-03-02 18:15:14
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 2007-03-02 18:08:01
+  en_diseno: "1"
+  proyecto_id: "9"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "9"
+  ingreso_diseno: 2007-03-02 18:07:49
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "11"
+  salida_planeamiento: 
+  estado_diseno: "2"
+proyecto_areas_011: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "1"
+  proyecto_id: "11"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "11"
+  ingreso_diseno: 2007-04-11 18:59:11
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "3"
+proyecto_areas_012: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "0"
+  proyecto_id: "12"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "12"
+  ingreso_diseno: 
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "0"
+proyecto_areas_001: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 2007-01-30 17:37:36
+  estado_planeamiento: "8"
+  ingreso_planeamiento: 2007-01-30 17:00:17
+  observaciones_diseno: 
+  ingreso_costos: 2007-01-30 17:22:31
+  en_diseno: "1"
+  proyecto_id: "1"
+  salida_diseno: 2007-01-30 17:00:04
+  en_planeamiento: "1"
+  id: "1"
+  ingreso_diseno: 2007-01-30 16:25:10
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado_costos: "11"
+  salida_planeamiento: 2007-01-30 17:15:51
+  estado_diseno: "2"
+proyecto_areas_013: 
+  encargado_costos: ""
+  en_costos: "1"
+  encargado_diseno: ""
+  salida_costos: 
+  estado_planeamiento: "8"
+  ingreso_planeamiento: 2007-04-19 09:19:18
+  observaciones_diseno: 
+  ingreso_costos: 2007-04-19 09:19:19
+  en_diseno: "1"
+  proyecto_id: "13"
+  salida_diseno: 
+  en_planeamiento: "1"
+  id: "13"
+  ingreso_diseno: 2007-04-19 09:19:16
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado_costos: "10"
+  salida_planeamiento: 
+  estado_diseno: "3"
+proyecto_areas_002: 
+  encargado_costos: ""
+  en_costos: "0"
+  encargado_diseno: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  salida_costos: 
+  estado_planeamiento: "0"
+  ingreso_planeamiento: 
+  observaciones_diseno: 
+  ingreso_costos: 
+  en_diseno: "1"
+  proyecto_id: "2"
+  salida_diseno: 
+  en_planeamiento: "0"
+  id: "2"
+  ingreso_diseno: 2007-01-30 19:32:14
+  observaciones_planeamiento: 
+  observaciones_costos: 
+  encargado_planeamiento: ""
+  estado_costos: "0"
+  salida_planeamiento: 
+  estado_diseno: "2"

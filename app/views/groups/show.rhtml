@@ -1,0 +1,37 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "groups", :action => "list" %>";
+});
+</script>
+
+<h2>Grupos</h2>
+
+<h3>Grupo "<%= @group.name %>"</h3>
+
+<%= link_to "Editar", :action => "edit", :id => @group.id %>
+o <%= link_to "Regresar", :action => "list" %><br>
+<br>
+
+<form method="POST">
+<b>Miembros de este Grupo</b><br>
+<br>
+<% if @group.members -%>
+<table border="0" cellpadding="5" cellspacing="1">
+<% @group.members.each do |m| -%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= m.user.full_name -%>
+</td><td valign="top">
+<%= link_to image_tag("stock_delete-16.gif", :border => 0), { :action => "delete_member", :id => @group.id, :mid => m.id }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+<br>
+<select name="user">
+<% @execs.each do |e| -%>
+<option value="<%= e.id %>"><%= e.full_name %></option>
+<% end -%>
+</select>
+
+<%= submit_tag "Añadir a este grupo" %>
+</form>

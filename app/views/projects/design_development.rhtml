@@ -1,0 +1,65 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Dise&ntilde;o / Desarrollo</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Fecha de Ingreso</b><br>
+<%= @project.area.ingreso_diseno.strftime "%d/%m/%Y" %><br>
+<br>
+<b>Fecha de Salida</b><br>
+<% unless @project.area.salida_diseno.nil? -%>
+<%= @project.area.salida_diseno.strftime "%d/%m/%Y" %><br>
+<% end -%>
+<br>
+<b>Encargado de Dise&ntilde;o</b><br>
+<% if @project.area.encargado_diseno == '' -%>
+<i>Sin asignar</i><br>
+<% else -%>
+<%= User.find_by_id(@project.area.encargado_diseno).user_name %><br>
+<% end -%>
+<br>
+<b>Estado</b><br>
+<%= ESTADOS[@project.area.estado_diseno][:label] %><br>
+<br>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Observaciones</h3>
+
+<%= form_tag :action=> "post_message", :id => @project.uid, :aid => A_DISENO_DESARROLLO, :type => @project.type %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form.to_html :mensaje, :cols => 60 %>
+<br>
+<%= submit_tag "Publicar" %><br>
+<br>
+<br>
+
+<b>Observaciones</b> (M&aacute;s recientes primero)<br>
+<br>
+
+<% @messages.each do |m| -%>
+<span class="weak">
+<%= m.fecha.strftime "%d/%m/%Y %H:%M" %><br>
+<%= m.user.user_name %> escribi&oacute;:
+</span>
+<%= simple_format(h(m.mensaje)) %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+

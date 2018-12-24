@@ -1,0 +1,85 @@
+<form method="POST">
+
+<%= render :partial => "menubar" %>
+
+<h3>Editar Detalles</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<center>
+
+<table width="90%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Cant.</b>
+</td><td valign="top" align="center">
+<b>Tipo</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top">
+&nbsp;
+</td><td valign="top" align="center">
+<b>Aprobado</b>
+</td></tr>
+
+<%
+if @project.detalles.size > 0
+  @project.detalles.each do |d|
+%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= d.cantidad %>
+</td><td valign="top" align="center">
+<%=
+if d.tipo == "P"
+  "Producto"
+else
+  "Servicio"
+end
+%>
+</td><td valign="top">
+<%=
+if d.tipo == "P"
+  label  = d.producto.nombre
+  action = "edit_detail"
+else
+  label  = d.servicio.nombre
+  action = "edit_detail"
+end
+link_to label, :action => action, :id => @project.uid, :did => d.id, :type => @project.type
+%>
+</td><td valign="top" align="center">
+<%= link_to "Remover", { :action => "delete_detail", :id => @project.uid, :did => d.id, :type => @project.type }, :confirm => "Esta seguro de eliminar este detalle?" %>
+</td><td valign="top" align="center">
+<input type="checkbox" name="ap[]" value="<%= d.id %>"<%= (d.aprobado? ? " checked" : "") %>>
+</td></tr>
+<%
+  end
+else
+-%>
+<tr bgcolor="#ffffff"><td colspan="7">
+<i>No hay productos o servicios para listar</i>
+</td></tr>
+<%
+end
+-%>
+</table>
+
+<br>
+
+<%= link_to "Agregar nuevo producto", :action => "add_product", :id => @project.uid, :type => @project.type %>
+&nbsp;
+<%= link_to "Agregar nuevo servicio", :action => "add_service", :id => @project.uid, :type => @project.type %>
+
+</center>
+
+</td></tr>
+</table>
+
+<br>
+
+<center>
+<input type="submit" value="Guardar cambios">
+o <%= link_to "Cancelar", :action => "show_details", :id => @project.uid, :type => @project.type %>
+</center>
+
+</form>

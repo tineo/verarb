@@ -1,0 +1,218 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<%= render :partial => "projects/menubar" %>
+
+<form method="POST">
+
+<h3> Facturaci&oacute;n</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%= @project.factura_razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @project.factura_ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Empresa Vendedora</b>
+</td><td valign="top">
+<%= EMPRESA_VENDEDORA[@project.empresa_vendedora] %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n Fiscal</b>
+</td><td valign="top">
+<%= simple_format(@project.factura_account.extras.factura_direccion_fiscal) unless @project.factura_account.nil? || @project.factura_account.extras.factura_direccion_fiscal.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Documentos de conformidad de compra<br>
+(Orden de Compra)</b>
+</td><td valign="top">
+<%= render :partial => "projects/confirmation_docs_list" %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Descripci&oacute;n que va en la Factura</b>
+</td><td valign="top">
+<%= @project.factura_descripcion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>D&iacute;a y Hora para Entrega de Factura</b>
+</td><td valign="top">
+<%= format_date(@project.factura_fecha_facturacion) unless @project.factura_fecha_facturacion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Contacto de Facturaci&oacute;n</b>
+</td><td valign="top">
+<%= @project.factura_contacto_facturacion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono Fijo</b>
+</td><td valign="top">
+<%= @project.factura_telefono_fijo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono M&oacute;vil</b>
+</td><td valign="top">
+<%= @project.factura_telefono_movil %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail</b>
+</td><td valign="top">
+<%= @project.factura_email %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n donde se deja la Factura</b>
+</td><td valign="top">
+<%= simple_format(@project.factura_direccion) unless @project.factura_direccion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= @project.factura_observaciones %>
+</td></tr>
+
+
+</table>
+
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+
+<tr><td valign="top" width="50%">
+<b>Producto</b><br>
+<%= @project.nombre_proyecto %><br>
+<br>
+
+<b>Autorizado:</b> <%= state_image(@project.autorizado_para_facturar) %><br>
+<br>
+
+<b>Necesita Orden de Compra:</b> <%= state_image(@project.factura_necesita_odt) %><br>
+<br>
+
+<b>Cantidad</b><br>
+<%= @project.quantity_of_approved_products %><br>
+<br>
+
+<b>Categor&iacute;a de Venta</b><br>
+<%= TIPO_DE_VENTA[@project.tipo_de_venta] %><br>
+<br>
+
+<b>Tipo de Proyecto</b><br>
+<%= TIPO_PROYECTO[@project.tipo_proyecto] %>
+<% if @project.tipo_proyecto == T_OTRO -%>
+(<%= @project.otro_tipo %>)
+<% end -%><br>
+<br>
+
+<b>Importe (sin IGV)</b><br>
+<% if @project.tipo_proyecto == T_NUEVO_PROYECTO -%>
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top" align="right">
+S/. <%= format_price @project.monto_de_venta_as_soles %><br>
+$ <%= format_price @project.monto_de_venta_as_dollars %><br>
+</td></tr>
+</table>
+<% else -%>
+<%= TIPO_PROYECTO[@project.tipo_proyecto] %>
+<% end -%>
+<br>
+
+<b>Fecha de Creaci&oacute;n de ODT</b><br>
+<%= format_date(@project.fecha_creacion_odt) %><br>
+<br>
+
+<b>Fecha de Entrega de ODT</b><br>
+<%= format_date(@project.fecha_de_entrega_odt) unless @project.fecha_de_entrega_odt.nil? %><br>
+<br>
+
+</td><td valign="top">
+
+<b>Precio unitario</b><br>
+$ <%= format_price(@project.monto_de_venta_as_dollars / @project.quantity_of_approved_products) %><br>
+<br>
+
+<b>Saldo por facturar</b><br>
+<%= currency(@project.moneda_odt)%> <%= format_price(@project.facturated_remainder) %><br>
+<br>
+
+<b>Facturado a la fecha de hoy</b><br>
+<%= currency(@project.moneda_odt)%> <%= format_price(@project.monto_facturado) %><br>
+<br>
+
+<% unless @project.facturation_data_complete? -%>
+
+<i>Datos de Facturaci&oacute;n incompletos</i>
+
+<% else -%>
+<b>Fecha de Entrega real de la ODT</b><br>
+<%= format_short_date(@project.fecha_de_entrega_real) if @project.fecha_de_entrega_real %><br>
+<br>
+
+<b>Status de Entrega Total</b><br>
+<%= STATUS_ENTREGA[@project.status_de_entrega_total] %><br>
+<br>
+
+<b>Forma de Pago</b><br>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Con adelanto de
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= @form.to_html :monto_adelanto, :size => 10 %>
+</td><td valign="top">
+<% if @project.incluye_igv_odt? -%>
+(inc. IGV)
+<% end -%>
+</td></tr>
+</table>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Pago a
+</td><td valign="top">
+<%= @form.to_html :dias_plazo, :size => 2 %>
+</td><td valign="top">
+d&iacute;as (0 = Contraentrega)
+</td></tr>
+</table>
+
+<br>
+
+<%= @form.to_html :cancelado %> Cancelado sin Factura<br>
+<br>
+
+<input type="submit" name="save" value="Guardar cambios">
+o <%= link_to "Cancelar", :controller => "projects", :action => "panel" %>
+<% end -%>
+
+</td></tr>
+</table>
+
+</form>
+

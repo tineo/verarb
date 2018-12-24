@@ -1,0 +1,36 @@
+<%= render :partial => "menubar" %>
+
+<h3>Producci&oacute;n - Terminado en Planta</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Entregas Parciales al Cliente</b><br>
+<br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Cant.</b>
+</td><td valign="top" align="center">
+<b>Detalles</b>
+</td><td valign="top" align="center">
+<b>Terminados en Planta</b>
+</td></tr>
+<% @project.fechas_de_entrega.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to f.fecha.long_format, :action => "production_edit", :fid => f.id %>
+</td><td valign="top" align="right">
+<%= f.cantidad %>
+</td><td valign="top">
+<%= simple_format f.detalle %>
+</td><td valign="top" align="right">
+<%= f.finished_in_plant_quantity %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+</td></tr>
+</table>
+

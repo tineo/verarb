@@ -1,0 +1,36 @@
+<%
+color = []
+color[0] = "#eeeeee"
+color[1] = "#eecccc"
+-%>
+<table width="100%" border="1" cellpadding="3" cellspacing="0">
+<%
+i = 0
+r = ''
+@data.each do |a|
+  if a.ruc != r
+    i += 1
+    r  = a.ruc
+  end
+  
+  unless a.assigned_user_id.nil?
+    u = User.find_by_id(a.assigned_user_id)
+    
+    if u
+      name = u.full_name
+    else
+      name = ''
+    end
+  end
+-%>
+<tr bgcolor="<%= color[(i % 2)] %>"><td valign="top">
+<%= a.ruc %>
+</td><td valign="top">
+<%= a.name %>
+</td><td valign="top">
+<%= name %>
+</td><td valign="top">
+<%= a.id %>
+</td></tr>
+<% end -%>
+</table>

@@ -1,0 +1,16 @@
+nombre:
+  type:         text 
+
+telefono:
+  type:         text
+
+email:
+  type:         text
+  function:     validate_email
+  mandatory:    false
+
+horario_atencion:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+

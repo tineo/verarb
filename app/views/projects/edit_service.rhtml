@@ -1,0 +1,50 @@
+<form name="f" method="POST">
+<%= render :partial => "menubar" %>
+
+<h3>Editar detalle - Servicio - <%= @service.nombre %></h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>General</h3>
+
+<b>Cantidad</b><br>
+<%= @form.to_html :cantidad, :size => 5 %>
+<br>
+
+<b>Categor&iacute;a</b><br>
+<select name="categoria" onChange="document.f.servicio.value='-1'; document.f.servicio.disabled = true">
+<%= @form.options_for :categoria %>
+</select>
+<input type="submit" value="Seleccionar"><br>
+<%= @form.e :categoria %>
+<br>
+
+<b>Servicio</b><br>
+<select name="servicio">
+<%= @form.options_for :servicio %>
+</select><br>
+<%= @form.e :servicio %>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= @form.to_html :descripcion %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :observaciones %>
+<br>
+
+<b>Precio</b><br>
+<%= @form.to_html :precio, :size => 16 %><br>
+<br>
+
+</td></tr>
+</table>
+
+<br>
+
+<input type="submit" name="button" value="Actualizar">
+o <%= link_to "Cancelar", :action => "edit_details", :id => @project.uid, :type => @project.type %>
+
+</form>

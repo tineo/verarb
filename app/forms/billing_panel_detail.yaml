@@ -1,0 +1,28 @@
+fecha_recepcion:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+
+modalidad_pago:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+fecha_probable:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+
+observaciones:
+  type:         text 
+  acts_as:      textarea
+  mandatory:    false
+
+fecha_cobranza:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+

@@ -1,0 +1,5 @@
+client:
+  type:         text
+  function:     validate_ajax_account
+  mandatory:    false
+

@@ -1,0 +1,55 @@
+<h2>Cuentas / Clientes</h2>
+
+<h3>Buscar Cuenta</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<%= autocomplete_account_field(@form.cuenta) %>
+<input type="submit" value="Buscar"><br>
+<%= @form.e :cuenta %>
+</td></tr>
+</table>
+</form>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<h3>Ctas. Relacionadas</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<% @relations.each do |a| -%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= link_to a.name, :action => "related_edit", :id => a.id %><br>
+</td></tr>
+<% end -%>
+</table>
+
+</td><td valign="top">
+
+<h3>Ctas. Bloqueadas / Larga Cobranza</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eeeeee"><td valign="top" align="center">
+<b>B</b>
+</td><td valign="top" align="center">
+<b>L</b>
+</td><td valign="top" align="center">
+<b>Nombre</b>
+</td></tr>
+
+<% @blocked.each do |a| -%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= image_tag("stock_ok-16.gif", :alt => "Bloqueado") if a.blocked? -%>
+</td><td valign="top">
+<%= image_tag("stock_ok-16.gif", :alt => "Cobranza Larga") if a.cobranza_larga? -%>
+</td><td valign="top">
+<%= link_to a.name, :action => "related_edit", :id => a.id %><br>
+</td></tr>
+<% end -%>
+</table>
+
+
+</td></tr>
+</table>
+

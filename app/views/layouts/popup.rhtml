@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title><%= "* " unless ENV['RAILS_ENV'] == 'production' %><%= @HTML_TITLE || "Vera - Apoyo Publicitario" %></title>
+<%= stylesheet_link_tag "styles" %>
+<%= javascript_include_tag "prototype" %>
+<%= javascript_include_tag "shortcuts" %>
+<%= javascript_include_tag "scriptaculous" %>
+<%= javascript_include_tag "controls" %>
+<%= javascript_include_tag "effects" %>
+</head>
+<body bgcolor="#ffffff">
+
+<%= yield %>
+
+</body>
+</html>
+

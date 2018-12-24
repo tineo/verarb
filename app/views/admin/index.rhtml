@@ -1,0 +1,42 @@
+<h2>Administraci&oacute;n</h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if is_admin? -%>
+<h3><%= link_to "Categor&iacute;as, Productos y Servicios", :controller => "categories", :action => "list" %></h3>
+
+<h3><%= link_to "Notificaciones", :controller => "admin", :action => "list_admin" %></h3>
+
+<h3><%= link_to "Cuotas de Ejecutivos", :controller => "users", :action => "admin_quotas" %></h3>
+
+<h3><%= link_to "Grupos", :controller => "groups", :action => "list" %></h3>
+
+<h3><%= link_to "Tipo de Cambio", :controller => "tipo_de_cambio", :action => "list" %></h3>
+
+<h3><%= link_to "Noticias", :controller => "admin", :action => "ticker" %></h3>
+
+<h3><%= link_to "Roles y Usuarios", :controller => "roles", :action => "index" %></h3>
+
+<h3><%= link_to "Cuentas / Clientes", :controller => "accounts", :action => "related_index" %></h3>
+
+<h3><%= link_to "Claves", :controller => "admin", :action => "passwords" %></h3>
+
+<h3><%= link_to "Importar datos de SISPRE", :controller => "admin", :action => "import_sispre" %></h3>
+
+<% end -%>
+
+<% if is_admin? || can_access?(:accounts_extras) -%>
+<h3><%= link_to "Datos de Facturaci&oacute;n de Clientes", :controller => "accounts", :action => "accounts_extras" %></h3>
+<% end -%>
+
+<% if is_admin? -%>
+<h3><%= link_to "Porcentaje de Alerta de Insumos", :controller => "admin", :action => "insumos_percent" %></h3>
+<% end -%>
+
+<% if is_admin? -%>
+<h3><%= link_to "Actualizar cach&eacute; de Costos Variables", :controller => "admin", :action => "update_variable_costs_cache" %></h3>
+<% end -%>
+
+</td></tr>
+</table>

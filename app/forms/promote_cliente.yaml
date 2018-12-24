@@ -1,0 +1,27 @@
+cliente_razon_social:
+  type:         text
+
+cliente_ruc:
+  type:         text
+  max_length:   11
+
+cliente_direccion:
+  type:         text
+  acts_as:      textarea
+
+cliente_contacto:
+  type:         text
+
+cliente_telefono_fijo:
+  type:         text
+  mandatory:    false
+
+cliente_telefono_movil:
+  type:         text
+  mandatory:    false
+
+cliente_email:
+  type:         text
+  function:     validate_email
+  mandatory:    false
+

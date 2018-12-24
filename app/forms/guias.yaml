@@ -1,0 +1,43 @@
+client:
+  type:         text
+  mandatory:    false
+  value:        ""
+
+empresa_vendedora:
+  type:         select
+  options:      "empresa_options"
+  value:        "-1"
+
+serie:
+  type:         select
+  options:      "guia_serie_options"
+  value:        "-1"
+
+month_retorno:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+year_retorno:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+  
+month_emision:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+year_emision:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false  
+  
+
+no_date:
+  type:         checkbox
+

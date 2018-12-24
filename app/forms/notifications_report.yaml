@@ -1,0 +1,29 @@
+tipo:
+  type:         select
+  options:      "notifications_report_options"
+  value:        "-1"
+
+start_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+start_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+end_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+end_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+

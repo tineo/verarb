@@ -1,0 +1,130 @@
+client:
+  type:         text
+  mandatory:    false
+  value:        ""
+
+status:
+  type:         select
+  value:        "-1"
+
+designer:
+  type:         select
+  value:        "-1"
+  mandatory:    false
+
+executive:
+  type:         select
+  value:        "-1"
+  mandatory:    false
+
+creado_start_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+creado_start_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+creado_end_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+creado_end_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+entrega_start_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+entrega_start_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+entrega_end_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+entrega_end_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+con_fecha_de_entrega:
+  type:         select
+  value:        "-1"
+
+con_orden_de_trabajo:
+  type:         select
+  value:        "0"
+  options:      "panel_misc_options"
+  mandatory:    false
+
+anulado:
+  type:         select
+  value:        "0"
+  mandatory:    false
+
+postvendido:
+  type:         select
+  value:        "0"
+  options:      "panel_misc_options"
+  mandatory:    false
+
+autorizado_para_facturar:
+  type:         select
+  value:        "-1"
+  options:      "panel_autorizado_para_facturar_options"
+  mandatory:    false
+
+status_facturacion:
+  type:         select
+  value:        "-1"
+  options:      "panel_status_facturacion_options"
+  mandatory:    false
+
+status_cobranza:
+  type:         select
+  value:        "-1"
+  options:      "panel_status_cobranza_options"
+  mandatory:    false
+
+factura_start_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+factura_start_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+factura_end_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+factura_end_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+

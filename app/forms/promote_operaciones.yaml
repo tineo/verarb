@@ -1,0 +1,74 @@
+fecha_de_desmontaje:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+
+hora_de_desmontaje:
+  type:         text
+  function:     validate_texttime
+  max_length:   4
+  mandatory:    false
+
+hora_am_pm_d:
+  type:         select
+  options:      hora_am_pm_options
+  mandatory:    false
+
+observaciones:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+solo_entrega:
+  type:         checkbox
+
+con_instalacion:
+  type:         checkbox
+
+recojo_de_producto:
+  type:         checkbox
+
+se_necesita_supervisor:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+
+colores_aprobados:
+  type:         checkbox
+
+igual_al_arte_adjuntado:
+  type:         checkbox
+
+igual_al_codigo_pantones:
+  type:         checkbox
+
+presentar_muestra_de_color:
+  type:         checkbox
+
+graficas_aprobadas:
+  type:         checkbox
+
+graf_igual_a_muestra:
+  type:         checkbox
+
+graf_igual_a_pantones:
+  type:         checkbox
+
+graf_presentar_muestra:
+  type:         checkbox
+
+confirmar_medidas:
+  type:         checkbox
+
+autorizacion:
+  type:         text
+  acts_as:      password
+  mandatory:    false
+  function:     validate_authorize_consorcio
+
+# For Autorizacion
+empresa:
+  type:         text
+  function:     validate_dummy
+

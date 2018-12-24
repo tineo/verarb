@@ -1,0 +1,13 @@
+monto_adelanto:
+  type:         text
+  function:     validate_precio
+  max_length:   10
+  mandatory:    false
+
+dias_plazo:
+  type:         text
+  function:     validate_dias_plazo
+  max_length:   2
+
+cancelado:
+  type:         checkbox

@@ -1,0 +1,17 @@
+descripcion:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+cantidad:
+  type:         text
+  function:     validate_number
+  mandatory:    false
+
+medida:
+  type:         select
+  options:      guia_medida_options
+  unset_option: -1
+  value:        -1
+  mandatory:    false
+

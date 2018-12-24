@@ -1,0 +1,46 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<h2><%= @project.nombre_proyecto %></h2>
+
+<h3>Asignar Dise&ntilde;ador</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="70%" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr bgcolor="#ffe698"><td valign="top" align="center">
+<b>Dise&ntilde;ador</b>
+</td><td valign="top" align="center">
+<b>Proyectos</b>
+</td><td valign="top" align="center">
+<b>Urgentes</b>
+</td><td valign="top" align="center">
+<b>Total Rebotes</b>
+</td></tr>
+<% @designers.each do |d| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<% if @project.area.encargado_diseno == d.id -%>
+<b><%= d.user_name %></b>
+<% else -%>
+<%= link_to d.user_name, :action => "assign_designer", :id => @project.uid, :uid => d.id, :type => @project.type %>
+<% end -%>
+</td><td valign="top">
+<%= d.assigned_design_projects_count %>
+</td><td valign="top">
+<%= d.urgent_design_projects_count %>
+</td><td valign="top">
+<%= d.bounced_count %>
+</td></tr>
+<% end -%>
+
+</td></tr>
+</table>
+<br>
+
+<center>
+<%= link_to "Regresar al panel", :action => "panel" %>
+</center>

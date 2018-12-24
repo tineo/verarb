@@ -1,0 +1,46 @@
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#045C72">
+<tr><td valign="top">
+<span class="project_title"><%= @factura.razon_social %></span><br>
+<span class="project_exec">RUC: <%= @factura.ruc %></span>
+</td><td valign="top" align="right">
+<span class="main_id">
+<%= @document_label_singular %> <%= format_factura_number(@factura) %>
+</span>
+</td></tr>
+<% if @factura.anulada? -%>
+<tr><td valign="top" bgcolor="#cc0000" colspan="2" class="project_void" align="center">
+FACTURA ANULADA
+</td></tr>
+<% end -%>
+<% if @factura.has_notes? -%>
+<tr><td valign="top" bgcolor="#eeeeee" colspan="2">
+Descontada con Notas de Cr&eacute;dito:
+<% @factura.notes.each do |n| -%>
+<%= link_to n.formatted_number, :controller => "notes", :action => "show", :nid => n.id %>&nbsp;&nbsp;
+<% end -%>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Datos", :controller => "facturation", :action => "show_factura", :fid => @factura.id, :type => @factura.tipo, :from => "f" %>
+
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Guias", :controller => "facturation", :action => "factura_guias", :fid => @factura.id, :type => @factura.tipo %>
+
+<% unless @factura.imprimida? || @factura.tipo == "b" -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Imprimir Factura", :controller => "facturation", :action => "print_factura", :fid => @factura.id %>
+<% end -%>
+
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+
+<%= link_to "Crear Nota de Cr&eacute;dito", :controller => "notes", :action => "new_note_1", :fid => @factura.id, :type => @factura.tipo %>
+
+</td></tr>
+</table>
+
+
+

@@ -1,0 +1,11 @@
+--- 
+servicios_001: 
+  categoria_id: "4"
+  descripcion: 
+  nombre: Limpieza
+  id: "1"
+servicios_002: 
+  categoria_id: "4"
+  descripcion: 
+  nombre: Ensucie
+  id: "2"

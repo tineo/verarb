@@ -1,0 +1,504 @@
+<script type="text/javascript">
+function popup_costs() {
+  window.open("<%= url_for :action => "costs_docs_popup", :id => @project.id %>", "costs_popup", "menubar=no, width=480, height=360, toolbar=no, scrollbars=yes");
+}
+
+function popup_conf() {
+  window.open("<%= url_for :action => "confirmation_docs_popup", :id => @project.id %>", "doc_popup", "menubar=no, width=480, height=360, toolbar=no, scrollbars=yes");
+}
+</script>
+
+<form method="POST">
+<%= render :partial => "menubar" %>
+
+<% if @preediting -%>
+<h2>Pre-editando Datos de Confirmaci&oacute;n de ODT</h2>
+<% elsif @editing -%>
+<h2>Editar Datos de Confirmaci&oacute;n de ODT</h2>
+<% else -%>
+<h2>Crear ODT - Datos de Confirmaci&oacute;n</h2>
+
+<% if @project.estado_validacion == E_VALIDACION_RECHAZADO %>
+<span class="error_msg"><b>Observaciones de rechazo:</b> <%= @project.observaciones_validacion %></span><br>
+<br>
+<% end -%>
+<% end -%>
+
+<% if @project.tipo_nuevo_proyecto? %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>Del Cliente</h3>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Nombre Comercial</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_ruc, :size => 11 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_direccion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Contacto de Venta</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_contacto %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono Fijo</b>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_telefono_fijo, :size => 24 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono M&oacute;vil</b>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_telefono_movil, :size => 24 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail</b>
+</td><td valign="top">
+<%= @form_cliente.to_html :cliente_email %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>Para Facturar</h3>
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Estructura de Costos</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= render :partial => "costs_files_list" %>
+
+<a href="#" onclick="popup_costs(); return false;">Ver o anexar Documentos</a><br>
+<% if @show_costs_docs_error_message -%>
+<span class="error_msg">No se han anexado Documentos</span>
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Documentos de Conformidad de Compra<br>
+(Orden de Compra)</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= render :partial => "confirmation_docs_list" %>
+
+<a href="#" onclick="popup_conf(); return false;">Ver o anexar Documentos</a><br>
+<% if @show_confirmation_docs_error_message -%>
+<span class="error_msg">No se han anexado Documentos</span>
+<% end -%>
+
+<%
+if @project.empresa_vendedora == APOYO || @project.empresa_vendedora == ARQUITECTURA
+  if @project.empresa_vendedora == APOYO
+    empresa = "apoyo"
+  else
+    empresa = "arquitectura"
+  end
+-%>
+
+<br>
+<a href="/formularios/<%= empresa %>.doc">Formulario de Solicitud Formal de Pedido</a>
+<% end -%>
+
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+&iquest;Tiene Orden de Compra o equivalente? <%= @form_facturar.to_html :factura_necesita_odt %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social a facturar</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= autocomplete_account_field(@form_facturar.factura_cliente) %>
+o <a href="<%= crm_url %>index.php?module=Accounts&action=EditView" target="_blank">Crear nuevo</a><br>
+<%= @form_facturar.e :factura_cliente %><br>
+</td></tr>
+
+<% if @edit_direccion_fiscal -%>
+<tr><td valign="top">
+<b>Direcci&oacute;n Fiscal</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_direccion_fiscal %>
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>D&iacute;a y Hora para Entrega de Factura</b>
+</td><td valign="top">
+<input type="text" id="factura_fecha_facturacion" name="factura_fecha_facturacion" value="<%= @form_facturar.factura_fecha_facturacion %>" readonly="true">
+<%= image_tag "calendar.gif", :id => "trigger_f", :border => 0 %>
+
+&nbsp;
+
+<input type="text" id="factura_hora_facturacion" name="factura_hora_facturacion" maxlength="4" size="4" value="<%= @form_facturar.factura_hora_facturacion %>">
+<%= @form_facturar.to_html :hora_am_pm_f %>
+<%= @form_facturar.e :factura_hora_facturacion %>
+<%= @form_facturar.e :factura_fecha_facturacion %>
+
+</td></tr>
+
+<tr><td valign="top">
+<b>Descripci&oacute;n que va en la Factura</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_descripcion %>
+</td></tr>
+
+<% if @project.has_facturas_or_boletas? -%>
+<tr><td valign="top">
+<b>Precio de Venta</b>
+</td><td valign="top">
+<%= verbose_odt_price(@project) %><br>
+<span class="weak">Orden con facturas - datos no editables</span>
+<% unless @project.facturated_remainder == 0 -%>
+(<%= link_to "Cambiar precio", :action => "redefine_facturated_price", :id => @project.orden_id %>)
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Monto de Adelanto</b>
+</td><td valign="top">
+<% if @project.monto_adelanto.nil? || @project.monto_adelanto.zero? -%>
+<i>Sin adelanto</i>
+<% else -%>
+<%= currency(@project.moneda_odt) %> <%= format_price @project.monto_adelanto %>
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Forma de Pago</b>
+</td><td valign="top">
+<%= @project.payment_form %>
+</td></tr>
+
+<% else -%>
+
+<tr><td valign="top">
+<b>Precio de Venta</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_facturar.to_html :monto_de_venta, :size => 10 %>
+<%= @form_facturar.to_html :incluye_igv %> Incluye IGV
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @form_facturar.to_html :moneda %>
+</td></tr>
+
+<% if @editing -%>
+<tr><td valign="top">
+<b>Motivo de cambio de Precio de Venta</b><br>
+</td><td valign="top">
+<%= @form_facturar.to_html :motivo_monto, :rows => 5 %>
+</td></tr>
+<% end -%>
+
+<% if @editing -%>
+<tr><td valign="top">
+<b>Clave de Autorizaci&oacute;n</b><br>
+<span class="weak">El cambio de Precio de Venta<br>
+requiere autorizaci&oacute;n</span>
+</td><td valign="top">
+<%= @form_facturar.to_html :clave_modificacion_monto, :size => 7 %>
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<h3>Forma de Pago</h3>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_con_adelanto %> Con adelanto
+
+<table cellpadding="3" cellspacing="0" border="0">
+<tr><td width="10">
+&nbsp;
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_tipo_adelanto, :value => "P", :hide_label => true %>
+Porcentaje %
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_porcentaje, :size => 2 %>
+</td></tr>
+
+<tr><td>
+&nbsp;
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_tipo_adelanto, :value => "M", :hide_label => true %>
+Monto
+</td><td valign="top">
+<%= @form_facturar.to_html :monto_adelanto, :size => 8 %>
+</td></tr>
+</table>
+<%= @form_facturar.e :factura_tipo_adelanto %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+
+<table border="0" cellpadding="0">
+<tr><td valign="top">
+<%= @form_facturar.to_html :factura_contraentrega, :value => "1" %>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+<tr><td valign="top">
+<%= @form_facturar.to_html :factura_contraentrega, :value => "0" %>
+</td><td valign="top">
+<%= @form_facturar.to_html :dias_plazo, :size => 2 %>
+</td></tr>
+</table>
+<%= @form_facturar.e :factura_contraentrega %>
+
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>Contacto de Facturaci&oacute;n</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_contacto_facturacion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono Fijo</b>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_telefono_fijo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono M&oacute;vil</b>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_telefono_movil %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail</b>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_email %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n donde se deja la Factura</b> <span class="obligatory">*</span>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_direccion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= @form_facturar.to_html :factura_observaciones %>
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+
+<br>
+<%
+# if tipo nuevo proyecto
+end
+-%>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>Para Operaciones</h3>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<% if @editing == false && @project.empresa_vendedora == CONSORCIO -%>
+<tr><td valign="top">
+<b>Autorizaci&oacute;n de Empresa</b><br>
+</td><td valign="top">
+<%= @form_operaciones.to_html :autorizacion %>
+<span class="weak">Requiere autorizaci&oacute;n para crear una ODT de la empresa "Consorcio de Direcci&oacute;n Empresarial SAC"</span>
+</td></tr>
+<% end -%>
+
+<tr><td valign="top" width="25%">
+<b>Fecha y Hora de Desmontaje</b><br>
+<span class="weak">Formato hora: hhmm. Ej: 1130, 0545</span>
+</td><td valign="top">
+<input type="text" id="fecha_de_desmontaje" name="fecha_de_desmontaje" value="<%= @form_operaciones.fecha_de_desmontaje %>" size="8">
+<%= image_tag "calendar.gif", :id => "trigger_d", :border => 0 %>
+
+&nbsp;
+
+<input type="text" id="hora_de_desmontaje" name="hora_de_desmontaje" maxlength="4" size="4" value="<%= @form_operaciones.hora_de_desmontaje %>">
+<%= @form_operaciones.to_html :hora_am_pm_d %>
+<%= @form_operaciones.e :hora_de_desmontaje %>
+<%= @form_operaciones.e :fecha_de_desmontaje %>
+</td></tr>
+
+</table>
+<br>
+
+<b>Marcar al menos una opci&oacute;n:</b> <span class="obligatory">*</span>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+Solo Entrega <%= @form_operaciones.to_html :solo_entrega %>
+</td><td valign="top">
+</td><td valign="top">
+Con Instalaci&oacute;n <%= @form_operaciones.to_html :con_instalacion %>
+</td><td valign="top">
+</td><td valign="top">
+Recojo de Producto <%= @form_operaciones.to_html :recojo_de_producto %>
+</td><td valign="top">
+</td><td valign="top">
+Se necesita Supervisor <%= @form_operaciones.to_html :se_necesita_supervisor %>
+</td></tr>
+</table>
+<%=
+if @error_msg_for_checkboxes
+  "<span class=\"error_msg\">#{@error_msg_for_checkboxes}</span><br>"
+else
+  ''
+end
+%>
+
+<br>
+
+<table border="0" cellpadding="5" cellspacing="3">
+<tr><td valign="top" bgcolor="#ffe698" align="center">
+<b>Direcci&oacute;n de Entrega</b>
+</td><td valign="top" bgcolor="#ffe698" align="center">
+<b>Contacto para solicitar permiso de entrega y/o instalaci&oacute;n</b>
+</td><td valign="top" bgcolor="#ffe698" align="center">
+<b>Tel&eacute;fonos y Correos</b>
+</td><td valign="top" bgcolor="#ffe698" align="center">
+<b>Rango de Hora de Entrega</b>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+<% @puntos.each_with_index do |f, i| -%>
+<tr><td valign="top">
+<textarea name="punto[<%= i %>]" cols="20" rows="5"><%= f.punto %></textarea><br>
+<%= f.e :punto %>
+</td><td valign="top">
+<textarea name="contacto[<%= i %>]" cols="40" rows="5"><%= f.contacto %></textarea><br>
+<%= f.e :contacto %>
+</td><td valign="top">
+<textarea name="telefono[<%= i %>]" cols="20" rows="5"><%= f.telefono %></textarea><br>
+<%= f.e :telefono %>
+</td><td valign="top">
+<textarea name="hora[<%= i %>]" cols="20" rows="5"><%= f.hora %></textarea><br>
+<%= f.e :hora %>
+</td><td valign="top">
+<% unless i == 0 -%>
+<input type="submit" name="delete[<%= i %>]" value="Eliminar">
+<% end -%>
+</td></tr>
+<% end -%>
+<tr><td valign="top">
+</td><td valign="top" align="right">
+</td><td valign="top" align="right">
+</td><td valign="top" align="right">
+<input type="submit" name="more" value="Agregar una fila adicional">
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+
+<b>Gr&aacute;fica</b><br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top">
+Igual a muestra f&iacute;sica proporcionada
+</td><td valign="top">
+<%= @form_operaciones.to_html :graf_igual_a_muestra %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Igual al c�digo de los Pantones
+</td><td valign="top">
+<%= @form_operaciones.to_html :graf_igual_a_pantones %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Presentar muestra de color para su aprobaci&oacute;n
+</td><td valign="top">
+<%= @form_operaciones.to_html :graf_presentar_muestra %>
+</td></tr>
+</table><br>
+<br>
+
+<b>Pintura</b><br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top">
+Igual a muestra f&iacute;sica proporcionada
+</td><td valign="top">
+<%= @form_operaciones.to_html :colores_aprobados %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Igual al c&oacute;digo de los Pantones
+</td><td valign="top">
+<%= @form_operaciones.to_html :igual_al_codigo_pantones %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Presentar muestra de color para su aprobaci&oacute;n
+</td><td valign="top">
+<%= @form_operaciones.to_html :presentar_muestra_de_color %>
+</td></tr>
+</table>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top">
+Ir a confirmar medidas
+</td><td valign="top">
+<%= @form_operaciones.to_html :confirmar_medidas %>
+</td></tr>
+</table>
+
+</td><td valign="top">
+
+<b>Observaciones</b><br>
+<%= @form_operaciones.to_html :observaciones, :rows => 12 %>
+
+</td></tr>
+</table>
+
+<br>
+
+<input type="submit" name="ok" value="Guardar">
+
+</td></tr>
+</table>
+
+</form>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_de_desmontaje",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_d"
+});
+
+<% if @project.tipo_nuevo_proyecto? -%>
+Calendar.setup({
+    inputField : "factura_fecha_facturacion",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_f"
+});
+<% end -%>
+</script>
+

@@ -1,0 +1,12 @@
+<form method="POST">
+<h3>Ingrese ID de Orden para marcarla para Exportaci&oacute;n:</h3>
+
+<font color="red"><%= "Orden #{@p.orden_id} marcada para ser vuelta a exportar<br><br>" if @p %></font>
+
+<input type="text" name="id">
+<input type="submit" value="Aceptar">
+o <%= link_to "Cancelar", :controller => "dashboard", :action => "index" %>
+</form>
+
+<br>
+<br>

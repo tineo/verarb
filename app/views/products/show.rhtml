@@ -1,0 +1,62 @@
+<h2>Categor&iacute;as y Productos</h2>
+
+<h3>Producto "<%= @product.nombre %>"</h3>
+
+<b>Nombre</b><br>
+<%= @product.nombre %><br>
+<br>
+
+<b>Categor&iacute;a</b><br>
+<%= @product.categoria.nombre %><br>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= simple_format @product.descripcion %>
+
+<b>Costo Variable</b><br>
+<%= "%.2f" % @product.costo_variable %><br>
+<br>
+
+<b>Atributos</b><br>
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#ff9999"><td valign="top" align="center">
+<b>Tipo</b>
+</td><td valign="top" align="center">
+<b>Nombre</b>
+</td></tr>
+<% @attribs.each do |a| -%>
+<tr><td valign="top" bgcolor="#ffee55">
+<%= a.tipo %>
+</td><td valign="top">
+<%= a.nombre %>
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+
+<h3>Ficheros adjuntos</h3>
+
+<% if @files.empty? -%>
+<i>No hay ficheros adjuntados a este producto</i><br>
+<br>
+<% else -%>
+<table border="0" cellpadding="3" cellspacing="2">
+<% @files.each do |f| -%>
+<tr bgcolor="#fff8c2"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top" align="right">
+<%= size_of_file(f.size) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :action => "get_file", :pid => @product.id, :fid => f.filename %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+
+<br>
+
+<%= link_to "Regresar", :controller => "categories", :action => "show", :id => @product.categoria_id %>
+<% if @product.activo? -%>
+o <%= link_to "Editar", :controller => "products", :action => "edit", :id => @product.id %>
+<% end -%>

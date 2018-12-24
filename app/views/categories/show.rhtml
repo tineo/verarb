@@ -1,0 +1,46 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "categories", :action => "list" %>";
+});
+</script>
+
+<h2>Categor&iacute;as y Productos</h2>
+
+<h3>Categor&iacute;a de <%= @what %>s "<%= @category.nombre %>"</h3>
+
+<%= link_to "Crear nuevo " + @what, :controller => @children_controller, :action => "new", :cid => @category.id %>
+o <%= link_to "Regresar", :action => "list" %><br>
+<br>
+
+<% if @children.size > 0 -%>
+<table border="0" cellpadding="5" cellspacing="1">
+<%
+@children.each do |p|
+  if p.activo?
+    aclass = "a_enabled"
+    aimg   = "stock_delete-16.gif"
+  else
+    aclass = "a_disabled"
+    aimg   = "stock_undelete-16.gif"
+  end
+-%>
+<tr bgcolor="#fff8c2"><td valign="top">
+<%= link_to p.nombre, { :controller => @children_controller, :action => "show", :id => p.id }, :class => aclass %>
+</td><td valign="top">
+<%= p.descripcion %>
+</td><td valign="top">
+<%=
+if p.activo?
+  link_to image_tag("stock_edit-16.gif", :border => 0), :controller => @children_controller, :action => "edit", :id => p.id
+else
+  "&nbsp;"
+end  
+-%>
+</td><td valign="top">
+<%= link_to image_tag(aimg, :border => 0), { :controller => @children_controller, :action => "toggle_active", :id => p.id }, :confirm => "Esta seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+<% else -%>
+<i>No hay items en esta categor&iacute;a.</i>
+<% end -%>

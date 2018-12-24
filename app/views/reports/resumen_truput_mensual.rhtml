@@ -1,0 +1,94 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Resumen de Truput Mensual</h2>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month, :start_year, :end_month, :end_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Mostrar">
+</td></tr>
+</table>
+
+<br>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["Mes", "Monto de lo Entregado (A)", "Costo Variable (B)", "Truput (A-B)", "Truput % Mensual", "Facturado de (A)", "Diferencia"].each do |i|
+-%>
+<td valign="top" align="center">
+<b><%= i -%></b>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="7">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+total_amount     = 0.00
+total_vc         = 0.00
+total_truput     = 0.00
+total_facturated = 0.00
+total_difference = 0.00
+
+@data.each do |d|
+  total_amount      += d.amount
+  total_vc          += d.variable_cost
+  total_truput      += d.truput
+  total_facturated  += d.facturated
+  total_difference  += d.difference
+  
+  date               = Date::MONTHNAMES[d.date.month] + " " + d.date.year.to_s
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= link_to date, { :action => "resumen_truput_mensual", :detailed => 1, :start_month => d.date.month, :start_year => d.date.year, :end_month => d.date.month, :end_year => d.date.year, :empresa => @form.empresa, :q => 1 } %>
+</td><td valign="top" align="right">
+<%= format_price d.amount %>
+</td><td valign="top" align="right">
+<%= format_price d.variable_cost %>
+</td><td valign="top" align="right">
+<%= format_price d.truput %>
+</td><td valign="top" align="right">
+<%= d.monthly_truput.round %>%
+</td><td valign="top" align="right">
+<%= format_price d.facturated %>
+</td><td valign="top" align="right">
+<%= format_price d.difference %>
+</td></tr>
+<% end -%>
+<tr bgcolor="#ffcccc"><td valign="top">
+<b>TOTALES</b>
+</td><td valign="top" align="right">
+<b><%= format_price total_amount %></b>
+</td><td valign="top" align="right">
+<b><%= format_price total_vc %></b>
+</td><td valign="top" align="right">
+<b><%= format_price total_truput %></b>
+</td><td valign="top" align="right">
+<b><%= ((total_truput / total_amount) * 100).round %>%</b>
+</td><td valign="top" align="right">
+<b><%= format_price total_facturated %></b>
+</td><td valign="top" align="right">
+<b><%= format_price total_difference %></b>
+</td></tr>
+<% end -%>
+</table>
+
+
+

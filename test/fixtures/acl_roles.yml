@@ -1,0 +1,55 @@
+--- 
+acl_roles_001: 
+  name: VENTAS
+  created_by: "1"
+  date_modified: 2006-06-13 17:52:22
+  id: adfb7e39-6d1e-f988-62c6-448efbce90df
+  description: Grupo Area Ventas
+  deleted: "1"
+  modified_user_id: "1"
+  date_entered: 2006-06-13 17:51:06
+acl_roles_exec: 
+  name: Ejecutivo de cuentas
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_modified: 2006-11-22 18:05:06
+  id: 4849c3b5-b7ce-78fc-729c-464b4527e61b
+  description: x
+  deleted: "0"
+  modified_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_entered: 2006-10-23 22:19:08
+acl_roles_admin: 
+  name: Administrador del sistema
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_modified: 2006-10-23 23:03:19
+  id: f1e36f07-36a8-4612-ef15-4653b402b248
+  description: Acceso total al sistema
+  deleted: "0"
+  modified_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_entered: 2006-10-23 23:03:19
+acl_roles_004: 
+  name: temporal
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_modified: 2006-11-03 00:46:57
+  id: 845362d7-1823-08d2-38f6-454a915ed7a5
+  description: 
+  deleted: "0"
+  modified_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_entered: 2006-11-03 00:45:21
+acl_roles_005: 
+  name: Supervisor
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_modified: 2007-04-19 17:21:18
+  id: 52834e79-60ff-d285-acaa-4562175cebb8
+  description: Supervisa cuentas del area comercial
+  deleted: "0"
+  modified_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_entered: 2006-11-20 21:02:02
+acl_roles_006: 
+  name: "Dise\xF1o,costos,planeamiento"
+  created_by: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_modified: 2007-02-07 23:53:15
+  id: ab6d73c5-c9e2-77b9-edb6-45c3d03adeee
+  description: para seguridad
+  deleted: "0"
+  modified_user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  date_entered: 2007-02-02 23:58:55

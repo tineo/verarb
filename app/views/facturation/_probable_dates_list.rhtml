@@ -1,0 +1,12 @@
+<b>Hist&oacute;rico de Fechas Probables</b><br>
+<br>
+<table border="0" cellpadding="5" cellspacing="1">
+<% @fechas_probables.each do |fp| -%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= format_short_date fp.fecha unless fp.fecha.nil? %>
+</td><td valign="top">
+<%= simple_format fp.observaciones %>
+</td></tr>
+<% end -%>
+</table>
+

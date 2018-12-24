@@ -1,0 +1,87 @@
+<form method="POST">
+<h2>Nuevo Proyecto</h2>
+
+<h3>Generales</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Proyecto</b><br>
+<%= @form.to_html :nombre_proyecto, :size => 60 %>
+<br>
+
+<%= @form.to_html :urgente %> Es urgente<br>
+<%= @form.e :urgente %>
+<br>
+
+<b>Fecha de entrega del Dise&ntilde;o</b><br>
+<span class="weak">Formato: dd/mm/aa. Ej: 25/12/06</span><br>
+<%= @form.to_html :fecha_entrega, :size => 8 %>
+<br>
+
+<b>Hora de entrega del Dise&ntilde;o</b><br>
+<span class="weak">Formato: hh:mm en 24 horas. Ej: 9:00, 11:30, 17:45</span><br>
+<%= @form.to_html :hora_entrega, :size => 5 %>
+<br>
+
+</td></tr>
+</table>
+
+
+<h3>Forma</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Caracter&iacute;sticas del Entorno</b><br>
+<%= @form.to_html :caracteristicas_entorno, :size => 60 %>
+<br>
+
+<b>P&uacute;blico objetivo</b><br>
+<%= @form.to_html :publico_objetivo, :size => 60 %>
+<br>
+
+<b>Dimensiones del espacio</b><br>
+<span class="weak">Ancho x Alto x Profundidad</span><br>
+<%= @form.to_html :dimensiones_espacio %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :observaciones, :cols => 60 %>
+<br>
+
+<b>Sugerencias</b><br>
+<%= @form.to_html :sugerencias, :cols => 60 %>
+<br>
+
+</td></tr>
+</table>
+
+<h3>Caracter&iacute;sticas Espec&iacute;ficas</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Nivel de Seguridad</b><br>
+<%= @form.to_html :nivel_seguridad %>
+<br>
+
+<b>Materiales</b><br>
+<%= @form.to_html :materiales, :size => 60 %>
+<br>
+
+<b>Acabado</b><br>
+<%= @form.to_html :acabado, :size => 60 %>
+<br>
+
+<b>C&oacute;mo se ver&aacute;</b><br>
+<%= @form.to_html :como_se_vera %>
+
+</td></tr>
+</table>
+
+<br>
+
+<input type="submit" name="button" value="Crear proyecto">
+o <%= link_to "Cancelar", :action => "cancel_new_project" %>
+</form>

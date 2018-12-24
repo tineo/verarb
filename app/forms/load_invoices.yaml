@@ -1,0 +1,14 @@
+facturacion:
+  type:         text
+  acts_as:      password
+  function:     validate_load_invoices_facturacion_password
+
+cobranza:
+  type:         text
+  acts_as:      password
+  function:     validate_load_invoices_cobranza_password
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

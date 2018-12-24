@@ -1,0 +1,5 @@
+observaciones:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes especificar los motivos"
+

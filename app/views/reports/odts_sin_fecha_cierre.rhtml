@@ -1,0 +1,74 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Resumen de ODT sin Fecha de Cierre</h2>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month, :start_year, :end_month, :end_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Mostrar">
+</td></tr>
+</table>
+
+<br>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+[["ODT", "odt"], ["Cliente", "cliente"], ["Descripci&oacute;n", "descripcion"], ["Monto $", "monto"], ["F. Entrega Pactada", "fecha_entrega"], ["Factura", ""], ["Gu&iacute;a", ""]].each do |i|
+-%>
+<td valign="top" align="center">
+<%= render_sort_field (i, "reports", "odts_sin_fecha_cierre", "sort", "dir") %>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="6">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+@data.each do |p|
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= link_to p.orden_id, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= p.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= format_report_price p.monto_de_venta_as_dollars %>
+</td><td valign="top" align="center">
+<%= format_short_date(p.fecha_de_entrega_odt) %>
+</td><td valign="top">
+<%
+p.facturas.each do |of|
+  f = of.factura
+-%>
+<%= link_to f.formatted_factura_number, :controller => "facturation", :action => "show_factura", :fid => f.id, :type => f.tipo, :from => "f" %><br>
+<% end -%>
+</td><td valign="top">
+<%
+p.nonvoid_guias.each do |g|
+-%>
+<%= link_to g.formatted_number, :controller => "facturation", :action => "show_guia", :id => g.id %><br>
+<% end -%>
+
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+

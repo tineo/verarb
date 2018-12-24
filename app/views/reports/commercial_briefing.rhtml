@@ -1,0 +1,190 @@
+<%= javascript_include_tag "relay" %>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<h2>Resumen Comercial</h2>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<select name="start_month" id="start_month" onChange="relay(this, 'end_month');">
+<%= @form.options_for :start_month %>
+</select>
+<select name="start_year" id="start_year" onChange="relay(this, 'end_year');">
+<%= @form.options_for :start_year %>
+</select>
+
+a
+
+<select name="end_month" id="end_month">
+<%= @form.options_for :end_month %>
+</select>
+<select name="end_year" id="end_year">
+<%= @form.options_for :end_year %>
+</select>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+</td></tr>
+</table>
+
+<% if @data_groups -%>
+
+<h3>Equipos</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+fields = %w(Equipo Oportunidades Vendido Prospecto Negociaci&oacute;n/Revisi&oacute;n Perdido Meta Diferencia Productividad)
+
+  fields.each_with_index do |f, i|
+    sort_direction = "0"
+    
+    if @sort1 == i
+      classn = "panel_field_selected"
+      
+      if @dir1 == "0"
+        sort_direction = "1"
+      else
+        sort_direction = "0"
+      end
+    else
+      classn = "panel_field"
+    end
+-%>
+<td valign="top" align="center">
+<b><%= link_to f, { :action => "commercial_briefing", :start_month => @form.start_month, :start_year => @form.start_year, :end_month => @form.end_month, :end_year => @form.end_year, :sort1 => i, :dir1 => sort_direction, :sort2 => @sort2, :dir2 => @dir2, :sort3 => @sort3, :dir3 => @dir3 }, :class => classn %></b>
+</td>
+<% end -%>
+
+<% @data_groups.each do |row| -%>
+<tr bgcolor="#eeeeee">
+<td valign="top">
+<%= row[0] %>
+</td>
+<% row[1..-3].each do |d| -%>
+<td valign="top" align="right">
+<%= format_report_price(d) %>
+</td>
+<% end -%>
+<td align="right">
+<%= '<font color="#ff0000">' if row[7] < 0 %>
+<%= format_report_price(row[7]) %>
+<%= '</font>' if row[7] < 0 %>
+</td>
+<td align="right">
+<%= row[8] %>%
+</td>
+
+<% end -%>
+</table>
+<% end -%>
+
+
+
+<% if @data_execs -%>
+
+<h3>Ejecutivos</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+fields = %w(Ejecutivo Oportunidades Vendido Prospecto Negociaci&oacute;n/Revisi&oacute;n Perdido Meta Diferencia Productividad)
+
+  fields.each_with_index do |f, i|
+    sort_direction = "0"
+    
+    if @sort2 == i
+      classn = "panel_field_selected"
+      
+      if @dir2 == "0"
+        sort_direction = "1"
+      else
+        sort_direction = "0"
+      end
+    else
+      classn = "panel_field"
+    end
+-%>
+<td valign="top" align="center">
+<b><%= link_to f, { :action => "commercial_briefing", :start_month => @form.start_month, :start_year => @form.start_year, :end_month => @form.end_month, :end_year => @form.end_year, :sort1 => @sort1, :dir1 => @dir1, :sort2 => i, :dir2 => sort_direction, :sort3 => @sort3, :dir3 => @dir3 }, :class => classn %></b>
+</td>
+<% end -%>
+
+<% @data_execs.each do |row| -%>
+<tr bgcolor="#eeeeee">
+<td valign="top">
+<%= row[0] %>
+</td>
+<% row[1..-3].each do |d| -%>
+<td valign="top" align="right">
+<%= format_report_price(d) %>
+</td>
+<% end -%>
+<td align="right">
+<%= '<font color="#ff0000">' if row[7] < 0 %>
+<%= format_report_price(row[7]) %>
+<%= '</font>' if row[7] < 0 %>
+</td>
+<td align="right">
+<%= row[8] %>%
+</td>
+
+<% end -%>
+</table>
+<% end -%>
+
+
+
+<% if @data_ratios -%>
+
+<h3>Ratios Comerciales</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+fields = ["Ejecutivo", "Efectividad Cierre", "Efectividad Venta", "Rotaci&oacute;n"]
+
+  fields.each_with_index do |f, i|
+    sort_direction = "0"
+    
+    if @sort2 == i
+      classn = "panel_field_selected"
+      
+      if @dir2 == "0"
+        sort_direction = "1"
+      else
+        sort_direction = "0"
+      end
+    else
+      classn = "panel_field"
+    end
+-%>
+<td valign="top" align="center">
+<b><%= link_to f, { :action => "commercial_briefing", :start_month => @form.start_month, :start_year => @form.start_year, :end_month => @form.end_month, :end_year => @form.end_year, :sort1 => @sort1, :dir1 => @dir1, :sort2 => i, :dir2 => sort_direction, :sort3 => @sort3, :dir3 => @dir3 }, :class => classn %></b>
+</td>
+<% end -%>
+
+<% @data_ratios.each do |row| -%>
+<tr bgcolor="#eeeeee">
+<td valign="top">
+<%= row[0] %>
+</td>
+<% row[1..-1].each do |d| -%>
+<td valign="top" align="right">
+<%= d %>%
+</td>
+<% end -%>
+<% end -%>
+</table>
+<% end -%>

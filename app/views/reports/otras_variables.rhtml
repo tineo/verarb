@@ -1,0 +1,307 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Otras Variables</h2>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month, :start_year, :end_month, :end_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Mostrar">
+</td></tr>
+</table>
+
+<br>
+
+<h3>Cantidad de ODTs</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["Mes", "ODTs Generadas"].each do |i|
+-%>
+<td valign="top" align="center">
+<b><%= i -%></b>
+</td>
+<% end -%>
+
+<td valign="top" align="center">
+<b>Cant. ODTs Vendidas</b>
+</td><td valign="top" align="center">
+<b>Valor Venta</b>
+</td><td valign="top" align="center">
+<b>Costo Variable</b>
+
+
+</td><td valign="top" align="center">
+<b>Garant&iacute;as</b>
+</td><td valign="top" align="center">
+<b>Costo Garant&iacute;a</b>
+
+</td><td valign="top" align="center">
+<b>Reclamos</b>
+</td><td valign="top" align="center">
+<b>Costo Reclamos</b>
+
+</td><td valign="top" align="center">
+<b>Internas</b>
+</td><td valign="top" align="center">
+<b>Costo Internas</b>
+
+</td><td valign="top" align="center">
+<b>Otros</b>
+</td><td valign="top" align="center">
+<b>Costo Otros</b>
+
+</td><td valign="top" align="center">
+<b>Anuladas</b>
+</td><td valign="top" align="center">
+<b>Costo Anuladas</b>
+
+</td></tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="15">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+
+count_total      = 0
+new_total        = 0
+garantias_total  = 0
+garantias_amount = 0.00
+reclamos_total   = 0
+reclamos_amount  = 0.00
+internas_total   = 0
+internas_amount  = 0.00
+otros_total      = 0
+otros_amount     = 0.00
+anuladas_total   = 0
+anuladas_amount  = 0.00
+
+@data.each do |d|
+  count_total      += d.count
+  new_total        += d.new_count
+  garantias_total  += d.garantias_count
+  garantias_amount += d.garantias_amount
+  reclamos_total   += d.reclamos_count
+  reclamos_amount  += d.reclamos_amount
+  internas_total   += d.internas_count
+  internas_amount  += d.internas_amount
+  otros_total      += d.otros_count
+  otros_amount     += d.otros_amount
+  anuladas_total   += d.anuladas_count
+  anuladas_amount  += d.anuladas_amount
+  
+  # Generate the link for details
+  url = params
+  
+  url[:q]       = 1
+  url[:empresa] = @form.empresa
+  
+  # We only want the detail for this month
+  url[:start_month] = url[:end_month] = d.date.month
+  url[:start_year]  = url[:end_year] = d.date.year
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= Date::MONTHNAMES[d.date.month] %> <%= d.date.year %>
+
+</td><td valign="top" align="right">
+<%= link_to d.count, url.merge({ :details => "count" }) %>
+
+</td><td valign="top" align="right">
+<%= link_to d.new_count, url.merge({ :details => "new" }) %>
+
+</td><td valign="top" align="right">
+<%= format_price d.new_amount %>
+
+</td><td valign="top" align="right">
+<%= format_price d.new_vc %>
+
+</td><td valign="top" align="right">
+<%= link_to d.garantias_count, url.merge({ :details => "garantias" }) %>
+
+</td><td valign="top" align="right">
+<%= format_price d.garantias_amount %>
+
+</td><td valign="top" align="right">
+<%= link_to d.reclamos_count, url.merge({ :details => "reclamos" }) %>
+
+</td><td valign="top" align="right">
+<%= format_price d.reclamos_amount %>
+
+</td><td valign="top" align="right">
+<%= link_to d.internas_count, url.merge({ :details => "internas" }) %>
+
+</td><td valign="top" align="right">
+<%= format_price d.internas_amount %>
+
+</td><td valign="top" align="right">
+<%= link_to d.otros_count, url.merge({ :details => "otros" }) %>
+
+</td><td valign="top" align="right">
+<%= format_price d.otros_amount %>
+
+</td><td valign="top" align="right">
+<%= link_to d.anuladas_count, url.merge({ :details => "anuladas" }) %>
+
+</td><td valign="top" align="right">
+<%= format_price d.anuladas_amount %>
+
+</td><tr>
+<% end -%>
+
+<tr bgcolor="#ffbbbb"><td valign="top">
+<b>TOTALES</b>
+
+</td><td valign="top" align="right">
+<b><%= count_total %></b>
+
+</td><td valign="top" align="right">
+<b><%= new_total %></b>
+
+</td><td valign="top" align="right">
+
+</td><td valign="top" align="right">
+
+</td><td valign="top" align="right">
+<b><%= garantias_total %></b>
+
+</td><td valign="top" align="right">
+<b><%= format_price garantias_amount %></b>
+
+</td><td valign="top" align="right">
+<b><%= reclamos_total %></b>
+
+</td><td valign="top" align="right">
+<b><%= format_price reclamos_amount %></b>
+
+</td><td valign="top" align="right">
+<b><%= internas_total %></b>
+
+</td><td valign="top" align="right">
+<b><%= format_price internas_amount %></b>
+
+</td><td valign="top" align="right">
+<b><%= otros_total %></b>
+
+</td><td valign="top" align="right">
+<b><%= format_price otros_amount %></b>
+
+</td><td valign="top" align="right">
+<b><%= anuladas_total %></b>
+
+</td><td valign="top" align="right">
+<b><%= format_price anuladas_amount %></b>
+
+</td><tr>
+
+<% end -%>
+
+</table>
+
+
+<h3>Porcentajes</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["Mes"].each do |i|
+-%>
+<td valign="top" align="center">
+<b><%= i -%></b>
+</td>
+<% end -%>
+
+<td valign="top" align="center">
+<b>% Venta / ODTs atend.</b>
+</td><td valign="top" align="center">
+<b>Garant&iacute;as</b>
+</td><td valign="top" align="center">
+<b>Reclamos</b>
+</td><td valign="top" align="center">
+<b>Internas</b>
+</td><td valign="top" align="center">
+<b>Otros</b>
+</td><td valign="top" align="center">
+<b>Anuladas</b>
+</td></tr>
+
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="6">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+new_percent       = (new_total * 100) / count_total
+garantias_percent = (garantias_total * 100) / count_total
+reclamos_percent  = (reclamos_total * 100) / count_total
+internas_percent  = (internas_total * 100) / count_total
+otros_percent     = (otros_total * 100) / count_total
+anuladas_percent  = (anuladas_total * 100) / count_total
+
+@data.each do |d|
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= Date::MONTHNAMES[d.date.month] %> <%= d.date.year %>
+
+</td><td valign="top" align="right">
+<%= d.new_percent %>%
+
+</td><td valign="top" align="right">
+<%= d.garantias_percent %>%
+
+</td><td valign="top" align="right">
+<%= d.reclamos_percent %>%
+
+</td><td valign="top" align="right">
+<%= d.internas_percent %>%
+
+</td><td valign="top" align="right">
+<%= d.otros_percent %>%
+
+</td><td valign="top" align="right">
+<%= d.anuladas_percent %>%
+
+</td><tr>
+<% end -%>
+
+<tr bgcolor="#ffbbbb"><td valign="top">
+<b>TOTALES</b>
+
+</td><td valign="top" align="right">
+<b><%= new_percent %>%</b>
+
+</td><td valign="top" align="right">
+<b><%= garantias_percent %>%</b>
+
+</td><td valign="top" align="right">
+<b><%= reclamos_percent %>%</b>
+
+</td><td valign="top" align="right">
+<b><%= internas_percent %>%</b>
+
+</td><td valign="top" align="right">
+<b><%= otros_percent %>%</b>
+
+</td><td valign="top" align="right">
+<b><%= anuladas_percent %>%</b>
+
+</td><tr>
+<% end -%>
+
+</table>
+
+

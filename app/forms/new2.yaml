@@ -1,0 +1,70 @@
+nombre_proyecto:
+  type:         text
+
+urgente:
+  type:         checkbox
+  unset_value:  "0"
+  set_value:    "1"
+  value:        "0"
+
+fecha_entrega:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+
+hora_entrega:
+  type:         text
+  function:     validate_texttime
+  max_length:   5
+
+
+# Forma
+
+caracteristicas_entorno:
+  type:         text
+  max_length:   200
+  mandatory:    false
+
+publico_objetivo:
+  text:         text
+  max_length:   200
+  mandatory:    false
+
+dimensiones_espacio:
+  text:         text
+  max_length:   100
+  mandatory:    false
+
+observaciones:
+  text:         text
+  acts_as:      textarea
+  mandatory:    false
+
+sugerencias:
+  text:         text
+  acts_as:      textarea
+  mandatory:    false
+
+
+# Caracteristicas Especificas
+
+nivel_seguridad:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+  mandatory:    false
+
+materiales:
+  type:         text
+  max_length:   250
+  mandatory:    false
+
+acabado:
+  type:         text
+  max_length:   250
+  mandatory:    false
+
+como_se_vera:
+  type:         checkboxmulti
+  mandatory:    false
+

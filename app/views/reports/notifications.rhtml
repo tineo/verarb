@@ -1,0 +1,62 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Notificaciones</h2>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Tipo
+</td><td valign="top">
+<%= @form.to_html :tipo %>
+</td></tr>
+
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month, :start_year, :end_month, :end_year) %>
+
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<% ["Fecha", "Proyecto/ODT", "Descripci&oacute;n"].each do |h| -%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+
+<%
+@notifications.each do |n|
+  id  = n.proyecto.id.to_s
+  id += " / " + n.proyecto.orden_id.to_s if n.proyecto.con_orden_de_trabajo?
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" align="center">
+<%= format_date(n.created_on) %>
+</td><td valign="top" align="center">
+<%= link_to id, :controller => "projects", :action => "show", :id => n.proyecto.uid, :type => n.proyecto.type %>
+</td><td valign="top">
+<%= simple_format n.descripcion %>
+</td></tr>
+<% end -%>
+
+
+</table>
+
+

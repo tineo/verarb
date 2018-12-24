@@ -1,0 +1,276 @@
+<%= render :partial => "menubar" %>
+
+<h3>Cliente</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<b>Cliente</b><br>
+<a href="<%= crm_url %>index.php?module=Accounts&action=DetailView&record=<%= @project.account.id %>" target="_Blank"><%= @project.account.name %></a><br>
+<br>
+
+<b>RUC</b><br>
+<%= @project.account.ruc %><br>
+<br>
+
+<% if @project.contact %>
+<b>Contacto</b><br>
+
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<a href="<%= crm_url() + "index.php?action=DetailView&module=Contacts&record=" + @project.contact.id %>"><%= @project.contact.full_name %></a><br>
+<br>
+<b>Tel&eacute;fono</b><br>
+<%= @project.contact.phone_work %><br>
+<br>
+<b>E-Mail</b><br>
+<a href="mailto:<%= @project.contact.email1 %>"><%= @project.contact.email1 %></a><br>
+</td></tr>
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+
+<h3>Proyecto</h3>
+
+<% if can_access?(:executive_tasks) && is_owner? -%>
+<% unless @project.anulado? -%>
+<%= link_to "Editar proyecto", :action => "edit_project", :id => @project.uid, :type => @project.type %>
+
+<% if controller.is_admin? -%>
+&nbsp;&nbsp;<%= link_to "Editar Metadata", :action => "edit_metadata", :id => @project.uid, :type => @project.type %>
+<% end -%>
+
+<% if can_access?(:executive_tasks) && @project.con_orden_de_trabajo? -%>
+&nbsp;&nbsp;<%=
+if @project.muy_urgente?
+  t = "Desmarcar"
+else
+  t = "Marcar como"
+end
+
+link_to "#{t} Muy Urgente", :action => "toggle_urgency", :id => @project.uid
+%>
+<% end -%>
+
+<% if controller.is_supervisor? -%>
+&nbsp;&nbsp;<%= link_to "Cambiar de Empresa o Tipo", :action => "change_empresa_or_type", :id => @project.uid, :type => @project.type %>
+<% end -%>
+
+<%
+end # unless project.anulado?
+-%>
+
+<% if controller.is_supervisor? -%>
+&nbsp;&nbsp;<%= link_to "Hist&oacute;rico de Fechas de Entrega", :action => "history_of_dates", :id => @project.uid, :type => @project.type %>
+
+&nbsp;&nbsp;<%= link_to "Notificaciones", :action => "notifications", :id => @project.uid, :type => @project.type %>
+<% end -%>
+
+<br>
+<br>
+<% end -%>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<b>Proyecto</b><br>
+<a href="<%= crm_url() %>index.php?action=DetailView&module=Opportunities&record=<%= @project.opportunity_id %>"><%= @project.nombre_proyecto %></a><br>
+<br>
+
+<b>Urgente</b><br>
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<%= state_image(@project.urgente_diseno) %>
+</td><td valign="top">
+Dise&ntilde;o
+</td></tr>
+<tr><td valign="top">
+<%= state_image(@project.urgente_planeamiento) %>
+</td><td valign="top">
+Planeamiento
+</td></tr>
+<tr><td valign="top">
+<%= state_image(@project.urgente_costos) %>
+</td><td valign="top">
+Costos
+</td></tr>
+</table>
+<br>
+
+<b>Empresa Vendedora</b><br>
+<%= EMPRESA_VENDEDORA[@project.empresa_vendedora] %><br>
+<br>
+
+<b>Categor&iacute;a de Venta</b><br>
+<%= TIPO_DE_VENTA[@project.tipo_de_venta] %><br>
+<br>
+
+<% if @project.canje? -%>
+Este proyecto es Canje<br>
+<br>
+<% end -%>
+
+<b>Tipo de Proyecto</b><br>
+<%= TIPO_PROYECTO[@project.tipo_proyecto] %>
+<% if @project.tipo_proyecto == T_OTRO -%>
+(<%= @project.otro_tipo %>)
+<% end -%><br>
+<br>
+
+<b>Subtipo de Proyecto</b><br>
+<% if @project.subtipo_nuevo_proyecto.to_i == 0 %>
+  <b><span style="color:#074">Operaciones</span></b>
+<% else %>
+  <b><span style="color:#074">Arquitectura</span></b>
+<% end %>
+<br><br>
+
+<b>Fecha de Solicitud</b><br>
+<%= @project.fecha_creacion_proyecto.strftime "%d/%m/%Y" %><br>
+<br>
+
+<b>Fechas de entrega</b><br>
+<table border="0" cellpadding="3" cellspacing="0">
+
+<tr><td valign="top">
+<b>Dise&ntilde;o:</b>
+</td><td valign="top">
+<%= format_date(@project.fecha_entrega_diseno) unless @project.fecha_entrega_diseno.nil? %><br>
+</td></tr>
+
+<tr><td valign="top">
+<b>Planeamiento:</b>
+</td><td valign="top">
+<%= format_date(@project.fecha_entrega_planeamiento) unless @project.fecha_entrega_planeamiento.nil? %><br>
+</td></tr>
+
+<tr><td valign="top">
+<b>Costos:</b>
+</td><td valign="top">
+<%= format_date(@project.fecha_entrega_costos) unless @project.fecha_entrega_costos.nil? %><br>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha Final de Entrega al Cliente</b>
+</td><td valign="top">
+<%= format_date(@project.fecha_de_entrega_odt) unless @project.fecha_de_entrega_odt.nil? %><br>
+</td></tr>
+
+</table>
+<br>
+
+<b>Fechas Parciales de Entrega al Cliente</b><br>
+<br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Cant.</b>
+</td><td valign="top" align="center">
+<b>Detalles</b>
+</td></tr>
+<% @project.fechas_de_entrega.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= format_date f.fecha %>
+</td><td valign="top" align="right">
+<%= f.cantidad %>
+</td><td valign="top">
+<%= simple_format f.detalle || "" %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+
+- <%=
+if @project.alquiler?
+  "Alquiler"
+else
+  "Venta"
+end %><br>
+- <%=
+if @project.solo_entrega?
+  "S&oacute;lo entrega" + (@project.con_instalacion? ? " (Con instalaci&oacute;n)" : "")
+else
+  "Instalaci&oacute;n"
+end %><br>
+- <%=
+if @project.entrega_en_un_punto?
+  "Entrega en un punto"
+else
+  "Entrega en varios puntos"
+end %><br>
+<br>
+
+<b>Lugar(es) de entrega</b><br>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<%= simple_format @project.lugares_de_entrega %>
+</td></tr>
+</table>
+<br>
+
+<% unless @project.tipo_de_presentacion == "-1" -%>
+<b>Tipo de Presentaci&oacute;n de Dise&ntilde;o</b><br>
+<%= TIPO_DE_PRESENTACION[@project.tipo_de_presentacion] %><br>
+<br>
+<% end -%>
+
+
+</td></tr>
+</table>
+
+<h3>Forma</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<b>Caracter&iacute;sticas del Entorno</b><br>
+<%= @project.caracteristicas_entorno %><br>
+<br>
+
+<b>P&uacute;blico Objetivo</b><br>
+<%= @project.publico_objetivo %><br>
+<br>
+
+<b>Dimensiones del espacio</b><br>
+<span class="weak">Ancho x Alto x Profundidad, d&oacute;nde estar&aacute; el producto</span><br>
+<%= @project.dimensiones_espacio %><br>
+<br>
+
+<b>Observaciones</b><br>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<%= simple_format @project.observaciones %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<% if is_operations_validator? && @project.area.en_validacion_operaciones? -%>
+<br>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>Validaci&oacute;n de Operaciones</h3>
+
+<b>Observaciones de Desaprobaci&oacute;n</b><br>
+<%= @form.to_html :observaciones %>
+<br>
+
+<input type="submit" name="approve" value="Aprobar">
+
+o
+
+<input type="submit" name="disapprove" value="Desaprobar">
+
+
+</td></tr>
+</table>
+</form>
+
+<% end -%>
+
+

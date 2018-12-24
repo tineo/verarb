@@ -1,0 +1,32 @@
+probabilidad:
+  type:         text
+  function:     validate_number
+  empty_msg:    "Debes escribir una probabilidad"
+  value:        "80"
+
+start_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+start_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+end_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+end_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+executive:
+  type:         select
+  value:        "-1"
+  mandatory:    false
+  options:      executive_options
+

@@ -1,0 +1,6 @@
+content:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+  filters:
+    - filter_strip

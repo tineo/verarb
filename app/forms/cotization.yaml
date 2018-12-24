@@ -1,0 +1,40 @@
+tiempo_de_entrega:
+  type:         text
+  function:     validate_number
+  max_length:   2
+  empty_msg:    "Debes especificar en cu&aacute;ntos d&iacute;as se har&aacute; la entrega"
+
+forma_de_pago:
+  type:         text
+  max_length:   255
+  empty_msg:    "Debes especificar la forma de pago"
+
+moneda:
+  type:         radio
+  value:        "D"
+
+contacto:
+  type:         text
+  mandatory:    false
+
+validez_de_oferta:
+  type:         text
+  function:     validate_number
+  max_length:   2
+  empty_msg:    "Debes especificar la cantidad de d&iacute;as que tiene validez esta oferta"
+
+notas:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+incluir_gran_total:
+  type:         checkbox
+  unset_value:  "0"
+  set_value:    "1"
+
+especificar_detalles:
+  type:         checkbox
+  unset_value:  "0"
+  set_value:    "1"
+

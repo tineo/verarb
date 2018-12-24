@@ -1,0 +1,12 @@
+<form method="POST">
+<h3>Ingrese ID de Proyecto para retirar de Operaciones:</h3>
+
+<font color="red"><%= "Proyecto #{@p.id} retirado<br><br>" if @p %></font>
+
+<input type="text" name="id">
+<input type="submit" value="Retirar">
+o <%= link_to "Cancelar", :controller => "dashboard", :action => "index" %>
+</form>
+
+<br>
+<br>

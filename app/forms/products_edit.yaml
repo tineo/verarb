@@ -1,0 +1,23 @@
+nombre:
+  type:         text
+
+categoria:
+  type:         select
+  options:      lst_categorias_productos_options
+
+atributos:
+  type:         text
+  acts_as:      textarea
+  function:     validate_atributos
+  max_length:   65536
+
+descripcion:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+  max_length:   65536
+
+costo_variable:
+  type:         text
+  function:     validate_precio
+  value:        "0.00"

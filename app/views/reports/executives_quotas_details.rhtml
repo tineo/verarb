@@ -1,0 +1,80 @@
+<h2>Detalle de Comisiones y Bonificaciones Comercial</h2>
+
+<h2><%= @executive.full_name %></h2>
+
+<a href="javascript:history.back();">Regresar</a><br>
+<br>
+
+<%
+if params[:what] == "billed"
+  label_a = "Cobrados en el Mes"
+  label_b = "No cobrados en el Mes"
+else
+  label_a = "Facturados en el Mes"
+  label_b = "No facturados en el Mes"
+end
+-%>
+
+<%
+[@group_a, @group_b].each_with_index do |g, i|
+  if i == 0
+    label = label_a
+  else
+    label = label_b
+  end
+-%>
+<h3><%= label %></h3>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["ODT", "Cliente", "Descripci&oacute;n", "Monto S/.", "Monto $", "Ejecutivo", ].each do |h|
+-%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<% if g.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="10">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<%
+else
+  total_s = 0.00
+  total_d = 0.00
+  
+  g.each do |p|
+    total_s += p.monto_facturado_as_soles
+    total_d += p.monto_facturado_as_dollars
+-%>
+
+<tr bgcolor="#eeeeee"><td valign="top" align="center">
+<%= p.orden_id %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= link_to p.nombre_proyecto, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top" align="right">
+<%= format_report_price(p.monto_facturado_as_soles) %>
+</td><td valign="top" align="right">
+<%= format_report_price(p.monto_facturado_as_dollars) %>
+</td><td valign="top">
+<%= p.executive.full_name %>
+</td></tr>
+<% end -%>
+<tr bgcolor="#eeeeee"><td valign="top" align="right" bgcolor="#eebbbb" colspan="3">
+<b>TOTAL</b>
+</td><td valign="top" align="right">
+<%= format_report_price(total_s) %>
+</td><td valign="top" align="right">
+<%= format_report_price(total_d) %>
+</td><td valign="top">
+</td></tr>
+
+<% end -%>
+</table>
+<br>
+
+<% end -%>
+

@@ -1,0 +1,4 @@
+supervisor:
+  type:         select
+  options:      op_supervisor_options
+

@@ -1,0 +1,48 @@
+<%= render :partial => "menubar" %>
+
+<h3>Hist&oacute;rico de Fechas de Entrega Parciales</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr><td valign="top" align="center">
+<b>Registrado en</b>
+</td><td valign="top" align="center">
+<b>Usuario</b>
+</td><td valign="top" align="center">
+<b>Nueva Fecha de Entrega</b>
+</td><td valign="top" align="center">
+<b>Observaciones</b>
+</td><td valign="top" align="center">
+<b>Comentarios</b>
+</td></tr>
+
+<% if @dates.empty? -%>
+<tr bgcolor="#ffffff"><td colspan="3">
+<i>No hay Fechas de Entrega registradas.</i>
+</td></tr>
+<% else -%>
+<% @dates.each do |d| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= d.created_on.long_format %>
+</td><td valign="top">
+<%= d.user.full_name %>
+</td><td valign="top">
+<%= d.fecha.long_format %>
+</td><td valign="top">
+<%= simple_format d.observaciones %>
+</td><td valign="top">
+<%= d.comentarios %>
+</td></tr>
+<% end -%>
+<% end -%>
+
+</table>
+
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+

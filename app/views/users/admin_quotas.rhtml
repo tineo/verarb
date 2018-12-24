@@ -1,0 +1,20 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Administraci&oacute;n de Cuotas de Ejecutivos</h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0">
+<tr bgcolor="#fff8c2"><td valign="top">
+
+<h3>Per&iacute;odos</h3>
+
+<% @periods.each do |p| %>
+<li> <%= link_to "#{p.year} - #{Date::MONTHNAMES[p.month.to_i]}", :action => "admin_quotas_entry", :y => p.year, :m => p.month %></li>
+<% end -%>
+
+</td></tr>
+</table>
+

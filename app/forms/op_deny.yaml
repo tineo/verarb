@@ -1,0 +1,5 @@
+motivo:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    Debes especificar el motivo del rechazo
+

@@ -1,0 +1,21 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Noticias</h2>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+Texto de Noticias a mostrar:<br>
+<br>
+<%= @form.to_html :content, :rows => 10, :cols => 40 %><br>
+
+<input type="submit" value="Actualizar">
+o <%= link_to "Cancelar", :controller => "admin", :action => "index" %><br>
+<br>
+</td></tr>
+</table>
+</form>

@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Cargo de Mensajer&iacute;a - <%= format_short_date Time.now %></title>
+<style>
+body, td {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size:   8px;
+  color:       #222;
+}
+
+.razon_social {
+  font-weight: bold;
+  color:       #aa0000;
+}
+
+</style>
+</head>
+
+<center>
+<h3>Entrega de Facturas a Clientes - <%= format_short_date Time.now %></h3>
+</center>
+
+<table width="100%" border="1" cellpadding="2" cellspacing="0">
+
+<% @data.each do |d| -%>
+<tr><td colspan="2" valign="bottom">
+<span class="razon_social"><%= d.razon_social %></span><br>
+<%= d.address %>
+</td></tr>
+
+<tr><td valign="top">
+
+<% unless d.to_deliver.empty? -%>
+<table border="1" cellpadding="3" cellspacing="0">
+<tr><td valign="top" colspan="4">
+<b>Por Entregar</b>
+</td></tr>
+<% d.to_deliver.each_with_index do |f, i| -%>
+<tr><td valign="top" align="right" width="10">
+<%= i + 1 %>.
+</td><td valign="top" align="center" width="10">
+&nbsp;
+</td><td valign="top">
+<%= f.formatted_factura_number %>
+</td><td valign="top">
+<%
+address = f.of.first.proyecto.factura_direccion
+
+f.of.each do |o|
+-%>
+<%= o.proyecto.orden_id %><br>
+<% end -%>
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+Total por entregar: <%= d.to_deliver.size %><br>
+Total entregado: _____<br>
+<br>
+<% end -%>
+&nbsp;
+
+</td><td valign="top" width="40%">
+
+<% unless d.to_bill.empty? -%>
+<table border="1" cellpadding="3" cellspacing="0">
+<tr><td valign="top" colspan="4">
+<b>Por Cobrar</b>
+</td><td valign="top">
+<b>Modalidad de Pago</b>
+</td></tr>
+<% d.to_bill.each_with_index do |f, i| -%>
+<tr><td valign="top" align="right" width="15">
+<%= i + 1 %>.
+</td><td valign="top" width="15">
+&nbsp;
+</td><td valign="top">
+<%= f.formatted_factura_number %>
+</td><td valign="top">
+<%
+odts = []
+f.of.each do |o|
+  odts << o.proyecto.orden_id
+end
+
+odts.uniq!
+
+odts.each do |o| -%>
+<%= o %><br>
+<% end -%>
+
+</td><td valign="top">
+<%= f.modalidad_pago %> &nbsp;
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+Total por cobrar: <%= d.to_bill.size %><br>
+Total cobrado: _____<br>
+<br>
+<% end -%>
+&nbsp;
+
+</td></tr>
+
+<% end -%>
+</table>
+
+</html>
+

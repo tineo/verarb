@@ -1,0 +1,63 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "edit_details", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+<form name="f" method="POST">
+<%= render :partial => "menubar" %>
+
+<h3>Agregar Servicio</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>General</h3>
+
+<b>Cantidad</b><br>
+<%= @form.to_html :cantidad, :size => 5 %>
+<br>
+
+<b>Categor&iacute;a</b><br>
+<select name="categoria" onChange="document.f.servicio.value='-1'; document.f.servicio.disabled = true; Element.hide('info')">
+<%= @form.options_for :categoria %>
+</select>
+<input type="submit" value="Seleccionar"><br>
+<%= @form.e :categoria %>
+<br>
+
+<b>Servicio</b><br>
+<select name="servicio" onChange="Element.hide('info')">
+<%= @form.options_for :servicio %>
+</select>
+<input type="submit" value="Seleccionar"><br>
+<%= @form.e :servicio %>
+<br>
+
+<% unless @form.servicio == "-1" -%>
+<div id="info">
+
+<b>Descripci&oacute;n:</b><br>
+<%= @form.to_html :descripcion %>
+<br>
+
+<b>Observaciones</b><br>
+<%= @form.to_html :observaciones %>
+<br>
+
+<b>Precio</b><br>
+<%= @form.to_html :precio, :size => 16 %><br>
+<br>
+
+</td></tr>
+</table>
+
+</div>
+<% end -%>
+
+<br>
+
+<input type="submit" name="button" value="Guardar servicio">
+o <%= link_to "Cancelar", :action => "edit_details", :id => @project.uid, :type => @project.type %>
+
+</form>

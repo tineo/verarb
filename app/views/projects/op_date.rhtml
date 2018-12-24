@@ -1,0 +1,160 @@
+<%= render :partial => "menubar" %>
+
+<h3>Operaciones</h3>
+
+<% if @project.notificado_como_venta_asegurada? -%>
+<span class="alert">Proyecto vendido al Cliente con datos pendientes</span><br>
+<br>
+<% end -%>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Fecha de Ingreso</b><br>
+<%= @project.fecha_creacion_proyecto.strftime "%d/%m/%Y %H:%M" %><br>
+<br>
+<b>Precio de Venta</b><br>
+<%= currency(@project.moneda_odt) %> <%= format_price @project.monto_de_venta %><br>
+<br>
+<%= state_image(@project.con_instalacion?) %> Con Instalaci&oacute;n<br>
+<br>
+<%= state_image(@project.se_necesita_supervisor?) %> Se necesita Supervisor<br>
+<br>
+<% if @project.se_necesita_supervisor? && is_operations? -%>
+<form method="POST">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Supervisor asignado
+</td><td valign="top">
+<%= @sform.to_html :supervisor %>
+</td><td valign="top">
+<input type="submit" name="sup" value="Aceptar">
+</td></tr>
+</table>
+</form>
+<br>
+<% end -%>
+<b>Estado</b><br>
+<%= ESTADOS[@project.area.estado_operaciones][:label] %><br>
+<br>
+
+<b>Fechas Parciales de Entrega al Cliente</b><br>
+<br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Cant.</b>
+</td><td valign="top" align="center">
+<b>Detalles</b>
+</td><td valign="top" align="center">
+<b>Estado</b>
+</td><td valign="top" align="center">
+<b>Observaciones</b>
+</td></tr>
+<% @project.fechas_de_entrega.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to format_date(f.fecha), :action => "op_date_item", :fid => f.id %>
+</td><td valign="top" align="right">
+<%= f.cantidad %>
+</td><td valign="top">
+<%= simple_format f.detalle %>
+</td><td valign="top">
+<%= f.status_to_s %>
+</td><td valign="top">
+<%= simple_format f.observaciones %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<br>
+
+<b>Fecha y Hora de Inicio de Instalaci&oacute;n</b><br>
+<% if @project.fecha_de_inicio_instalacion.nil? -%>
+No hay fecha definida a&uacute;n.
+<% else -%>
+<%= @project.fecha_de_inicio_instalacion.strftime "%d/%m/%Y %I:%M %p" %>
+<% end -%><br>
+<br>
+
+<% if is_operations? -%>
+<form method="POST">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#FFE698">
+<tr><td valign="top">
+<input type="text" id="fecha_de_inicio" name="fecha_de_inicio" value="<%= @isdform.fecha_de_inicio %>" readonly="true" size="8">
+<%= image_tag "calendar.gif", :id => "trigger2", :border => 0 %>
+
+&nbsp;
+
+<input type="text" id="hora_de_inicio" name="hora_de_inicio" maxlength="4" size="4" value="<%= @isdform.hora_de_inicio %>">
+<%= @isdform.to_html :hora_inicio_am_pm %>
+</td><td valign="top">
+<input type="submit" name="inicio" value="Aceptar">
+</td></tr>
+<tr><td valign="top">
+<%= @isdform.e :fecha_de_inicio %>
+<%= @isdform.e :hora_de_inicio %>
+<span class="weak">Formato hora: hhmm. Ej: 1130, 0545</span>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+</table>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_de_inicio",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger2"
+});
+</script>
+
+<br>
+<br>
+
+<% unless @project.con_orden_de_trabajo? -%>
+<b>Rechazar Proyecto</b><br>
+
+<%= @denyform.to_html :motivo %>
+<br>
+<input type="submit" name="deny" value="Rechazar Proyecto" onclick="return confirm('&iquest;Est&aacute; seguro de rechazar este Proyecto?')">
+<br>
+
+<% end -%>
+
+</form>
+<% end -%>
+
+</form>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Observaciones</h3>
+
+<%= form_tag :action=> "post_message", :id => @project.uid, :aid => A_OPERACIONES, :type => @project.type %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @mform.to_html :mensaje, :cols => 60 %>
+<br>
+<%= submit_tag "Publicar" %><br>
+<br>
+<br>
+
+<b>Observaciones</b> (M&aacute;s recientes primero)<br>
+
+<% @messages.each do |m| -%>
+<span class="weak">
+<%= m.fecha.strftime "%d/%m/%Y %H:%M" %><br>
+<%= m.user.user_name %> escribi&oacute;:
+</span>
+<%= simple_format(h(m.mensaje)) %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+</form>

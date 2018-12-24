@@ -1,0 +1,63 @@
+<h2><%= @document_label_plural %></h2>
+
+<% if @factura -%>
+<h3><%= @document_label_singular %> <%= @factura.formatted_factura_number %> - Agregar otra Orden</h3>
+<% else -%>
+<h3>Crear nueva <%= @document_label_singular %></h3>
+<% end -%>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<b>ID de Orden</b>
+<%= @form.to_html :order, :size => 8 %>
+</td><td valign="top">
+<input type="submit" value="Buscar">
+</td></tr>
+</table>
+
+<br>
+
+<% if @searched -%>
+<% if @order_found -%>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<h3>ODT <%= @order.orden_id %> - <%= @order.nombre_proyecto %></h3>
+<b>Cliente:</b> <%= @order.account.name %><br>
+<b>Ejecutivo:</b> <%= @order.executive.full_name %><br>
+<b>Empresa vendedora:</b> <%= EMPRESA_VENDEDORA[@order.empresa_vendedora] %><br>
+<br>
+
+<% if !can_see_company? @order.empresa_vendedora -%>
+<span class="error_msg">Esta Orden pertenece a la empresa "<%= EMPRESA_VENDEDORA[@order.empresa_vendedora] %>" a la que no tienes acceso.</span>
+
+<% elsif (motive = @order.is_facturable?(:with_motive)) != "" -%>
+<span class="error_msg">Esta Orden no se puede facturar: <%= motive %></span>
+
+<% elsif @factura && @factura.has_this_project?(@order.id) -%>
+<span class="error_msg">Esta Orden ya se ha facturado con esta misma Factura</span>
+
+<% elsif @factura && @factura.empresa != @order.empresa_vendedora -%>
+<span class="error_msg">Esta Orden pertenece a la empresa "<%= EMPRESA_VENDEDORA[@order.empresa_vendedora] %>" y la Factura es de "<%= EMPRESA_VENDEDORA[@factura.empresa] %>"</span>
+
+<% elsif @factura -%>
+<%= link_to "Agregar esta Orden a la Factura #{@factura.formatted_factura_number}", :action => "new_factura_3", :id => @order.orden_id, :fid => @factura.id, :type => @type, :add => 1 %>
+<% else -%>
+<%= link_to "Crear #{@document_label_singular} para esta Orden", :action => "new_factura_2", :id => @order.orden_id %>
+<% end -%>
+
+</td></tr>
+</table>
+
+<% else -%>
+<span class="error_msg">La Orden <%= @form.order %> no existe. Verifique si el n&uacute;mero es correcto y reintente nuevamente.</span>
+<% end -%>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+

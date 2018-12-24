@@ -1,0 +1,80 @@
+<h2>Reportes</h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if can_access? :reports_ventas -%>
+<h3><%= link_to "Reporte de Ventas por ODT", :controller => "reports", :action => "ventas" %></h3>
+<% end -%>
+
+<% if can_access? :reports_ventas -%>
+<h3><%= link_to "Resumen de Comisiones y Bonificaciones Comercial", :controller => "reports", :action => "executives_quotas" %></h3>
+<% end -%>
+
+<% if can_access? :reports_monthly -%>
+<h3><%= link_to "Gr&aacute;fico de Ventas Mensuales", :controller => "reports", :action => "monthly" %></h3>
+<% end -%>
+
+<% if can_access? :reports_account_movement -%>
+<h3><%= link_to "Ranking de Cuentas", :controller => "reports", :action => "account_movement" %></h3>
+<% end -%>
+
+<% if can_access? :reports_commercial_briefing -%>
+<h3><%= link_to "Resumen Comercial", :controller => "reports", :action => "commercial_briefing" %></h3>
+<% end -%>
+
+<% if can_access? :reports_design -%>
+<h3><%= link_to "Reporte por Costo de Oportunidad", :controller => "reports", :action => "design" %></h3>
+<% end -%>
+
+<% if can_access? :reports_flow -%>
+<h3><%= link_to "Flujo de Cobranza", :controller => "reports", :action => "facturation_flow" %></h3>
+<% end -%>
+
+<% if can_access? :reports_weekly_flow -%>
+<h3><%= link_to "Flujo de Cobranza Semanal", :controller => "reports", :action => "billing_weekly_flow" %></h3>
+<% end -%>
+
+<% if is_supervisor? -%>
+<h3><%= link_to "Historial de Notificaciones", :controller => "reports", :action => "notifications" %></h3>
+<% end -%>
+
+<% if can_access? :reports_odt_guia -%>
+<h3><%= link_to "ODTs con Gu&iacute;as y Facturas no relacionadas", :controller => "reports", :action => "odt_guias" %></h3>
+<% end -%>
+
+<% if can_access? :reports_truput_estimado_mes -%>
+<h3><%= link_to "Truput Estimado por Mes", :controller => "reports", :action => "truput_estimado_mes" %></h3>
+<% end -%>
+
+<% if can_access? :reports_estimado_cierre_de_venta -%>
+<h3><%= link_to "Estimado de Cierre de Venta", :controller => "reports", :action => "estimado_cierre_de_venta" %></h3>
+<% end -%>
+
+<% if session[:user].user_name == "jpuppo" -%>
+<h3><%= link_to "Consumo de ODT", :controller => "reports", :action => "odt_consumption" %></h3>
+<% end -%>
+
+<% if is_executive? || is_supervisor? -%>
+<h3><%= link_to "ODTs pendientes por Facturar", :controller => "reports", :action => "facturation_pending" %></h3>
+<% end -%>
+
+<% if can_access? :reports_costos_por_odt -%>
+<h3><%= link_to "Costos por ODT", :controller => "reports", :action => "costos_por_odt" %></h3>
+<% end -%>
+
+<% if can_access? :reports_resumen_truput_mensual -%>
+<h3><%= link_to "Resumen de Truput Mensual", :controller => "reports", :action => "resumen_truput_mensual" %></h3>
+<% end -%>
+
+<% if can_access? :reports_otras_variables -%>
+<h3><%= link_to "Otras Variables", :controller => "reports", :action => "otras_variables" %></h3>
+<% end -%>
+
+<% if can_access? :reports_odts_sin_fecha_cierre -%>
+<h3><%= link_to "ODTs sin Fecha de Cierre", :controller => "reports", :action => "odts_sin_fecha_cierre" %></h3>
+<% end -%>
+
+</td></tr>
+</table>
+

@@ -1,0 +1,583 @@
+--- 
+proyecto_estados_080: 
+  fecha: 2007-05-04 18:55:48
+  proyecto_id: "13"
+  id: "80"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  estado: "8"
+proyecto_estados_078: 
+  fecha: 2007-05-04 18:36:18
+  proyecto_id: "17"
+  id: "78"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "7"
+proyecto_estados_057: 
+  fecha: 2007-04-20 17:14:46
+  proyecto_id: "14"
+  id: "57"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_015: 
+  fecha: 2007-02-01 17:03:21
+  proyecto_id: "3"
+  id: "15"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "3"
+proyecto_estados_036: 
+  fecha: 2007-02-08 12:14:02
+  proyecto_id: "5"
+  id: "36"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_081: 
+  fecha: 2007-05-04 18:59:07
+  proyecto_id: "17"
+  id: "81"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  estado: "8"
+proyecto_estados_079: 
+  fecha: 2007-05-04 18:53:53
+  proyecto_id: "17"
+  id: "79"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  estado: "8"
+proyecto_estados_016: 
+  fecha: 2007-02-01 17:03:23
+  proyecto_id: "3"
+  id: "16"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "7"
+proyecto_estados_037: 
+  fecha: 2007-02-08 12:22:34
+  proyecto_id: "6"
+  id: "37"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_060: 
+  fecha: 2007-04-20 17:23:37
+  proyecto_id: "14"
+  id: "60"
+  user_id: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado: "9"
+proyecto_estados_058: 
+  fecha: 2007-04-20 17:15:57
+  proyecto_id: "14"
+  id: "58"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "7"
+proyecto_estados_082: 
+  fecha: 2007-05-04 19:01:00
+  proyecto_id: "17"
+  id: "82"
+  user_id: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado: "9"
+proyecto_estados_017: 
+  fecha: 2007-02-01 17:03:24
+  proyecto_id: "3"
+  id: "17"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "10"
+proyecto_estados_038: 
+  fecha: 2007-02-20 11:30:48
+  proyecto_id: "7"
+  id: "38"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "1"
+proyecto_estados_061: 
+  fecha: 2007-04-20 17:25:13
+  proyecto_id: "14"
+  id: "61"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "5"
+proyecto_estados_059: 
+  fecha: 2007-04-20 17:19:48
+  proyecto_id: "14"
+  id: "59"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  estado: "8"
+proyecto_estados_083: 
+  fecha: 2007-05-04 19:14:03
+  proyecto_id: "17"
+  id: "83"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_018: 
+  fecha: 2007-02-02 18:20:06
+  proyecto_id: "4"
+  id: "18"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_040: 
+  fecha: 2007-03-02 17:59:35
+  proyecto_id: "9"
+  id: "40"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_039: 
+  fecha: 2007-03-02 09:26:27
+  proyecto_id: "8"
+  id: "39"
+  user_id: a1b10be3-1a2a-6abf-75c7-448ef85cf17d
+  estado: "1"
+proyecto_estados_020: 
+  fecha: 2007-02-02 19:03:48
+  proyecto_id: "4"
+  id: "20"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_019: 
+  fecha: 2007-02-02 18:51:51
+  proyecto_id: "4"
+  id: "19"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "3"
+proyecto_estados_041: 
+  fecha: 2007-03-02 18:07:49
+  proyecto_id: "9"
+  id: "41"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "3"
+proyecto_estados_062: 
+  fecha: 2007-04-20 17:26:59
+  proyecto_id: "14"
+  id: "62"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_084: 
+  fecha: 2007-05-04 19:17:17
+  proyecto_id: "17"
+  id: "84"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_021: 
+  fecha: 2007-02-02 19:12:36
+  proyecto_id: "4"
+  id: "21"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_042: 
+  fecha: 2007-03-02 18:08:01
+  proyecto_id: "9"
+  id: "42"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "10"
+proyecto_estados_063: 
+  fecha: 2007-04-20 17:27:31
+  proyecto_id: "14"
+  id: "63"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "6"
+proyecto_estados_085: 
+  fecha: 2007-05-04 19:18:31
+  proyecto_id: "17"
+  id: "85"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_001: 
+  fecha: 2007-01-26 12:12:57
+  proyecto_id: "1"
+  id: "1"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_022: 
+  fecha: 2007-02-02 19:14:07
+  proyecto_id: "4"
+  id: "22"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "5"
+proyecto_estados_043: 
+  fecha: 2007-03-02 18:12:38
+  proyecto_id: "9"
+  id: "43"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_064: 
+  fecha: 2007-04-20 17:28:05
+  proyecto_id: "14"
+  id: "64"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_086: 
+  fecha: 2007-05-04 19:26:09
+  proyecto_id: "17"
+  id: "86"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "6"
+proyecto_estados_002: 
+  fecha: 2007-01-30 16:25:10
+  proyecto_id: "1"
+  id: "2"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "3"
+proyecto_estados_023: 
+  fecha: 2007-02-02 19:16:45
+  proyecto_id: "4"
+  id: "23"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_044: 
+  fecha: 2007-03-02 18:15:13
+  proyecto_id: "9"
+  id: "44"
+  user_id: 29a5e483-a5d8-7c0d-3751-45c3d4524adb
+  estado: "11"
+proyecto_estados_065: 
+  fecha: 2007-04-20 17:28:24
+  proyecto_id: "14"
+  id: "65"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "6"
+proyecto_estados_087: 
+  fecha: 2007-05-08 11:11:54
+  proyecto_id: "18"
+  id: "87"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_024: 
+  fecha: 2007-02-02 19:20:28
+  proyecto_id: "4"
+  id: "24"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "10"
+proyecto_estados_045: 
+  fecha: 2007-03-02 18:40:42
+  proyecto_id: "10"
+  id: "45"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_066: 
+  fecha: 2007-04-20 17:46:23
+  proyecto_id: "14"
+  id: "66"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_003: 
+  fecha: 2007-01-30 16:48:44
+  proyecto_id: "1"
+  id: "3"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "2"
+proyecto_estados_090: 
+  fecha: 2007-05-08 15:40:42
+  proyecto_id: "19"
+  id: "90"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "10"
+proyecto_estados_088: 
+  fecha: 2007-05-08 15:19:49
+  proyecto_id: "19"
+  id: "88"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "1"
+proyecto_estados_067: 
+  fecha: 2007-04-20 17:47:03
+  proyecto_id: "14"
+  id: "67"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "6"
+proyecto_estados_046: 
+  fecha: 2007-03-02 18:56:19
+  proyecto_id: "10"
+  id: "46"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "7"
+proyecto_estados_004: 
+  fecha: 2007-01-30 16:59:32
+  proyecto_id: "1"
+  id: "4"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "4"
+proyecto_estados_025: 
+  fecha: 2007-02-02 19:22:26
+  proyecto_id: "4"
+  id: "25"
+  user_id: 29a5e483-a5d8-7c0d-3751-45c3d4524adb
+  estado: "11"
+proyecto_estados_091: 
+  fecha: 2007-05-08 15:40:44
+  proyecto_id: "19"
+  id: "91"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "7"
+proyecto_estados_089: 
+  fecha: 2007-05-08 15:28:09
+  proyecto_id: "19"
+  id: "89"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "3"
+proyecto_estados_070: 
+  fecha: 2007-04-20 17:59:04
+  proyecto_id: "14"
+  id: "70"
+  user_id: 78846d10-56c5-4d80-f14a-45c3cf170cef
+  estado: "4"
+proyecto_estados_068: 
+  fecha: 2007-04-20 17:48:32
+  proyecto_id: "14"
+  id: "68"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "10"
+proyecto_estados_005: 
+  fecha: 2007-01-30 17:00:04
+  proyecto_id: "1"
+  id: "5"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "6"
+proyecto_estados_026: 
+  fecha: 2007-02-02 19:23:28
+  proyecto_id: "4"
+  id: "26"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "6"
+proyecto_estados_047: 
+  fecha: 2007-04-11 18:58:13
+  proyecto_id: "11"
+  id: "47"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_092: 
+  fecha: 2007-05-08 16:00:20
+  proyecto_id: "19"
+  id: "92"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_071: 
+  fecha: 2007-04-20 17:59:23
+  proyecto_id: "14"
+  id: "71"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "6"
+proyecto_estados_069: 
+  fecha: 2007-04-20 17:49:30
+  proyecto_id: "14"
+  id: "69"
+  user_id: 29a5e483-a5d8-7c0d-3751-45c3d4524adb
+  estado: "11"
+proyecto_estados_006: 
+  fecha: 2007-01-30 17:00:17
+  proyecto_id: "1"
+  id: "6"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "7"
+proyecto_estados_027: 
+  fecha: 2007-02-07 10:33:58
+  proyecto_id: "1"
+  id: "27"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_050: 
+  fecha: 2007-04-16 17:56:57
+  proyecto_id: "13"
+  id: "50"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_048: 
+  fecha: 2007-04-11 18:59:11
+  proyecto_id: "11"
+  id: "48"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "3"
+proyecto_estados_093: 
+  fecha: 2007-05-08 16:07:54
+  proyecto_id: "19"
+  id: "93"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "4"
+proyecto_estados_072: 
+  fecha: 2007-04-23 12:50:22
+  proyecto_id: "15"
+  id: "72"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "1"
+proyecto_estados_007: 
+  fecha: 2007-01-30 17:01:00
+  proyecto_id: "1"
+  id: "7"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "8"
+proyecto_estados_028: 
+  fecha: 2007-02-07 10:35:22
+  proyecto_id: "2"
+  id: "28"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_049: 
+  fecha: 2007-04-14 12:31:23
+  proyecto_id: "12"
+  id: "49"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_094: 
+  fecha: 2007-05-08 16:16:59
+  proyecto_id: "15"
+  id: "94"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_008: 
+  fecha: 2007-01-30 17:02:20
+  proyecto_id: "1"
+  id: "8"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "9"
+proyecto_estados_030: 
+  fecha: 2007-02-08 11:53:50
+  proyecto_id: "1"
+  id: "30"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  estado: "8"
+proyecto_estados_029: 
+  fecha: 2007-02-08 11:53:34
+  proyecto_id: "3"
+  id: "29"
+  user_id: b0f943fa-d320-73a0-c4c0-45ca65266ef9
+  estado: "8"
+proyecto_estados_051: 
+  fecha: 2007-04-19 09:19:16
+  proyecto_id: "13"
+  id: "51"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "3"
+proyecto_estados_073: 
+  fecha: 2007-04-23 13:02:13
+  proyecto_id: "15"
+  id: "73"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "3"
+proyecto_estados_010: 
+  fecha: 2007-01-30 17:22:31
+  proyecto_id: "1"
+  id: "10"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "10"
+proyecto_estados_009: 
+  fecha: 2007-01-30 17:15:51
+  proyecto_id: "1"
+  id: "9"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "9"
+proyecto_estados_031: 
+  fecha: 2007-02-08 11:55:18
+  proyecto_id: "3"
+  id: "31"
+  user_id: 559eb62e-7145-25e7-8a37-45ca55edd360
+  estado: "9"
+proyecto_estados_052: 
+  fecha: 2007-04-19 09:19:18
+  proyecto_id: "13"
+  id: "52"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "7"
+proyecto_estados_095: 
+  fecha: 2007-05-08 16:22:14
+  proyecto_id: "15"
+  id: "95"
+  user_id: 199d72e5-f0ea-c28f-2fa7-4640e8d1f631
+  estado: "4"
+proyecto_estados_074: 
+  fecha: 2007-04-28 12:03:23
+  proyecto_id: "16"
+  id: "74"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_011: 
+  fecha: 2007-01-30 17:37:36
+  proyecto_id: "1"
+  id: "11"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "11"
+proyecto_estados_032: 
+  fecha: 2007-02-08 12:04:57
+  proyecto_id: "5"
+  id: "32"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_053: 
+  fecha: 2007-04-19 09:19:19
+  proyecto_id: "13"
+  id: "53"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "10"
+proyecto_estados_096: 
+  fecha: 2007-05-08 16:29:24
+  proyecto_id: "19"
+  id: "96"
+  user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  estado: "5"
+proyecto_estados_075: 
+  fecha: 2007-05-04 18:07:04
+  proyecto_id: "17"
+  id: "75"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_012: 
+  fecha: 2007-01-30 19:28:09
+  proyecto_id: "2"
+  id: "12"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"
+proyecto_estados_033: 
+  fecha: 2007-02-08 12:07:05
+  proyecto_id: "5"
+  id: "33"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "3"
+proyecto_estados_054: 
+  fecha: 2007-04-20 10:54:03
+  proyecto_id: "14"
+  id: "54"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "1"
+proyecto_estados_097: 
+  fecha: 2007-05-08 16:38:17
+  proyecto_id: "19"
+  id: "97"
+  user_id: 29a5e483-a5d8-7c0d-3751-45c3d4524adb
+  estado: "11"
+proyecto_estados_076: 
+  fecha: 2007-05-04 18:36:14
+  proyecto_id: "17"
+  id: "76"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "3"
+proyecto_estados_013: 
+  fecha: 2007-01-30 19:32:14
+  proyecto_id: "2"
+  id: "13"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "3"
+proyecto_estados_034: 
+  fecha: 2007-02-08 12:12:02
+  proyecto_id: "5"
+  id: "34"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_055: 
+  fecha: 2007-04-20 16:28:00
+  proyecto_id: "14"
+  id: "55"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "3"
+proyecto_estados_077: 
+  fecha: 2007-05-04 18:36:17
+  proyecto_id: "17"
+  id: "77"
+  user_id: 542263ff-c818-0de1-92c4-448ef422c3fd
+  estado: "10"
+proyecto_estados_035: 
+  fecha: 2007-02-08 12:12:05
+  proyecto_id: "5"
+  id: "35"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_056: 
+  fecha: 2007-04-20 17:11:45
+  proyecto_id: "14"
+  id: "56"
+  user_id: 17a580e3-d10d-b0cb-1044-45c3cf33ec1c
+  estado: "2"
+proyecto_estados_014: 
+  fecha: 2007-01-31 13:49:14
+  proyecto_id: "3"
+  id: "14"
+  user_id: d290e23a-6391-3482-ac43-45ba1fdb6a20
+  estado: "1"

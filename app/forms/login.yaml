@@ -1,0 +1,6 @@
+username:
+  type:         text
+
+password:
+  type:         text
+  acts_as:      password

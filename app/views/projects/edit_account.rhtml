@@ -1,0 +1,139 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+
+<form name="f" method="POST">
+<h2><%= @project.nombre_proyecto %></h2>
+
+<h3>Editar cliente</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Cliente</b> (<a href="<%= crm_url %>index.php?module=Accounts&action=EditView" target="_Blank">Agregar nuevo</a>)<br>
+<select name="client" onChange="document.f.contact.value='-1'; document.f.contact.disabled=true;">
+<%= @form.options_for :client %>
+</select>
+<input type="submit" name="q" value="Seleccionar"><br>
+<%= @form.e :client %>
+<br>
+
+<% if @client -%>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<a href="<%= crm_url %>index.php?module=Accounts&action=DetailView&record=<%= @client.id %>" target="_Blank"><%= @client.name %></a>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @client.ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n</b>
+</td><td valign="top">
+<%= @client.billing_address_street %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono</b>
+</td><td valign="top">
+<%= @client.phone_office %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fax</b>
+</td><td valign="top">
+<%= @client.phone_fax %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Email</b>
+</td><td valign="top">
+<%= @client.email1 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>P&aacute;gina Web</b>
+</td><td valign="top">
+<%= @client.website %>
+</td></tr>
+
+</table>
+<br>
+<% end -%>
+
+<br>
+
+<b>Contacto</b> (<a href="<%= crm_url %>index.php?module=Contacts&action=EditView" target="_Blank">Agregar nuevo</a>)<br>
+<select name="contact">
+<%= @form.options_for :contact %>
+</select>
+<input type="submit" name="q" value="Seleccionar"><br>
+<%= @form.e :contact %>
+<br>
+
+<% if @contact -%>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<b>Nombre</b>
+</td><td valign="top">
+<a href="<%= crm_url %>index.php?module=Contacts&action=DetailView&record=<%= @contact.id %>" target="_Blank"><%= @contact.first_name + " " + @contact.last_name %></a>
+</td></tr>
+
+<tr><td valign="top">
+<b>Departamento</b>
+</td><td valign="top">
+<%= @contact.department %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono</b>
+</td><td valign="top">
+<%= @contact.phone_work %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fax</b>
+</td><td valign="top">
+<%= @contact.phone_fax %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Email</b>
+</td><td valign="top">
+<%= @contact.email1 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Descripci&oacute;n</b>
+</td><td valign="top">
+<%= @contact.description %>
+</td></tr>
+
+</table>
+<br>
+<% end -%>
+
+<br>
+
+<b>Tipo</b><br>
+<%= @form.to_html :project_type %>
+<br>
+
+<br>
+
+</td></tr>
+</table>
+
+<br>
+
+<input type="submit" name="button" value="Guardar cambios">
+o <%= link_to "Cancelar", :action => "show", :id => @project.uid, :type => @project.type %>
+</form>

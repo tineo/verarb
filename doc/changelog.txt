@@ -1,0 +1,267 @@
+Vera 2.0.3
+
+- Esta versión todavía maneja los Proyectos con Oportunidades.
+
+--------------------------------------------------------------------------------
+
+Vera 2.0.1
+
+- Implementar anulación de ODT
+- Bugfix: La fecha de creacion de ODT estaba cambiando cuando editaban los datos de confirmación :(
+- Quitar el botón predeterminado de tipo de proyecto al crear proyecto y obligar a que lo pongan
+- Activar edición de Tipo de Proyecto
+- Bugfix: Implementación de Lista de Oportunidades nuevas no estaba funcionando bien y el MySQL no devolvía valores correctos. Se ha realizado otra implementación más eficiente.
+- Reporte: colocar cuotas
+- Reporte: Adicionar totales a vendido y cuotas
+- Reporte: activar odt como link para direccionar a la odt
+- Reporte: Filtrar por tipo (interna, proyecto, garantia etc)
+- Implementar Reporte (enviado por jpuppo)
+- Hacer que cuando se cree una ODT cambie la fecha de CRM (fecha de cierre) a la fecha de creación de ODT
+- Integrar página de "Area" y "Enviar" en una sola
+- Modificar fecha de cierre en CRM a fecha de creación de ODT de entradas existentes
+- Eliminar proyecto 101
+- Que se pueda cambiar el ordenamiento en el Panel por columnas (inicialmente: Ejecutivo)
+- Hacer que el envío de correos sea asíncrono
+- Cotizaciones: cantidad solamente está aceptando un máximo de 4 cifras, incrementar
+- Que el ejecutivo asignado a un proyecto se maneje con el campo interno del SugarCRM
+- Hacer un routing para "/stylesheets/menuarrow.gif"
+
+--------------------------------------------------------------------------------
+
+Vera 2.0.0
+
+- Bugfix: Algunas Ordenes no habían sido migradas
+- Bugfix: La lista de Ordenes debe ordenar por ID de ODT
+- Bugfix: Al editar los Datos de Confirmación de una ODT se estaba asignando un nuevo ID de ODT :(
+- Bugfix: Faltó volver a colocar el stylesheet para los atributos coloreados
+- Hacer que la impresión de ODT maneje la URL con el ID de orden, para que puedan hacer URL-hacking
+- Implementar ficheros de intercambio de datos para Sistema del Sr. Molina
+- Agregar hora a Fecha de Creación de ODT en Lista
+- Bugfix: Otra vez están apareciendo las hojas membrete antiguas :(
+- Agregar hora a Fecha de Creación de ODT en Lista
+- En impresión de Cotización dar más espacio entre "Atentamente" y la firma como para colocar rúbrica
+- Incrementar el tamaño de ODT y ejecutivo
+- Bugfix: Error al tratar de validar una Fecha de Entrega vacía en Promote
+- Ubicar en la parte superior de ODT debajo de domicilio fiscal los datos del contacto y debajo de descripción general la cantidad total de productos, estos datos son necesarios para la guía de remisión
+- Agregar en Crear ODT Fecha de Desmontaje
+- En datos para Crear Orden Pendiente agregar un check para "Recojo de Producto" debajo de datos de Instalación
+- Bugfix: En el Archivo hay que corregir el encoding de los títulos :(
+- Crear Oportunidades para ODTs que quedaron huérfanas
+- Implementar un divisor en los Atributos
+- Informar a Melissa re "espacio ampliado" en Cotización: es cosa del HTML
+- Informar a Melissa que no todos tienen datos de Contacto
+- Revisar que esté funcionando bien la notificación de Peligro en el Panel
+- Re-ordenar campos en impresión de ODT según especifó Melissa en mail
+- Confirmación de datos ODT: La fecha de Desmontaje debe ser obligatoria sólo si está marcado "Con Instalación"
+- Code cleanup: Accounts y Contacts
+- Bugfix: Falló envío por mail de Cotización de Carlos Díaz
+- Bugfix: Estaba guardando la Moneda de ODT en otro campo y no actualizando la Oportunidad
+- Bugfix: El widget de hora está aceptando horas de tipo 1500 y provoca error Rails
+- Agregar filtro por Ejecutivo para Proyectos para Administrador
+- Colocar un mecanismo de autorización para las ODTs que pertenecen a "Consorcio de Dirección Empresarial SAC"
+- Bugfix: La fecha de desmontaje se esta colocando por defecto, no deberia salir nada -- SE HA CAMBIADO CAMPO FECHA PARA QUE PUEDAN BORRARLA
+- Que en el preview de la impresion debe decir lo mismo que en el vera (colores aprobados, colores igual al arte, etc)
+- Aumentar tamaño de campo de texto de atributo de Productos
+- En la ODT el campo cantidad total figura como 01 en todos los casos
+- Quitar el condicional de fecha de desmontaje
+- Hacer caso especial para ignorar Oportunidades antiguas ganadas que Melissa listó por correo
+
+--------------------------------------------------------------------------------
+
+Vera 2.0.0
+This is amazing! Best version ever!
+
+- Para área de diseño: cambiar fecha de creación de oportunidad por fecha de solicitud de diseño
+- Implementado nuevos Filtros en Panel
+- En impresión de Orden se colorean los atributos que tienen valor
+- Se muestra dirección fiscal en print_order
+- Datos de confirmación de Orden ahora tiene checkbox si incluye IGV
+
+Lo novedoso, novedoso:
+- Unificación interna de Proyectos y Ordenes
+- Unificación de listas de Proyectos y Ordenes
+- Interface con Tabs!
+- Filtros de Panel mejorados! Con filtros que memorizan sus valores!
+- Nuevos colores! :)
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.6 more tasty!
+
+- Bugfix: No funcionaban upload de ficheros
+- Enviar Cotización: Poder colocar más de un e-mail separado por comas
+- Bugfix: el CRM siempre debe manejar el precio final, no la Orden
+- Lista de ODTs: ordenamiento por Fecha de Entrega
+- Impresión de ODTs: cambiar orden de presentación: Cliente Proyecto Costos Entrega Tipo de Presentación Forma Detalles
+- En Cotización: agrandar tamaño de campo de texto detalle
+- Implementar funcionalidad para que puedan cambiar de rol
+- Modificar formulario de Crear Orden en base a doc anexado
+- Bugfix: Error Rails al editar una Orden
+- Bugfix: La hora la estaba procesando mal
+- Implementar solución temporal a edición de Orden
+- Orden: Implementar hora a Fecha de Entrega
+- Bugfix: Estaba borrando el rol de Administrador de array de Roles interno
+- Bugfix: El encoding de caracteres de Vera difiere del CRM y salen mal
+- Bugfix: Usuario tipo Planeamiento no se podía loguear, pues la constante de rol estaba mal
+- Bugfix: Revisar envío de correos, le está llegando a Costos cuando se notifica a Diseño
+- Planificar cambios para implementar lista de Ordenes en Panel (y que siga siendo enviado a las áreas)
+- Clarificar las referencias a fechas
+- Validar que fecha de entrega no sea antes de fecha de creación
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.6 tasty!
+
+- ODT: Colocar Empresa Vendedora
+- Colocar datos de creación de Orden en impresión de Orden
+- Agregar símbolo de Moneda a ODT
+- Code cleanup de moneda en otros lados
+- Bugfix: Faltaba dato de monto de venta en ODT
+- Bugfix: Impresión de lista de ODTs no funcionaba
+- Cotizaciones: Agregar campo texto adicional
+- Cotizaciones: Agregar campo cantidad
+- Cotizaciones: Agregar campo Contacto
+- Lista ODTs: Agregar filtro por Fecha de Entrega
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.6
+Not sure if I drew the line correctly here. Whatever, Basecamp overrules everything, that's the canonical one.
+
+- Bugfix: Error al tratar de imprimir una Orden
+- Implementar cambios de Chiquita en Crear Orden
+- Modificar campo "Con Instalación" de Nuevo Proyecto, no debe ser radio sino checkbox
+- Crear orden: agregar campo "Forma de pago" -- lo saca de Cotización si existe
+- Crear orden: "Observaciones" es edición de "Observaciones" de Forma
+- Desactivar campos de sección Caracteristicas Especificas de nuevo Proyecto
+- Bugfix: Restringir que las "Ordenes por crear" sean de Proyectos pertenecientes al Ejecutivo actual
+- Impresión de Orden: - Agregar Categoría - Agregar Forma de Pago - Agregar Fecha de Entrega al Cliente - Cambiar "Fecha de Solicitud" a "Fecha de Creación de Orden" (funcionalidad también cambia, ojo)
+- Impresión de Orden: Colocar visiblemente nombre de Ejecutivo
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.5 still tasty!
+
+- Bugfix: No se podían agregar productos
+- Panel: Mover tabla de Ordenes por crear debajo de tabla de Proyectos
+- Empezar a numerar las Ordenes desde el 10,000
+- Bugfix: No salen links para agregar detalle, editar proyecto
+- Implementar Fecha de Entrega, Precio de Venta, Observaciones y checkbox Datos Pendientes
+- Implementar funcionalidad para descargar la Cotización desde el sistema en formato HTML
+- Bugfix: Error de Javascript al momento de seleccionar Producto en Agregar Detalles
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.5 extra tasty!
+
+- En la opción de elaboración de cotización cambiar el texto: "Notas" por "Observación"
+- En el campo Descripción de Cotizaciones los Enter no se están considerando y sale todo de corrido
+- Implementar caja de texto Lugar(es) de Entrega
+- Las celdas de las columnas Precio Unitario y Precio Total se debe ajustar al ancho de texto
+- En Cotizaciones agregar "útiles" a "Días"
+- He convertido todas las imágenes de PNG a GIF para que se vea bien la transparencia en Internet Explorer
+- Bugfix: Error de Javascript al momento de seleccionar Producto en Agregar Detalles
+- En áreas cambiar Planeamiento por Diseño & Desarrollo
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.5
+
+- Implementado notificación al enviar a Area
+- Bugfix: Application Error en Lista de Ordenes -- faltó quitar campo sugerencias
+- Bugfix: Falta especificar destinatario en Notificación
+- Corregido descuadre HTML de los atributos
+- El campo tipo de Presentación es ahora obligatorio si ha llenado campo Fecha Entrega de Diseño
+- Completar el título "Tipo de Presentación" con "de diseño"
+- Revisar notificación de E-Mails
+- Modificar bandera de peligro para que incluya fechas de planeamiento y costos
+- Quitar campo sugerencias de Nuevo Proyecto
+- Renombrar "Tipo de Venta" a "Categoría de Venta" en Nuevo Proyecto
+- Implementar envío de Cotización por mail para el cliente
+- El membrete de impresión debe ser según la Empresa Vendedora
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.4a
+
+- Ahora las Categorías, Productos y Servicios no se borran, sólo se desactivan
+- Code clean: ahora las listas para C, P y S las saca via los modelos
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.3
+
+- Cambiado valores de Empresa Vendedora
+- Agregado campo Tipo de Venta
+- Agregado mostrar esos valores en show de proyecto!
+- Bugfix en edit_project respecto a fecha de entrega y hora de entrega
+
+--------------------------------------------------------------------------------
+
+Vera 1.0.3 - Mas bugfixes y code cleaning
+
+- Actualizado el código y fixtures para que corran lindos los Functional Tests
+- También un cambio en environment.rb: la constante NIVEL_SEGURIDAD es ahora un array (antes era un OHash)
+- Code cleaning para las rutas de anexos de Producto, Proyectos y Costos
+- Code cleaning en todas las llamadas a Atributos de Producto. Ahora sí, el ordenamiento es constante para todos
+- Ahora el formato de fecha de todos los anexos se muestra con el helper date_of_file
+- Ahora tanto las creaciones como borrados de directorios/ficheros se hacen exista o no exista el directorio/fichero
+- Todos los comentarios traducidos al inglés (AHAHA)
+
+--------------------------------------------------------------------------------
+
+Bugfixes
+
+- Ordenamiento no estaba funcionando bien
+- Nuevo script para reiniciar el server \o/
+
+--------------------------------------------------------------------------------
+
+v1.0.2 (extra)
+
+- Tipos de datos for Atributos terminados
+- Aumenté en Fionna el maxlength default de 128 a 512
+
+--------------------------------------------------------------------------------
+
+v1.0.2 (extra)
+
+- Avances de tipos de datos para Atributos de Productos
+  - Bacán, está implementado lindo, falta poquito :)
+
+--------------------------------------------------------------------------------
+
+v1.0.2 (extra)
+
+- Arreglar navegación (wee! shortcuts!)
+- Resolver asunto de IP externa/interna para acceder a CRM
+
+--------------------------------------------------------------------------------
+
+v1.0.2
+
+- Agregar campo "Empresa Vendedora"
+- Checkbox de aprobado que sea por defecto true
+- En cotizaciones: número de días como campo numérico
+- Revisar borrado de ficheros anexados, no funciona bien
+
+--------------------------------------------------------------------------------
+
+v1.0.1 (extra)
+- Corregir problema con usuario lmascaro, es Jefe de Planeamiento
+- Colocar ficheros anexados de productos en detalle de ODT
+- Colocar ficheros anexados de costos en detalle de ODT
+- Revisar filtro de lista de ODT, no está funcionando bien con ODT de ejecutivo jpuppo
+
+--------------------------------------------------------------------------------
+
+v1.0.1
+- Redimensionamiento de imagen en ODT
+- Fix de roles borrados lógicamente en el Sugar
+- Ahora se maneja la versión en constante en environment.rb
+
+--------------------------------------------------------------------------------
+
+v1.0.0
+- Correcciones diversas
+- Imagen en ODT

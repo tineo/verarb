@@ -1,0 +1,60 @@
+<h2>ODTs Pendientes por Facturar</h2>
+
+<a href="javascript:history.back();">Regresar</a><br>
+<br>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+A&ntilde;o
+</td><td valign="top">
+<%= @form.to_html :year %>
+</td></tr>
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</table>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["Ejecutivo", "ODTs pendientes", "Monto"].each do |i|
+-%>
+<td valign="top" align="center">
+<%= i -%>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="3">
+<i>No hay ODTs pendientes</i>
+</td></tr>
+<% else -%>
+<%
+gtotal = 0.00
+ototal = 0
+
+@data.each do |d|
+  ototal += d[:count]
+  gtotal += d[:amount]
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= d[:user] %>
+</td><td valign="top" align="right">
+<%= link_to d[:count], :action => "facturation_pending", :uid => d[:uid], :year => @form.year %>
+</td><td valign="top" align="right">
+<%= format_price(d[:amount]) %>
+</td></tr>
+<% end -%>
+<% if is_supervisor? -%>
+<tr bgcolor="#eeeeee"><td valign="top" align="right">
+</td><td valign="top" align="right">
+<%= ototal %>
+</td><td valign="top" align="right">
+<%= format_price(gtotal) %>
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+

@@ -1,0 +1,60 @@
+<%= javascript_include_tag "relay" %>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="panel_title_notes" colspan="7">
+<b>NOTAS DE CREDITO</b>
+</td></tr>
+<% if @docs.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="7">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<% ["No.", "Raz&oacute;n Social", "Factura", "Monto USD$"].each do |h| -%>
+<td valign="top" align="center">
+<%= h %>
+</td>
+<% end -%>
+</tr>
+<%
+total = 0.00
+
+@docs.each do |f|
+  if f.anulada?
+    color_on = "#ff7479"
+    color_off  = "#f67075"
+  else
+    color_on  = "#f7f7f7"
+    color_off = "#eeeeee"
+  end
+  
+  total += f.monto_as_dollars
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top">
+<%= link_to f.formatted_number, :action => "show", :nid => f.id %>
+</td><td valign="top">
+<%= f.razon_social %>
+</td><td valign="top">
+<% unless f.blank? -%>
+<%= link_to f.factura.formatted_factura_number, :controller => "facturation", :action => "show_factura", :fid => f.factura.id, :type => f.factura.tipo, :from => f.factura.tipo %>
+<% end -%>
+</td><td valign="top" align="right">
+<% unless f.blank? %>
+<%= format_price(f.monto_as_dollars) %>
+<% end -%>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" align="right" colspan="3" bgcolor="#dddddd">
+TOTAL
+</td><td valign="top" align="right">
+<%= format_price(total) %>
+</td></tr>
+
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+
+

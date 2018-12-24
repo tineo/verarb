@@ -1,0 +1,119 @@
+monto_de_venta:
+  type:         text
+  function:     validate_precio
+  max_length:   10
+
+motivo_monto:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+  empty_msg:    "El Monto de Venta ha cambiado, debes escribir el Motivo"
+
+moneda:
+  type:         radio
+  value:        ""
+
+incluye_igv:
+  type:         checkbox
+
+clave_modificacion_monto:
+  type:         text
+  acts_as:      password
+  mandatory:    false
+  function:     validate_modificacion_monto
+  empty_msg:    "Falta la Clave de Autorizaci&oacute;n"
+
+factura_necesita_odt:
+  type:         checkbox
+
+factura_cliente:
+  function:     validate_ajax_account
+  type:         text
+
+factura_direccion_fiscal:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+factura_fecha_facturacion:
+  type:         text
+
+factura_hora_facturacion:
+  type:         text
+  function:     validate_texttime
+  max_length:   4
+  mandatory:    false
+
+hora_am_pm_f:
+  type:         select
+  options:      hora_am_pm_options
+  mandatory:    false
+  value:        "AM"
+
+factura_descripcion:
+  type:         text
+  acts_as:      textarea
+
+factura_con_adelanto:
+  type:         checkbox
+
+factura_tipo_adelanto:
+  type:         radio
+  mandatory:    false
+  empty_msg:    "Debes especificar Porcentaje o Monto"
+  
+factura_porcentaje:
+  type:         text
+  function:     validate_percent
+  mandatory:    false
+
+monto_adelanto:
+  type:         text
+  function:     validate_precio
+  mandatory:    false
+
+factura_contraentrega:
+  type:         radio
+  empty_msg:    "Debes especificar Contraentrega o D&iacute;as de Pago"
+
+dias_plazo:
+  type:         text
+  function:     validate_dias_plazo
+  mandatory:    false
+
+factura_contacto_facturacion:
+  type:         text
+
+factura_telefono_fijo:
+  type:         text
+  mandatory:    false
+
+factura_telefono_movil:
+  type:         text
+  mandatory:    false
+
+factura_email:
+  type:         text
+  mandatory:    false
+  function:     validate_email
+
+factura_direccion:
+  type:         text
+  acts_as:      textarea
+
+factura_observaciones:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+autorizacion:
+  type:         text
+  acts_as:      password
+  mandatory:    false
+  function:     validate_authorize_consorcio
+
+# For Autorizacion
+empresa:
+  type:         text
+  function:     validate_dummy
+

@@ -1,0 +1,3319 @@
+--- 
+atributos_detalles_397: 
+  nombre: Ancho
+  detalle_id: "29"
+  valor: ""
+  id: "397"
+  orden: "0"
+atributos_detalles_400: 
+  nombre: Garruchas
+  detalle_id: "29"
+  valor: ""
+  id: "400"
+  orden: "0"
+atributos_detalles_210: 
+  nombre: Altura Libre
+  detalle_id: "16"
+  valor: ""
+  id: "210"
+  orden: "0"
+atributos_detalles_020: 
+  nombre: _Ancho
+  detalle_id: "5"
+  valor: ""
+  id: "20"
+  orden: "0"
+atributos_detalles_398: 
+  nombre: Colores/Pantone
+  detalle_id: "29"
+  valor: ""
+  id: "398"
+  orden: "0"
+atributos_detalles_401: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "29"
+  valor: ""
+  id: "401"
+  orden: "0"
+atributos_detalles_211: 
+  nombre: Ancho
+  detalle_id: "16"
+  valor: ""
+  id: "211"
+  orden: "0"
+atributos_detalles_021: 
+  nombre: _Materiales
+  detalle_id: "5"
+  valor: ""
+  id: "21"
+  orden: "0"
+atributos_detalles_399: 
+  nombre: Fijado al Piso
+  detalle_id: "29"
+  valor: ""
+  id: "399"
+  orden: "0"
+atributos_detalles_402: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "29"
+  valor: ""
+  id: "402"
+  orden: "0"
+atributos_detalles_212: 
+  nombre: Cajones
+  detalle_id: "16"
+  valor: ""
+  id: "212"
+  orden: "0"
+atributos_detalles_022: 
+  nombre: _Materiales
+  detalle_id: "5"
+  valor: ""
+  id: "22"
+  orden: "0"
+atributos_detalles_450: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "31"
+  valor: si
+  id: "450"
+  orden: "0"
+atributos_detalles_403: 
+  nombre: Lleva Accesorios
+  detalle_id: "29"
+  valor: ""
+  id: "403"
+  orden: "0"
+atributos_detalles_260: 
+  nombre: Muestras de Color
+  detalle_id: "19"
+  valor: ""
+  id: "260"
+  orden: "0"
+atributos_detalles_070: 
+  nombre: _Profundidad / Largo
+  detalle_id: "7"
+  valor: ""
+  id: "70"
+  orden: "0"
+atributos_detalles_213: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "16"
+  valor: ""
+  id: "213"
+  orden: "0"
+atributos_detalles_023: 
+  nombre: Almacenamiento
+  detalle_id: "6"
+  valor: ""
+  id: "23"
+  orden: "0"
+atributos_detalles_451: 
+  nombre: Repisas
+  detalle_id: "31"
+  valor: "2"
+  id: "451"
+  orden: "0"
+atributos_detalles_404: 
+  nombre: "Malet\xC3\xADn o Caja para Transporte\r"
+  detalle_id: "29"
+  valor: ""
+  id: "404"
+  orden: "0"
+atributos_detalles_261: 
+  nombre: Observaciones
+  detalle_id: "19"
+  valor: ""
+  id: "261"
+  orden: "0"
+atributos_detalles_071: 
+  nombre: _Profundidad / Largo
+  detalle_id: "7"
+  valor: ""
+  id: "71"
+  orden: "0"
+atributos_detalles_214: 
+  nombre: Cerrajeria Completa
+  detalle_id: "16"
+  valor: ""
+  id: "214"
+  orden: "0"
+atributos_detalles_024: 
+  nombre: Almacenamiento
+  detalle_id: "6"
+  valor: ""
+  id: "24"
+  orden: "0"
+atributos_detalles_452: 
+  nombre: "Separaci\xC3\xB3n entre Repisas\r"
+  detalle_id: "31"
+  valor: 35 cm
+  id: "452"
+  orden: "0"
+atributos_detalles_405: 
+  nombre: Materiales Sugeridos
+  detalle_id: "29"
+  valor: ""
+  id: "405"
+  orden: "0"
+atributos_detalles_262: 
+  nombre: Alto 
+  detalle_id: "20"
+  valor: ""
+  id: "262"
+  orden: "0"
+atributos_detalles_072: 
+  nombre: _Tipo de pintura y/o acabado
+  detalle_id: "7"
+  valor: ""
+  id: "72"
+  orden: "0"
+atributos_detalles_215: 
+  nombre: Colores/Pantone
+  detalle_id: "16"
+  valor: ""
+  id: "215"
+  orden: "0"
+atributos_detalles_025: 
+  nombre: Alquiler o venta
+  detalle_id: "6"
+  valor: ""
+  id: "25"
+  orden: "0"
+atributos_detalles_453: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "31"
+  valor: duco
+  id: "453"
+  orden: "0"
+atributos_detalles_406: 
+  nombre: Muestras de Color
+  detalle_id: "29"
+  valor: ""
+  id: "406"
+  orden: "0"
+atributos_detalles_263: 
+  nombre: Ancho
+  detalle_id: "20"
+  valor: ""
+  id: "263"
+  orden: "0"
+atributos_detalles_073: 
+  nombre: _Tipo de pintura y/o acabado
+  detalle_id: "7"
+  valor: ""
+  id: "73"
+  orden: "0"
+atributos_detalles_216: 
+  nombre: Equipos Empotrados
+  detalle_id: "16"
+  valor: ""
+  id: "216"
+  orden: "0"
+atributos_detalles_026: 
+  nombre: Alquiler o venta
+  detalle_id: "6"
+  valor: ""
+  id: "26"
+  orden: "0"
+atributos_detalles_454: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "31"
+  valor: doble
+  id: "454"
+  orden: "0"
+atributos_detalles_407: 
+  nombre: Observaciones
+  detalle_id: "29"
+  valor: ""
+  id: "407"
+  orden: "0"
+atributos_detalles_264: 
+  nombre: Cerrajeria Completa
+  detalle_id: "20"
+  valor: ""
+  id: "264"
+  orden: "0"
+atributos_detalles_074: 
+  nombre: Alto
+  detalle_id: "8"
+  valor: ""
+  id: "74"
+  orden: "0"
+atributos_detalles_217: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "16"
+  valor: ""
+  id: "217"
+  orden: "0"
+atributos_detalles_027: 
+  nombre: Altura de tablero atencion/Trabajo
+  detalle_id: "6"
+  valor: ""
+  id: "27"
+  orden: "0"
+atributos_detalles_455: 
+  nombre: Almacenamiento
+  detalle_id: "32"
+  valor: si
+  id: "455"
+  orden: "0"
+atributos_detalles_408: 
+  nombre: Profundidad/Largo
+  detalle_id: "29"
+  valor: ""
+  id: "408"
+  orden: "0"
+atributos_detalles_265: 
+  nombre: Colores/Pantone
+  detalle_id: "20"
+  valor: ""
+  id: "265"
+  orden: "0"
+atributos_detalles_075: 
+  nombre: Ancho
+  detalle_id: "8"
+  valor: ""
+  id: "75"
+  orden: "0"
+atributos_detalles_218: 
+  nombre: Lleva Accesorios
+  detalle_id: "16"
+  valor: ""
+  id: "218"
+  orden: "0"
+atributos_detalles_028: 
+  nombre: Altura de tablero atencion/Trabajo
+  detalle_id: "6"
+  valor: ""
+  id: "28"
+  orden: "0"
+atributos_detalles_456: 
+  nombre: Alto
+  detalle_id: "32"
+  valor: 95cm
+  id: "456"
+  orden: "0"
+atributos_detalles_409: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "29"
+  valor: ""
+  id: "409"
+  orden: "0"
+atributos_detalles_266: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "20"
+  valor: ""
+  id: "266"
+  orden: "0"
+atributos_detalles_076: 
+  nombre: Espesor
+  detalle_id: "8"
+  valor: ""
+  id: "76"
+  orden: "0"
+atributos_detalles_219: 
+  nombre: Materiales Sugeridos
+  detalle_id: "16"
+  valor: ""
+  id: "219"
+  orden: "0"
+atributos_detalles_029: 
+  nombre: Altura de zocalos
+  detalle_id: "6"
+  valor: ""
+  id: "29"
+  orden: "0"
+atributos_detalles_457: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "32"
+  valor: 90cm
+  id: "457"
+  orden: "0"
+atributos_detalles_267: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "20"
+  valor: ""
+  id: "267"
+  orden: "0"
+atributos_detalles_077: 
+  nombre: Altura libre
+  detalle_id: "9"
+  valor: ""
+  id: "77"
+  orden: "0"
+atributos_detalles_458: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "32"
+  valor: 5cm
+  id: "458"
+  orden: "0"
+atributos_detalles_268: 
+  nombre: Materiales Sugeridos
+  detalle_id: "20"
+  valor: ""
+  id: "268"
+  orden: "0"
+atributos_detalles_078: 
+  nombre: Altura libre
+  detalle_id: "9"
+  valor: ""
+  id: "78"
+  orden: "0"
+atributos_detalles_459: 
+  nombre: Altura Libre
+  detalle_id: "32"
+  valor: ""
+  id: "459"
+  orden: "0"
+atributos_detalles_269: 
+  nombre: Muestras de Color
+  detalle_id: "20"
+  valor: ""
+  id: "269"
+  orden: "0"
+atributos_detalles_079: 
+  nombre: Colores/Pantone
+  detalle_id: "9"
+  valor: ""
+  id: "79"
+  orden: "0"
+atributos_detalles_510: 
+  nombre: Ancho
+  detalle_id: "34"
+  valor: ""
+  id: "510"
+  orden: "0"
+atributos_detalles_320: 
+  nombre: Desmontable
+  detalle_id: "23"
+  valor: ""
+  id: "320"
+  orden: "0"
+atributos_detalles_130: 
+  nombre: Maletin o caja para transporte
+  detalle_id: "10"
+  valor: ""
+  id: "130"
+  orden: "0"
+atributos_detalles_511: 
+  nombre: Cajones
+  detalle_id: "34"
+  valor: ""
+  id: "511"
+  orden: "0"
+atributos_detalles_321: 
+  nombre: Materiales Sugeridos
+  detalle_id: "23"
+  valor: ""
+  id: "321"
+  orden: "0"
+atributos_detalles_131: 
+  nombre: Muestras de color
+  detalle_id: "10"
+  valor: ""
+  id: "131"
+  orden: "0"
+atributos_detalles_512: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "34"
+  valor: ""
+  id: "512"
+  orden: "0"
+atributos_detalles_322: 
+  nombre: Muestras de Color
+  detalle_id: "23"
+  valor: ""
+  id: "322"
+  orden: "0"
+atributos_detalles_132: 
+  nombre: Alto
+  detalle_id: "11"
+  valor: ""
+  id: "132"
+  orden: "0"
+atributos_detalles_513: 
+  nombre: Cerrajeria Completa
+  detalle_id: "34"
+  valor: ""
+  id: "513"
+  orden: "0"
+atributos_detalles_370: 
+  nombre: Colores/Pantone
+  detalle_id: "27"
+  valor: azul
+  id: "370"
+  orden: "0"
+atributos_detalles_180: 
+  nombre: Repisas
+  detalle_id: "14"
+  valor: "4"
+  id: "180"
+  orden: "0"
+atributos_detalles_323: 
+  nombre: Observaciones
+  detalle_id: "23"
+  valor: ""
+  id: "323"
+  orden: "0"
+atributos_detalles_133: 
+  nombre: Ancho
+  detalle_id: "11"
+  valor: ""
+  id: "133"
+  orden: "0"
+atributos_detalles_514: 
+  nombre: Colores/Pantone
+  detalle_id: "34"
+  valor: ""
+  id: "514"
+  orden: "0"
+atributos_detalles_371: 
+  nombre: Garruchas
+  detalle_id: "27"
+  valor: ""
+  id: "371"
+  orden: "0"
+atributos_detalles_181: 
+  nombre: "Separaci\xC3\xB3n entre Repisas\r"
+  detalle_id: "14"
+  valor: 20 cm
+  id: "181"
+  orden: "0"
+atributos_detalles_324: 
+  nombre: Profundidad/Largo
+  detalle_id: "23"
+  valor: ""
+  id: "324"
+  orden: "0"
+atributos_detalles_134: 
+  nombre: Profundidad / Largo
+  detalle_id: "11"
+  valor: ""
+  id: "134"
+  orden: "0"
+atributos_detalles_515: 
+  nombre: Equipos Empotrados
+  detalle_id: "34"
+  valor: ""
+  id: "515"
+  orden: "0"
+atributos_detalles_372: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "27"
+  valor: ""
+  id: "372"
+  orden: "0"
+atributos_detalles_182: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "14"
+  valor: duco
+  id: "182"
+  orden: "0"
+atributos_detalles_325: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "23"
+  valor: ""
+  id: "325"
+  orden: "0"
+atributos_detalles_135: 
+  nombre: Una cara/Doble cara/Isla
+  detalle_id: "11"
+  valor: ""
+  id: "135"
+  orden: "0"
+atributos_detalles_516: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "34"
+  valor: ""
+  id: "516"
+  orden: "0"
+atributos_detalles_373: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "27"
+  valor: impresiones
+  id: "373"
+  orden: "0"
+atributos_detalles_183: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "14"
+  valor: una cara
+  id: "183"
+  orden: "0"
+atributos_detalles_326: 
+  nombre: alto
+  detalle_id: "24"
+  valor: 50 cm
+  id: "326"
+  orden: "0"
+atributos_detalles_136: 
+  nombre: Alto
+  detalle_id: "12"
+  valor: ""
+  id: "136"
+  orden: "0"
+atributos_detalles_517: 
+  nombre: Lleva Accesorios
+  detalle_id: "34"
+  valor: ""
+  id: "517"
+  orden: "0"
+atributos_detalles_374: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "27"
+  valor: isla
+  id: "374"
+  orden: "0"
+atributos_detalles_184: 
+  nombre: Alto
+  detalle_id: "15"
+  valor: ""
+  id: "184"
+  orden: "0"
+atributos_detalles_327: 
+  nombre: ancho
+  detalle_id: "24"
+  valor: 50 cm
+  id: "327"
+  orden: "0"
+atributos_detalles_137: 
+  nombre: Ancho
+  detalle_id: "12"
+  valor: ""
+  id: "137"
+  orden: "0"
+atributos_detalles_518: 
+  nombre: Materiales Sugeridos
+  detalle_id: "34"
+  valor: ""
+  id: "518"
+  orden: "0"
+atributos_detalles_375: 
+  nombre: Lleva Accesorios
+  detalle_id: "27"
+  valor: si gancheras
+  id: "375"
+  orden: "0"
+atributos_detalles_185: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "15"
+  valor: ""
+  id: "185"
+  orden: "0"
+atributos_detalles_328: 
+  nombre: largo
+  detalle_id: "24"
+  valor: 50 cm
+  id: "328"
+  orden: "0"
+atributos_detalles_138: 
+  nombre: Profundidad / Largo
+  detalle_id: "12"
+  valor: ""
+  id: "138"
+  orden: "0"
+atributos_detalles_519: 
+  nombre: Muestras de Color
+  detalle_id: "34"
+  valor: ""
+  id: "519"
+  orden: "0"
+atributos_detalles_376: 
+  nombre: Materiales Sugeridos
+  detalle_id: "27"
+  valor: mdf
+  id: "376"
+  orden: "0"
+atributos_detalles_186: 
+  nombre: Altura Libre
+  detalle_id: "15"
+  valor: ""
+  id: "186"
+  orden: "0"
+atributos_detalles_329: 
+  nombre: Material
+  detalle_id: "24"
+  valor: ""
+  id: "329"
+  orden: "0"
+atributos_detalles_139: 
+  nombre: Una cara/Doble cara/Isla
+  detalle_id: "12"
+  valor: ""
+  id: "139"
+  orden: "0"
+atributos_detalles_377: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "27"
+  valor: "pasta dental, enjuague bucal "
+  id: "377"
+  orden: "0"
+atributos_detalles_187: 
+  nombre: Ancho
+  detalle_id: "15"
+  valor: ""
+  id: "187"
+  orden: "0"
+atributos_detalles_378: 
+  nombre: Muestras de Color
+  detalle_id: "27"
+  valor: existente
+  id: "378"
+  orden: "0"
+atributos_detalles_188: 
+  nombre: Caja Luminosa
+  detalle_id: "15"
+  valor: ""
+  id: "188"
+  orden: "0"
+atributos_detalles_001: 
+  nombre: attr1
+  detalle_id: "2"
+  valor: Atributo1
+  id: "1"
+  orden: "0"
+atributos_detalles_379: 
+  nombre: Observaciones
+  detalle_id: "27"
+  valor: "similar a dise\xC3\xB1o a anterior"
+  id: "379"
+  orden: "0"
+atributos_detalles_189: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "15"
+  valor: ""
+  id: "189"
+  orden: "0"
+atributos_detalles_002: 
+  nombre: attr2
+  detalle_id: "2"
+  valor: Atributo2
+  id: "2"
+  orden: "0"
+atributos_detalles_430: 
+  nombre: Almacenamiento
+  detalle_id: "31"
+  valor: si
+  id: "430"
+  orden: "0"
+atributos_detalles_240: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "17"
+  valor: ""
+  id: "240"
+  orden: "0"
+atributos_detalles_050: 
+  nombre: Pasacables
+  detalle_id: "6"
+  valor: ""
+  id: "50"
+  orden: "0"
+atributos_detalles_003: 
+  nombre: attr1
+  detalle_id: "3"
+  valor: Atributo 1
+  id: "3"
+  orden: "0"
+atributos_detalles_431: 
+  nombre: Alto
+  detalle_id: "31"
+  valor: "1.80"
+  id: "431"
+  orden: "0"
+atributos_detalles_241: 
+  nombre: Lleva Accesorios
+  detalle_id: "17"
+  valor: ""
+  id: "241"
+  orden: "0"
+atributos_detalles_051: 
+  nombre: Puerta batiente/corrediza/enrollable/plegable
+  detalle_id: "6"
+  valor: ""
+  id: "51"
+  orden: "0"
+atributos_detalles_004: 
+  nombre: attr2
+  detalle_id: "3"
+  valor: Atributo 2
+  id: "4"
+  orden: "0"
+atributos_detalles_432: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "31"
+  valor: .90
+  id: "432"
+  orden: "0"
+atributos_detalles_242: 
+  nombre: Materiales Sugeridos
+  detalle_id: "17"
+  valor: ""
+  id: "242"
+  orden: "0"
+atributos_detalles_052: 
+  nombre: Puerta batiente/corrediza/enrollable/plegable
+  detalle_id: "6"
+  valor: ""
+  id: "52"
+  orden: "0"
+atributos_detalles_005: 
+  nombre: Alto
+  detalle_id: "4"
+  valor: "100"
+  id: "5"
+  orden: "0"
+atributos_detalles_480: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "33"
+  valor: 10cm
+  id: "480"
+  orden: "0"
+atributos_detalles_433: 
+  nombre: "Altura Sector de Exhibici\xC3\xB3n\r"
+  detalle_id: "31"
+  valor: "0.90"
+  id: "433"
+  orden: "0"
+atributos_detalles_290: 
+  nombre: Garruchas
+  detalle_id: "21"
+  valor: ""
+  id: "290"
+  orden: "0"
+atributos_detalles_243: 
+  nombre: Muestras de Color
+  detalle_id: "17"
+  valor: ""
+  id: "243"
+  orden: "0"
+atributos_detalles_053: 
+  nombre: Punto de luz para equipos
+  detalle_id: "6"
+  valor: ""
+  id: "53"
+  orden: "0"
+atributos_detalles_006: 
+  nombre: Ancho
+  detalle_id: "4"
+  valor: "200"
+  id: "6"
+  orden: "0"
+atributos_detalles_481: 
+  nombre: "Altura Sector de Exhibici\xC3\xB3n\r"
+  detalle_id: "33"
+  valor: diferencia
+  id: "481"
+  orden: "0"
+atributos_detalles_434: 
+  nombre: Ancho
+  detalle_id: "31"
+  valor: 0.50 cm
+  id: "434"
+  orden: "0"
+atributos_detalles_291: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "21"
+  valor: ""
+  id: "291"
+  orden: "0"
+atributos_detalles_244: 
+  nombre: Observaciones
+  detalle_id: "17"
+  valor: ""
+  id: "244"
+  orden: "0"
+atributos_detalles_054: 
+  nombre: Punto de luz para equipos
+  detalle_id: "6"
+  valor: ""
+  id: "54"
+  orden: "0"
+atributos_detalles_007: 
+  nombre: Profundidad / Largo
+  detalle_id: "4"
+  valor: "300"
+  id: "7"
+  orden: "0"
+atributos_detalles_482: 
+  nombre: Ancho
+  detalle_id: "33"
+  valor: 40cm
+  id: "482"
+  orden: "0"
+atributos_detalles_435: 
+  nombre: Caja Luminosa
+  detalle_id: "31"
+  valor: si
+  id: "435"
+  orden: "0"
+atributos_detalles_292: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "21"
+  valor: ""
+  id: "292"
+  orden: "0"
+atributos_detalles_245: 
+  nombre: Profundidad/Largo
+  detalle_id: "17"
+  valor: ""
+  id: "245"
+  orden: "0"
+atributos_detalles_055: 
+  nombre: Repisas
+  detalle_id: "6"
+  valor: ""
+  id: "55"
+  orden: "0"
+atributos_detalles_008: 
+  nombre: Una cara/Doble cara/Isla
+  detalle_id: "4"
+  valor: "400"
+  id: "8"
+  orden: "0"
+atributos_detalles_483: 
+  nombre: Caja Luminosa
+  detalle_id: "33"
+  valor: "no"
+  id: "483"
+  orden: "0"
+atributos_detalles_436: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "31"
+  valor: "4"
+  id: "436"
+  orden: "0"
+atributos_detalles_293: 
+  nombre: Lleva Accesorios
+  detalle_id: "21"
+  valor: ""
+  id: "293"
+  orden: "0"
+atributos_detalles_246: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "17"
+  valor: ""
+  id: "246"
+  orden: "0"
+atributos_detalles_056: 
+  nombre: Alquiler o venta
+  detalle_id: "7"
+  valor: venta
+  id: "56"
+  orden: "0"
+atributos_detalles_009: 
+  nombre: Colores/Pantone
+  detalle_id: "5"
+  valor: ""
+  id: "9"
+  orden: "0"
+atributos_detalles_484: 
+  nombre: Cajones
+  detalle_id: "33"
+  valor: "no"
+  id: "484"
+  orden: "0"
+atributos_detalles_437: 
+  nombre: Cerrajeria Completa
+  detalle_id: "31"
+  valor: si
+  id: "437"
+  orden: "0"
+atributos_detalles_294: 
+  nombre: Materiales Sugeridos
+  detalle_id: "21"
+  valor: ""
+  id: "294"
+  orden: "0"
+atributos_detalles_247: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "17"
+  valor: ""
+  id: "247"
+  orden: "0"
+atributos_detalles_057: 
+  nombre: Alquiler o venta
+  detalle_id: "7"
+  valor: ""
+  id: "57"
+  orden: "0"
+atributos_detalles_485: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "33"
+  valor: "4"
+  id: "485"
+  orden: "0"
+atributos_detalles_438: 
+  nombre: Fijado al Piso
+  detalle_id: "31"
+  valor: "no"
+  id: "438"
+  orden: "0"
+atributos_detalles_295: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "21"
+  valor: ""
+  id: "295"
+  orden: "0"
+atributos_detalles_248: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "17"
+  valor: ""
+  id: "248"
+  orden: "0"
+atributos_detalles_058: 
+  nombre: Colores/Pantone
+  detalle_id: "7"
+  valor: ""
+  id: "58"
+  orden: "0"
+atributos_detalles_486: 
+  nombre: Cerrajeria Completa
+  detalle_id: "33"
+  valor: si
+  id: "486"
+  orden: "0"
+atributos_detalles_439: 
+  nombre: Garruchas
+  detalle_id: "31"
+  valor: "no"
+  id: "439"
+  orden: "0"
+atributos_detalles_296: 
+  nombre: Muestras de Color
+  detalle_id: "21"
+  valor: ""
+  id: "296"
+  orden: "0"
+atributos_detalles_249: 
+  nombre: Vistas
+  detalle_id: "17"
+  valor: ""
+  id: "249"
+  orden: "0"
+atributos_detalles_059: 
+  nombre: Colores/Pantone
+  detalle_id: "7"
+  valor: ""
+  id: "59"
+  orden: "0"
+atributos_detalles_487: 
+  nombre: Colores/Pantone
+  detalle_id: "33"
+  valor: segun muestra
+  id: "487"
+  orden: "0"
+atributos_detalles_297: 
+  nombre: Observaciones
+  detalle_id: "21"
+  valor: ""
+  id: "297"
+  orden: "0"
+atributos_detalles_488: 
+  nombre: Garruchas
+  detalle_id: "33"
+  valor: si
+  id: "488"
+  orden: "0"
+atributos_detalles_298: 
+  nombre: Pasacables
+  detalle_id: "21"
+  valor: ""
+  id: "298"
+  orden: "0"
+atributos_detalles_300: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "21"
+  valor: ""
+  id: "300"
+  orden: "0"
+atributos_detalles_110: 
+  nombre: Cantidad de soportes/patas
+  detalle_id: "10"
+  valor: ""
+  id: "110"
+  orden: "0"
+atributos_detalles_489: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "33"
+  valor: si
+  id: "489"
+  orden: "0"
+atributos_detalles_301: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "21"
+  valor: ""
+  id: "301"
+  orden: "0"
+atributos_detalles_111: 
+  nombre: Cerrajeria completa
+  detalle_id: "10"
+  valor: ""
+  id: "111"
+  orden: "0"
+atributos_detalles_299: 
+  nombre: Profundidad/Largo
+  detalle_id: "21"
+  valor: ""
+  id: "299"
+  orden: "0"
+atributos_detalles_302: 
+  nombre: Repisas
+  detalle_id: "21"
+  valor: ""
+  id: "302"
+  orden: "0"
+atributos_detalles_112: 
+  nombre: Cerrajeria completa
+  detalle_id: "10"
+  valor: ""
+  id: "112"
+  orden: "0"
+atributos_detalles_540: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "35"
+  valor: ""
+  id: "540"
+  orden: "0"
+atributos_detalles_350: 
+  nombre: Repisas
+  detalle_id: "25"
+  valor: ""
+  id: "350"
+  orden: "0"
+atributos_detalles_160: 
+  nombre: Alto
+  detalle_id: "14"
+  valor: 2.00m
+  id: "160"
+  orden: "0"
+atributos_detalles_303: 
+  nombre: "Separaci\xC3\xB3n entre Repisas\r"
+  detalle_id: "21"
+  valor: ""
+  id: "303"
+  orden: "0"
+atributos_detalles_113: 
+  nombre: Colores/Pantone
+  detalle_id: "10"
+  valor: ""
+  id: "113"
+  orden: "0"
+atributos_detalles_541: 
+  nombre: Alto
+  detalle_id: "36"
+  valor: ""
+  id: "541"
+  orden: 
+atributos_detalles_351: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "25"
+  valor: ""
+  id: "351"
+  orden: "0"
+atributos_detalles_161: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "14"
+  valor: "no"
+  id: "161"
+  orden: "0"
+atributos_detalles_304: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "21"
+  valor: ""
+  id: "304"
+  orden: "0"
+atributos_detalles_114: 
+  nombre: Colores/Pantone
+  detalle_id: "10"
+  valor: ""
+  id: "114"
+  orden: "0"
+atributos_detalles_542: 
+  nombre: Altura Libre
+  detalle_id: "36"
+  valor: ""
+  id: "542"
+  orden: 
+atributos_detalles_352: 
+  nombre: Alto
+  detalle_id: "26"
+  valor: ""
+  id: "352"
+  orden: "0"
+atributos_detalles_162: 
+  nombre: "Altura Sector de Exhibici\xC3\xB3n\r"
+  detalle_id: "14"
+  valor: 90 cm
+  id: "162"
+  orden: "0"
+atributos_detalles_305: 
+  nombre: Vistas
+  detalle_id: "21"
+  valor: ""
+  id: "305"
+  orden: "0"
+atributos_detalles_115: 
+  nombre: Desmontable
+  detalle_id: "10"
+  valor: ""
+  id: "115"
+  orden: "0"
+atributos_detalles_543: 
+  nombre: Ancho
+  detalle_id: "36"
+  valor: ""
+  id: "543"
+  orden: 
+atributos_detalles_353: 
+  nombre: Ancho
+  detalle_id: "26"
+  valor: ""
+  id: "353"
+  orden: "0"
+atributos_detalles_163: 
+  nombre: Ancho
+  detalle_id: "14"
+  valor: 1.50m
+  id: "163"
+  orden: "0"
+atributos_detalles_306: 
+  nombre: Alto
+  detalle_id: "22"
+  valor: ""
+  id: "306"
+  orden: "0"
+atributos_detalles_116: 
+  nombre: Desmontable
+  detalle_id: "10"
+  valor: ""
+  id: "116"
+  orden: "0"
+atributos_detalles_544: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "36"
+  valor: ""
+  id: "544"
+  orden: 
+atributos_detalles_354: 
+  nombre: Colores/Pantone
+  detalle_id: "26"
+  valor: ""
+  id: "354"
+  orden: "0"
+atributos_detalles_164: 
+  nombre: Caja Luminosa
+  detalle_id: "14"
+  valor: "no"
+  id: "164"
+  orden: "0"
+atributos_detalles_307: 
+  nombre: Ancho
+  detalle_id: "22"
+  valor: ""
+  id: "307"
+  orden: "0"
+atributos_detalles_117: 
+  nombre: Fijado al piso
+  detalle_id: "10"
+  valor: ""
+  id: "117"
+  orden: "0"
+atributos_detalles_545: 
+  nombre: Colores/Pantone
+  detalle_id: "36"
+  valor: azul 3005
+  id: "545"
+  orden: 
+atributos_detalles_355: 
+  nombre: Con Ojalillos o Tubos
+  detalle_id: "26"
+  valor: ""
+  id: "355"
+  orden: "0"
+atributos_detalles_165: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "14"
+  valor: "4"
+  id: "165"
+  orden: "0"
+atributos_detalles_308: 
+  nombre: Colores/Pantone
+  detalle_id: "22"
+  valor: ""
+  id: "308"
+  orden: "0"
+atributos_detalles_118: 
+  nombre: Fijado al piso
+  detalle_id: "10"
+  valor: ""
+  id: "118"
+  orden: "0"
+atributos_detalles_546: 
+  nombre: Fijado al Piso
+  detalle_id: "36"
+  valor: ""
+  id: "546"
+  orden: 
+atributos_detalles_356: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "26"
+  valor: ""
+  id: "356"
+  orden: "0"
+atributos_detalles_166: 
+  nombre: Cerrajeria Completa
+  detalle_id: "14"
+  valor: si
+  id: "166"
+  orden: "0"
+atributos_detalles_309: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "22"
+  valor: ""
+  id: "309"
+  orden: "0"
+atributos_detalles_119: 
+  nombre: Garruchas
+  detalle_id: "10"
+  valor: ""
+  id: "119"
+  orden: "0"
+atributos_detalles_547: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "36"
+  valor: rotulos blancos
+  id: "547"
+  orden: 
+atributos_detalles_357: 
+  nombre: Materiales Sugeridos
+  detalle_id: "26"
+  valor: ""
+  id: "357"
+  orden: "0"
+atributos_detalles_167: 
+  nombre: Fijado al Piso
+  detalle_id: "14"
+  valor: "no"
+  id: "167"
+  orden: "0"
+atributos_detalles_548: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "36"
+  valor: mesa
+  id: "548"
+  orden: 
+atributos_detalles_358: 
+  nombre: Muestras de Color
+  detalle_id: "26"
+  valor: ""
+  id: "358"
+  orden: "0"
+atributos_detalles_168: 
+  nombre: Garruchas
+  detalle_id: "14"
+  valor: si
+  id: "168"
+  orden: "0"
+atributos_detalles_549: 
+  nombre: Materiales Sugeridos
+  detalle_id: "36"
+  valor: ""
+  id: "549"
+  orden: 
+atributos_detalles_359: 
+  nombre: Observaciones
+  detalle_id: "26"
+  valor: ""
+  id: "359"
+  orden: "0"
+atributos_detalles_169: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "14"
+  valor: si
+  id: "169"
+  orden: "0"
+atributos_detalles_410: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "29"
+  valor: ""
+  id: "410"
+  orden: "0"
+atributos_detalles_220: 
+  nombre: Muestras de Color
+  detalle_id: "16"
+  valor: ""
+  id: "220"
+  orden: "0"
+atributos_detalles_030: 
+  nombre: Altura de zocalos
+  detalle_id: "6"
+  valor: ""
+  id: "30"
+  orden: "0"
+atributos_detalles_411: 
+  nombre: Almacenamiento
+  detalle_id: "30"
+  valor: k
+  id: "411"
+  orden: "0"
+atributos_detalles_221: 
+  nombre: Observaciones
+  detalle_id: "16"
+  valor: ""
+  id: "221"
+  orden: "0"
+atributos_detalles_031: 
+  nombre: Altura libre
+  detalle_id: "6"
+  valor: ""
+  id: "31"
+  orden: "0"
+atributos_detalles_412: 
+  nombre: Alto
+  detalle_id: "30"
+  valor: x
+  id: "412"
+  orden: "0"
+atributos_detalles_222: 
+  nombre: Pasacables
+  detalle_id: "16"
+  valor: ""
+  id: "222"
+  orden: "0"
+atributos_detalles_032: 
+  nombre: Altura libre
+  detalle_id: "6"
+  valor: ""
+  id: "32"
+  orden: "0"
+atributos_detalles_460: 
+  nombre: Ancho
+  detalle_id: "32"
+  valor: 2m
+  id: "460"
+  orden: "0"
+atributos_detalles_413: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "30"
+  valor: x
+  id: "413"
+  orden: "0"
+atributos_detalles_270: 
+  nombre: Observaciones
+  detalle_id: "20"
+  valor: ""
+  id: "270"
+  orden: "0"
+atributos_detalles_080: 
+  nombre: Colores/Pantone
+  detalle_id: "9"
+  valor: ""
+  id: "80"
+  orden: "0"
+atributos_detalles_223: 
+  nombre: Profundidad/Largo
+  detalle_id: "16"
+  valor: ""
+  id: "223"
+  orden: "0"
+atributos_detalles_033: 
+  nombre: Cajones
+  detalle_id: "6"
+  valor: ""
+  id: "33"
+  orden: "0"
+atributos_detalles_461: 
+  nombre: Cajones
+  detalle_id: "32"
+  valor: "2"
+  id: "461"
+  orden: "0"
+atributos_detalles_414: 
+  nombre: Ancho
+  detalle_id: "30"
+  valor: ""
+  id: "414"
+  orden: "0"
+atributos_detalles_271: 
+  nombre: Profundidad/Largo
+  detalle_id: "20"
+  valor: ""
+  id: "271"
+  orden: "0"
+atributos_detalles_081: 
+  nombre: Iluminacion
+  detalle_id: "9"
+  valor: ""
+  id: "81"
+  orden: "0"
+atributos_detalles_224: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "16"
+  valor: ""
+  id: "224"
+  orden: "0"
+atributos_detalles_034: 
+  nombre: Cajones
+  detalle_id: "6"
+  valor: ""
+  id: "34"
+  orden: "0"
+atributos_detalles_462: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "32"
+  valor: "4"
+  id: "462"
+  orden: "0"
+atributos_detalles_415: 
+  nombre: Colores/Pantone
+  detalle_id: "30"
+  valor: ""
+  id: "415"
+  orden: "0"
+atributos_detalles_272: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "20"
+  valor: ""
+  id: "272"
+  orden: "0"
+atributos_detalles_082: 
+  nombre: Iluminacion
+  detalle_id: "9"
+  valor: ""
+  id: "82"
+  orden: "0"
+atributos_detalles_225: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "16"
+  valor: ""
+  id: "225"
+  orden: "0"
+atributos_detalles_035: 
+  nombre: Cantidad de soportes/patas
+  detalle_id: "6"
+  valor: ""
+  id: "35"
+  orden: "0"
+atributos_detalles_463: 
+  nombre: Cerrajeria Completa
+  detalle_id: "32"
+  valor: si
+  id: "463"
+  orden: "0"
+atributos_detalles_416: 
+  nombre: Garruchas
+  detalle_id: "30"
+  valor: ""
+  id: "416"
+  orden: "0"
+atributos_detalles_273: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "20"
+  valor: ""
+  id: "273"
+  orden: "0"
+atributos_detalles_083: 
+  nombre: "Instalacion: Pared / Mesa / Pedestal"
+  detalle_id: "9"
+  valor: ""
+  id: "83"
+  orden: "0"
+atributos_detalles_226: 
+  nombre: Repisas
+  detalle_id: "16"
+  valor: ""
+  id: "226"
+  orden: "0"
+atributos_detalles_036: 
+  nombre: Cantidad de soportes/patas
+  detalle_id: "6"
+  valor: ""
+  id: "36"
+  orden: "0"
+atributos_detalles_464: 
+  nombre: Colores/Pantone
+  detalle_id: "32"
+  valor: segun muestra
+  id: "464"
+  orden: "0"
+atributos_detalles_417: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "30"
+  valor: x
+  id: "417"
+  orden: "0"
+atributos_detalles_274: 
+  nombre: Una Cara/Doble Cara/Isla
+  detalle_id: "20"
+  valor: ""
+  id: "274"
+  orden: "0"
+atributos_detalles_084: 
+  nombre: "Instalacion: Pared / Mesa / Pedestal"
+  detalle_id: "9"
+  valor: ""
+  id: "84"
+  orden: "0"
+atributos_detalles_227: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "16"
+  valor: ""
+  id: "227"
+  orden: "0"
+atributos_detalles_037: 
+  nombre: Cerrajeria completa
+  detalle_id: "6"
+  valor: ""
+  id: "37"
+  orden: "0"
+atributos_detalles_465: 
+  nombre: Equipos Empotrados
+  detalle_id: "32"
+  valor: "no"
+  id: "465"
+  orden: "0"
+atributos_detalles_418: 
+  nombre: Lleva Accesorios
+  detalle_id: "30"
+  valor: ""
+  id: "418"
+  orden: "0"
+atributos_detalles_275: 
+  nombre: Almacenamiento
+  detalle_id: "21"
+  valor: ""
+  id: "275"
+  orden: "0"
+atributos_detalles_085: 
+  nombre: Muestras de color
+  detalle_id: "9"
+  valor: ""
+  id: "85"
+  orden: "0"
+atributos_detalles_228: 
+  nombre: Alto
+  detalle_id: "17"
+  valor: ml
+  id: "228"
+  orden: "0"
+atributos_detalles_038: 
+  nombre: Cerrajeria completa
+  detalle_id: "6"
+  valor: ""
+  id: "38"
+  orden: "0"
+atributos_detalles_466: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "32"
+  valor: "no"
+  id: "466"
+  orden: "0"
+atributos_detalles_419: 
+  nombre: "Malet\xC3\xADn o Caja para Transporte\r"
+  detalle_id: "30"
+  valor: ""
+  id: "419"
+  orden: "0"
+atributos_detalles_276: 
+  nombre: Alto
+  detalle_id: "21"
+  valor: ""
+  id: "276"
+  orden: "0"
+atributos_detalles_086: 
+  nombre: Muestras de color
+  detalle_id: "9"
+  valor: ""
+  id: "86"
+  orden: "0"
+atributos_detalles_229: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "17"
+  valor: ml
+  id: "229"
+  orden: "0"
+atributos_detalles_039: 
+  nombre: Colores/Pantone
+  detalle_id: "6"
+  valor: ""
+  id: "39"
+  orden: "0"
+atributos_detalles_467: 
+  nombre: Lleva Accesorios
+  detalle_id: "32"
+  valor: "no"
+  id: "467"
+  orden: "0"
+atributos_detalles_277: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "21"
+  valor: ""
+  id: "277"
+  orden: "0"
+atributos_detalles_087: 
+  nombre: _Alto
+  detalle_id: "9"
+  valor: ""
+  id: "87"
+  orden: "0"
+atributos_detalles_468: 
+  nombre: Materiales Sugeridos
+  detalle_id: "32"
+  valor: mdf
+  id: "468"
+  orden: "0"
+atributos_detalles_278: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "21"
+  valor: ""
+  id: "278"
+  orden: "0"
+atributos_detalles_088: 
+  nombre: _Alto
+  detalle_id: "9"
+  valor: ""
+  id: "88"
+  orden: "0"
+atributos_detalles_469: 
+  nombre: Muestras de Color
+  detalle_id: "32"
+  valor: si
+  id: "469"
+  orden: "0"
+atributos_detalles_279: 
+  nombre: Altura Libre
+  detalle_id: "21"
+  valor: ""
+  id: "279"
+  orden: "0"
+atributos_detalles_089: 
+  nombre: _Ancho
+  detalle_id: "9"
+  valor: ""
+  id: "89"
+  orden: "0"
+atributos_detalles_520: 
+  nombre: Observaciones
+  detalle_id: "34"
+  valor: ""
+  id: "520"
+  orden: "0"
+atributos_detalles_330: 
+  nombre: Almacenamiento
+  detalle_id: "25"
+  valor: ""
+  id: "330"
+  orden: "0"
+atributos_detalles_140: 
+  nombre: Almacenamiento
+  detalle_id: "13"
+  valor: ""
+  id: "140"
+  orden: "0"
+atributos_detalles_521: 
+  nombre: Pasacables
+  detalle_id: "34"
+  valor: ""
+  id: "521"
+  orden: "0"
+atributos_detalles_331: 
+  nombre: Alto
+  detalle_id: "25"
+  valor: ""
+  id: "331"
+  orden: "0"
+atributos_detalles_141: 
+  nombre: Alto
+  detalle_id: "13"
+  valor: ""
+  id: "141"
+  orden: "0"
+atributos_detalles_522: 
+  nombre: Profundidad/Largo
+  detalle_id: "34"
+  valor: ""
+  id: "522"
+  orden: "0"
+atributos_detalles_332: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "25"
+  valor: ""
+  id: "332"
+  orden: "0"
+atributos_detalles_142: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "13"
+  valor: ""
+  id: "142"
+  orden: "0"
+atributos_detalles_523: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "34"
+  valor: ""
+  id: "523"
+  orden: "0"
+atributos_detalles_380: 
+  nombre: Profundidad/Largo
+  detalle_id: "27"
+  valor: 0.60 m
+  id: "380"
+  orden: "0"
+atributos_detalles_190: 
+  nombre: Colores/Pantone
+  detalle_id: "15"
+  valor: ""
+  id: "190"
+  orden: "0"
+atributos_detalles_333: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "25"
+  valor: ""
+  id: "333"
+  orden: "0"
+atributos_detalles_143: 
+  nombre: Ancho
+  detalle_id: "13"
+  valor: ""
+  id: "143"
+  orden: "0"
+atributos_detalles_524: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "34"
+  valor: ""
+  id: "524"
+  orden: "0"
+atributos_detalles_381: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "27"
+  valor: ""
+  id: "381"
+  orden: "0"
+atributos_detalles_191: 
+  nombre: Equipos Empotrados
+  detalle_id: "15"
+  valor: ""
+  id: "191"
+  orden: "0"
+atributos_detalles_334: 
+  nombre: Altura Libre
+  detalle_id: "25"
+  valor: ""
+  id: "334"
+  orden: "0"
+atributos_detalles_144: 
+  nombre: Colores/Pantone
+  detalle_id: "13"
+  valor: ""
+  id: "144"
+  orden: "0"
+atributos_detalles_525: 
+  nombre: Repisas
+  detalle_id: "34"
+  valor: ""
+  id: "525"
+  orden: "0"
+atributos_detalles_382: 
+  nombre: Repisas
+  detalle_id: "27"
+  valor: si
+  id: "382"
+  orden: "0"
+atributos_detalles_192: 
+  nombre: Fijado al Piso
+  detalle_id: "15"
+  valor: ""
+  id: "192"
+  orden: "0"
+atributos_detalles_335: 
+  nombre: Ancho
+  detalle_id: "25"
+  valor: ""
+  id: "335"
+  orden: "0"
+atributos_detalles_145: 
+  nombre: Garruchas
+  detalle_id: "13"
+  valor: ""
+  id: "145"
+  orden: "0"
+atributos_detalles_526: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "34"
+  valor: ""
+  id: "526"
+  orden: "0"
+atributos_detalles_383: 
+  nombre: "Separaci\xC3\xB3n entre Repisas\r"
+  detalle_id: "27"
+  valor: 0.195 m
+  id: "383"
+  orden: "0"
+atributos_detalles_193: 
+  nombre: Garruchas
+  detalle_id: "15"
+  valor: ""
+  id: "193"
+  orden: "0"
+atributos_detalles_336: 
+  nombre: Cajones
+  detalle_id: "25"
+  valor: ""
+  id: "336"
+  orden: "0"
+atributos_detalles_146: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "13"
+  valor: ""
+  id: "146"
+  orden: "0"
+atributos_detalles_527: 
+  nombre: Alto
+  detalle_id: "35"
+  valor: ""
+  id: "527"
+  orden: "0"
+atributos_detalles_384: 
+  nombre: Tipo de Ganchera
+  detalle_id: "27"
+  valor: con pintura al horno
+  id: "384"
+  orden: "0"
+atributos_detalles_194: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "15"
+  valor: ""
+  id: "194"
+  orden: "0"
+atributos_detalles_337: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "25"
+  valor: ""
+  id: "337"
+  orden: "0"
+atributos_detalles_147: 
+  nombre: Lleva Accesorios
+  detalle_id: "13"
+  valor: ""
+  id: "147"
+  orden: "0"
+atributos_detalles_528: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "35"
+  valor: ""
+  id: "528"
+  orden: "0"
+atributos_detalles_385: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "27"
+  valor: del mueble al duco
+  id: "385"
+  orden: "0"
+atributos_detalles_195: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "15"
+  valor: ""
+  id: "195"
+  orden: "0"
+atributos_detalles_338: 
+  nombre: Cerrajeria Completa
+  detalle_id: "25"
+  valor: ""
+  id: "338"
+  orden: "0"
+atributos_detalles_148: 
+  nombre: "Malet\xC3\xADn o Caja para Transporte\r"
+  detalle_id: "13"
+  valor: ""
+  id: "148"
+  orden: "0"
+atributos_detalles_529: 
+  nombre: Ancho
+  detalle_id: "35"
+  valor: ""
+  id: "529"
+  orden: "0"
+atributos_detalles_386: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "27"
+  valor: isla
+  id: "386"
+  orden: "0"
+atributos_detalles_196: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "15"
+  valor: ""
+  id: "196"
+  orden: "0"
+atributos_detalles_339: 
+  nombre: Colores/Pantone
+  detalle_id: "25"
+  valor: ""
+  id: "339"
+  orden: "0"
+atributos_detalles_149: 
+  nombre: Materiales Sugeridos
+  detalle_id: "13"
+  valor: ""
+  id: "149"
+  orden: "0"
+atributos_detalles_387: 
+  nombre: Vistas
+  detalle_id: "27"
+  valor: ""
+  id: "387"
+  orden: "0"
+atributos_detalles_197: 
+  nombre: Lleva Accesorios
+  detalle_id: "15"
+  valor: ""
+  id: "197"
+  orden: "0"
+atributos_detalles_200: 
+  nombre: Observaciones
+  detalle_id: "15"
+  valor: ""
+  id: "200"
+  orden: "0"
+atributos_detalles_010: 
+  nombre: Colores/Pantone
+  detalle_id: "5"
+  valor: ""
+  id: "10"
+  orden: "0"
+atributos_detalles_388: 
+  nombre: Alto
+  detalle_id: "28"
+  valor: ""
+  id: "388"
+  orden: "0"
+atributos_detalles_198: 
+  nombre: Materiales Sugeridos
+  detalle_id: "15"
+  valor: ""
+  id: "198"
+  orden: "0"
+atributos_detalles_201: 
+  nombre: Profundidad/Largo
+  detalle_id: "15"
+  valor: ""
+  id: "201"
+  orden: "0"
+atributos_detalles_011: 
+  nombre: Con ojalillos o tubos
+  detalle_id: "5"
+  valor: ""
+  id: "11"
+  orden: "0"
+atributos_detalles_389: 
+  nombre: Ancho
+  detalle_id: "28"
+  valor: ""
+  id: "389"
+  orden: "0"
+atributos_detalles_199: 
+  nombre: Muestras de Color
+  detalle_id: "15"
+  valor: ""
+  id: "199"
+  orden: "0"
+atributos_detalles_202: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "15"
+  valor: ""
+  id: "202"
+  orden: "0"
+atributos_detalles_012: 
+  nombre: Con ojalillos o tubos
+  detalle_id: "5"
+  valor: ""
+  id: "12"
+  orden: "0"
+atributos_detalles_440: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "31"
+  valor: si
+  id: "440"
+  orden: "0"
+atributos_detalles_203: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "15"
+  valor: ""
+  id: "203"
+  orden: "0"
+atributos_detalles_013: 
+  nombre: Impresiones - rotulos en vinyl
+  detalle_id: "5"
+  valor: ""
+  id: "13"
+  orden: "0"
+atributos_detalles_250: 
+  nombre: alto
+  detalle_id: "18"
+  valor: ""
+  id: "250"
+  orden: "0"
+atributos_detalles_060: 
+  nombre: Desmontable
+  detalle_id: "7"
+  valor: ""
+  id: "60"
+  orden: "0"
+atributos_detalles_441: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "31"
+  valor: segun arte
+  id: "441"
+  orden: "0"
+atributos_detalles_204: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "15"
+  valor: ""
+  id: "204"
+  orden: "0"
+atributos_detalles_014: 
+  nombre: Impresiones - rotulos en vinyl
+  detalle_id: "5"
+  valor: ""
+  id: "14"
+  orden: "0"
+atributos_detalles_251: 
+  nombre: ancho
+  detalle_id: "18"
+  valor: ""
+  id: "251"
+  orden: "0"
+atributos_detalles_061: 
+  nombre: Desmontable
+  detalle_id: "7"
+  valor: ""
+  id: "61"
+  orden: "0"
+atributos_detalles_442: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "31"
+  valor: ""
+  id: "442"
+  orden: "0"
+atributos_detalles_205: 
+  nombre: Vistas
+  detalle_id: "15"
+  valor: ""
+  id: "205"
+  orden: "0"
+atributos_detalles_015: 
+  nombre: Muestras de color
+  detalle_id: "5"
+  valor: ""
+  id: "15"
+  orden: "0"
+atributos_detalles_252: 
+  nombre: largo
+  detalle_id: "18"
+  valor: ""
+  id: "252"
+  orden: "0"
+atributos_detalles_062: 
+  nombre: Muestras de color
+  detalle_id: "7"
+  valor: ""
+  id: "62"
+  orden: "0"
+atributos_detalles_490: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "33"
+  valor: si
+  id: "490"
+  orden: "0"
+atributos_detalles_443: 
+  nombre: Lleva Accesorios
+  detalle_id: "31"
+  valor: "no"
+  id: "443"
+  orden: "0"
+atributos_detalles_206: 
+  nombre: Almacenamiento
+  detalle_id: "16"
+  valor: ""
+  id: "206"
+  orden: "0"
+atributos_detalles_016: 
+  nombre: Muestras de color
+  detalle_id: "5"
+  valor: ""
+  id: "16"
+  orden: "0"
+atributos_detalles_253: 
+  nombre: Material
+  detalle_id: "18"
+  valor: ""
+  id: "253"
+  orden: "0"
+atributos_detalles_063: 
+  nombre: Muestras de color
+  detalle_id: "7"
+  valor: ""
+  id: "63"
+  orden: "0"
+atributos_detalles_491: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "33"
+  valor: ""
+  id: "491"
+  orden: "0"
+atributos_detalles_444: 
+  nombre: Materiales Sugeridos
+  detalle_id: "31"
+  valor: mdf.
+  id: "444"
+  orden: "0"
+atributos_detalles_207: 
+  nombre: Alto
+  detalle_id: "16"
+  valor: ""
+  id: "207"
+  orden: "0"
+atributos_detalles_017: 
+  nombre: _Alto
+  detalle_id: "5"
+  valor: ""
+  id: "17"
+  orden: "0"
+atributos_detalles_254: 
+  nombre: Alto
+  detalle_id: "19"
+  valor: ""
+  id: "254"
+  orden: "0"
+atributos_detalles_064: 
+  nombre: _Alto
+  detalle_id: "7"
+  valor: ""
+  id: "64"
+  orden: "0"
+atributos_detalles_492: 
+  nombre: Lleva Accesorios
+  detalle_id: "33"
+  valor: "no"
+  id: "492"
+  orden: "0"
+atributos_detalles_445: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "31"
+  valor: 15cmx9cmx3cm
+  id: "445"
+  orden: "0"
+atributos_detalles_208: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "16"
+  valor: ""
+  id: "208"
+  orden: "0"
+atributos_detalles_018: 
+  nombre: _Alto
+  detalle_id: "5"
+  valor: ""
+  id: "18"
+  orden: "0"
+atributos_detalles_255: 
+  nombre: Ancho
+  detalle_id: "19"
+  valor: ""
+  id: "255"
+  orden: "0"
+atributos_detalles_065: 
+  nombre: _Alto
+  detalle_id: "7"
+  valor: ""
+  id: "65"
+  orden: "0"
+atributos_detalles_493: 
+  nombre: Materiales Sugeridos
+  detalle_id: "33"
+  valor: melamina
+  id: "493"
+  orden: "0"
+atributos_detalles_446: 
+  nombre: Muestras de Color
+  detalle_id: "31"
+  valor: si
+  id: "446"
+  orden: "0"
+atributos_detalles_209: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "16"
+  valor: ""
+  id: "209"
+  orden: "0"
+atributos_detalles_019: 
+  nombre: _Ancho
+  detalle_id: "5"
+  valor: ""
+  id: "19"
+  orden: "0"
+atributos_detalles_256: 
+  nombre: Colores/Pantone
+  detalle_id: "19"
+  valor: ""
+  id: "256"
+  orden: "0"
+atributos_detalles_066: 
+  nombre: _Ancho
+  detalle_id: "7"
+  valor: ""
+  id: "66"
+  orden: "0"
+atributos_detalles_494: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "33"
+  valor: 10x15x9 cm
+  id: "494"
+  orden: "0"
+atributos_detalles_447: 
+  nombre: Observaciones
+  detalle_id: "31"
+  valor: prueba
+  id: "447"
+  orden: "0"
+atributos_detalles_257: 
+  nombre: Con Ojalillos o Tubos
+  detalle_id: "19"
+  valor: ""
+  id: "257"
+  orden: "0"
+atributos_detalles_067: 
+  nombre: _Ancho
+  detalle_id: "7"
+  valor: ""
+  id: "67"
+  orden: "0"
+atributos_detalles_495: 
+  nombre: Muestras de Color
+  detalle_id: "33"
+  valor: si
+  id: "495"
+  orden: "0"
+atributos_detalles_448: 
+  nombre: Profundidad/Largo
+  detalle_id: "31"
+  valor: 0.50 cm
+  id: "448"
+  orden: "0"
+atributos_detalles_258: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "19"
+  valor: ""
+  id: "258"
+  orden: "0"
+atributos_detalles_068: 
+  nombre: _Materiales
+  detalle_id: "7"
+  valor: ""
+  id: "68"
+  orden: "0"
+atributos_detalles_496: 
+  nombre: Observaciones
+  detalle_id: "33"
+  valor: otra mas
+  id: "496"
+  orden: "0"
+atributos_detalles_449: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "31"
+  valor: "no"
+  id: "449"
+  orden: "0"
+atributos_detalles_259: 
+  nombre: Materiales Sugeridos
+  detalle_id: "19"
+  valor: ""
+  id: "259"
+  orden: "0"
+atributos_detalles_069: 
+  nombre: _Materiales
+  detalle_id: "7"
+  valor: ""
+  id: "69"
+  orden: "0"
+atributos_detalles_497: 
+  nombre: Profundidad/Largo
+  detalle_id: "33"
+  valor: 40cm
+  id: "497"
+  orden: "0"
+atributos_detalles_500: 
+  nombre: "Separaci\xC3\xB3n entre Repisas\r"
+  detalle_id: "33"
+  valor: ""
+  id: "500"
+  orden: "0"
+atributos_detalles_498: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "33"
+  valor: batiente
+  id: "498"
+  orden: "0"
+atributos_detalles_310: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "22"
+  valor: ""
+  id: "310"
+  orden: "0"
+atributos_detalles_120: 
+  nombre: Garruchas
+  detalle_id: "10"
+  valor: ""
+  id: "120"
+  orden: "0"
+atributos_detalles_501: 
+  nombre: Tipo de Ganchera
+  detalle_id: "33"
+  valor: simple
+  id: "501"
+  orden: "0"
+atributos_detalles_499: 
+  nombre: Repisas
+  detalle_id: "33"
+  valor: "no"
+  id: "499"
+  orden: "0"
+atributos_detalles_311: 
+  nombre: Materiales Sugeridos
+  detalle_id: "22"
+  valor: ""
+  id: "311"
+  orden: "0"
+atributos_detalles_121: 
+  nombre: Iluminacion
+  detalle_id: "10"
+  valor: ""
+  id: "121"
+  orden: "0"
+atributos_detalles_502: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "33"
+  valor: duco
+  id: "502"
+  orden: "0"
+atributos_detalles_312: 
+  nombre: Muestras de Color
+  detalle_id: "22"
+  valor: ""
+  id: "312"
+  orden: "0"
+atributos_detalles_122: 
+  nombre: Iluminacion
+  detalle_id: "10"
+  valor: ""
+  id: "122"
+  orden: "0"
+atributos_detalles_550: 
+  nombre: Muestras de Color
+  detalle_id: "36"
+  valor: ""
+  id: "550"
+  orden: 
+atributos_detalles_503: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "33"
+  valor: una cara
+  id: "503"
+  orden: "0"
+atributos_detalles_313: 
+  nombre: Observaciones
+  detalle_id: "22"
+  valor: ""
+  id: "313"
+  orden: "0"
+atributos_detalles_123: 
+  nombre: Impresiones - rotulos en vinyl
+  detalle_id: "10"
+  valor: ""
+  id: "123"
+  orden: "0"
+atributos_detalles_360: 
+  nombre: Almacenamiento
+  detalle_id: "27"
+  valor: ""
+  id: "360"
+  orden: "0"
+atributos_detalles_170: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "14"
+  valor: si
+  id: "170"
+  orden: "0"
+atributos_detalles_551: 
+  nombre: Observaciones
+  detalle_id: "36"
+  valor: adjunto archivo
+  id: "551"
+  orden: 
+atributos_detalles_504: 
+  nombre: Vistas
+  detalle_id: "33"
+  valor: "3"
+  id: "504"
+  orden: "0"
+atributos_detalles_314: 
+  nombre: Profundidad/Largo
+  detalle_id: "22"
+  valor: ""
+  id: "314"
+  orden: "0"
+atributos_detalles_124: 
+  nombre: Impresiones - rotulos en vinyl
+  detalle_id: "10"
+  valor: ""
+  id: "124"
+  orden: "0"
+atributos_detalles_361: 
+  nombre: Alto
+  detalle_id: "27"
+  valor: 2.10 m
+  id: "361"
+  orden: "0"
+atributos_detalles_171: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "14"
+  valor: ""
+  id: "171"
+  orden: "0"
+atributos_detalles_552: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "36"
+  valor: duco
+  id: "552"
+  orden: 
+atributos_detalles_505: 
+  nombre: Almacenamiento
+  detalle_id: "34"
+  valor: ""
+  id: "505"
+  orden: "0"
+atributos_detalles_315: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "22"
+  valor: ""
+  id: "315"
+  orden: "0"
+atributos_detalles_125: 
+  nombre: "Instalacion: Pared / Mesa / Pedestal"
+  detalle_id: "10"
+  valor: ""
+  id: "125"
+  orden: "0"
+atributos_detalles_362: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "27"
+  valor: ""
+  id: "362"
+  orden: "0"
+atributos_detalles_172: 
+  nombre: Lleva Accesorios
+  detalle_id: "14"
+  valor: ""
+  id: "172"
+  orden: "0"
+atributos_detalles_553: 
+  nombre: Una Cara/Doble Cara/Lista
+  detalle_id: "36"
+  valor: ""
+  id: "553"
+  orden: 
+atributos_detalles_506: 
+  nombre: Alto
+  detalle_id: "34"
+  valor: ""
+  id: "506"
+  orden: "0"
+atributos_detalles_316: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "22"
+  valor: ""
+  id: "316"
+  orden: "0"
+atributos_detalles_126: 
+  nombre: "Instalacion: Pared / Mesa / Pedestal"
+  detalle_id: "10"
+  valor: ""
+  id: "126"
+  orden: "0"
+atributos_detalles_363: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "27"
+  valor: ""
+  id: "363"
+  orden: "0"
+atributos_detalles_173: 
+  nombre: Materiales Sugeridos
+  detalle_id: "14"
+  valor: trupan
+  id: "173"
+  orden: "0"
+atributos_detalles_507: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "34"
+  valor: ""
+  id: "507"
+  orden: "0"
+atributos_detalles_317: 
+  nombre: Alto
+  detalle_id: "23"
+  valor: "1.20"
+  id: "317"
+  orden: "0"
+atributos_detalles_127: 
+  nombre: Lleva accesorios
+  detalle_id: "10"
+  valor: ""
+  id: "127"
+  orden: "0"
+atributos_detalles_364: 
+  nombre: "Altura Sector de Exhibici\xC3\xB3n\r"
+  detalle_id: "27"
+  valor: ""
+  id: "364"
+  orden: "0"
+atributos_detalles_174: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "14"
+  valor: celular
+  id: "174"
+  orden: "0"
+atributos_detalles_508: 
+  nombre: "Altura de Z\xC3\xB3calos\r"
+  detalle_id: "34"
+  valor: ""
+  id: "508"
+  orden: "0"
+atributos_detalles_318: 
+  nombre: Ancho
+  detalle_id: "23"
+  valor: ""
+  id: "318"
+  orden: "0"
+atributos_detalles_128: 
+  nombre: Lleva accesorios
+  detalle_id: "10"
+  valor: ""
+  id: "128"
+  orden: "0"
+atributos_detalles_365: 
+  nombre: Ancho
+  detalle_id: "27"
+  valor: 0.60 m
+  id: "365"
+  orden: "0"
+atributos_detalles_175: 
+  nombre: Muestras de Color
+  detalle_id: "14"
+  valor: si
+  id: "175"
+  orden: "0"
+atributos_detalles_509: 
+  nombre: Altura Libre
+  detalle_id: "34"
+  valor: ""
+  id: "509"
+  orden: "0"
+atributos_detalles_319: 
+  nombre: Colores/Pantone
+  detalle_id: "23"
+  valor: ""
+  id: "319"
+  orden: "0"
+atributos_detalles_129: 
+  nombre: Maletin o caja para transporte
+  detalle_id: "10"
+  valor: ""
+  id: "129"
+  orden: "0"
+atributos_detalles_366: 
+  nombre: Caja Luminosa
+  detalle_id: "27"
+  valor: ""
+  id: "366"
+  orden: "0"
+atributos_detalles_176: 
+  nombre: Observaciones
+  detalle_id: "14"
+  valor: la tiene wilmer
+  id: "176"
+  orden: "0"
+atributos_detalles_367: 
+  nombre: Cajones
+  detalle_id: "27"
+  valor: ""
+  id: "367"
+  orden: "0"
+atributos_detalles_177: 
+  nombre: Profundidad/Largo
+  detalle_id: "14"
+  valor: ""
+  id: "177"
+  orden: "0"
+atributos_detalles_368: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "27"
+  valor: ""
+  id: "368"
+  orden: "0"
+atributos_detalles_178: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "14"
+  valor: ""
+  id: "178"
+  orden: "0"
+atributos_detalles_369: 
+  nombre: Cerrajeria Completa
+  detalle_id: "27"
+  valor: ""
+  id: "369"
+  orden: "0"
+atributos_detalles_179: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "14"
+  valor: si
+  id: "179"
+  orden: "0"
+atributos_detalles_420: 
+  nombre: Materiales Sugeridos
+  detalle_id: "30"
+  valor: x
+  id: "420"
+  orden: "0"
+atributos_detalles_230: 
+  nombre: Altura Libre
+  detalle_id: "17"
+  valor: ml
+  id: "230"
+  orden: "0"
+atributos_detalles_040: 
+  nombre: Colores/Pantone
+  detalle_id: "6"
+  valor: ""
+  id: "40"
+  orden: "0"
+atributos_detalles_421: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "30"
+  valor: ""
+  id: "421"
+  orden: "0"
+atributos_detalles_231: 
+  nombre: Ancho
+  detalle_id: "17"
+  valor: ml
+  id: "231"
+  orden: "0"
+atributos_detalles_041: 
+  nombre: Equipos empotrados
+  detalle_id: "6"
+  valor: ""
+  id: "41"
+  orden: "0"
+atributos_detalles_422: 
+  nombre: Muestras de Color
+  detalle_id: "30"
+  valor: ""
+  id: "422"
+  orden: "0"
+atributos_detalles_232: 
+  nombre: Caja Luminosa
+  detalle_id: "17"
+  valor: ml
+  id: "232"
+  orden: "0"
+atributos_detalles_042: 
+  nombre: Equipos empotrados
+  detalle_id: "6"
+  valor: ""
+  id: "42"
+  orden: "0"
+atributos_detalles_470: 
+  nombre: Observaciones
+  detalle_id: "32"
+  valor: prueba
+  id: "470"
+  orden: "0"
+atributos_detalles_423: 
+  nombre: Observaciones
+  detalle_id: "30"
+  valor: ""
+  id: "423"
+  orden: "0"
+atributos_detalles_233: 
+  nombre: Cantidad de Soportes/Patas
+  detalle_id: "17"
+  valor: ml
+  id: "233"
+  orden: "0"
+atributos_detalles_043: 
+  nombre: Impresiones - rotulos en vinyl
+  detalle_id: "6"
+  valor: ""
+  id: "43"
+  orden: "0"
+atributos_detalles_280: 
+  nombre: "Altura Sector de Exhibici\xC3\xB3n\r"
+  detalle_id: "21"
+  valor: ""
+  id: "280"
+  orden: "0"
+atributos_detalles_090: 
+  nombre: _Ancho
+  detalle_id: "9"
+  valor: ""
+  id: "90"
+  orden: "0"
+atributos_detalles_471: 
+  nombre: Pasacables
+  detalle_id: "32"
+  valor: si
+  id: "471"
+  orden: "0"
+atributos_detalles_424: 
+  nombre: Pasacables
+  detalle_id: "30"
+  valor: ""
+  id: "424"
+  orden: "0"
+atributos_detalles_234: 
+  nombre: Colores/Pantone
+  detalle_id: "17"
+  valor: ml
+  id: "234"
+  orden: "0"
+atributos_detalles_044: 
+  nombre: Impresiones - rotulos en vinyl
+  detalle_id: "6"
+  valor: ""
+  id: "44"
+  orden: "0"
+atributos_detalles_281: 
+  nombre: Ancho
+  detalle_id: "21"
+  valor: ""
+  id: "281"
+  orden: "0"
+atributos_detalles_091: 
+  nombre: _Materiales
+  detalle_id: "9"
+  valor: ""
+  id: "91"
+  orden: "0"
+atributos_detalles_472: 
+  nombre: Profundidad/Largo
+  detalle_id: "32"
+  valor: 1m
+  id: "472"
+  orden: "0"
+atributos_detalles_425: 
+  nombre: Profundidad/Largo
+  detalle_id: "30"
+  valor: x
+  id: "425"
+  orden: "0"
+atributos_detalles_235: 
+  nombre: Equipos Empotrados
+  detalle_id: "17"
+  valor: ml
+  id: "235"
+  orden: "0"
+atributos_detalles_045: 
+  nombre: Lleva accesorios
+  detalle_id: "6"
+  valor: ""
+  id: "45"
+  orden: "0"
+atributos_detalles_282: 
+  nombre: Caja Luminosa
+  detalle_id: "21"
+  valor: ""
+  id: "282"
+  orden: "0"
+atributos_detalles_092: 
+  nombre: _Materiales
+  detalle_id: "9"
+  valor: ""
+  id: "92"
+  orden: "0"
+atributos_detalles_473: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "32"
+  valor: "no"
+  id: "473"
+  orden: "0"
+atributos_detalles_426: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "30"
+  valor: ""
+  id: "426"
+  orden: "0"
+atributos_detalles_236: 
+  nombre: Fijado al Piso
+  detalle_id: "17"
+  valor: ""
+  id: "236"
+  orden: "0"
+atributos_detalles_046: 
+  nombre: Lleva accesorios
+  detalle_id: "6"
+  valor: ""
+  id: "46"
+  orden: "0"
+atributos_detalles_283: 
+  nombre: Cajones
+  detalle_id: "21"
+  valor: ""
+  id: "283"
+  orden: "0"
+atributos_detalles_093: 
+  nombre: _Profundidad / Largo
+  detalle_id: "9"
+  valor: ""
+  id: "93"
+  orden: "0"
+atributos_detalles_474: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "32"
+  valor: si
+  id: "474"
+  orden: "0"
+atributos_detalles_427: 
+  nombre: Repisas
+  detalle_id: "30"
+  valor: ""
+  id: "427"
+  orden: "0"
+atributos_detalles_237: 
+  nombre: Garruchas
+  detalle_id: "17"
+  valor: ""
+  id: "237"
+  orden: "0"
+atributos_detalles_047: 
+  nombre: Muestras de color
+  detalle_id: "6"
+  valor: ""
+  id: "47"
+  orden: "0"
+atributos_detalles_284: 
+  nombre: Cerrajeria Completa
+  detalle_id: "21"
+  valor: ""
+  id: "284"
+  orden: "0"
+atributos_detalles_094: 
+  nombre: _Profundidad / Largo
+  detalle_id: "9"
+  valor: ""
+  id: "94"
+  orden: "0"
+atributos_detalles_475: 
+  nombre: Repisas
+  detalle_id: "32"
+  valor: "no"
+  id: "475"
+  orden: "0"
+atributos_detalles_428: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "30"
+  valor: ""
+  id: "428"
+  orden: "0"
+atributos_detalles_238: 
+  nombre: "Iluminaci\xC3\xB3n\r"
+  detalle_id: "17"
+  valor: ""
+  id: "238"
+  orden: "0"
+atributos_detalles_048: 
+  nombre: Muestras de color
+  detalle_id: "6"
+  valor: ""
+  id: "48"
+  orden: "0"
+atributos_detalles_285: 
+  nombre: Cerramiento Exterior
+  detalle_id: "21"
+  valor: ""
+  id: "285"
+  orden: "0"
+atributos_detalles_095: 
+  nombre: _Tipo de pintura y/o acabado
+  detalle_id: "9"
+  valor: ""
+  id: "95"
+  orden: "0"
+atributos_detalles_476: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "32"
+  valor: duco
+  id: "476"
+  orden: "0"
+atributos_detalles_429: 
+  nombre: 
+  detalle_id: "31"
+  valor: ""
+  id: "429"
+  orden: "0"
+atributos_detalles_239: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "17"
+  valor: ""
+  id: "239"
+  orden: "0"
+atributos_detalles_049: 
+  nombre: Pasacables
+  detalle_id: "6"
+  valor: ""
+  id: "49"
+  orden: "0"
+atributos_detalles_286: 
+  nombre: Colores/Pantone
+  detalle_id: "21"
+  valor: ""
+  id: "286"
+  orden: "0"
+atributos_detalles_096: 
+  nombre: _Tipo de pintura y/o acabado
+  detalle_id: "9"
+  valor: ""
+  id: "96"
+  orden: "0"
+atributos_detalles_477: 
+  nombre: Almacenamiento
+  detalle_id: "33"
+  valor: si
+  id: "477"
+  orden: "0"
+atributos_detalles_287: 
+  nombre: Desmontable
+  detalle_id: "21"
+  valor: ""
+  id: "287"
+  orden: "0"
+atributos_detalles_097: 
+  nombre: _Una cara/Doble cara/Isla
+  detalle_id: "9"
+  valor: ""
+  id: "97"
+  orden: "0"
+atributos_detalles_478: 
+  nombre: Alto
+  detalle_id: "33"
+  valor: 2m
+  id: "478"
+  orden: "0"
+atributos_detalles_100: 
+  nombre: Almacenamiento
+  detalle_id: "10"
+  valor: ""
+  id: "100"
+  orden: "0"
+atributos_detalles_288: 
+  nombre: Equipos Empotrados
+  detalle_id: "21"
+  valor: ""
+  id: "288"
+  orden: "0"
+atributos_detalles_098: 
+  nombre: _Una cara/Doble cara/Isla
+  detalle_id: "9"
+  valor: ""
+  id: "98"
+  orden: "0"
+atributos_detalles_479: 
+  nombre: "Altura de Tablero Atenci\xC3\xB3n/Trabajo\r"
+  detalle_id: "33"
+  valor: 90cm
+  id: "479"
+  orden: "0"
+atributos_detalles_101: 
+  nombre: Alquiler o venta
+  detalle_id: "10"
+  valor: ""
+  id: "101"
+  orden: "0"
+atributos_detalles_289: 
+  nombre: Fijado al Piso
+  detalle_id: "21"
+  valor: ""
+  id: "289"
+  orden: "0"
+atributos_detalles_099: 
+  nombre: Almacenamiento
+  detalle_id: "10"
+  valor: ""
+  id: "99"
+  orden: "0"
+atributos_detalles_102: 
+  nombre: Alquiler o venta
+  detalle_id: "10"
+  valor: ""
+  id: "102"
+  orden: "0"
+atributos_detalles_530: 
+  nombre: Cerrajeria Completa
+  detalle_id: "35"
+  valor: ""
+  id: "530"
+  orden: "0"
+atributos_detalles_340: 
+  nombre: Equipos Empotrados
+  detalle_id: "25"
+  valor: ""
+  id: "340"
+  orden: "0"
+atributos_detalles_150: 
+  nombre: Medidas del Producto a Exhibir
+  detalle_id: "13"
+  valor: ""
+  id: "150"
+  orden: "0"
+atributos_detalles_103: 
+  nombre: Altura de zocalos
+  detalle_id: "10"
+  valor: ""
+  id: "103"
+  orden: "0"
+atributos_detalles_531: 
+  nombre: Colores/Pantone
+  detalle_id: "35"
+  valor: ""
+  id: "531"
+  orden: "0"
+atributos_detalles_341: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "25"
+  valor: ""
+  id: "341"
+  orden: "0"
+atributos_detalles_151: 
+  nombre: Muestras de Color
+  detalle_id: "13"
+  valor: ""
+  id: "151"
+  orden: "0"
+atributos_detalles_104: 
+  nombre: Altura de zocalos
+  detalle_id: "10"
+  valor: ""
+  id: "104"
+  orden: "0"
+atributos_detalles_532: 
+  nombre: "Instalaci\xC3\xB3n:Pared/Mesa/Pedestal\r"
+  detalle_id: "35"
+  valor: ""
+  id: "532"
+  orden: "0"
+atributos_detalles_342: 
+  nombre: Lleva Accesorios
+  detalle_id: "25"
+  valor: ""
+  id: "342"
+  orden: "0"
+atributos_detalles_152: 
+  nombre: Observaciones
+  detalle_id: "13"
+  valor: ""
+  id: "152"
+  orden: "0"
+atributos_detalles_105: 
+  nombre: Altura libre
+  detalle_id: "10"
+  valor: ""
+  id: "105"
+  orden: "0"
+atributos_detalles_533: 
+  nombre: Materiales Sugeridos
+  detalle_id: "35"
+  valor: ""
+  id: "533"
+  orden: "0"
+atributos_detalles_343: 
+  nombre: Materiales Sugeridos
+  detalle_id: "25"
+  valor: ""
+  id: "343"
+  orden: "0"
+atributos_detalles_153: 
+  nombre: Pasacables
+  detalle_id: "13"
+  valor: ""
+  id: "153"
+  orden: "0"
+atributos_detalles_106: 
+  nombre: Altura libre
+  detalle_id: "10"
+  valor: ""
+  id: "106"
+  orden: "0"
+atributos_detalles_390: 
+  nombre: Colores/Pantone
+  detalle_id: "28"
+  valor: ""
+  id: "390"
+  orden: "0"
+atributos_detalles_534: 
+  nombre: Muestras de Color
+  detalle_id: "35"
+  valor: ""
+  id: "534"
+  orden: "0"
+atributos_detalles_344: 
+  nombre: Muestras de Color
+  detalle_id: "25"
+  valor: ""
+  id: "344"
+  orden: "0"
+atributos_detalles_154: 
+  nombre: Profundidad/Largo
+  detalle_id: "13"
+  valor: ""
+  id: "154"
+  orden: "0"
+atributos_detalles_107: 
+  nombre: Caja luminosa
+  detalle_id: "10"
+  valor: ""
+  id: "107"
+  orden: "0"
+atributos_detalles_391: 
+  nombre: Con Ojalillos o Tubos
+  detalle_id: "28"
+  valor: ""
+  id: "391"
+  orden: "0"
+atributos_detalles_535: 
+  nombre: Observaciones
+  detalle_id: "35"
+  valor: ""
+  id: "535"
+  orden: "0"
+atributos_detalles_345: 
+  nombre: Observaciones
+  detalle_id: "25"
+  valor: ""
+  id: "345"
+  orden: "0"
+atributos_detalles_155: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "13"
+  valor: ""
+  id: "155"
+  orden: "0"
+atributos_detalles_108: 
+  nombre: Caja luminosa
+  detalle_id: "10"
+  valor: ""
+  id: "108"
+  orden: "0"
+atributos_detalles_392: 
+  nombre: Impresiones-Rotulos en Vinyl
+  detalle_id: "28"
+  valor: ""
+  id: "392"
+  orden: "0"
+atributos_detalles_536: 
+  nombre: Profundidad/Largo
+  detalle_id: "35"
+  valor: ""
+  id: "536"
+  orden: "0"
+atributos_detalles_346: 
+  nombre: Pasacables
+  detalle_id: "25"
+  valor: ""
+  id: "346"
+  orden: "0"
+atributos_detalles_156: 
+  nombre: Repisas
+  detalle_id: "13"
+  valor: ""
+  id: "156"
+  orden: "0"
+atributos_detalles_109: 
+  nombre: Cantidad de soportes/patas
+  detalle_id: "10"
+  valor: ""
+  id: "109"
+  orden: "0"
+atributos_detalles_393: 
+  nombre: Materiales Sugeridos
+  detalle_id: "28"
+  valor: ""
+  id: "393"
+  orden: "0"
+atributos_detalles_537: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "35"
+  valor: ""
+  id: "537"
+  orden: "0"
+atributos_detalles_347: 
+  nombre: Profundidad/Largo
+  detalle_id: "25"
+  valor: ""
+  id: "347"
+  orden: "0"
+atributos_detalles_157: 
+  nombre: Tipo de Pintura y/o Acabado
+  detalle_id: "13"
+  valor: ""
+  id: "157"
+  orden: "0"
+atributos_detalles_394: 
+  nombre: Muestras de Color
+  detalle_id: "28"
+  valor: ""
+  id: "394"
+  orden: "0"
+atributos_detalles_538: 
+  nombre: Repisas
+  detalle_id: "35"
+  valor: ""
+  id: "538"
+  orden: "0"
+atributos_detalles_348: 
+  nombre: Puerta Batiente/Corrediza/Enrrollable/Plegable
+  detalle_id: "25"
+  valor: ""
+  id: "348"
+  orden: "0"
+atributos_detalles_158: 
+  nombre: 
+  detalle_id: "14"
+  valor: ""
+  id: "158"
+  orden: "0"
+atributos_detalles_395: 
+  nombre: Observaciones
+  detalle_id: "28"
+  valor: ""
+  id: "395"
+  orden: "0"
+atributos_detalles_539: 
+  nombre: "Separaci\xC3\xB3n entre Repisas\r"
+  detalle_id: "35"
+  valor: ""
+  id: "539"
+  orden: "0"
+atributos_detalles_349: 
+  nombre: Punto de Luz para Equipos
+  detalle_id: "25"
+  valor: ""
+  id: "349"
+  orden: "0"
+atributos_detalles_159: 
+  nombre: Almacenamiento
+  detalle_id: "14"
+  valor: si
+  id: "159"
+  orden: "0"
+atributos_detalles_396: 
+  nombre: Alto
+  detalle_id: "29"
+  valor: ""
+  id: "396"
+  orden: "0"

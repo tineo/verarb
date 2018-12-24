@@ -1,0 +1,63 @@
+razon_social:
+  type:         select
+  value:        "-1"
+  unset_option: "-1"
+
+numero_orden_de_compra:
+  type:         text
+  max_length:   128
+
+descripcion:
+  type:         text
+  acts_as:      textarea
+
+fecha_emision:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    true
+
+quien_lo_dejo:
+  type:         text
+  mandatory:    false
+
+moneda:
+  type:         radio
+
+tipo_de_cambio:
+  type:         text
+  function:     validate_precio
+  max_length:   10
+
+canje:
+  type:         checkbox
+
+comentarios:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+completa:
+  type:         checkbox
+  checked:      true
+
+con_una_sola_descripcion:
+  type:         checkbox
+  checked:      false
+
+one_descripcion:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+one_cantidad:
+  type:         text
+  function:     validate_number
+  mandatory:    false
+
+monto_odt:
+  type:         text
+  function:     validate_precio
+  mandatory:    false
+
+

@@ -1,0 +1,25 @@
+<h2>Flujo de Cobranza Semanal</h2>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<% ["Factura", "ODT", "Cliente", "F.Emisi&oacute;n", "F.Recepci&oacute;n", "F.Vencimiento", "Lunes", "Martes", "Mi&eacute;rcoles", "Jueves", "Viernes", "S&aacute;bado"].each do |h| -%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+
+<% @flow.each do |f| -%>
+<tr><td valign="top">
+<%= f.factura_number %>
+</td><td valign="top">
+<%= linked_list_of_odts f.odts %>
+</td><td valign="top">
+<%= f.cliente %>
+</td><td valign="top">
+<%= format_short_date f.femision %>
+</td></tr>
+<% end -%>
+
+</table>
+

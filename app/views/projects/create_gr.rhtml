@@ -1,0 +1,33 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Crear Garant&iacute;a/Reclamo</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<b>Tipo a crear</b><br>
+<%= @form.to_html :gr_type %>
+<br>
+
+<b>Descripci&oacute;n de Oportunidad</b><br>
+<%= @form.to_html :description %>
+<br>
+
+<b>Clave de Autorizaci&oacute;n</b><br>
+<%= @form.to_html :grio_password, :size => 16 %>
+<br>
+
+<input type="submit" value="Crear" onClick="return confirm('Se creará una Garantía o Reclamo para esta Orden. Está seguro?')">
+
+o <%= link_to "Cancelar", :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type %><br>
+<br>
+
+</td></tr>
+</table>
+</form>

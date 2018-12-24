@@ -1,0 +1,12 @@
+factura_direccion:
+  type:         text
+  acts_as:      textarea
+
+factura_direccion_fiscal:
+  type:         text
+  acts_as:      textarea
+
+dias_plazo:
+  type:         text
+  function:     validate_dias_plazo
+

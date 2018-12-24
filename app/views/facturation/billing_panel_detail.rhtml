@@ -1,0 +1,271 @@
+<%
+cals = []
+-%>
+
+<script type="text/javascript">
+function toggle_all_c(check) {
+  s = check.checked;
+  
+  var list = new Array("<%= @unconfirmed.collect{|f| f.id }.join('", "') %>");
+  
+  for (i in list) {
+    $('c[' + list[i] + ']').checked = s;
+  }
+}
+
+function toggle_all_b(check) {
+  s = check.checked;
+  
+  var list = new Array("<%= @close_to_bill.collect{|f| f.id }.join('", "') %>");
+  
+  for (i in list) {
+    $('b[' + list[i] + ']').checked = s;
+  }
+}
+
+
+<% if @account -%>
+function popup() {
+  window.open("<%= url_for :action => "edit_billing_contact", :id => @account.id %>", "bill_popup", "menubar=no, width=480, height=360, toolbar=no");
+}
+<% end -%>
+</script>
+
+<%= render :partial => "billing_menu" %>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="70%">
+<h2><%= @account_name %></h2>
+
+</td><td valign="top">
+<% if @account && @account.contacto_cobranza -%>
+
+<table border="0" cellpadding="1" cellspacing="0">
+<tr><td valign="top">
+<b>Contacto:</b>
+</td><td valign="top">
+<%= @account.contacto_cobranza.nombre %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Telf.:</b>
+</td><td valign="top">
+<%= @account.contacto_cobranza.telefono %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail:</b>
+</td><td valign="top">
+<a href="mailto:<%= @account.contacto_cobranza.email %>"><%= @account.contacto_cobranza.email %></a>
+</td></tr>
+
+<tr><td valign="top">
+<b>Horario:</b>
+</td><td valign="top">
+<%= simple_format(@account.contacto_cobranza.horario_atencion) %>
+</td></tr>
+</table>
+<% end -%>
+
+<% if @account -%>
+<br>
+(<a href="#" onClick="javascript: popup();">Editar Contacto de Cobranza</a>)
+<% end -%>
+
+</td></tr>
+</table>
+
+<br>
+
+<form id="f" method="POST">
+<!-- main table -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="70%">
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="panel_title_billing" colspan="7">
+<b>FACTURAS PROXIMAS A COBRAR</b>
+</td></tr>
+<% if @close_to_bill.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="7">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<% ["Factura", "Monto", "Cond.Pago", "F.Emisi&oacute;n", "F.Recepci&oacute;n Cliente", "F.Probable"].each do |h| -%>
+<td align="center"><b><%= h %></b></td>
+<% end -%>
+<td align="center">
+<input type="checkbox" onClick="javascript: toggle_all_b(this);">
+</td>
+</tr>
+<%
+@close_to_bill.each do |f|
+  color_on  = "#f7f7f7"
+  color_off = "#eeeeee"
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top">
+<%= link_to f.formatted_factura_number, :action => "show_factura", :fid => f.id, :type => f.tipo, :from => "c" %>
+</td><td valign="top" align="right">
+<%= currency f.moneda %> <%= format_price f.monto %>
+</td><td valign="top" align="right">
+<%= f.dias_plazo %>
+</td><td valign="top" align="center">
+<%= format_short_date f.fecha_emision %>
+</td><td valign="top" align="center">
+<%= format_short_date f.fecha_recepcion %>
+</td><td valign="top" align="center">
+<% fecha = format_short_date(f.fecha_probable) %>
+<%=
+if f.fecha_probable < Time.today
+  "<font color=\"#ff0000\">#{fecha}</font>"
+else
+  fecha
+end
+%>
+</td><td valign="top" align="center">
+<input type="checkbox" id="b[<%= f.id %>]" name="b[<%= f.id %>]" value="1">
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="panel_title_billing" colspan="6">
+<b>FACTURAS EMITIDAS POR CONFIRMAR</b>
+</td></tr>
+<% if @unconfirmed.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="6">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<% ["Factura", "Monto", "Cond.Pago", "F.Emisi&oacute;n", "F.Recepci&oacute;n Cliente"].each do |h| -%>
+<td align="center"><b><%= h %></b></td>
+<% end -%>
+<td align="center">
+<input type="checkbox" onClick="javascript: toggle_all_c(this);">
+</td>
+</tr>
+<%
+@unconfirmed.each do |f|
+  color_on  = "#f7f7f7"
+  color_off = "#eeeeee"
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top">
+<%= link_to f.formatted_factura_number, :action => "show_factura", :fid => f.id, :type => f.tipo, :from => "c" %>
+</td><td valign="top" align="right">
+<%= currency f.moneda %> <%= format_price f.monto %>
+</td><td valign="top" align="right">
+<%= f.dias_plazo %>
+</td><td valign="top" align="center">
+<%= format_short_date f.fecha_emision %>
+</td><td valign="top" align="center">
+<%= format_short_date f.fecha_recepcion unless f.fecha_recepcion.nil? %>
+</td><td valign="top" align="center">
+<input type="checkbox" id="c[<%= f.id %>]" name="c[<%= f.id %>]" value="1">
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+
+<!-- separator and sidebar --!>
+</td><td valign="top" width="10">
+&nbsp;
+</td><td valign="top">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>F.Recepci&oacute;n</b>
+</td><td valign="top">
+<%=
+cals << "fecha_recepcion"
+calendar_field(@form, "fecha_recepcion")
+%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Modalidad Pago</b>
+</td><td valign="top">
+<%= @form.to_html :modalidad_pago, :cols => 24 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>F.Probable</b>
+</td><td valign="top">
+<%=
+cals << "fecha_probable"
+calendar_field(@form, "fecha_probable", { :no_clear_button => true })
+%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observ.</b>
+</td><td valign="top">
+<%= @form.to_html :observaciones, :cols => 24 %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" name="save" value="Grabar">
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+Marcar seleccionadas como
+<input type="submit" name="mark_confirm" value="Confirmadas">
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+Marcar seleccionadas como Cobradas<br>
+<br>
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Fecha de Cobro</b>
+</td><td valign="top">
+<%=
+cals << "fecha_cobranza"
+calendar_field(@form, "fecha_cobranza")
+%>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="mark_bill" value="Cobradas" onClick="return confirm('Estas Facturas se marcar&aacute;n como cobradas -- &iquest;Est&aacute; seguro?');">
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</form>
+
+<%= calendar_javascripts(cals) unless cals.empty? %>
+

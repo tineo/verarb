@@ -1,0 +1,41 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show", :id => @project.id %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Historial de Notificaciones</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if @notifications.empty? -%>
+<i>No hay notificaciones para mostrar</i>
+
+<% else -%>
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td></tr>
+
+<% @notifications.each do |n| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= format_date n.created_on %>
+</td><td valign="top">
+<pre>
+<%= n.descripcion %>
+</pre>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+

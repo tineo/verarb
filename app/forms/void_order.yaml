@@ -1,0 +1,15 @@
+password:
+  type:         text
+  acts_as:      password
+  function:     validate_void
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+motive:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes explicar el motivo"
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

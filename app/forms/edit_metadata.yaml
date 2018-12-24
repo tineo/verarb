@@ -1,0 +1,34 @@
+ejecutivo:
+  type:         select
+  options:      metadata_ejecutivo
+
+#estado_proyecto:
+#  type:         radio
+#  options:      metadata_estado_proyecto
+
+enviado_diseno:
+  type:         checkbox
+  set_value:    "1"
+  unset_value:  "0"
+
+estado_diseno:
+  type:         select
+  options:      metadata_estado_diseno
+
+enviado_planeamiento:
+  type:         checkbox
+  set_value:    "1"
+  unset_value:  "0"
+
+estado_planeamiento:
+  type:         select
+  options:      metadata_estado_planeamiento
+
+enviado_costos:
+  type:         checkbox
+  set_value:    "1"
+  unset_value:  "0"
+
+estado_costos:
+  type:         select
+  options:      metadata_estado_costos

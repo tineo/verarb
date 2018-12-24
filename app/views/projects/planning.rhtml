@@ -1,0 +1,74 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Planeamiento</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Fecha de Ingreso</b><br>
+<%= @project.area.ingreso_planeamiento.strftime "%d/%m/%Y" %><br>
+<br>
+<b>Fecha de Salida</b><br>
+<% unless @project.area.salida_planeamiento.nil? -%>
+<%= @project.area.salida_planeamiento.strftime "%d/%m/%Y" %>
+<% end -%>
+<br>
+<br>
+<b>Encargado de Planeamiento</b><br>
+<% if @project.area.encargado_planeamiento == '' -%>
+<i>No asignado</i><br>
+<% else -%>
+<%= User.find_by_id(@project.area.encargado_planeamiento).user_name %><br>
+<%- end %>
+<br>
+<b>Estado</b><br>
+<%= ESTADOS[@project.area.estado_planeamiento][:label] %><br>
+<br>
+
+<% if can_access?(:executive_tasks) && @project.area.estado_planeamiento == E_PLANEAMIENTO_POR_APROBAR && !@project.anulado? -%>
+<form method="POST">
+<input type="submit" name="ap" value="Aprobar planeamiento" onClick="return confirm ('&iquest;Est&aacute; seguro de APROBAR el planeamiento?')">
+o
+<input type="submit" name="ob" value="Marcar como observado" onClick="return confirm ('&iquest;Est&aacute; seguro de OBSERVAR este planeamiento?')">
+</form>
+<% end -%>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Observaciones</h3>
+
+
+<%= form_tag :action=> "post_message", :id => @project.uid, :type => @project.type, :aid => A_PLANEAMIENTO %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form.to_html :mensaje, :cols => 60 %>
+<br>
+<%= submit_tag "Publicar" %><br>
+<br>
+<br>
+
+<b>Observaciones</b> (M&aacute;s recientes primero)<br>
+<br>
+
+<% @messages.each do |m| -%>
+<span class="weak">
+<%= m.fecha.strftime "%d/%m/%Y %H:%M" %><br>
+<%= m.user.user_name %> escribi&oacute;:
+</span>
+<%= simple_format(h(m.mensaje)) %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+</form>

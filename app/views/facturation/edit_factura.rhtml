@@ -1,0 +1,144 @@
+<%= render :partial => "menubar_factura" %>
+
+<h3>Editar datos</h3>
+
+<form method="POST">
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>No. de <%= @document_label_singular %></b>
+</td><td valign="top">
+<%= format_factura_number @factura %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%= @factura.razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @factura.ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>N&uacute;mero de Orden de Compra</b>
+</td><td valign="top">
+<%= @form.to_html :numero_orden_de_compra, :size => 16 %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Emisi&oacute;n</b>
+</td><td valign="top">
+<input type="text" id="fecha_emision" name="fecha_emision" value="<%= @form.fecha_emision %>" size="8">
+<%= image_tag "calendar.gif", :id => "trigger_e", :border => 0 %><br>
+<%= @form.e :fecha_emision %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Qui&eacute;n lo dej&oacute;</b>
+</td><td valign="top">
+<%= @form.to_html :quien_lo_dejo %>
+</td></tr>
+</table>
+<br>
+
+<h3>Detalles de la Factura</h3>
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>ODT</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Valor Unitario</b><br>
+(Sin IGV)
+</td><td valign="top" align="center">
+<b>Valor de Venta</b><br>
+(Sin IGV)
+</td></tr>
+
+<% @details.each_with_index do |f, i| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<% if @factura.con_una_sola_descripcion? -%>
+N/A
+<% else -%>
+<%= @factura.details[i].proyecto.orden_id %>
+<% end -%>
+</td><td valign="top">
+<textarea name="descripcion[<%= i %>]" cols="60" rows="7"><%= f.descripcion %></textarea><br>
+<%= f.e :descripcion %>
+</td><td valign="top" align="right">
+<%= @factura.details[i].cantidad %>
+</td><td valign="top" align="right">
+<%= format_price(@factura.details[i].valor_unitario) %>
+</td><td valign="top" align="right">
+<%= format_price(@factura.details[i].valor_de_venta) %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+
+<tr><td valign="top">
+<b>Moneda a Facturar</b>
+</td><td valign="top">
+<%= @form.to_html :moneda %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tipo de Cambio</b>
+</td><td valign="top">
+<%= @form.to_html :tipo_de_cambio, :size => 4 %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @form.to_html :canje %> Es Canje
+</td></tr>
+
+<tr><td valign="top">
+<b>Comentarios</b>
+</td><td valign="top">
+<%= @form.to_html :comentarios %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @form.to_html :completa %> Factura est&aacute; completa (no se incluir&aacute;n m&aacute;s ODTs)
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="s" value="Guardar cambios">
+<input type="submit" name="c" value="Guardar cambios y agregar otra Orden a la <%= @document_label_singular %>">
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</form>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_emision",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_e"
+});
+</script>
+

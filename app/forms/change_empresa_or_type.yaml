@@ -1,0 +1,15 @@
+empresa:
+  type:         select
+  options:      empresa_vendedora_options
+  unset_option: "-1"
+
+tipo:
+  type:         select
+  options:      project_type_options
+  unset_option: "-1"
+
+password:
+  type:         text
+  acts_as:      password
+  function:     validate_change_et_password
+

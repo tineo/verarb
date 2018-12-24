@@ -1,0 +1,52 @@
+<h2>Otras Variables</h2>
+
+<h3>Detalle de <%= @what %> - <%= Date::MONTHNAMES[@date.month] %> <%= @date.year %></h3>
+
+<a href="javascript:history.back();">Regresar</a><br>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["ODT", "Cliente", "Descripci&oacute;n", "Monto S/.", "Monto $", "Ejecutivo", "Fecha de Emisi&oacute;n", "Categor&iacute;a", "Tipo"].each do |i|
+-%>
+<td valign="top" align="center">
+<b><%= i -%></b>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="10">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+@data.each do |p|
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= link_to p.orden_id, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= p.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= format_report_price p.monto_de_venta_as_soles %>
+</td><td valign="top" align="right">
+<%= format_report_price p.monto_de_venta_as_dollars %>
+</td><td valign="top">
+<%= p.executive.full_name %>
+</td><td valign="top">
+<%= format_date p.fecha_creacion_odt %>
+</td><td valign="top">
+<%= TIPO_DE_VENTA[p.tipo_de_venta] %>
+</td><td valign="top">
+<%= TIPO_PROYECTO[p.tipo_proyecto] %>
+</td></tr>
+<% end -%>
+<% end -%>
+</table>
+
+
+
+
+

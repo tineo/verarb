@@ -1,0 +1,94 @@
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= autocomplete_account_field(@form.client) %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+<% unless filter_empty?("opportunities") -%>
+o <%= link_to "deshacer filtro", :action => "panel", :reset_filters => 1 %>
+<% end -%>
+</td></tr>
+</table>
+</form>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="8" align="center" class="panel_title_opportunities">
+<b>OPORTUNIDADES</b>
+</td></tr>
+<tr bgcolor="#dddddd">
+<% [["proyecto", "Proyecto"],
+["odt", "ODT"],
+["propuesta", "Propuesta"],
+["cliente", "Cliente"],
+["estado", "Estado"],
+["creacion_opp", "Fecha Creaci&oacute;n Oportunidad"],
+["creacion_pro", "Fecha Creaci&oacute;n Proyecto"],
+["creacion_odt", "Fecha Creaci&oacute;n ODT"]].each do |h|
+  if h[0] == @order[:field]
+    link_class = "panel_field_selected"
+  else
+    link_class = "panel_field_names"
+  end
+-%>
+<td align="center">
+<%= link_to h[1], { :action => "set_sort_field", :field => h[0] }, :class => link_class %>
+</td>
+<% end -%>
+</tr>
+
+<% if @opps.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="8">
+<i>No hay elementos para listar</i>
+</td></tr>
+<% else -%>
+
+<%
+@opps.each do |o|
+  if o.project.nil?
+    pid = oid = date_project = date_order = ""
+  else
+    pid          = link_to o.project.id, :controller => "projects", :action => "show", :id => o.project.id, :type => "p"
+    date_project = format_date(o.project.fecha_creacion_proyecto)
+    
+    if o.project.con_orden_de_trabajo?
+      oid        = link_to o.project.orden_id, :controller => "projects", :action => "show", :id => o.project.orden_id, :type => "o"
+      date_order = format_date(o.project.fecha_creacion_odt)
+    else
+      oid        = ""
+      date_order = ""
+    end
+  end
+-%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top" align="center">
+<%= pid %>
+</td><td valign="top" align="center">
+<%= oid %>
+</td><td valign="top">
+<%= link_to o.name, :action => "show", :id => o.id %>
+</td><td valign="top">
+<%= o.accounts.first.name %>
+</td><td valign="top" align="center">
+<%= o.sales_stage %>
+</td><td valign="top" align="center">
+<%= format_date(o.date_entered) unless o.date_entered.nil? %>
+</td><td valign="top" align="center">
+<%= date_project %>
+</td><td valign="top" align="center">
+<%= date_order %>
+</td></tr>
+<%
+end #each opps
+-%>
+<%
+end #if empty opps
+-%>
+</table>
+

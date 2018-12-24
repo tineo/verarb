@@ -1,0 +1,30 @@
+<%= render :partial => "menubar" %>
+
+<h3>Anulaci&oacute;n de Orden</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>C&oacute;digo de Autorizaci&oacute;n</b>
+</td><td valign="top">
+<%= @form.to_html :password, :size => 16 %>
+</td></tr>
+<tr><td valign="top">
+<b>Motivo de anulaci&oacute;n</b>
+</td><td valign="top">
+<%= @form.to_html :motive %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" value="Anular esta Orden">
+o <%= link_to "Cancelar", :controller => "projects", :action => "show", :id => @project.id %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</form>

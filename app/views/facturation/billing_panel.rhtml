@@ -1,0 +1,45 @@
+<%= render :partial => "billing_menu" %>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="panel_title_billing" colspan="5">
+<b>RESUMEN DE COBRANZA</b>
+</td></tr>
+<% if @clients.empty? -%>
+<tr bgcolor="#eeeeee"><td>
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<% ["Cliente", "Cantidad<br>Facturas", "Total Monto Facturas<br>por Confirmar Recepci&oacute;n", "Total Monto Facturas<br>por Cobrar", "Fecha Probable<br>de Pago"].each do |h| -%>
+<td align="center"><b><%= h %></b></td>
+<% end -%>
+</tr>
+<% @clients.each do |c| -%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top">
+<%= link_to c.account_name, :action => "billing_panel_detail", :id => c.account_id %>
+</td><td valign="top" align="right">
+<%= c.docs %>
+</td><td valign="top" align="right">
+$ <%= format_price c.total_to_confirm %>
+</td><td valign="top" align="right">
+$ <%= format_price c.total_to_bill %>
+</td><td valign="top" align="center">
+<%=
+if c.fecha_pago.nil?
+  fecha = ""
+else
+  fecha = format_short_date(c.fecha_pago)
+  if c.fecha_pago < Time.today
+    fecha = "<font color=\"#ff0000\">#{fecha}</font>"
+  end
+end
+
+fecha
+%>
+</td></tr>
+<%
+end # @clients.each
+-%>
+<% end -%>
+</table>
+

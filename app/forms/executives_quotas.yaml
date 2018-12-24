@@ -1,0 +1,13 @@
+month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+tisac:
+  type:         checkbox
+

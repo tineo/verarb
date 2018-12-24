@@ -1,0 +1,19 @@
+<h2>Categor&iacute;as y Productos</h2>
+
+<h3>Categor&iacute;a "<%= @category.nombre %>" &gt; Nuevo servicio</h3>
+
+<form action="<%= url_for :controller => "services", :action => "new", :cid => @category.id %>" method="POST">
+<b>Nombre</b><br>
+<%= @form.to_html :nombre %>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= @form.to_html :descripcion %>
+<br>
+
+<%= submit_tag "Aceptar" %>
+
+o <%= link_to "Cancelar", :controller => "categories", :action => "show", :id => @category.id %>
+
+<%= end_form_tag %>
+

@@ -1,0 +1,9 @@
+client:
+  type:         select
+  value:        "-1"
+  options:      flow_report_client_options
+
+empresa_vendedora:
+  type:         select
+  value:        "-1"
+

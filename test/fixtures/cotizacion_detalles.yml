@@ -1,0 +1,191 @@
+--- 
+cotizacion_detalles_012: 
+  descripcion: .
+  nombre: Dummies
+  id: "13"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "38"
+  servicio_id: "0"
+  producto_id: "18"
+  tipo: P
+cotizacion_detalles_001: 
+  descripcion: .
+  nombre: Modulo desmontable
+  id: "2"
+  precio: "80"
+  cantidad: "1"
+  cotizacion_id: "34"
+  servicio_id: "0"
+  producto_id: "35"
+  tipo: P
+cotizacion_detalles_013: 
+  descripcion: .
+  nombre: Modulo desmontable
+  id: "14"
+  precio: "80"
+  cantidad: "1"
+  cotizacion_id: "39"
+  servicio_id: "0"
+  producto_id: "35"
+  tipo: P
+cotizacion_detalles_002: 
+  descripcion: ""
+  nombre: eqwweqewqweqewq
+  id: "3"
+  precio: "123"
+  cantidad: "1"
+  cotizacion_id: "35"
+  servicio_id: 
+  producto_id: 
+  tipo: M
+cotizacion_detalles_014: 
+  descripcion: .
+  nombre: Counter
+  id: "15"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "40"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+cotizacion_detalles_003: 
+  descripcion: ""
+  nombre: rtetewrewrew
+  id: "4"
+  precio: "234"
+  cantidad: "1"
+  cotizacion_id: "35"
+  servicio_id: 
+  producto_id: 
+  tipo: M
+cotizacion_detalles_015: 
+  descripcion: .
+  nombre: "Botiqu\xC3\xADn"
+  id: "16"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "40"
+  servicio_id: "0"
+  producto_id: "73"
+  tipo: P
+cotizacion_detalles_004: 
+  descripcion: .
+  nombre: Vitrina
+  id: "5"
+  precio: "120"
+  cantidad: "1"
+  cotizacion_id: "36"
+  servicio_id: "0"
+  producto_id: "67"
+  tipo: P
+cotizacion_detalles_016: 
+  descripcion: .
+  nombre: Counter
+  id: "17"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "41"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+cotizacion_detalles_005: 
+  descripcion: .
+  nombre: Counter
+  id: "6"
+  precio: "150"
+  cantidad: "1"
+  cotizacion_id: "36"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+cotizacion_detalles_017: 
+  descripcion: .
+  nombre: "Botiqu\xC3\xADn"
+  id: "18"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "41"
+  servicio_id: "0"
+  producto_id: "73"
+  tipo: P
+cotizacion_detalles_006: 
+  descripcion: .
+  nombre: Exhibidor
+  id: "7"
+  precio: "60"
+  cantidad: "1"
+  cotizacion_id: "36"
+  servicio_id: "0"
+  producto_id: "22"
+  tipo: P
+cotizacion_detalles_018: 
+  descripcion: .
+  nombre: Counter
+  id: "19"
+  precio: "100"
+  cantidad: "1"
+  cotizacion_id: "42"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+cotizacion_detalles_007: 
+  descripcion: .
+  nombre: Vitrina
+  id: "8"
+  precio: "120"
+  cantidad: "1"
+  cotizacion_id: "37"
+  servicio_id: "0"
+  producto_id: "67"
+  tipo: P
+cotizacion_detalles_019: 
+  descripcion: .
+  nombre: "Botiqu\xC3\xADn"
+  id: "20"
+  precio: "40"
+  cantidad: "1"
+  cotizacion_id: "42"
+  servicio_id: "0"
+  producto_id: "73"
+  tipo: P
+cotizacion_detalles_008: 
+  descripcion: .
+  nombre: Counter
+  id: "9"
+  precio: "150"
+  cantidad: "1"
+  cotizacion_id: "37"
+  servicio_id: "0"
+  producto_id: "15"
+  tipo: P
+cotizacion_detalles_010: 
+  descripcion: "Similar a dise\xC3\xB1o anterior adjunto"
+  nombre: Exhibidor
+  id: "11"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "38"
+  servicio_id: "0"
+  producto_id: "22"
+  tipo: P
+cotizacion_detalles_009: 
+  descripcion: .
+  nombre: Exhibidor
+  id: "10"
+  precio: "60"
+  cantidad: "1"
+  cotizacion_id: "37"
+  servicio_id: "0"
+  producto_id: "22"
+  tipo: P
+cotizacion_detalles_011: 
+  descripcion: .
+  nombre: Banderola
+  id: "12"
+  precio: "0"
+  cantidad: "1"
+  cotizacion_id: "38"
+  servicio_id: "0"
+  producto_id: "6"
+  tipo: P

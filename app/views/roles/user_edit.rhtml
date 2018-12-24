@@ -1,0 +1,87 @@
+<form method="POST">
+<h2>Usuarios</h2>
+
+<h3><%= @user.full_name %></h3>
+
+<span class="roles_user_important"><b>Nota importante:</b> El usuario debe reiniciar su sesi&oacute;n para que los cambios sean efectivos.</span><br>
+<br>
+
+<%= link_to "Regresar", :action => "user_list" %><br>
+<br>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>Roles asignados a este usuario</h3>
+
+<% if @roles.empty? -%>
+<i>Este usuario no tiene roles asignados.</i><br>
+<% else -%>
+<table border="0" cellpadding="5" cellspacing="1">
+<% @roles.each do |r| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to r.rol.name, :action => "edit", :id => r.rol.id %><br>
+<%= simple_format r.rol.description if r.rol.description %>
+</td><td valign="top">
+<%= link_to image_tag("stock_delete-16.gif", :border => 0), { :action => "user_edit", :delete => r.id }, :confirm => "Está seguro?" %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<%= @form.to_html :role %>
+</td><td valign="top">
+<input type="submit" name="add" value="Agregar este Rol"><br>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+</td><td valign="top">
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>Empresas a las que pertenece</h3>
+
+<%= @emp.to_html :empresas %>
+<br>
+
+<input type="submit" name="emp" value="Guardar estos cambios">
+
+
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>Extras</h3>
+
+<input type="checkbox" name="supervisor" value="1" onClick="submit()"<%= @user.is_vera_supervisor? ? " checked" : "" %>> Con privilegios de Supervisor<br>
+<br>
+
+<input type="checkbox" name="admin" value="1" onClick="submit()"<%= @user.is_vera_admin? ? " checked" : "" %>> Con privilegios de Administrador<br>
+<br>
+
+<input type="checkbox" name="external" value="1" onClick="submit()"<%= @user.has_external_access? ? " checked" : "" %>> Con acceso externo<br>
+<br>
+</form>
+
+</td></tr>
+</table>
+</form>
+
+
+</td></tr>
+</table>
+
+<br>
+

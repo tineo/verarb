@@ -1,0 +1,239 @@
+<%
+if @project.is_order?
+  bgcolor = "#047212"
+else
+  bgcolor = "#3B0671"
+end
+%>
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="<%= bgcolor %>">
+<tr><td valign="top">
+<span class="project_title"><%= @project.nombre_proyecto %></span><br>
+<span class="project_exec">Ejecutivo: <%= @project.executive.full_name %></span><br>
+</td><td valign="top" align="right">
+<% if @project.is_order? -%>
+<span class="main_id">
+Orden <%= @project.orden_id %><br>
+</span>
+<span class="sub_id">
+Proyecto <%= @project.id %>
+</span>
+<% else -%>
+<span class="main_id">
+Proyecto <%= @project.id %>
+</span>
+<% end -%>
+</span>
+</td></tr>
+<% if @project.anulado? -%>
+<tr><td valign="top" bgcolor="#cc0000" colspan="2" class="project_void" align="center">
+ORDEN ANULADA
+</td></tr>
+<% end -%>
+<% if @project.en_standby? -%>
+<tr><td valign="top" bgcolor="#aaaa00" colspan="2" class="project_void" align="center">
+ORDEN EN STANDBY
+</td></tr>
+<% end -%>
+<% if @project.has_related_grios? -%>
+<tr><td valign="top" bgcolor="#cccccc" colspan="2">
+Garant&iacute;as/Reclamos relacionados:
+<% @project.grios.each do |g| -%>
+<%= 
+if g.grio.con_orden_de_trabajo?
+  label = "Orden #{g.grio.orden_id}"
+else
+  label = "Proyecto #{g.grio.id}"
+end
+
+link_to label, :controller => "projects", :action => "show", :id => g.grio.uid, :type => g.grio.type
+%>&nbsp;&nbsp;
+<% end -%>
+</td></tr>
+<% end -%>
+<% if parent = @project.get_parent_project -%>
+<tr><td valign="top" bgcolor="#cccccc" colspan="2">
+<%= TIPO_PROYECTO[@project.tipo_proyecto] %> de:
+<%= link_to "Orden #{parent.orden_id}", :controller => "projects", :action => "show", :id => parent.uid, :type => parent.type
+%>&nbsp;&nbsp;
+</td></tr>
+<% end -%>
+<% if @project.has_related_order? -%>
+<tr><td valign="top" bgcolor="#dddddd" colspan="2">
+Relacionada a la Orden
+<%=
+p = @project.related_order
+
+link_to p.orden_id, :controller => "projects", :action => "show", :id => p.uid, :type => p.type
+%>&nbsp;&nbsp;
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<% if is_facturation? -%>
+<% if @project.tipo_proyecto != T_ORDEN_INTERNA && !@project.anulado? %>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Facturaci&oacute;n", :controller => "facturation", :action => "order_facturation", :id => @project.orden_id %>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Facturas", :controller => "facturation", :action => "order_facturas", :id => @project.orden_id, :type => "f" %>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Boletas", :controller => "facturation", :action => "order_facturas", :id => @project.orden_id, :type => "b" %>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Gu&iacute;as", :controller => "facturation", :action => "order_guias", :id => @project.orden_id %>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Costo Variable", :controller => "projects", :action => "variable_cost", :id => @project.orden_id %>
+<% if can_access?(:cotizations) -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Cotizaciones", :controller => "projects", :action => "cotization", :id => @project.id %>
+<% end -%>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+<% end -%>
+
+<% else -%>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr>
+<% if can_access?(:projects) || can_access?(:orders) -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Cliente/Proyecto", :action => "show", :id => @project.uid, :type => @project.type %>
+</td>
+<% end -%>
+<% if is_executive? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Fechas de Entrega", :action => "edit_fechas_de_entrega", :id => @project.id %>
+<% end -%>
+<% if (can_access?(:projects) || can_access?(:orders)) && !is_printviewer? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Detalles", :action => "show_details", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:design) && @project.area.en_diseno? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Dise&ntilde;o", :action => "design", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:design_development) && @project.area.en_desarrollo? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Dise&ntilde;o/Desarrollo", :action => "design_development", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:planning) && @project.area.en_planeamiento? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Planeamiento", :action => "planning", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:costs) && @project.area.en_costos? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Costos", :action => "costs", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if (is_operations? || is_executive? || is_operations_validator?) && @project.area.en_operaciones? && is_owner? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Operaciones", :action => "op_date", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:innovations) && @project.area.en_innovaciones? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Innovaciones", :action => "innovations", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:installations) && @project.area.en_instalaciones? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Instalaciones", :action => "installations", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if can_access?(:production) && @project.con_orden_de_trabajo? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Producci&oacute;n", :action => "production", :id => @project.orden_id %>
+<% end -%>
+<% if (is_executive? && is_owner?) || can_access?(:cotizations) -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Cotizaciones", :action => "cotization", :id => @project.id %>
+<% end -%>
+<% if is_executive? || is_operations? || is_operations_validator? -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Datos de confirmaci&oacute;n de Orden", :action => "confirmation_data_of_order", :id => @project.uid, :type => @project.type %>
+<% end -%>
+<% if @project.con_orden_de_trabajo? && (is_supervisor? || is_admin?) -%>
+</td><td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Costo Variable", :action => "variable_cost", :id => @project.orden_id %>
+<% end -%>
+
+</td></tr>
+</table>
+
+
+<% if can_access?(:executive_tasks) && is_owner? -%>
+<table border="0" cellpadding="5" cellspacing="2">
+<tr>
+
+<% if !@project.anulado? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Enviar a Area", :controller => "projects", :action => "areas", :id => @project.uid, :type => @project.type %>
+</td>
+<% end -%>
+
+<% if @project.con_orden_de_trabajo? && !@project.anulado? && !@project.autorizado_para_facturar? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%=
+  if @project.tipo_proyecto == T_NUEVO_PROYECTO
+    link_to "Marcar para Facturar", { :action => "invoice", :id => @project.orden_id }, :confirm => "Esta seguro de marcar para Facturar esta ODT?"
+  else
+    content = link_to "Marcar como Atendido", { :action => "invoice", :id => @project.orden_id }, :confirm => "Esta seguro de marcar como Atendida esta ODT?"
+  end
+%>
+</td>
+<% end -%>
+
+<% if @project.con_orden_de_trabajo? && !@project.anulado? && !@project.postvendido? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Marcar Post-Venta", { :action => "mark_post_venta", :id => @project.orden_id }, :confirm => "Esta seguro que desea marcar esta Orden como Post-Venta?" %>
+</td>
+<% end -%>
+
+<% if @project.con_orden_de_trabajo? && !@project.anulado? && !@project.has_facturas_or_boletas? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Anular Orden", :action => "void_order", :id => @project.orden_id %>
+</td>
+<% end -%>
+
+<% if @project.con_orden_de_trabajo? && @project.en_standby? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Desmarcar en Standby", { :action => "set_standby", :id => @project.orden_id, :off => 1 }, :onclick => "return confirm('Se desmarcará esta Orden en Standby');" %>
+</td>
+<% end -%>
+
+<% if @project.con_orden_de_trabajo? && !@project.en_standby? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Marcar en Standby", :action => "set_standby", :id => @project.orden_id %>
+</td>
+<% end -%>
+
+<% if @project.con_orden_de_trabajo? && !@project.anulado? && !@project.is_a_grio? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Crear Garant&iacute;a/Reclamo", :action => "create_gr", :id => @project.uid %>
+</td>
+<% end -%>
+
+<% if !@project.opportunity.deleted? && !@project.has_facturas_or_boletas? -%>
+<td valign="top" bgcolor="#eeeeee" align="center">
+<%= link_to "Eliminar Oportunidad del CRM", :controller => "projects", :action => "delete_opportunity", :id => @project.uid, :type => @project.type %>
+</td>
+<% end -%>
+
+</tr>
+</table>
+<% end -%>
+
+</td><td valign="top" align="right">
+
+<% if @project.is_order? && can_access?(:orders) -%>
+<%= link_to '<img src="/images/stock_print-16.gif" border="0">', { :controller => "projects", :action => "print_order", :id => @project.orden_id }, :target => "_blank" %>
+<%= link_to 'Imprimir Orden', { :controller => "projects", :action => "print_order", :id => @project.orden_id }, :target => "_blank" %>
+<% end -%>
+
+</td></tr>
+</table>
+<% end -%>

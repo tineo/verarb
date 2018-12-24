@@ -1,0 +1,58 @@
+<%= render :partial => "menubar_factura" %>
+
+<form method="POST">
+<h2>Selecci&oacute;n de Gu&iacute;as</h2>
+
+<%
+@ofs.each do |of|
+  p  = of.proyecto
+  guias = p.guias
+  
+  unless guias.empty?
+-%>
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td class="factura_add_guias_odt_title" colspan="5">
+<b>Orden <%= p.orden_id %></b>
+</td></tr>
+<tr bgcolor="#dddddd">
+<% ["&nbsp;", "N&uacute;mero", "Fecha de Emisi&oacute;n", "Fecha de Recepci&oacute;n del Cliente"].each do |h| -%>
+<td valign="top" align="center">
+<%= h %>
+</td>
+<% end -%>
+</tr>
+<%
+guias.each do |g|
+  color_on  = "#f7f7f7"
+  color_off = "#eeeeee"
+  
+  if g.belongs_to? @factura
+    checked = "checked"
+  else
+    checked = ""
+  end
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top" align="center" width="5%">
+<input type="checkbox" name="selection[]" value="<%= g.id %>" <%= checked %>>
+</td><td valign="top">
+<%= link_to g.formatted_number, :action => "show_guia", :id => g.id %>
+</td><td valign="top" align="center">
+<%= format_short_date(g.fecha_emision) unless g.fecha_emision.nil? %>
+</td><td valign="top" align="center">
+<%= format_short_date(g.fecha_despacho) unless g.fecha_despacho.nil? %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<%
+  end
+end
+-%>
+<br>
+
+<input type="submit" value="Asociar estas Gu&iacute;as a la <%= @document_label_singular %>">
+o <%= link_to "Cancelar", :action => "factura_guias", :fid => @factura.id, :type => @factura.tipo %>
+</form>
+
+
+

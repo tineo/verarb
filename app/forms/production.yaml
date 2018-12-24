@@ -1,0 +1,18 @@
+fecha_fecha:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+
+fecha_hora:
+  type:         text
+  function:     validate_texttime
+  max_length:   4
+
+fecha_am_pm:
+  type:         select
+  options:      hora_am_pm_options
+
+cantidad:
+  type:         text
+  function:     validate_number
+

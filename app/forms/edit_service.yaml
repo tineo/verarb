@@ -1,0 +1,28 @@
+cantidad:
+  type:         text
+  function:     validate_number
+  max_length:   5
+
+categoria:
+  type:         select
+  options:      "categoria_servicios_options"
+  unset_option: "-1"
+  value:        "-1"
+
+servicio:
+  type:         select
+  unset_option: "-1"
+  value:        "-1"
+
+descripcion:
+  type:         text
+  acts_as:      textarea
+
+observaciones:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+precio:
+  type:         text
+  function:     validate_precio

@@ -1,0 +1,35 @@
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="8" align="center" class="panel_title_orders">
+<b>ORDENES POR VALIDAR</b>
+</td></tr>
+<tr bgcolor="#dddddd">
+<% ["ID", "Propuesta", "Cliente"].each do |h| -%>
+<td align="center">
+<%= h %>
+</td>
+<% end -%>
+</tr>
+
+<% if @orders.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="5">
+<i>No hay elementos para listar</i>
+</td></tr>
+<% else -%>
+
+<% @orders.each do |o| -%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top" align="center">
+<%= o.id %>
+</td><td valign="top">
+<%= link_to o.nombre_proyecto, :action => "confirmation_data_of_order", :id => o.uid, :type => o.type %>
+</td><td valign="top">
+<%= o.account.name %>
+</td></tr>
+<%
+end #each opps
+-%>
+<%
+end #if empty opps
+-%>
+</table>
+
+

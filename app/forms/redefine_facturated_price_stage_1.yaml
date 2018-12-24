@@ -1,0 +1,20 @@
+monto_de_venta:
+  type:         text
+  function:     validate_precio
+  max_length:   10
+
+motivo:
+  type:         text
+  acts_as:      textarea
+  empty_msg:    "Debes escribir el Motivo del cambio"
+
+auth_exec:
+  type:         text
+  acts_as:      password
+  function:     validate_fact_price_redef_exec
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

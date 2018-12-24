@@ -1,0 +1,101 @@
+<h2>Resumen de Comisiones</h2>
+
+<h2><%= @user.full_name %> - Comisiones a cobrar en <%= Date::MONTHNAMES[@date.month] %> <%= @date.year %></h2>
+
+<a href="javascript:history.back();">Regresar</a><br>
+<br>
+
+<%
+if @data
+  @data.each do |data|
+-%>
+
+<h3>Comisiones generadas en <%= Date::MONTHNAMES[data[:date].month] %> <%= data[:date].year %></h3>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr><td valign="top" bgcolor="#eebbbb">
+<b>Monto vendido</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price data[:briefings].sold %>
+</td></tr>
+
+<tr><td valign="top" bgcolor="#eebbbb">
+<b>Cuota</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price data[:briefings].quota %>
+</td></tr>
+
+<tr><td valign="top" bgcolor="#eebbbb">
+<b>Diferencia</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price data[:briefings].diff %>
+</td></tr>
+
+<tr><td valign="top" bgcolor="#eebbbb">
+<b>% de Comisi&oacute;n</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+<%= data[:briefings].comission_rate %>%
+</td></tr>
+
+<tr><td valign="top" bgcolor="#eebbbb">
+<b>Comisi&oacute;n</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(data[:comission].monto) %>
+</td></tr>
+</table>
+
+<br>
+
+<h3>Detalles</h3>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb"><td valign="top" align="center">
+<b>ODT</b>
+</td><td valign="top" align="center">
+<b>Cliente</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Facturas</b>
+</td><td valign="top" align="center">
+<b>Monto</b>
+</td><td valign="top" align="center">
+<b>Fecha de Venta</b>
+</td></tr>
+
+<%
+data[:comission].detalles.each do |d|
+  p = d.project
+  
+  facturas = ""
+  
+  p.of.each do |of|
+    facturas = facturas + of.factura.formatted_factura_number + "<br>"
+  end
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= p.orden_id %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= link_to p.nombre_proyecto, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top">
+<%= facturas %>
+</td><td valign="top" align="right">
+$&nbsp;<%= format_report_price p.monto_de_venta_sin_igv %>
+</td><td valign="top" align="center">
+<%= format_short_date p.fecha_creacion_odt %>
+</td></tr>
+
+<% end -%>
+</table>
+
+<br>
+<br>
+
+<% end -%>
+
+<% else -%>
+<i>Sorry, no hay datos para este mes.</i>
+<% end -%>
+

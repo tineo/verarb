@@ -1,0 +1,22 @@
+<h2>Actualizar Cach&eacute; de Costos Variables</h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if params[:update] -%>
+Cach&eacute; actualizada.<br>
+<br>
+<%= link_to "Regresar" , :action => "index" %>
+<% else -%>
+
+Haga click para actualizar la cach&eacute; de Costos Variables. Este proceso tomar&aacute; varios minutos.<br>
+<br>
+<%= link_to "Actualizar Cach&eacute;", :action => "update_variable_costs_cache", :update => 1 %>
+
+o <%= link_to "Cancelar" , :action => "index" %>
+
+<% end -%>
+
+</td></tr>
+</table>
+

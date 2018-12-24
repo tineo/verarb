@@ -1,0 +1,9 @@
+fecha_probable:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+
+observaciones:
+  type:         text 
+  acts_as:      textarea
+

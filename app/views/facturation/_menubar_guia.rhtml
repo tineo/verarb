@@ -1,0 +1,14 @@
+<table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#7E871F">
+<tr><td valign="top">
+<% unless @guia.en_blanco? -%>
+<span class="project_title"><%= @guia.proyecto.nombre_proyecto %></span><br>
+<span class="project_exec">ODT <%= @guia.proyecto.orden_id %></span>
+<% end -%>
+</td><td valign="top" align="right">
+<span class="main_id">
+Gu&iacute;a <%= @guia.formatted_number %>
+</span>
+</td></tr>
+</table>
+<br>
+

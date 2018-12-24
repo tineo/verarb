@@ -1,0 +1,118 @@
+--- 
+cotizaciones_001: 
+  created_on: 2007-05-02 14:35:52
+  moneda: S
+  tiempo_de_entrega: qweqew
+  marked: "0"
+  incluir_gran_total: "1"
+  proyecto_id: "16"
+  codigo: P070500034
+  id: "34"
+  version: "0"
+  especificar_detalles: "0"
+  notas: qweqweqwewqe
+  forma_de_pago: qewewqqeweqw
+cotizaciones_002: 
+  created_on: 2007-05-02 14:36:16
+  moneda: S
+  tiempo_de_entrega: "132132123"
+  marked: "0"
+  incluir_gran_total: "1"
+  proyecto_id: "16"
+  codigo: P070500034-1
+  id: "35"
+  version: "1"
+  especificar_detalles: "1"
+  notas: qweqweqwewqe
+  forma_de_pago: "12313123123"
+cotizaciones_003: 
+  created_on: 2007-05-04 19:29:07
+  moneda: D
+  tiempo_de_entrega: 7 dias
+  marked: "0"
+  incluir_gran_total: "0"
+  proyecto_id: "17"
+  codigo: P070500036
+  id: "36"
+  version: "0"
+  especificar_detalles: "0"
+  notas: .
+  forma_de_pago: 20 dias
+cotizaciones_004: 
+  created_on: 2007-05-04 19:34:15
+  moneda: D
+  tiempo_de_entrega: "10"
+  marked: "0"
+  incluir_gran_total: "1"
+  proyecto_id: "17"
+  codigo: P070500036-1
+  id: "37"
+  version: "1"
+  especificar_detalles: "0"
+  notas: .
+  forma_de_pago: "30"
+cotizaciones_005: 
+  created_on: 2007-05-07 13:18:01
+  moneda: S
+  tiempo_de_entrega: contraentreg
+  marked: "0"
+  incluir_gran_total: "0"
+  proyecto_id: "15"
+  codigo: P070500038
+  id: "38"
+  version: "0"
+  especificar_detalles: "0"
+  notas: .
+  forma_de_pago: conbtado
+cotizaciones_006: 
+  created_on: 2007-05-08 13:54:27
+  moneda: D
+  tiempo_de_entrega: prueba
+  marked: "0"
+  incluir_gran_total: "1"
+  proyecto_id: "16"
+  codigo: P070500034-2
+  id: "39"
+  version: "2"
+  especificar_detalles: "0"
+  notas: eeqwqwe
+  forma_de_pago: probando
+cotizaciones_007: 
+  created_on: 2007-05-09 14:48:05
+  moneda: D
+  tiempo_de_entrega: 7 dias
+  marked: "0"
+  incluir_gran_total: "0"
+  proyecto_id: "18"
+  codigo: P070500040
+  id: "40"
+  version: "0"
+  especificar_detalles: "0"
+  notas: .
+  forma_de_pago: contado
+cotizaciones_008: 
+  created_on: 2007-05-09 14:48:53
+  moneda: D
+  tiempo_de_entrega: 10 dias
+  marked: "0"
+  incluir_gran_total: "1"
+  proyecto_id: "18"
+  codigo: P070500040-1
+  id: "41"
+  version: "1"
+  especificar_detalles: "0"
+  notas: .
+  forma_de_pago: 15 dias
+cotizaciones_009: 
+  created_on: 2007-05-09 14:49:51
+  moneda: D
+  tiempo_de_entrega: 10 dias
+  marked: "1"
+  incluir_gran_total: "1"
+  proyecto_id: "18"
+  codigo: P070500040-2
+  id: "42"
+  version: "2"
+  especificar_detalles: "0"
+  notas: .
+  forma_de_pago: 15 dias

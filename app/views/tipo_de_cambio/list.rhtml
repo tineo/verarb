@@ -1,0 +1,55 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Tipo de Cambio</h2>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<%= @fdate.to_html :month %>
+</td><td valign="top">
+<%= @fdate.to_html :year %>
+</td><td valign="top">
+<input type="submit" name="d" value="Ir a fecha">
+<% unless @month == Time.now.month && @year == Time.now.year -%>
+o <%= link_to "ir al Mes actual", :action => "list", :month => Time.now.month, :year => Time.now.year %>
+<% end -%>
+</td></tr>
+</table>
+</form>
+
+<br>
+
+<form method="POST">
+<input type="hidden" name="tcm" value="<%= @month %>">
+<input type="hidden" name="tcy" value="<%= @year %>">
+<table border="0" cellpadding="3" cellspacing="2">
+<%
+1.upto(@tcs.size) do |day|
+  t   = @tcs[day]
+  
+  yes_its_today = @month == Time.now.month && @year == Time.now.year && day == Time.now.day
+-%>
+<tr><td valign="top" bgcolor="#fff8c2">
+<%= "<b>" if yes_its_today %>
+<%= Date::MONTHNAMES[@month] %> <%= day.to_s.rjust 2, "0" %>
+<%= "</b>" if yes_its_today %>
+</td><td valign="top">
+<input type="text" name="tc[<%= day %>]" value="<%= t %>" size="10" maxlength="10"><br>
+<font class="error_msg"><%= @errors[day] %></font>
+</td></tr>
+<% end -%>
+</table><br>
+<br>
+<input type="submit" value="Guardar cambios">
+
+o <%= link_to "Cancelar", :controller => "admin", :action => "index" %><br>
+<br>
+
+</td></tr>
+</table>
+</form>
+

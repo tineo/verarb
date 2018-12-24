@@ -1,0 +1,14 @@
+<h3>Anulaci&oacute;n de <%= @document_label_singular %> <%= @factura.formatted_factura_number %></h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="40%">
+Para anular esta <%= @document_label_singular %> requiere ingresar la Clave de Anulaci&oacute;n:<br>
+<%= @form.to_html :clave, :size => 5 %>
+<br>
+<input type="submit" value="Anular">
+
+</td></tr>
+</table>
+</form>
+

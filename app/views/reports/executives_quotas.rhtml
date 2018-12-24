@@ -1,0 +1,148 @@
+<h2>Resumen de Comisiones y Bonificaciones Comercial</h2>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Fecha
+</td><td valign="top">
+<select name="month" id="month">
+<%= @form.options_for :month %>
+</select>
+<select name="year" id="year">
+<%= @form.options_for :year %>
+</select>
+
+</td></tr>
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @form.to_html :tisac %>
+Incluye TISAC
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+</td></tr>
+</table>
+</form>
+
+</td></tr>
+</table>
+
+<br>
+
+<% unless @exec_data.empty? -%>
+<br>
+
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+[["Ejecutivo", "name"], ["Vendido", "sold"], ["Meta", "quota"], ["Diferencia", "diff"], ["Bonificaci&oacute;n", "bonus"], ["Cobrado a la fecha de hoy", "billed"], ["Facturado a la fecha de hoy", "facturated"], ["Comisi&oacute;n", "comission"], ["Productividad", "productivity"], ["Total ODT", "total_odt"], ["Ped.Prom.", "ped_prom"]].each do |i|
+-%>
+<td valign="top" align="center">
+<%= render_quota_sort_field(i, "sort_exec", "dir_exec") %>
+</td>
+<% end -%>
+</tr>
+<%
+sold_total       = 0
+quota_total      = 0
+diff_total       = 0
+todt_total       = 0
+pedp_total       = 0
+billed_total     = 0
+facturated_total = 0
+
+@exec_data.each do |e|
+  sold_total       += e.sold
+  quota_total      += e.quota
+  diff_total       += e.diff
+  todt_total       += e.total_odt
+  pedp_total       += e.ped_prom
+  billed_total     += e.billed
+  facturated_total += e.facturated
+  
+  parameters   = params.to_hash.merge({ :details => 1, :executive => e.user_id })
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= e.name %>
+</td><td valign="top" align="right">
+<%= link_to format_report_price(e.sold), :action => "ventas", :executive => e.user_id, :start_month => @form.month, :start_year => @form.year, :end_month => @form.month, :end_year => @form.year, :q => 1, :empresa => [APOYO, ARQUITECTURA, CONSORCIO, DIRECCION] %>
+</td><td valign="top" align="right">
+<%= format_report_price(e.quota) %>
+</td><td valign="top" align="right">
+<%= '<font color="#ff0000">' if e.diff < 0 %>
+<%= format_report_price(e.diff) %>
+<%= '</font>' if e.diff < 0 %>
+</td><td valign="top" align="right">
+<%= format_report_price(e.bonus) %>
+</td><td valign="top" align="right">
+<% if e.billed == 0 -%>
+0
+<% else -%>
+<%= link_to format_report_price(e.billed), parameters.merge({ :what => "billed" }) %>
+<% end -%><br>
+<%
+if @cc_for_user[e.user_id]
+  d  = @cc_for_user[e.user_id]
+  dl = d.strftime("%m/%Y")
+-%>
+(Cobro: <%= link_to dl, { :action => "executives_quotas", :month => d.month, :year => d.year, :q => "Filtrar" }, :title => "Comisión completada a cobrar en #{dl}" %>)
+<% end -%>
+</td><td valign="top" align="right">
+<% if e.facturated == 0 -%>
+0
+<% else -%>
+<%= link_to format_report_price(e.facturated), parameters.merge({ :what => "facturated" }) %>
+<% end -%>
+</td><td valign="top" align="right">
+<% if e.comission == 0 -%>
+0
+<% else -%>
+<%= link_to format_report_price(e.comission), :action => "executives_comissions", :uid => e.user_id, :month => @form.month, :year => @form.year %>
+<% end -%>
+</td><td valign="top" align="right">
+<%= e.productivity %>%
+</td><td valign="top" align="right">
+<%= e.total_odt %>
+</td><td valign="top" align="right">
+<%= format_report_price(e.ped_prom) %>
+</td></tr>
+<% end -%>
+<tr><td valign="top" align="right" bgcolor="#ffffff">
+<b>Total</b>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(sold_total) %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(quota_total) %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+<%= '<font color="#ff0000">' if diff_total < 0 %>
+$&nbsp;<%= format_report_price(diff_total) %>
+<%= '</font>' if diff_total < 0 %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+&nbsp;
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(billed_total) %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(facturated_total) %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+&nbsp;
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+&nbsp;
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+<%= todt_total %>
+</td><td valign="top" align="right" bgcolor="#eeeeee">
+$&nbsp;<%= format_report_price(pedp_total) %>
+</td></tr>
+</table>
+
+<% end -%>

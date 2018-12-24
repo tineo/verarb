@@ -1,0 +1,133 @@
+--- 
+config_025: 
+  name: port
+  category: proxy
+  value: ""
+config_014: 
+  name: CheckUpdates
+  category: Update
+  value: automatic
+config_003: 
+  name: send_by_default
+  category: notify
+  value: "2"
+config_026: 
+  name: auth
+  category: proxy
+  value: "0"
+config_015: 
+  name: msg_admin
+  category: license
+  value: ""
+config_004: 
+  name: "on"
+  category: notify
+  value: "1"
+config_027: 
+  name: username
+  category: proxy
+  value: ""
+config_016: 
+  name: msg_all
+  category: license
+  value: ""
+config_005: 
+  name: smtpserver
+  category: mail
+  value: localhost
+config_028: 
+  name: password
+  category: proxy
+  value: ""
+config_017: 
+  name: last_validation
+  category: license
+  value: success
+config_006: 
+  name: smtpport
+  category: mail
+  value: "25"
+config_029: 
+  name: skypeout_on
+  category: system
+  value: "0"
+config_018: 
+  name: latest_versions
+  category: license
+  value: YToxOntpOjA7YToyOntzOjc6InZlcnNpb24iO3M6NjoiNC41LjFkIjtzOjExOiJkZXNjcmlwdGlvbiI7czoxNjM6IlRoZSBsYXRlc3QgdmVyc2lvbiBvZiBTdWdhckNSTSBpcyA0LjUuMWQuICBQbGVhc2UgdmlzaXQgPGEgaHJlZj0iaHR0cDovL3N1cHBvcnQuc3VnYXJjcm0uY29tIiB0YXJnZXQ9Il9uZXciPnN1cHBvcnQuc3VnYXJjcm0uY29tPC9hPiB0byBhY3F1aXJlIHRoZSBsYXRlc3QgdmVyc2lvbi4iO319
+config_007: 
+  name: sendtype
+  category: mail
+  value: sendmail
+config_030: 
+  name: mailmerge_on
+  category: system
+  value: "0"
+config_019: 
+  name: last_check_date
+  category: Update
+  value: "1179411001"
+config_008: 
+  name: smtpuser
+  category: mail
+  value: ""
+config_031: 
+  name: campaign_emails_per_run
+  category: massemailer
+  value: "500"
+config_020: 
+  name: last_validation_fail
+  category: license
+  value: 2007-03-12 22:23:01
+config_009: 
+  name: smtppass
+  category: mail
+  value: ""
+config_032: 
+  name: tracking_entities_location_type
+  category: massemailer
+  value: "1"
+config_021: 
+  name: vk_end_date
+  category: license
+  value: 2006-07-05 22:09:02
+config_010: 
+  name: smtpauth_req
+  category: mail
+  value: "0"
+config_033: 
+  name: disable_useredit
+  category: MySettings
+  value: "no"
+config_022: 
+  name: validation_key
+  category: license
+  value: YToxOntzOjg6InZlcmlmaWVkIjtiOjA7fQ==
+config_011: 
+  name: sugar_version
+  category: info
+  value: 4.2.0
+config_023: 
+  name: "on"
+  category: proxy
+  value: "0"
+config_012: 
+  name: tab
+  category: MySettings
+  value: YToxNjp7aTowO3M6NDoiSG9tZSI7aToxO3M6NzoiaUZyYW1lcyI7aToyO3M6ODoiQ2FsZW5kYXIiO2k6MztzOjEwOiJBY3Rpdml0aWVzIjtpOjQ7czo4OiJDb250YWN0cyI7aTo1O3M6ODoiQWNjb3VudHMiO2k6NjtzOjU6IkxlYWRzIjtpOjc7czoxMzoiT3Bwb3J0dW5pdGllcyI7aTo4O3M6NjoiRW1haWxzIjtpOjk7czo5OiJDYW1wYWlnbnMiO2k6MTA7czo3OiJQcm9qZWN0IjtpOjExO3M6NToiRmVlZHMiO2k6MTI7czo1OiJDYXNlcyI7aToxMztzOjk6IkRhc2hib2FyZCI7aToxNDtzOjQ6IkJ1Z3MiO2k6MTU7czo5OiJEb2N1bWVudHMiO30=
+config_001: 
+  name: fromaddress
+  category: notify
+  value: CRM@apoyopublicitario.com
+config_024: 
+  name: host
+  category: proxy
+  value: ""
+config_013: 
+  name: "on"
+  category: portal
+  value: "1"
+config_002: 
+  name: fromname
+  category: notify
+  value: SugarCRM

@@ -1,0 +1,156 @@
+<%= javascript_include_tag "relay" %>
+
+<h2>Reporte de Consumo de ODT</h2>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+
+<tr><td valign="top">
+Empresa Vendedora
+</td><td valign="top">
+<%= @form.to_html :empresa_vendedora %>
+</td></tr>
+
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= @form.to_html :client %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Creaci&oacute;n de ODT
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_creation_month, :start_creation_year, :end_creation_month, :end_creation_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Recepci&oacute;n del Cliente
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_client_month, :start_client_year, :end_client_month, :end_client_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Facturaci&oacute;n
+</td><td valign="top">
+<%= @form.to_html :estado_facturacion %>
+</td></tr>
+
+<tr><td valign="top">
+Cobranza
+</td><td valign="top">
+<%= @form.to_html :estado_cobranza %>
+</td></tr>
+
+<tr><td valign="top">
+Tipo de Proyecto
+</td><td valign="top">
+<%= @form.to_html :tipo_proyecto %>
+</td></tr>
+
+<tr><td valign="top">
+Gu&iacute;a de Remisi&oacute;n
+</td><td valign="top">
+<%= @form.to_html :con_guia %> ODTs con Gu&iacute;a<br>
+<%= @form.to_html :sin_guia %> ODTs sin Gu&iacute;a
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Mostrar">
+</td></tr>
+
+</table>
+<br>
+
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+
+<tr bgcolor="#ffffff"><td valign="top" colspan="2">
+</td><td valign="top" bgcolor="#eebbbb" align="center" colspan="6">
+Monto Cargado
+</td><td valign="top" colspan="2">
+</td></tr>
+
+<tr bgcolor="#eebbbb">
+<%
+["ODT", "Cliente", "Insumos", "%", "Servicios", "%", "Operativos", "%", "Total Ant.", "Precio Vta.", "Diferencia"].each_with_index do |f, i|
+-%>
+<td valign="top" align="center">
+<%= f %>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="10">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else
+t_insumos    = 0.00
+t_servicios  = 0.00
+t_compras    = 0.00
+t_total_ant  = 0.00
+t_monto_odt  = 0.00
+t_diferencia = 0.00
+
+@data.each do |d|
+  total_ant    = d.insumos + d.servicios + d.compras
+  diferencia   = d.monto_odt - total_ant
+  
+  t_insumos    += d.insumos
+  t_servicios  += d.servicios
+  t_compras    += d.compras
+  t_total_ant  += total_ant
+  t_monto_odt  += d.monto_odt
+  t_diferencia += diferencia
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" align="center">
+<%= link_to d.orden_id, :controller => "projects", :action => "variable_cost", :id => d.orden_id %>
+</td><td valign="top">
+<%= d.client %>
+</td><td valign="top" align="right">
+<%= format_price(d.insumos) %>
+</td><td valign="top" align="right">
+<%= d.pinsumos %>%
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= format_price(d.servicios) %>
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= d.pservicios %>%
+</td><td valign="top" align="right">
+<%= format_price(d.compras) %>
+</td><td valign="top" align="right">
+<%= d.pcompras %>%
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= format_price(total_ant) %>
+</td><td valign="top" align="right">
+<%= format_price(d.monto_odt) %>
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= format_price(diferencia) %>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" bgcolor="#eebbbb" colspan="2" align="right">
+TOTAL
+</td><td valign="top" align="right">
+<%= format_price(t_insumos) %>
+</td><td valign="top" align="right">
+<%= ((t_insumos * 100) / t_monto_odt).round %>%
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= format_price(t_servicios) %>
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= ((t_servicios * 100) / t_monto_odt).round %>%
+</td><td valign="top" align="right">
+<%= format_price(t_compras) %>
+</td><td valign="top" align="right">
+<%= ((t_compras * 100) / t_monto_odt).round %>%
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= format_price(t_total_ant) %>
+</td><td valign="top" align="right">
+<%= format_price(t_monto_odt) %>
+</td><td valign="top" align="right" bgcolor="#fcfcfc">
+<%= format_price(t_diferencia) %>
+</td></tr>
+</table>
+
+<% end -%>
+

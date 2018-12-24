@@ -1,0 +1,19 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "cotization" %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Cotizaci&oacute;n enviada</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="2">
+<tr bgcolor="#fff8c2"><td valign="top">
+
+La cotizaci&oacute;n fue enviada satisfactoriamente.<br>
+<br>
+<%= link_to "Regresar", :controller => "projects", :action => "cotization" %>
+
+</td></tr>
+</table>

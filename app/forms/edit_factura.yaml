@@ -1,0 +1,33 @@
+numero_orden_de_compra:
+  type:         text
+  max_length:   128
+
+fecha_emision:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    true
+
+quien_lo_dejo:
+  type:         text
+  mandatory:    false
+
+moneda:
+  type:         radio
+
+tipo_de_cambio:
+  type:         text
+  function:     validate_precio
+  max_length:   10
+
+canje:
+  type:         checkbox
+
+comentarios:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+
+completa:
+  type:         checkbox
+  checked:      true

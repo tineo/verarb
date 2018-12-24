@@ -1,0 +1,9 @@
+password:
+  type:         text
+  acts_as:      password
+  function:     validate_delete_opportunity_password
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

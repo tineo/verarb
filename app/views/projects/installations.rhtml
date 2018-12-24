@@ -1,0 +1,129 @@
+<%= render :partial => "menubar" %>
+
+<h3>Instalaciones</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Fecha de Visita al Cliente (Toma de datos previos)</b><br>
+<% if is_installations? && @project.area.estado_instalaciones == E_INSTALACIONES_EN_PROCESO -%>
+<% if @date_error -%>
+<span class="error_msg">La fecha de fin no puede ser menor a la fecha de inicio</span><br>
+<% end -%>
+<br>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+<b>Desde</b><br>
+<%= calendar_field_with_time(@form, :visita_cliente_inicio) %>
+
+</td><td valign="top">
+<b>Hasta</b><br>
+<%= calendar_field_with_time(@form, :visita_cliente_fin) %>
+
+</td></tr>
+</table>
+<br>
+
+<input type="submit" name="save" value="Guardar">
+
+<% else -%>
+
+<% if @project.instalaciones_fecha_visita_inicio.nil? || @project.instalaciones_fecha_visita_fin.nil? -%>
+<i>No definida a&uacute;n por Instalaciones.</i>
+<% else -%>
+De <%= format_date(@project.instalaciones_fecha_visita_inicio) %>
+a <%= format_date(@project.instalaciones_fecha_visita_fin) %><br>
+
+<% if is_executive? && @project.area.estado_instalaciones != E_INSTALACIONES_TERMINADO -%>
+<br>
+<input type="submit" name="finished" value="Visita conclu&iacute;da">
+<% end -%>
+
+<% end -%>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+<br>
+
+<%= start_form_tag({:action => 'installations', :id => @project.uid }, :multipart => true) %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="10" cellspacing="0">
+<tr><td valign="top" width="50%">
+<b>Lista de ficheros adjuntos</b><br>
+<br>
+
+<% if @files.empty? -%>
+<i>No hay ficheros adjuntos</i><br>
+<br>
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<% @files.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :action => "get_installations_file", :id => @project.uid, :fid => f.filename, :type => @project.type %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<% end -%>
+
+</td><td valign="top" width="50%">
+<b>Anexar nuevo fichero</b><br>
+<br>
+<%= file_field_tag "file" %>
+<input type="submit" name="b" value="Transferir"><br>
+<br>
+
+</td></tr>
+</table>
+<%= end_form_tag %>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Observaciones</h3>
+
+<%= form_tag :action=> "post_message", :id => @project.uid, :aid => A_INSTALACIONES, :type => @project.type %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form2.to_html :mensaje, :cols => 60 %>
+<br>
+<%= submit_tag "Publicar" %><br>
+<br>
+<br>
+
+<b>Observaciones</b> (M&aacute;s recientes primero)<br>
+<br>
+
+<% @messages.each do |m| -%>
+<span class="weak">
+<%= m.fecha.strftime "%d/%m/%Y %H:%M" %><br>
+<%= m.user.user_name %> escribi&oacute;:
+</span>
+<%= simple_format(h(m.mensaje)) %><br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+</form>
+
+<%=
+if is_installations?
+  calendar_javascripts([
+    "visita_cliente_inicio_fecha",
+    "visita_cliente_fin_fecha",
+  ])
+end
+%>
+

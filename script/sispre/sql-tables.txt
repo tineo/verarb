@@ -1,0 +1,340 @@
+DROP TABLE IF EXISTS mt_Insumos_Familias;
+CREATE TABLE mt_Insumos_Familias (
+  Cod_Fam varchar(10),
+  Dsc_Fam varchar(100),
+  Cod_Fam_Sup varchar(10),
+  Nivel varchar(100),
+  Partida varchar(18)
+);
+
+DROP TABLE IF EXISTS mt_Unidades_Medida;
+CREATE TABLE mt_Unidades_Medida (
+  Cod_Unid varchar(10),
+  Dsc_Larg_Unid varchar(40),
+  Dsc_Cor_Unid varchar(6)
+);
+
+DROP TABLE IF EXISTS mt_Insumos_Items;
+CREATE TABLE mt_Insumos_Items (
+  Cod_Fam                 varchar(10), 
+  Cod_Ins                 varchar(10), 
+  Cod_Unid                varchar(10), 
+  Cod_Area                varchar(10), 
+  Dsc_Ins                 varchar(200), 
+  St_Min                  double, 
+  St_Max                  double, 
+  St_Actual               double, 
+  St_Inicial              double, 
+  St_Disponible           double, 
+  st_Reposicion           double, 
+  Tipo_Ins                varchar(2), 
+  Anula_Ins               varchar(2), 
+  Tipo_Compra             varchar(2),
+  Fecha_Salida            datetime,
+  Activo                  char,
+  Ratio                   varchar(200)
+);
+
+DROP TABLE IF EXISTS mt_Insumos_Proveedores;
+CREATE TABLE mt_Insumos_Proveedores (
+        Cod_Prov     varchar(10), 
+        Cod_Ins      varchar(10), 
+        Precio_Ins   double, 
+        Moneda_Ins   varchar(2),
+        Fecha_Compra datetime
+);
+
+DROP TABLE IF EXISTS pt_Resumen_Consumos_OT;
+CREATE TABLE pt_Resumen_Consumos_OT (
+        Cod_OT                  bigint(11), 
+        Cod_Ins                 varchar(10), 
+        Requerido_OT            double, 
+        Requerido_Posterior     double, 
+        Compras                 double, 
+        Vinculados              double, 
+        Salidas                 double, 
+        Reingresos              double, 
+        Desvinculados           double
+);
+
+DROP TABLE IF EXISTS pt_Requerimientos;
+CREATE TABLE pt_Requerimientos (
+        cod_requerida           varchar(10), 
+        cod_ot                  bigint(11), 
+        cod_ins                 varchar(10), 
+        fecha_requerida         DateTime , 
+        cant_requerida          double, 
+        cant_disponible         double, 
+        cant_compra             double, 
+        asegura_requerida       varchar(2), 
+        cod_lote                varchar(10), 
+        cod_prov                varchar(10), 
+        moneda_prov             varchar(2), 
+        precio_prov             double, 
+        fecha_lote              DateTime, 
+        vinculado_compra        varchar(2), 
+        cod_compra              varchar(10), 
+        forma_pago              varchar(400), 
+        tipo_cambio             double, 
+        percepcion              double, 
+        cod_cheque              varchar(10), 
+        cant_ingresada_NI       double, 
+        Anula_Requerida         varchar(100), 
+        Origen_Requerida        varchar(2), 
+        Fecha_Lim_Almacen       DateTime, 
+        Fecha_Envio_OC          DateTime, 
+        fecha_entrega           DateTime, 
+        lugar_entrega           varchar(100), 
+        atencion_entrega        varchar(100), 
+        alerta_a_OC             varchar(2), 
+        alerta_a_req            varchar(2), 
+        Cod_Motivo              varchar(10), 
+        Cod_Usu                 varchar(10), 
+        Comentario              varchar(510), 
+        Destino                 varchar(2)
+);
+
+DROP TABLE IF EXISTS mt_Clientes;
+CREATE TABLE mt_Clientes (
+        Cod_Cli                 varchar (10), 
+        Tipo_Cli                        varchar (4), 
+        Dsc_Fis_Cli                     varchar (100), 
+        Dsc_Com_Cli                     varchar (100), 
+        Dir_Cli                 varchar (200), 
+        Ruc_Cli                 varchar (30), 
+        Fono_Cli                        varchar (60), 
+        Fax_Cli                 varchar (40), 
+        Web_Cli                 varchar (200), 
+        Mail_Cli                        varchar (100), 
+        Contacto_Cli                    varchar (100), 
+        Forma_Pago_Cli                  varchar (100), 
+        Girar_Cheque_Cli                        varchar (100), 
+        Anula_Cli                       varchar (2)
+);
+
+DROP TABLE IF EXISTS mt_Tipos_Cambio;
+CREATE TABLE mt_Tipos_Cambio (
+        Fecha_Tip                       DateTime, 
+        Compra_Tip                      double, 
+        Venta_Tip                       double
+);
+
+DROP TABLE IF EXISTS pt_Salidas_Detalle;
+CREATE TABLE pt_Salidas_Detalle (
+        Cod_Sal                 varchar (10), 
+        Cod_Item                        varchar (10), 
+        Cod_Ins                 varchar (10), 
+        Cod_Herr                        varchar (10), 
+        Cod_OT                  varchar (20), 
+        Cant_Sal  double, 
+        Asegura_Sal                     varchar (2), 
+        Comenta_Sal                     text, 
+        Precio_Ins                      double, 
+        Tipo_Cambio                     double, 
+        Fecha_Doc                       DateTime, 
+        Num_Doc                 varchar (20), 
+        Moneda_Doc                      varchar (2), 
+        Monto_Doc                       double,
+        Cod_Area                        varchar(255)
+);
+
+DROP TABLE IF EXISTS pt_Salidas_Cabecera;
+CREATE TABLE pt_Salidas_Cabecera (
+        Cod_Sal                 varchar(10), 
+        Cod_Trab                        varchar(10), 
+        Cod_Usu                 varchar(10), 
+        Fecha_Sal                       DateTime, 
+        Hora_Inicio_Pedido                      DateTime, 
+        Hora_Final_Pedido                       DateTime, 
+        Asegura_Sal                     varchar(2), 
+        Tiempo_Sal                      DateTime, 
+        Comentario                      varchar(510), 
+        Requerimiento                   varchar(20)
+);
+
+DROP TABLE IF EXISTS pt_Servicios_Items;
+CREATE TABLE pt_Servicios_Items (
+        Cod_Servicio            varchar(10), 
+        Item                    varchar(10), 
+        Cod_OT                  varchar(10), 
+        Descripcion             text, 
+        Cantidad                double, 
+        Precio                  double, 
+        Moneda                  varchar(2), 
+        Cod_CtaServicio         varchar(10), 
+        Origen                  varchar(2), 
+        Cod_OT_Servicio         varchar(10), 
+        Fecha_Almacen           DateTime,
+        Cod_Unid                varchar(10),
+        Fecha_Planta            DateTime,
+        Cod_Area                varchar(255)
+);
+
+DROP TABLE IF EXISTS pt_Servicios_Cabecera;
+CREATE TABLE pt_Servicios_Cabecera (
+        Cod_Servicio                    varchar(10), 
+        Cod_Prov                        varchar(10), 
+        Fecha_Registro                  DateTime, 
+        Fecha_Servicio                  DateTime, 
+        Fecha_Entrega                   DateTime, 
+        Lugar_Entrega                   varchar(100), 
+        Atencion_Servicio               varchar(60), 
+        Cod_Trab                        varchar(10), 
+        Tipo_Cambio                     double, 
+        Asegura_Servicio                varchar(2), 
+        Anula_Servicio                  varchar(2), 
+        Tipo_Servicio                   varchar(20), 
+        Dsc_Servicio                    varchar(40), 
+        Forma_pago                      varchar(100), 
+        Recepcion_Servicio              varchar(2), 
+        Fecha_Recepcion                 DateTime, 
+        Fecha_Doc_Prov                  DateTime, 
+        Num_Doc_Prov                    varchar(22), 
+        Cod_TipoDoc                     varchar(6),
+        RUC                             varchar(22),
+        Detraccion                      varchar(2)
+);
+
+DROP TABLE IF EXISTS pt_OT_Cabecera;
+CREATE TABLE pt_OT_Cabecera (
+        Cod_Pres                        varchar(10), 
+        Cod_OT                  varchar(10), 
+        Cod_Cli                 varchar(10), 
+        Cod_Tip                 varchar(10), 
+        Fecha_Pres                      DateTime, 
+        Fecha_Final                     DateTime, 
+        Precio_Pres                     double, 
+        Moneda_Pres                     varchar(2), 
+        Descripcion_Pres                        varchar(100), 
+        Comentario                      text, 
+        Asegura_OT                      varchar(2), 
+        Cerrar_OT_inicial                       varchar(2), 
+        Cerrar_OT_Final                 varchar(2), 
+        Fecha_Factura                   DateTime, 
+        RUC                     varchar(22)
+);
+
+DROP TABLE IF EXISTS pt_Compras_Libres_Cabecera;
+CREATE TABLE pt_Compras_Libres_Cabecera (
+        Cod_Compra                      varchar(10), 
+        Cod_Cli            varchar(10), 
+        Cod_TipoDoc                     varchar(6), 
+        Fecha_Ingreso                   DateTime, 
+        Fecha_Doc                       DateTime, 
+        Num_Doc                 varchar(40), 
+        Moneda                  varchar(2), 
+        Tipo_Cambio                     float, 
+        Valor_Venta                     float, 
+        IGV                     float, 
+        Total                   float, 
+        Glosa                   varchar(500), 
+        Cod_Area                        varchar(10), 
+        Fecha_Liquida                   DateTime, 
+        Num_Liquida                     varchar(20), 
+        RUC                     varchar(22), 
+        Cod_Caja                        varchar(10), 
+        Cod_Trab                        varchar(10)
+);
+
+
+DROP TABLE IF EXISTS pt_Compras_Libres_Detalle;
+CREATE TABLE pt_Compras_Libres_Detalle (
+        Cod_Compra                      varchar(10), 
+        Item_Deta                       varchar(10), 
+        Cod_Cuenta                      varchar(18), 
+        Dsc_Cuenta                      varchar(200), 
+        Sub_Total                       float, 
+        IGV                     float, 
+        Total                   float, 
+        Afecto                  varchar(2), 
+        Cod_OT                  varchar(10), 
+        Tipo_Compra                     varchar(2)
+);
+
+DROP TABLE IF EXISTS mt_Areas;
+CREATE TABLE mt_Areas
+ (
+        Cod_Area                        varchar(10), 
+        Dsc_Area                        varchar(60)
+);
+
+DROP TABLE IF EXISTS mt_Cuentas_Servicios;
+CREATE TABLE mt_Cuentas_Servicios
+ (
+        Cod_CtaServicio                 varchar (10), 
+        Dsc_CtaServicio                 varchar (60), 
+        Cuenta_CtaServicio                      varchar (20), 
+        RUC                     varchar (22)
+);
+
+DROP TABLE IF EXISTS mt_Tipos_Documentos;
+CREATE TABLE mt_Tipos_Documentos
+ (
+        Cod_TipoDoc                     varchar(6), 
+        Dsc_TipoDoc                     varchar(100), 
+        Afecto                  varchar(2)
+);
+
+DROP TABLE IF EXISTS mt_Trabajadores;
+CREATE TABLE mt_Trabajadores
+ (
+        Cod_Trab                        varchar(10), 
+        Nom_Trab                        varchar(100)
+);
+
+DROP TABLE IF EXISTS mt_Usuarios_Cajas;
+CREATE TABLE mt_Usuarios_Cajas
+ (
+        Cod_Caja                        varchar(10), 
+        Cod_Usu                 varchar(10), 
+        Dsc_Caja                        varchar(60), 
+        Cuenta                  varchar(18)
+);
+
+DROP TABLE IF EXISTS pt_Compras_Cabecera;
+CREATE TABLE pt_Compras_Cabecera
+ (
+        Cod_Compra                      varchar(10), 
+        Cod_Cli                 varchar(10), 
+        Cod_TipoDoc                     varchar(6), 
+        Fecha_Ingreso                   DateTime, 
+        Fecha_Doc                       DateTime, 
+        Num_Doc                 varchar(40), 
+        Tipo_Cambio                     float, 
+        Valor_Venta                     float, 
+        Exoneracion                     float, 
+        IGV                     float, 
+        Total_Monto                     float, 
+        Asegura_Compra                  varchar(2), 
+        Tipo_Compra                     varchar(20), 
+        Num_Doc_Origen                  varchar(40), 
+        Devolucion_NC                   varchar(2), 
+        Cod_Cheque                      varchar(10), 
+        Cod_Cheque2                     varchar(10), 
+        Cod_Cheque3                     varchar(10), 
+        Cod_Cheque4                     varchar(10), 
+        SPOT                    varchar(30), 
+        Dias_Pago                       varchar(6), 
+        Origen                  varchar(2), 
+        Fecha_Liquida                   DateTime, 
+        Num_Liquida                     varchar(20)
+);
+
+DROP TABLE IF EXISTS pt_Compras_Detalle;
+CREATE TABLE pt_Compras_Detalle
+ (
+        Cod_Compra                      varchar(10), 
+        Item_Deta                       varchar(10), 
+        Cod_Ins                 varchar(10), 
+        Cod_OT                  varchar(10), 
+        Cant_Deta                       float, 
+        Precio_Deta                     float, 
+        Afecta_Disponible                       varchar(2), 
+        Responsable                     varchar(60), 
+        cod_lote                        varchar(10), 
+        ni_item_deta                    varchar(20), 
+        Insumo_Libre                    varchar(2), 
+        cod_requerida                   varchar(14)
+);
+
+

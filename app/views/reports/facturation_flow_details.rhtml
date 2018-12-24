@@ -1,0 +1,76 @@
+<h2>Flujo de Cobranza - Detalle</h2>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<b>Fecha</b>
+</td><td valign="top">
+<%= format_short_date(@date) %>
+</td></tr>
+<tr><td valign="top">
+<b>Cliente</b>
+</td><td valign="top">
+<%= @client_name %>
+</td></tr>
+<tr><td valign="top">
+<b>Empresa</b>
+</td><td valign="top">
+<%= @empresa_name %>
+</td></tr>
+</table>
+
+<br>
+
+<%= link_to "Regresar", :action => "facturation_flow", :client => @client, :empresa_vendedora => @empresa_vendedora %><br>
+<br>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#eebbbb"><td valign="top" align="center">
+<b>ODT</b>
+</td><td valign="top" align="center">
+<b>Nombre</b>
+</td><td valign="top" align="center">
+<b>Cliente</b>
+</td><td valign="top" align="center">
+<b>Monto Soles</b>
+</td><td valign="top" align="center">
+<b>Monto D&oacute;lares</b>
+</td></tr>
+
+<% if @list.empty? -%>
+<tr><td valign="top" colspan="5" bgcolor="#eeeeee">
+<i>No hay resultados</i>
+</td></tr>
+<%
+else
+  total_soles   = 0.00
+  total_dollars = 0.00
+  
+  @list.each do |p|
+    total_soles   += p.monto_de_venta_as_soles
+    total_dollars += p.monto_de_venta_as_dollars
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= p.orden_id %>
+</td><td valign="top">
+<%= link_to p.nombre_proyecto, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top" align="right">
+<%= format_price(p.monto_de_venta_as_soles) %>
+</td><td valign="top" align="right">
+<%= format_price(p.monto_de_venta_as_dollars) %>
+</td></tr>
+<%
+  end
+end
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" bgcolor="#eebbbb" colspan="3" align="right">
+<b>TOTAL</b>
+</td><td valign="top" align="right">
+<%= format_price(total_soles) %>
+</td><td valign="top" align="right">
+<%= format_price(total_dollars) %>
+</td></tr>
+</table>
+
+

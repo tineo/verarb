@@ -1,0 +1,21 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<h2><%= @op.name %></h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+No se puede crear Proyecto. El cliente <%= @client.name %> <b>no tiene RUC.</b><br>
+<br>
+1. <a href="<%= crm_url %>index.php?module=Accounts&action=DetailView&record=<%= @client.account_id %>" target="_Blank">Edite aqu&iacute; los datos del Cliente en el CRM</a> y regrese a esta ventana<br>
+<br>
+2. <%= link_to "Haga click aqu&iacute; para reintentar crear el Proyecto", :action => "new", :id => @op.id %><br>
+<br>
+<br>
+O <%= link_to "cancelar", :action => "panel" %> y regresar al Panel.
+</td></tr>
+</table>

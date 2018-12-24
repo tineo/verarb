@@ -1,0 +1,55 @@
+<%= render :partial => "facturation/menubar_factura" -%>
+
+<h3>Crear Nota de Cr&eacute;dito</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3><%= @document_label_singular %> <%= @factura.formatted_factura_number %></h3>
+<b>Raz&oacute;n Social:</b> <%= @factura.razon_social %><br>
+<b>Empresa vendedora:</b> <%= EMPRESA_VENDEDORA[@factura.empresa] %><br>
+<br>
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>N&uacute;mero de Nota de Cr&eacute;dito</h3>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<li> Por orden: <b><%= format_new_note_number(@curr, @factura) %></b>
+</td><td valign="top">
+<input type="submit" name="use_current" value="Usar este N&uacute;mero">
+<input type="submit" name="reserve" value="o reservarlo para despu&eacute;s">
+</td></tr>
+</table>
+
+<br>
+
+<% unless @numbers.empty? -%>
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<li> N&uacute;meros reservados
+</td><td valign="top">
+<select name="nid">
+<% @numbers.each do |n| -%>
+<option value="<%= n %>"><%= format_new_note_number(n, @factura) %></option>
+<% end -%>
+</select>
+<input type="submit" name="use_from_list" value="Usar">
+</td></tr>
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+<br>
+
+</form>
+
+
+

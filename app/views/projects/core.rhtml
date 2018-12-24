@@ -1,0 +1,210 @@
+<%
+@IN_PANEL = true
+
+@tab = controller.current_tab
+
+if @tab == "projects"
+  @title      = "PROYECTOS EN PROCESO"
+  @core_class = "panel_title_projects_progress"
+else
+  @title      = "ORDENES EN PROCESO"
+  @core_class = "panel_title_orders_progress"
+end
+-%>
+
+<a name="filter"></a>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="70%">
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= autocomplete_account_field(@form.client) %>
+</td></tr>
+<tr><td valign="top">
+Estado
+</td><td valign="top">
+<%= @form.to_html :status %>
+</td></tr>
+<% if @tab == "projects" && is_supervisor? -%>
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+<% end -%>
+<% if is_chief_designer? -%>
+<tr><td valign="top">
+Dise&ntilde;ador
+</td><td valign="top">
+<%= @form.to_html :designer %>
+</td></tr>
+<% end -%>
+<% if @tab == "orders" -%>
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+<% end -%>
+<tr><td valign="top">
+Creado
+</td><td valign="top">
+<%= render_form_range_date(@form, :creado_start_month, :creado_start_year, :creado_end_month, :creado_end_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Entrega al Cliente
+</td><td valign="top">
+<%= render_form_range_date(@form, :entrega_start_month, :entrega_start_year, :entrega_end_month, :entrega_end_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Con Fecha de Entrega al Cliente
+</td><td valign="top">
+<%= @form.to_html :con_fecha_de_entrega %>
+</td></tr>
+
+<% if @tab == "projects" -%>
+<tr><td valign="top">
+Con ODT
+</td><td valign="top">
+<%= @form.to_html :con_orden_de_trabajo %>
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+Anulado
+</td><td valign="top">
+<%= @form.to_html :anulado %>
+</td></tr>
+
+<% if @tab == "orders" -%>
+<% unless is_facturation? -%>
+<tr><td valign="top">
+Postvendido
+</td><td valign="top">
+<%= @form.to_html :postvendido %>
+</td></tr>
+
+<tr><td valign="top">
+Autorizado para Facturar
+</td><td valign="top">
+<%= @form.to_html :autorizado_para_facturar %>
+</td></tr>
+<% end -%>
+
+<% if is_facturation? -%>
+<tr><td valign="top">
+Estado Facturaci&oacute;n
+</td><td valign="top">
+<%= @form.to_html :status_facturacion %>
+</td></tr>
+
+<tr><td valign="top">
+Estado Cobranza
+</td><td valign="top">
+<%= @form.to_html :status_cobranza %>
+</td></tr>
+
+<tr><td valign="top">
+Emisi&oacute;n Factura
+</td><td valign="top">
+<%= render_form_range_date(@form, :factura_start_month, :factura_start_year, :factura_end_month, :factura_end_year) %>
+</td></tr>
+
+<% end -%>
+<% end -%>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+<% unless filter_empty?(@tab) -%>
+o <%= link_to "deshacer filtro", :controller => "projects", :action => @tab, :reset_filters => 1 %>
+<% end -%>
+</td></tr>
+</table>
+</form>
+
+</td><td valign="top" align="right">
+
+</td></tr>
+</table>
+
+<br>
+
+<% if @tab == "projects" && is_executive? && !@opportunities.empty? -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="<%= PanelHeader.length(@panel_headers) %>" align="center" class="panel_title_opportunities">
+<b>PROYECTOS POR CREAR</b>
+</td></tr>
+<tr bgcolor="#dddddd"><td valign="top" align="center" width="10%">
+<b>Oportunidad creada</b>
+</td><td valign="top" align="center" width="40%">
+<b>Nombre</b>
+</td><td valign="top" align="center" width="20%">
+<b>Ejecutivo</b>
+</td><td valign="top" align="center" width="30%">
+<b>Cliente</b>
+</td></tr>
+<% @opportunities.each do |o| -%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top" align="center">
+<%= o.date_entered.strftime "%d/%m/%Y" %>
+</td><td valign="top">
+<%= link_to o.name, :action => "new", :id => o.id %>
+</td><td valign="top">
+<%= o.executive.full_name unless o.assigned_user_id.nil? %>
+</td><td valign="top">
+<% if o.accounts[0] -%>
+<%= o.accounts[0].name %>
+<% end -%>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<br>
+<% end -%>
+
+<% if @tab == "orders" && is_executive? and !@projects_to_be_promoted.empty? -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td valign="top" colspan="<%= PanelHeader.length @panel_headers %>" align="center" class="panel_title_orders">
+<b>ORDENES POR CREAR</b>
+</td></tr>
+<tr bgcolor="#dddddd"><td valign="top" align="center" width="20%">
+<b>Proyecto cerrado</b>
+</td><td valign="top" align="center" width="40%">
+<b>Propuesta</b>
+</td><td valign="top" align="center" width="20%">
+<b>Cliente</b>
+</td><td valign="top" align="center" width="20%">
+<b>Estado</b>
+</td></tr>
+<% @projects_to_be_promoted.each do |p| -%>
+<tr bgcolor="#eeeeee" onMouseOver="this.style.background='#f7f7f7'" onMouseOut="this.style.background='#eeeeee'"><td valign="top" align="center">
+<%= format_short_date(p.opportunity.date_closed) %>
+</td><td valign="top">
+<%= link_to p.opportunity.name, :controller => "projects", :action => "promote", :id => p.id %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= p.to_be_created_status %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<br>
+<% end -%>
+
+<% @title = "ORDENES EN PROCESO1" -%>
+
+<%= render_pages_list("set_panel_page") unless @projects.empty? || @show_all %>
+
+<%= render :partial => "core_table" %>
+
+<br>
+
+<%= render_pages_list("set_panel_page") unless @projects.empty? || @show_all %>
+

@@ -1,0 +1,16 @@
+#nombre:
+#  type:         text
+#  max_length:   255
+
+descripcion:
+  type:         text
+  acts_as:      textarea
+
+cantidad:
+  type:         text
+  function:     validate_number
+  max_length:   5
+
+precio:
+  type:         text
+  function:     validate_precio

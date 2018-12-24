@@ -1,0 +1,19 @@
+<%= render :partial => "menubar" %>
+
+<h2>Crear ODT - Datos de Confirmaci&oacute;n</h2>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<span class="error_msg">La cuenta "<%= @project.account.name %>" est&aacute; bloqueada por falta de pago.</span><br>
+<br>
+No se puede crear una ODT para esta cuenta hasta su regularizaci&oacute;n.
+
+<% if is_admin? -%>
+(<%= link_to "Desbloquear Cuenta", :controller => "accounts", :action => "related_edit", :id => @project.account.id %>)
+<% end -%>
+<br>
+<br>
+
+</td></tr>
+</table>
+

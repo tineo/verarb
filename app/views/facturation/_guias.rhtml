@@ -1,0 +1,123 @@
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+
+<tr><td valign="top">
+Cliente
+</td><td valign="top">
+<%= autocomplete_account_field(@form.client) %>
+</td></tr>
+
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa_vendedora %>
+</td></tr>
+
+<tr><td valign="top">
+Serie
+</td><td valign="top">
+<%= @form.to_html :serie %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Retorno
+</td><td valign="top">
+<select name="month_retorno">
+<%= @form.options_for :month_retorno %>
+</select>
+
+<select name="year_retorno">
+<%= @form.options_for :year_retorno %>
+</select>
+</td></tr>
+
+<tr><td valign="top">
+Sin Fecha de Retorno
+</td><td valign="top">
+<%= @form.to_html :no_date %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+<% unless filter_empty?(@tab) -%>
+o <%= link_to "deshacer filtro", :reset_filters => 1 %>
+<% end -%>
+</td></tr>
+</table>
+</form>
+
+<br>
+
+<%= link_to "Crear nueva Gu&iacute;a", :action => "new_guia_1" %><br>
+<br>
+
+<%= render_pages_list("set_guias_page") unless @guias.empty? || @show_all %>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="panel_title_guias" colspan="11">
+<b>GUIAS DE REMISION</b>
+</td></tr>
+<% if @guias.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="11">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<% ["No.", "ODT", "Raz&oacute;n Social", "F.Emi.", "F.Recep.", "F.Ret.", "Resp.", "Lugar de Ent.", "Localidad", "Observaciones", "Facturada"].each do |h| -%>
+<td valign="top" align="center">
+<%= h %>
+</td>
+<% end -%>
+</tr>
+<%
+@guias.each do |g|
+  if g.anulada?
+    color_on = "#ff7479"
+    color_off  = "#f67075"
+  else
+    color_on  = "#f7f7f7"
+    color_off = "#eeeeee"
+  end
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top">
+<%= link_to g.formatted_number, :action => "show_guia", :id => g.id %>
+</td><td valign="top">
+<%= link_to g.proyecto.orden_id, :controller => "projects", :action => "show", :id => g.proyecto.uid, :type => g.proyecto.type unless g.proyecto.nil? %>
+</td><td valign="top">
+<%= g.account.name unless g.account.nil? %>
+</td><td valign="top" align="center">
+<%= g.fecha_emision.strftime "%d/%m/%y" unless g.fecha_emision.nil? %>
+</td><td valign="top" align="center">
+<%= g.fecha_despacho.strftime "%d/%m/%y" unless g.fecha_despacho.nil? %>
+</td><td valign="top" align="center">
+<%= g.fecha_retorno.strftime "%d/%m/%y" unless g.fecha_retorno.nil? %>
+</td><td valign="top">
+<%= g.responsable %>
+</td><td valign="top">
+<%= g.lugar_de_entrega %>
+</td><td valign="top">
+<%= g.localidad %>
+</td><td valign="top">
+<%= g.observaciones %>
+</td><td valign="top" align="center">
+<%= guia_facturada_status(g) %>
+</td></tr>
+<% end -%>
+<tr bgcolor="#eeeeee"><td valign="top" align="right" colspan="11">
+
+<% if @show_all -%>
+<%= link_to "Mostrar paginado", :action => "guias" %>
+<% elsif @total_pages > 1 -%>
+<a href="?show_all=1">Mostrar una sola p&aacute;gina</a>
+<% end -%>
+</td></tr>
+
+</table>
+<% end -%>
+
+<br>
+
+<%= render_pages_list("set_guias_page") unless @guias.empty? || @show_all %>
+

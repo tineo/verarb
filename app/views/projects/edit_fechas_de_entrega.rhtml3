@@ -1,0 +1,65 @@
+<form method="POST">
+
+<%= render :partial => "menubar" %>
+
+<h3>Editar Fechas Parciales de Entrega al Cliente</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Cant.</b>
+</td><td valign="top" align="center">
+<b>Detalle</b>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+
+<%
+js = []
+@dates.each_with_index do |f, i|
+  js << "fecha_fecha[#{i}]"
+-%>
+<tr><td valign="top">
+
+
+
+
+
+<% unless @new -%>
+<%= @project.fechas_de_entrega[i].fecha.long_format %>
+<% else -%>
+<%= calendar_field_with_time(f, "fecha", { :suffix => "[#{i}]", :no_clear_button => true }) %>
+<% end -%>
+
+
+</td><td valign="top">
+<input type="text" name="cantidad[<%= i %>]" value="<%= f.cantidad %>" size="4"><br>
+<%= f.e :cantidad %>
+</td><td valign="top">
+<textarea name="detalle[<%= i %>]" cols="30" rows="4"><%= f.detalle %></textarea><br>
+<%= f.e :detalle %>
+</td><td valign="top">
+<% if @new -%>
+<input type="submit" name="row_delete[<%= i %>]" value="Eliminar esta Fila">
+<% end -%>
+</td></tr>
+<% end -%>
+<% if @new -%>
+<tr><td valign="top">
+</td><td valign="top" colspan="3" align="right">
+<input type="submit" name="row_add" value="Agregar una nueva fila">
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<input type="submit" name="save" value="Guardar cambios">
+
+</form>
+
+<%= calendar_javascripts js if @new %>
+

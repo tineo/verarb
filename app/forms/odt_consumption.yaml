@@ -1,0 +1,66 @@
+start_creation_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+start_creation_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+end_creation_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+end_creation_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+start_client_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+start_client_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+end_client_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+end_client_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+estado_facturacion:
+  type:         checkboxmulti
+  options:      "consumption_facturation_status_options"
+
+estado_cobranza:
+  type:         checkboxmulti
+  options:      "consumption_billing_status_options"
+
+con_guia:
+  type:         checkbox
+
+sin_guia:
+  type:         checkbox
+
+empresa_vendedora:
+  type:         select
+  value:        "-1"
+
+client:
+  type:         select
+  value:        "-1"
+
+tipo_proyecto:
+  type:         checkboxmulti
+  options:      "tipo_proyecto_options"
+

@@ -1,0 +1,66 @@
+<form method="POST">
+
+<%= render :partial => "menubar" %>
+
+<h3>Producci&oacute;n - Terminado en Planta - Editar</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Fecha:</b><br>
+<%= @date.fecha.long_format %><br>
+<br>
+
+<b>Cantidad:</b><br>
+<%= @date.cantidad %><br>
+<br>
+
+<b>Detalles:</b><br>
+<%= simple_format @date.detalle %><br>
+<br>
+
+<br>
+
+
+<table width="60%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Fecha</b>
+</td><td valign="top" align="center">
+<b>Cant.</b>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+
+<%
+js = []
+@entries.each_with_index do |f, i|
+  js << "fecha_fecha[#{i}]"
+-%>
+<tr><td valign="top">
+<%= calendar_field_with_time(f, "fecha", { :suffix => "[#{i}]", :no_clear_button => true }) %>
+</td><td valign="top">
+<input type="text" name="cantidad[<%= i %>]" value="<%= f.cantidad %>" size="4"><br>
+<%= f.e :cantidad %>
+</td><td valign="top">
+<input type="submit" name="row_delete[<%= i %>]" value="Eliminar esta Fila">
+</td></tr>
+<% end -%>
+<tr><td valign="top">
+</td><td valign="top" colspan="3" align="right">
+<input type="submit" name="row_add" value="Agregar una nueva fila">
+</td></tr>
+</table>
+<br>
+
+<% if @quantity_error_msg -%>
+<span class="error_msg">La suma de cantidades ingresadas no pueden exceder la cantidad de la Entrega Parcial.</span><br>
+<br>
+<% end -%>
+
+<input type="submit" name="save" value="Guardar cambios">
+o <%= link_to "Cancelar", :action => "production", :id => @project.orden_id %>
+
+</form>
+
+<%= calendar_javascripts js %>
+

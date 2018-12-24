@@ -1,0 +1,57 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "admin", :action => "index" %>";
+});
+</script>
+
+<h2>Administraci&oacute;n de Cuotas de Ejecutivos</h2>
+
+<form method="POST">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<b>Per&iacute;odo</b>
+</td><td valign="top">
+<%= @dateform.to_html :month %>
+</td><td valign="top">
+<%= @dateform.to_html :year %>
+</td></tr>
+</table>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#FFE47A"><td valign="top" align="center">
+<b>Ejecutivo</b>
+</td><td valign="top" align="center">
+<b>Cuota</b>
+</td><td valign="top" align="center">
+<b>Comisi&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Bonificaci&oacute;n</b>
+</td><td valign="top" align="center">
+&nbsp;
+</td></tr>
+
+<% @execs.each do |e| -%>
+<tr><td valign="top" bgcolor="#fff8c2">
+<%= e.full_name %>
+</td><td valign="top">
+<input type="text" name="quota[<%= e.id %>]" value="<%= @data[e.id][:quota] %>" size="20" maxlength="60">
+</td><td valign="top">
+<input type="text" name="comission[<%= e.id %>]" value="<%= @data[e.id][:comission] %>" size="5" maxlength="5">
+</td><td valign="top">
+<input type="text" name="bonus[<%= e.id %>]" value="<%= @data[e.id][:bonus] %>" size="20" maxlength="60">
+</td><td valign="top">
+<span class="error_msg"><%= @data[e.id][:error] %></span>
+</td></tr>
+<% end -%>
+</table><br>
+<br>
+<input type="submit" value="Guardar cambios">
+
+o <%= link_to "Cancelar", :controller => "users", :action => "admin_quotas" %><br>
+<br>
+
+</td></tr>
+</table>
+</form>
+

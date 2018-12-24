@@ -1,0 +1,147 @@
+<%= javascript_include_tag "relay" %>
+
+<% if @type == "f"
+  label  = "FACTURAS"
+  doc    = "Factura"
+  classn = "panel_title_facturas"
+else
+  label  = "BOLETAS"
+  doc    = "Boleta"
+  classn = "panel_title_boletas"
+end
+%>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Empresa
+</td><td valign="top">
+<%= @form.to_html :empresa_vendedora %>
+</td></tr>
+
+<tr><td valign="top">
+Estado
+</td><td valign="top">
+<%= @form.to_html :estado %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Emisi&oacute;n
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month_emision, :start_year_emision, :end_month_emision, :end_year_emision) %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Recepci&oacute;n
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month_recepcion, :start_year_recepcion, :end_month_recepcion, :end_year_recepcion) %>
+</td></tr>
+
+<tr><td valign="top">
+Fecha de Cobranza
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month_cobranza, :start_year_cobranza, :end_month_cobranza, :end_year_cobranza) %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Filtrar">
+<% unless filter_empty?(@tab) -%>
+o <%= link_to "deshacer filtro", :reset_filters => 1 %>
+<% end -%>
+</td></tr>
+</table>
+
+</td><td valign="top">
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+Recepci&oacute;n de Facturas
+</td><td valign="top">
+<%= @form.to_html :recepcion %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</form>
+
+<br>
+
+<%= link_to "Crear nueva #{doc}", :action => "new_factura_1", :type => @type %><br>
+<br>
+
+<%= render_pages_list("set_facturas_page") unless @docs.empty? || @show_all %>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr><td align="center" class="<%= classn %>" colspan="7">
+<b><%= label %></b>
+</td></tr>
+<% if @docs.empty? -%>
+<tr bgcolor="#eeeeee"><td colspan="7">
+<i>No hay resultados para mostrar</i>
+</td></tr>
+<% else -%>
+<tr bgcolor="#dddddd">
+<% ["No.", "Raz&oacute;n Social", "Estado", "Emisi&oacute;n", "Recep.", "Cobranza", "Monto USD$"].each do |h| -%>
+<td valign="top" align="center">
+<%= h %>
+</td>
+<% end -%>
+</tr>
+<%
+total = 0.00
+
+@docs.each do |f|
+  if f.anulada?
+    color_on  = "#ff7479"
+    color_off = "#f67075"
+  elsif f.has_notes?
+    color_on  = "#FEF9A1"
+    color_off = "#FEF9A1"
+  else
+    color_on  = "#f7f7f7"
+    color_off = "#eeeeee"
+  end
+  
+  total += f.monto_as_dollars
+-%>
+<tr bgcolor="<%= color_off %>" onMouseOver="this.style.background='<%= color_on %>'" onMouseOut="this.style.background='<%= color_off %>'"><td valign="top">
+<%= link_to format_factura_number(f), :action => "show_factura", :fid => f.id, :type => @type, :from => "f" %>
+</td><td valign="top">
+<%= f.razon_social %>
+</td><td valign="top">
+<%= f.status %>
+</td><td valign="top" align="center">
+<%= f.fecha_emision.strftime "%d/%m/%y" unless f.fecha_emision.nil? %>
+</td><td valign="top" align="center">
+<%= f.fecha_recepcion.strftime "%d/%m/%y" unless f.fecha_recepcion.nil? %>
+</td><td valign="top" align="center">
+<%= f.fecha_cobranza.strftime "%d/%m/%y" unless f.fecha_cobranza.nil? %>
+</td><td valign="top" align="right">
+<%= format_price(f.monto_as_dollars) %>
+</td></tr>
+<% end -%>
+
+<tr bgcolor="#eeeeee"><td valign="top" align="right" colspan="6" bgcolor="#dddddd">
+TOTAL
+</td><td valign="top" align="right">
+<%= format_price(total) %>
+</td></tr>
+
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+<br>
+
+<%= render_pages_list("set_facturas_page") unless @docs.empty? || @show_all %>
+

@@ -1,0 +1,82 @@
+<% if @what == "odt" -%>
+<h2>Truput Estimado - <%= Date::MONTHNAMES[@month] %> <%= @year %> Proyectado > <%= @truput %>%</h2>
+<% else -%>
+<h2>Truput Estimado - <%= Date::MONTHNAMES[@month] %> <%= @year %> proyectado <%= TIPO_DE_VENTA[@type] %> <%= (@direction == 0 ? "&gt;=" : "&lt;") %> <%= @probability %>%</h2>
+<% end -%>
+
+<a href="javascript: back();">Regresar</a><br>
+<br>
+
+<%
+if @what == "odt"
+  fields = ["ODT", "Cliente", "Descripci&oacute;n", "Truput", "Monto"]
+else
+  fields = ["Proyecto", "Cliente", "Descripci&oacute;n", "Probabilidad", "Truput", "Monto"]
+end
+
+-%>
+<table border="0" cellpadding="5" cellspacing="1">
+<%
+gran_total = 0.00
+
+@executives.each do |exec|
+  total_truput = 0.00
+  total_monto  = 0.00
+  index        = 0
+-%>
+<tr bgcolor="#eebbbb"><td valign="top" colspan="<%= fields.size + 1 %>">
+<b><%= exec %></b>
+</td></tr>
+<tr bgcolor="#eebbbb">
+<td valign="top">
+<% fields.each do |h| -%>
+<td align="center">
+<%= h %>
+</td>
+<% end -%>
+
+<%
+@data[exec].each do |d|
+  total_truput += d.truput
+  total_monto  += d.monto
+  gran_total   += d.truput
+  index        += 1
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" align="center">
+<%= index %>
+</td><td valign="top" align="center">
+<%=
+if @what == "odt"
+  this = d.project.orden_id
+else
+  this = d.project.id
+end
+
+link_to this, :controller => "projects", :action => "show", :id => d.project.uid, :type => d.project.type
+%>
+</td><td valign="top">
+<%= d.project.account.name %>
+</td><td valign="top">
+<%= d.project.nombre_proyecto %>
+<% unless @what == "odt" -%>
+</td><td valign="top" align="right">
+<%= d.probabilidad %>
+<% end -%>
+</td><td valign="top" align="right">
+<b><%= format_report_price d.truput %></b>
+</td><td valign="top" align="right">
+<%= format_report_price d.monto %>
+</td></tr>
+<% end -%>
+<tr bgcolor="#eeeeee"><td colspan="<%= fields.size - 1 %>" align="right">
+<b>TOTAL</b>
+</td><td valign="top" align="right">
+<b><%= format_report_price total_truput %></b>
+</td><td valign="top" align="right">
+<%= format_report_price total_monto %>
+</td></tr>
+<% end -%>
+</table>
+
+<%= format_report_price gran_total %>
+

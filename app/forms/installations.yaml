@@ -1,0 +1,28 @@
+visita_cliente_inicio_fecha:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+
+visita_cliente_inicio_hora:
+  type:         text
+  function:     validate_texttime
+  max_length:   4
+
+visita_cliente_inicio_am_pm:
+  type:         select
+  options:      hora_am_pm_options
+
+visita_cliente_fin_fecha:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+
+visita_cliente_fin_hora:
+  type:         text
+  function:     validate_texttime
+  max_length:   4
+
+visita_cliente_fin_am_pm:
+  type:         select
+  options:      hora_am_pm_options
+

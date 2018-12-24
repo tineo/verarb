@@ -1,0 +1,16 @@
+--- 
+categorias_001: 
+  descripcion: 
+  nombre: Productos estandar
+  id: "1"
+  tipo: P
+categorias_002: 
+  descripcion: 
+  nombre: Transporte
+  id: "9"
+  tipo: S
+categorias_003: 
+  descripcion: 
+  nombre: Productos no estandar
+  id: "8"
+  tipo: P

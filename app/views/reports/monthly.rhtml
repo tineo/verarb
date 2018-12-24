@@ -1,0 +1,65 @@
+<h2>Gr&aacute;fico de Ventas Mensuales</h2>
+
+* No incluye TISAC<br>
+<br>
+
+<h3>Ventas Mes a Mes</h3>
+
+<center>
+<%= @graph_by_month -%>
+</center>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<% %w(&nbsp; ENE FEB MAR ABR MAY JUN JUL AGO SET OCT NOV DIC Total).each do |m| -%>
+<td align="center"><b><%= m -%></b></td>
+<% end -%>
+</tr>
+<%
+@data.each do |d|
+  total = 0.00
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" align="center" bgcolor="#eebbbb">
+<b><%= d[0] %></b>
+</td>
+<%
+  # Since usually the last array has incomplete data to draw correctly
+  # the graphic chart, we populate the missing data with zeroes
+  if d[1].size < 12
+    d[1] = d[1][0..-1] + ([0.00] * (13 - d[1].size))
+  end
+  
+  d[1][1..-1].each do |m|
+    total += m
+-%>
+<td valign="top" align="right">
+<%= '<font color="#888888">' if m == 0 %>
+<%= '<font color="#0000cc">' if m == @highest[d[0].to_i] %>
+<%= format_report_price(m) -%>
+<%= '</font>' if m == 0 || m == @highest[d[0].to_i]%>
+</td>
+<% end -%>
+<td valign="top" align="right" bgcolor="#F0EED0">
+<%= format_report_price(total) -%>
+</tr>
+<% end -%>
+</td></tr>
+</table>
+
+<br>
+
+<h3>Ventas Acumuladas</h3>
+
+<center>
+<%= @graph_accumulated -%>
+</center>
+
+<br>
+
+<h3>Tendencia de Crecimiento</h3>
+
+<center>
+<%= @graph_by_year -%>
+</center>

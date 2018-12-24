@@ -1,0 +1,168 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show_details", :id => @project.uid, :type => @project.type %>";
+});
+
+var status = new Array();
+
+function toggle_star(id) {
+  if (status[id] == 1) {
+    document.getElementById('star_' + id).src = "/images/star-off.gif"
+    status[id] = 0;
+  }
+  else {
+    document.getElementById('star_' + id).src = "/images/star-on.gif"
+    status[id] = 1;
+  }
+}
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Detalle - Producto - <%= @product.nombre %></h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+
+<h3>General</h3>
+
+<b>Nombre</b><br>
+<%= @product.nombre %><br>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<table border="0" cellpadding="3" cellspacing="3" bgcolor="#ffe698">
+<tr><td valign="top">
+<%= simple_format @detail.descripcion %>
+</td></tr>
+</table>
+<br>
+
+<b>Cantidad</b><br>
+<%= @detail.cantidad %><br>
+<br>
+
+<b>Categor&iacute;a</b><br>
+<%= @product.categoria.nombre %><br>
+<br>
+
+<% if can_access? :executive_tasks -%>
+<b>Precio</b><br>
+<%= format_price @detail.precio %><br>
+<br>
+<% end -%>
+
+</td><td valign="top">
+
+<%= image_for_display_product @product %>
+
+</td></tr>
+</table>
+
+<h3>Atributos de Producto</h3>
+
+<%= render :partial => "attributes_table", :locals => { :attributes => @attributes, :edit => false } -%>
+<br>
+
+</td></tr>
+</table>
+
+<br>
+
+<h3>Adjuntos</h3>
+
+<% js_status = [] %>
+
+<%= start_form_tag({:action => 'show_detail', :id => @project.uid, :type => @project.type, :did => @detail.id}, :multipart => true) %>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="10" cellspacing="0">
+<tr><td valign="top" width="50%">
+<b>Ficheros adjuntos del Proyecto</b><br>
+<br>
+
+<% if @project_files.empty? -%>
+<i>No hay ficheros de proyecto adjuntos</i><br>
+<br>
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<%
+mlist = @detail.marcados.split "/"
+
+@project_files.each_with_index do |f, i|
+  if mlist.include? f.filename
+    star_status = "on"
+    js_status[i] = 1
+  else
+    star_status = "off"
+    js_status[i] = 0
+  end
+  
+-%>
+
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top" align="right">
+<%= size_of_file(f.size) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :controller => "projects", :action => "get_file", :pid => @project.uid, :did => @detail.id, :fid => f.filename, :type => @project.type %>
+</td><td valign="top">
+<%= link_to image_tag("stock_delete-16.gif", :border => 0), { :action => "delete_project_file", :pid => @project.uid, :fid => f.filename, :did => @detail.id, :type => @project.type }, :confirm => "Esta seguro?" %>
+<%= link_to_remote('<img id="star_' + i.to_s + '" src="/images/star-' + star_status + '.gif" border="0">', :url => { :controller => "projects", :action => "toggle_attached_file", :id => @project.uid, :did => @detail.id, :fid => f.filename, :type => @project.type }, :success => "toggle_star(" + i.to_s + ")") %> 
+</td></tr>
+<% end -%>
+</table>
+<br>
+<% end -%>
+
+<br>
+
+<b>Ficheros adjuntos del Producto</b><br>
+<br>
+
+<% if @product_files.empty? -%>
+<i>No hay ficheros de proyecto adjuntos</i><br>
+<br>
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<% @product_files.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top" align="right">
+<%= size_of_file(f.size) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :controller => "products", :action => "get_file", :pid => @product.id, :fid => f.filename %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+<% end -%>
+
+
+</td><td valign="top" width="50%">
+<b>Anexar nuevo fichero de proyecto</b><br>
+<br>
+<%= file_field_tag "file" %>
+<%= submit_tag "Transferir" %><br>
+<br>
+
+</td></tr>
+</table>
+<%= end_form_tag %>
+
+</td></tr>
+</table>
+
+<br>
+
+<%= link_to "Regresar a Detalles", :action => "show_details", :id => @project.uid, :type => @project.type %>
+
+<script type="text/javascript">
+<% js_status.each_with_index do |s, i| -%>
+status[<%= i %>] = <%= s %>;
+<% end -%>
+</script>

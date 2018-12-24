@@ -1,0 +1,120 @@
+<h2>Ranking de Cuentas</h2>
+
+<form>
+<table border="0" cellpadding="2" cellspacing="0">
+<tr><td valign="top">
+A&ntilde;o: <%= @form.to_html :report_monthly_client_year %>
+<% if is_supervisor? -%>
+</td><td valign="top">
+Ejecutivo: <%= @form.to_html :executive %>
+<% else -%>
+<input type="hidden" name="executive" value="-1">
+<% end -%>
+</td><td valign="top">
+Tipo de Venta: <%= @form.to_html :tipo_de_venta %>
+</td><td valign="top">
+<input type="submit" name="q" value="Generar Reporte">
+</td></tr>
+</table>
+</form>
+
+<br>
+
+<%
+if @data
+  # If the user isn't a Supervisor she's not supposed to see the totals, so we
+  # limit the number of columns to one less
+  if is_supervisor?
+    total_columns = 13
+  else
+    total_columns = 12
+  end
+  
+  gtotal = 0.00
+  
+  mtotal = []
+  0.upto(total_columns - 1) do |m|
+    mtotal[m] = 0.00
+  end
+  
+  # Set the new sort value
+  if @sort == "0"
+    new_sort = "1"
+  else
+    new_sort = "0"
+  end
+-%>
+<table width="100%" border="0" cellpadding="3" cellspacing="1">
+<tr>
+<tr bgcolor="#eebbbb">
+<%
+  fields = %w(Rating Ejecutivo Cliente ENE FEB MAR ABR MAY JUN JUL AGO SET OCT NOV DIC Total)
+  
+  # If it's an exec, they're not supposed to see the Totals, so we delete 
+  # them off the array by popping 'em.
+  fields.pop unless is_supervisor?
+  
+  fields.each_with_index do |f, i|
+    sort_direction = "0"
+    
+    if @sort_column == i
+      classn = "panel_field_selected"
+      
+      if @sort_direction == "0"
+        sort_direction = "1"
+      else
+        sort_direction = "0"
+      end
+    else
+      classn = "panel_field"
+    end
+-%>
+<td align="center"><b><%= link_to f, { :action => "account_movement", :report_monthly_client_year => @form.report_monthly_client_year, :executive => @form.executive, :sort_column => i, :sort_direction => sort_direction, :q => 1 }, :class => classn %></b></td>
+<% end -%>
+</tr>
+<% @data.each do |d| -%>
+<tr bgcolor="#eeeeee"><td valign="top" bgcolor="#eebbbb" align="center">
+<%= d[0] %>
+</td><td valign="top" bgcolor="#eebbbb">
+<%= d[1] %>
+</td><td valign="top" bgcolor="#eebbbb">
+<%= d[2] %>
+</td>
+<%
+bgcolors = ["#eeeeee", "#dedede"]
+cc = 0
+
+bgcolor = bgcolors[1]
+
+d[3..(total_columns + 2)].each_with_index do |m, i|
+  # Background color stuff
+  bgcolor = bgcolors[cc % 2]
+  cc += 1
+  
+  # Override color and put the yellows for the totals
+  bgcolor = "#F0EED0" if i > 11
+  
+  mtotal[i] += m
+  gtotal    += m
+-%>
+<td valign="top" align="right" bgcolor="<%= bgcolor %>">
+<%= format_report_price(m) unless m == 0.00 -%>
+</td>
+<% end -%>
+</tr>
+<% end -%>
+
+<tr><td valign="top" bgcolor="#ffffff" colspan="3">
+&nbsp;
+</td>
+<% mtotal.each do |m| -%>
+<td valign="top" align="right" bgcolor="#F0EED0">
+<%= format_report_price(m) %>
+</td>
+<% end -%>
+</tr>
+</table>
+
+<% end -%>
+
+

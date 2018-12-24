@@ -1,0 +1,14 @@
+--- 
+acl_roles_users_jpuppo_exec: 
+  date_modified: "2007-04-19 17:35:04"
+  id: "rid_123"
+  role_id: 4849c3b5-b7ce-78fc-729c-464b4527e61b
+  user_id: 19
+  deleted: "0"
+
+acl_roles_users_jpuppo_admin: 
+  date_modified: "2007-04-19 17:35:04"
+  id: "rid_123"
+  role_id: f1e36f07-36a8-4612-ef15-4653b402b248
+  user_id: 19
+  deleted: "0"

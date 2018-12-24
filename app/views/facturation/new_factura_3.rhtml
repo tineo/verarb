@@ -1,0 +1,301 @@
+<script type="text/javascript">
+function toggle_details() {
+  $('one_detail').toggle();
+  $('many_details').toggle();
+}
+
+function update_vv(i) {
+  form = $('f');
+  cnt = parseFloat(form['cantidad[' + i + ']'].value);
+  vun = parseFloat(form['valor_unitario[' + i + ']'].value);
+  
+  if (!isNaN(cnt) && !isNaN(vun)) {
+    $('valor_de_venta[' + i + ']').innerHTML = (cnt * vun).toFixed(2);
+  }
+}
+
+</script>
+
+<h2><%= @document_label_plural %></h2>
+
+<h3>Crear nueva <%= @document_label_singular %></h3>
+
+<% unless @ofs.empty? -%>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Orden</b>
+</td><td align="center">
+<b>Descripci&oacute;n</b>
+</td><td align="center">
+<b>Monto</b>
+</td></tr>
+<%
+total = 0.00
+
+@ofs.each do |of|
+  order  = of.proyecto
+  total += of.monto_odt_in_factura_currency
+-%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to order.orden_id, :controller => "projects", :action => "show", :id => order.uid, :type => order.type  %>
+</td><td valign="top">
+<%= simple_format of.proyecto.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= currency(of.moneda_odt) %> <%= format_price(of.monto_odt) %>
+</td></tr>
+<% end -%>
+<tr bgcolor="#ffffff"><td valign="top" colspan="2" align="right">
+<b>Total</b>
+</td><td valign="top" align="right">
+<%= currency(@factura.moneda) %> <%= format_price(total) %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<br>
+
+<% end -%>
+
+<form id="f" method="POST">
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Orden</b>
+</td><td valign="top">
+<%= @project.orden_id %> - 
+<%= link_to @project.nombre_proyecto, :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type  %>
+</td></tr>
+
+<tr><td valign="top">
+<b>No. de <%= @document_label_singular %></b>
+</td><td valign="top">
+<%= format_new_factura_number @number, @project %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%
+if !@adding
+-%>
+<%= @form.to_html :razon_social %>
+<% else -%>
+<%= @account.name unless @account.nil? %>
+<input type="hidden" name="razon_social" value="-1">
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+<b>N&uacute;mero de Orden de Compra</b>
+</td><td valign="top">
+<%= @form.to_html :numero_orden_de_compra, :size => 16 %>
+</td></tr>
+
+
+<tr><td valign="top">
+<b>Doc. de Aceptaci&oacute;n del Cliente<br>
+(Orden de Compra)</b><br>
+</td><td valign="top">
+<%= render :partial => "projects/confirmation_docs_list" %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Emisi&oacute;n</b>
+</td><td valign="top">
+<input type="text" id="fecha_emision" name="fecha_emision" value="<%= @form.fecha_emision %>" size="8">
+<%= image_tag "calendar.gif", :id => "trigger_e", :border => 0 %><br>
+<%= @form.e :fecha_emision %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Qui&eacute;n lo dej&oacute;</b>
+</td><td valign="top">
+<%= @form.to_html :quien_lo_dejo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Moneda a Facturar</b>
+</td><td valign="top">
+<%= @form.to_html :moneda %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tipo de Cambio</b>
+</td><td valign="top">
+<%= @form.to_html :tipo_de_cambio, :size => 4 %>
+</td></tr>
+
+<% if @project.canje? -%>
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @form.to_html :canje %> Es Canje
+</td></tr>
+<% end -%>
+
+</table>
+<br>
+
+<h3>Detalles de la Factura</h3>
+<%
+if @form.con_una_sola_descripcion == "1"
+  display_one  = ""
+  display_many = "none"
+else
+  display_one  = "none"
+  display_many = ""
+end
+-%>
+
+<% if @creating || @factura.en_blanco? -%>
+<input type="checkbox" name="con_una_sola_descripcion" value="1" <%= (@form.con_una_sola_descripcion == "1" ? "checked" : "") %> onclick="toggle_details()"> Factura con una sola Descripci&oacute;n<br>
+<br>
+<% else -%>
+<input type="hidden" name="con_una_sola_descripcion" value="<%= (@factura.con_una_sola_descripcion? ? "1" : "0") %>">
+<% end -%>
+
+<div id="one_detail" style="display:<%= display_one %>">
+<table border="0" cellpadding="5" cellspacing="2">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td></tr>
+
+<tr bgcolor="#ffffff"><td valign="top">
+<textarea name="one_descripcion" cols="50" rows="7"><%= @form.one_descripcion %></textarea><br>
+<%= @form.e :one_descripcion %>
+</td><td valign="top">
+<input type="text" name="one_cantidad" value="<%= @form.one_cantidad %>" size="4"><br>
+<%= @form.e :one_cantidad %>
+</td></tr>
+</table>
+<br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Monto</b>
+</td><td valign="top">
+<%= currency(@project.moneda_odt) %> <%= @form.to_html :monto_odt, :size => "10" %>
+</td></tr>
+</table>
+
+</div>
+
+<div id="many_details" style="display:<%= display_many %>">
+<table border="0" cellpadding="5" cellspacing="2">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>ODT</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Valor Unitario</b><br>
+(Sin IGV)
+</td><td valign="top" align="center">
+<b>Valor de Venta</b><br>
+(Sin IGV)
+</td><td valign="top" align="center">
+&nbsp;
+</td></tr>
+
+<% if params[:add] -%>
+<% @factura.details.each do |d| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to d.proyecto.orden_id, :controller => "projects", :action => "show", :id => d.proyecto.uid, :type => d.proyecto.type  %>
+</td><td valign="top">
+<%= simple_format(d.descripcion) %>
+</td><td valign="top" align="right">
+<%= d.cantidad %>
+</td><td valign="top" align="right">
+<%= format_price(d.valor_unitario) %>
+</td><td valign="top" align="right">
+<%= format_price(d.valor_de_venta) %>
+</td><td valign="top" align="right">
+&nbsp;
+</td></tr>
+<% end -%>
+<% end -%>
+
+<% @details.each_with_index do |f, i| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= @project.orden_id %>
+</td><td valign="top">
+<textarea name="descripcion[<%= i %>]" cols="50" rows="7"><%= f.descripcion %></textarea><br>
+<%= f.e :descripcion %>
+</td><td valign="top">
+<input type="text" name="cantidad[<%= i %>]" value="<%= f.cantidad %>" size="4" onchange="update_vv(<%= i %>)"><br>
+<%= f.e :cantidad %>
+</td><td valign="top">
+<input type="text" name="valor_unitario[<%= i %>]" value="<%= f.valor_unitario %>" size="4" onchange="update_vv(<%= i %>)"><br>
+<%= f.e :valor_unitario %>
+</td><td valign="top" align="right">
+<div id="valor_de_venta[<%= i %>]">
+<%= "%0.2f" % (f.cantidad.to_i * f.valor_unitario.to_f) %>
+</div>
+</td><td valign="top">
+<input type="submit" name="row_delete[<%= i %>]" value="Eliminar">
+</td></tr>
+<% end -%>
+<tr bgcolor="#e9bb7d"><td valign="top">
+</td><td valign="top" colspan="5">
+<input type="submit" name="row_add" value="Agregar una nueva fila">
+</td></tr>
+</table>
+<br>
+</div>
+
+<% if @wrong_amount -%>
+<span class="error_msg">El Total de Detalles (<%= "%0.2f" % @monto %>) no puede ser mayor que el saldo pendiente de esta Orden (<%= "%0.2f" % @project.facturated_remainder %>)</span><br>
+<br>
+<% end -%>
+
+<br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Comentarios</b>
+</td><td valign="top">
+<%= @form.to_html :comentarios %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @form.to_html :completa %> Factura est&aacute; completa (no se incluir&aacute;n m&aacute;s ODTs)
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="n" value="Aceptar">
+<input type="submit" name="c" value="Aceptar y agregar otra Orden a la Factura">
+<input type="submit" name="g" value="Aceptar y relacionar a Gu&iacute;as">
+o <%= link_to "Cancelar", :action => "facturas" %>
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+</form>
+
+<script type="text/javascript">
+Calendar.setup({
+    inputField : "fecha_emision",
+    ifFormat   : "%d/%m/%y",
+    button     : "trigger_e"
+});
+</script>
+

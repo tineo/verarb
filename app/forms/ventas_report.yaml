@@ -1,0 +1,66 @@
+client:
+  type:         select
+  value:        "-1"
+  options:      ventas_report_client_options
+
+executive:
+  type:         select
+  value:        "-1"
+  mandatory:    false
+  options:      executive_options
+
+category:
+  type:         select
+  value:        "-1"
+  options:      ventas_report_category_options
+
+project_type:
+  type:         select
+  value:        "0"
+  options:      ventas_report_project_type_options
+
+start_day:
+  type:         select
+  options:      "wo_day_options"
+  value:        "-1"
+
+start_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+start_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+end_day:
+  type:         select
+  options:      "wo_day_options"
+  value:        "-1"
+
+end_month:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+
+end_year:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+
+facturada:
+  type:         select
+  options:      "facturada_options"
+  value:        "-1"
+
+estado:
+  type:         select
+  options:      "estado_options"
+  value:        "100"
+
+empresa_vendedora:
+  type:         checkboxmulti
+  options:      "ventas_empresa_options"
+  value:        "-1"
+

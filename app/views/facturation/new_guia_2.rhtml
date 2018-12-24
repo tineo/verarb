@@ -1,0 +1,72 @@
+<h2>Gu&iacute;as de Remisiones</h2>
+
+<h3>Agregar nueva Gu&iacute;a</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>ODT <%= @project.orden_id %> - <%= @project.nombre_proyecto %></h3>
+<b>Cliente:</b> <%= @project.account.name %><br>
+<b>Ejecutivo:</b> <%= @project.executive.full_name %><br>
+<b>Empresa vendedora:</b> <%= EMPRESA_VENDEDORA[@project.empresa_vendedora] %><br>
+<br>
+</td></tr>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>N&uacute;mero de Gu&iacute;a</h3>
+
+<% unless @project.tipo_nuevo_proyecto? -%>
+Cambiar de Serie:
+<% NEW_GUIA_SERIES.each do |s, n|
+  label = s.rjust(3, "0")
+  
+  if @serie == s
+    label = "<b>#{label}</b>" 
+  end
+-%>
+<%= link_to label, :action => "new_guia_2", :id => @project.orden_id, :serie => s %>&nbsp;
+<% end -%>
+<br>
+<br>
+<% end -%>
+
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+
+<li> Por orden: <b><%= format_new_guia_number(@serie, @curr) %></b>
+</td><td valign="top">
+<input type="submit" name="use_current" value="Usar este N&uacute;mero">
+<input type="submit" name="reserve" value="o reservarlo para despu&eacute;s">
+</td></tr>
+</table>
+
+<br>
+
+<% unless @blank_guias.empty? -%>
+<table border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top">
+<li> N&uacute;meros reservados:
+</td><td valign="top">
+<select name="gid">
+<% @blank_guias.each do |g| -%>
+<option value="<%= g.id %>"><%= format_new_guia_number(g.serie, g.numero) %></option>
+<% end -%>
+</select>
+<input type="submit" name="use_from_list" value="Usar">
+</td></tr>
+</table>
+<% end -%>
+
+</td></tr>
+</table>
+<br>
+
+</form>
+
+
+

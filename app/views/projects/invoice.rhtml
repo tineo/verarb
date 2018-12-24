@@ -1,0 +1,133 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "orders" %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<h3>Marcar Orden para Facturaci&oacute;n</h3>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Documentos de conformidad de compra<br>
+(Orden de Compra)</b>
+</td><td valign="top">
+<%= render :partial => "projects/confirmation_docs_list" %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= state_image(@project.factura_necesita_odt) %> Necesita Orden de Compra
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social a facturar</b>
+</td><td valign="top">
+<%= @project.factura_razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @project.factura_ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>D&iacute;a y Hora para Entrega de Factura</b>
+</td><td valign="top">
+<%= format_date(@project.factura_fecha_facturacion) unless @project.factura_fecha_facturacion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Descripci&oacute;n que va en la Factura</b>
+</td><td valign="top">
+<%= @project.factura_descripcion %>
+</td></tr>
+
+<% if @project.tipo_proyecto == T_NUEVO_PROYECTO -%>
+<tr><td valign="top">
+<b>Precio de Venta</b>
+</td><td valign="top">
+<%= verbose_odt_price(@project) %><br>
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>Monto de Adelanto</b>
+</td><td valign="top">
+<% if @project.monto_adelanto.nil? || @project.monto_adelanto.zero? -%>
+<i>Sin adelanto</i>
+<% else -%>
+<%= currency(@project.moneda_odt) %> <%= format_price @project.monto_adelanto %>
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+
+<%= @project.payment_form %>
+
+</td></tr>
+
+<tr><td valign="top">
+<b>Contacto de Facturaci&oacute;n</b>
+</td><td valign="top">
+<%= @project.factura_contacto_facturacion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono Fijo</b>
+</td><td valign="top">
+<%= @project.factura_telefono_fijo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono M&oacute;vil</b>
+</td><td valign="top">
+<%= @project.factura_telefono_movil %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail</b>
+</td><td valign="top">
+<%= @project.factura_email %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n donde se deja la Factura</b>
+</td><td valign="top">
+<%= simple_format(@project.factura_direccion) unless @project.factura_direccion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= @project.factura_observaciones %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<% if @project.facturation_data_complete? -%>
+<input type="submit" value="Marcar para Facturar">,
+<% else -%>
+<span class="error_msg">Datos incompletos, no se puede marcar esta ODT</a> --
+<% end -%>
+<%= link_to "Editar estos datos", :controller => "projects", :action => "promote", :id => @project.id %>
+o <%= link_to "Cancelar", :controller => "projects", :action => "orders" %><br>
+<br>
+<span class="mega_warning"><blink>ESTOS DATOS IRAN EN LA FACTURA, REVISAR CUIDADOSAMENTE ANTES DE ACEPTAR, CUALQUIER ERROR ESTARA BAJO SU RESPONSABILIDAD, ASI COMO LA SUBSANACION DE LOS INCONVENIENTES POSTERIORES</blink></span>
+
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</form>

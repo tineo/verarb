@@ -1,0 +1,72 @@
+<h2>Resumen de Truput Mensual</h2>
+
+<h3>Detalle de <%= Date::MONTHNAMES[@date.month] %> <%= @date.year %></h3>
+
+<a href="javascript:history.back();">Regresar</a><br>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<%
+["ODT", "Cliente", "Descripci&oacute;n", "Monto $", "Ejecutivo", "Fecha de Emisi&oacute;n", "Categor&iacute;a", "Tipo", "Facturado"].each do |i|
+-%>
+<td valign="top" align="center">
+<b><%= i -%></b>
+</td>
+<% end -%>
+</tr>
+<% if @data.empty? -%>
+<tr bgcolor="#eeeeee"><td valign="top" colspan="10">
+<i>No hay datos por mostrar</i>
+</td></tr>
+<% else -%>
+<%
+total_venta     = 0.00
+total_facturado = 0.00
+
+@data.each do |p|
+  total_venta     += p.monto_de_venta_as_dollars
+  total_facturado += p.monto_facturado_as_dollars
+-%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= link_to p.orden_id, :controller => "projects", :action => "show", :id => p.uid, :type => p.type %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= p.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= format_report_price p.monto_de_venta_as_dollars %>
+</td><td valign="top">
+<%= p.executive.full_name %>
+</td><td valign="top">
+<%= format_date p.fecha_creacion_odt %>
+</td><td valign="top">
+<%= TIPO_DE_VENTA[p.tipo_de_venta] %>
+</td><td valign="top">
+<%= TIPO_PROYECTO[p.tipo_proyecto] %>
+</td><td valign="top" align="right">
+<%
+if p.facturated_remainder == 0.00
+  color = "#000"
+else
+  color = "#f00"
+end
+-%>
+<span style="color: <%= color %>">
+<%= format_report_price p.monto_facturado_as_dollars %>
+</span>
+</td></tr>
+<% end -%>
+<tr bgcolor="#eebbbb"><td valign="top" colspan="3">
+</td><td valign="top" align="right">
+<%= format_report_price total_venta %>
+</td><td valign="top" colspan="4">
+</td><td valign="top" align="right">
+<%= format_report_price total_facturado %>
+</td></tr>
+<% end -%>
+</table>
+
+
+
+

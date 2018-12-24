@@ -1,0 +1,87 @@
+empresa_vendedora:
+  type:         select
+  value:        "-1"
+
+estado:
+  type:         select
+  options:      "factura_estado_options"
+  value:        "-1"
+
+start_month_emision:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+start_year_emision:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+end_month_emision:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+end_year_emision:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+start_month_recepcion:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+start_year_recepcion:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+end_month_recepcion:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+end_year_recepcion:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+start_month_cobranza:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+start_year_cobranza:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+end_month_cobranza:
+  type:         select
+  options:      "wo_month_options"
+  value:        "-1"
+  mandatory:    false
+
+end_year_cobranza:
+  type:         select
+  options:      "wo_year_options"
+  value:        "-1"
+  mandatory:    false
+
+recepcion:
+  type:         select
+  options:      "panel_facturas_boletas_recepcion"
+  value:        "-1"
+  mandatory:    false
+

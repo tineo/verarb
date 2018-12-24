@@ -1,0 +1,10 @@
+#!/usr/bin/ruby
+r   = `/bin/ps -eo pid,cmd | grep ruby | grep server | grep -v grep`
+r   =~ /^\s*([0-9]+?)\s/
+pid = $1
+
+puts "Killing server, process #{pid}"
+`kill -9 #{pid}`
+
+puts "Restarting server"
+`/var/www/app/script/server -e production -d`

@@ -1,0 +1,135 @@
+<%= javascript_include_tag "relay" %>
+<% 
+probabilidad = @form.probabilidad
+-%>
+
+<h2>Estimado por Cierre de Venta</h2>
+
+* No incluye TISAC<br>
+<br>
+
+<form method="GET">
+<table border="0" cellpadding="3" cellspacing="0">
+
+<tr><td valign="top">
+Probabilidad
+</td><td valign="top">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<%= @form.to_html :probabilidad, :size => 3 %>
+</td><td valign="top">
+%
+</td></tr>
+</table>
+
+</td></tr>
+
+<tr><td valign="top">
+Rango de Fecha
+</td><td valign="top">
+<%= render_form_range_date(@form, :start_month, :start_year, :end_month, :end_year) %>
+</td></tr>
+
+<tr><td valign="top">
+Ejecutivo
+</td><td valign="top">
+<%= @form.to_html :executive %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<input type="submit" name="q" value="Mostrar">
+</td></tr>
+
+</table>
+<br>
+
+<% if @tipo_error_msg -%>
+<center><span class="error_msg">Truput inv&aacute;lido de Tipo de Venta proyectado</span></center><br>
+<% end -%>
+
+<table border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#eebbbb">
+<td colspan="5" bgcolor="#f3bf5c">
+&nbsp;
+</td><td valign="top" colspan="<%= TIPO_DE_VENTA.size * 2 %>" align="center">
+<b>Detallado por unidad de Negocio por Proyecto</b>
+</td></tr>
+
+<tr bgcolor="#eebbbb">
+<td bgcolor="#f3bf5c" valign="top" rowspan="2">
+<b>Mes de Cierre de Venta</b>
+</td>
+<td bgcolor="#f3bf5c" valign="top" rowspan="2">
+<b>Total de Venta Estimado</b>
+</td>
+<td bgcolor="#f3bf5c" valign="top" rowspan="2">
+<b>Ventas Cerradas</b>
+</td>
+<td valign="top" align="center" colspan="2" bgcolor="#f3bf5c">
+<b>Cierre de Ventas Proyectadas</b>
+</td><% TIPO_DE_VENTA.each do |h| -%>
+<td valign="top" align="center" colspan="2">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<tr bgcolor="#eebbbb">
+<td align="center" valign="top" bgcolor="#f3bf5c">
+<% unless probabilidad.nil? -%>
+&gt;=&nbsp;<%= probabilidad %>
+<% end -%>
+</td><td valign="top" align="center" bgcolor="#cfcfcf">
+<% unless probabilidad.nil? -%>
+&lt;&nbsp;<%= probabilidad %>
+<% end -%>
+</td>
+<%
+TIPO_DE_VENTA.each_with_index do |h, i|
+-%>
+<td align="center" valign="top">
+<% unless probabilidad.nil? -%>
+&gt;=&nbsp;<%= probabilidad %>
+<% end -%>
+</td><td valign="top" align="center" bgcolor="#cfcfcf">
+<% unless probabilidad.nil? -%>
+&lt;&nbsp;<%= probabilidad %>
+<% end -%>
+</td>
+<% end -%>
+
+</tr>
+
+<% @data.each do |d| -%>
+<tr bgcolor="#eeeeee"><td valign="top">
+<%= Date::MONTHNAMES[d.date.month] %>&nbsp;<%= d.date.strftime "%Y" %>
+
+</td><td valign="top" align="right">
+<%= format_report_price(@totals[d.date].t) %>
+</td>
+
+<td valign="top" align="right">
+<%= link_to format_report_price(d.truput), :action => "estimado_cierre_de_venta_detalle", :year => d.date.year, :month => d.date.month, :what => "odt", :executive => @form.executive %>
+</td>
+
+<td valign="top" align="right">
+<%= format_report_price @totals[d.date].a %>
+</td><td valign="top" align="right" bgcolor="#e4e4e4">
+<%= format_report_price @totals[d.date].b %>
+</td>
+
+<% d.tipos.each_with_index do |amounts, tipo| -%>
+<td valign="top" align="right" bgcolor="#ffdada">
+<%= link_to format_report_price(amounts[0]), :action => "estimado_cierre_de_venta_detalle", :year => d.date.year, :month => d.date.month, :type => tipo, :probability => @form.probabilidad, :direction => 0, :what => "tipos", :executive => @form.executive %>
+</td><td valign="top" align="right" bgcolor="#e4e4e4">
+<%= link_to format_report_price(amounts[1]), :action => "estimado_cierre_de_venta_detalle", :year => d.date.year, :month => d.date.month, :type => tipo, :probability => @form.probabilidad, :direction => 1, :what => "tipos", :executive => @form.executive %>
+</td>
+<% end -%>
+
+</tr>
+
+<% end -%>
+</table>
+</form>
+

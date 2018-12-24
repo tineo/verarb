@@ -1,0 +1,155 @@
+<html>
+<style>
+<!--
+body, td {
+  font-family: Arial, Helvetica, Sans-serif;
+  font-size: 12px;
+}
+-->
+</style>
+
+<body text="#000000" bgcolor="#ffffff">
+
+<table width="646" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<%= image_tag((@full_url_link_for_header ? "http://" + EXTERNAL_IP + ":3000/images/" : "") + "cabecera" + @project.empresa_vendedora.to_s + ".jpg") %><br>
+<br>
+
+<%= @cotizacion.codigo %><br>
+<br>
+San Miguel, <%= @cotizacion.created_on.strftime("%d de XYZ del %Y").sub /XYZ/, Date::MONTHNAMES[@cotizacion.created_on.month] %><br>
+<br>
+Se&ntilde;ores<br>
+<b><%= @project.account.name %></b><br>
+<% unless @cotizacion.contacto == "" -%>
+Atenci&oacute;n: <%= @cotizacion.contacto %><br>
+<% end -%>
+<u>Presente</u><br>
+<br>
+
+Estimados se&ntilde;ores:<br>
+<br>
+Es grato poner a su consideraci&oacute;n la cotizaci&oacute;n seg&uacute;n las siguientes caracter&iacute;sticas:<br>
+<br>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#fffbdf"><td valign="top" align="center">
+<b>Item</b>
+</td><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cant</b>
+</td><td valign="top" align="center" width="80">
+<b>Precio Unitario</b>
+</td><td valign="top" align="center" width="80">
+<b>Precio Total</b>
+</td></tr>
+
+<%
+gran_total = 0
+
+@details.each_with_index do |d, i|
+  precio_unit  = "%.2f" % d.precio
+  precio_total = "%.2f" % (d.precio * d.cantidad)
+  gran_total   = gran_total + precio_total.to_f
+%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= i + 1 %>
+</td><td valign="top">
+<%= simple_format d.nombre %>
+<%= simple_format d.descripcion %>
+</td><td valign="top" align="center">
+<%= d.cantidad %>
+</td><td valign="top" align="right">
+<%= currency(@cotizacion.moneda) %> <%= precio_unit %>
+</td><td valign="top" align="right">
+<%= currency(@cotizacion.moneda) %> <%= precio_total %>
+</td></tr>
+<%
+end
+-%>
+
+<% if @cotizacion.incluir_gran_total? -%>
+<tr bgcolor="#ffffff"><td valign="top" colspan="4">
+&nbsp;
+</td><td valign="top" align="right">
+<%= currency(@cotizacion.moneda) %> <%= "%.2f" % gran_total %>
+</td></tr>
+<% end -%>
+
+</table>
+
+<br>
+
+<b>Los precios NO incluyen el IGV.</b><br>
+<br>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr><td valign="top">
+<b>Tiempo de entrega:</b>
+</td><td valign="top" width="20">
+</td><td valign="top">
+<%= @cotizacion.tiempo_de_entrega %> d&iacute;as
+</td></tr>
+
+<tr><td valign="top">
+<b>Forma de Pago:</b>
+</td><td valign="top">
+</td><td valign="top">
+<%= @cotizacion.forma_de_pago %>
+</td></tr>
+
+<% unless @cotizacion.validez_de_oferta.nil? -%>
+<tr><td valign="top">
+<b>Validez de Oferta:</b>
+</td><td valign="top">
+</td><td valign="top">
+<%= @cotizacion.validez_de_oferta %> d&iacute;as
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>Observaciones:</b>
+</td><td valign="top">
+</td><td valign="top">
+<%= simple_format @cotizacion.notas %>
+</td></tr>
+
+</table>
+<br>
+
+<% if [APOYO, ARQUITECTURA].include? @project.empresa_vendedora -%>
+<b><%= EMPRESA_VENDEDORA[@project.empresa_vendedora] %></b><br>
+<% if @project.empresa_vendedora == APOYO -%>
+Banco Continental<br>
+CTA. CTE. US$ 0011-0115-0100043527<br>
+Banco Scotiabank<br>
+CTA. CTE. US$ 000-3008927<br>
+Banco de Credito<br>
+CTA. CTE. US$ 192-1625296-1-40<br>
+<% else -%>
+Banco Continental<br>
+CTA. CTE. US$ 0011-0115-0100043500-36<br>
+<% end -%>
+<br>
+<br>
+<% end -%>
+
+Agradecemos su gentil atenci&oacute;n, nos despedimos a la espera de sus &oacute;rdenes.<br>
+<br>
+Atentamente,<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<b><%= @project.executive.full_name %></b><br>
+Ejecutivo de Cuentas<br>
+<br>
+
+</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+auth_fact:
+  type:         text
+  acts_as:      password
+  function:     validate_fact_price_redef_fact
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

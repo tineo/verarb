@@ -1,0 +1,428 @@
+<%=
+cals = []
+render :partial => "menubar_factura"
+%>
+
+<h3>Datos</h3>
+
+<% if @factura.en_blanco? -%>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="40%">
+<i>Esta <%= @document_label_singular %> est&aacute; en blanco.</i><br>
+</td></tr>
+</table>
+<br>
+
+<%
+else #not a blank factura
+-%>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top" width="40%">
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>No. de <%= @document_label_singular %></b>
+</td><td valign="top">
+<%= format_factura_number(@factura) %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social</b>
+</td><td valign="top">
+<%= @factura.razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @factura.ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Estado de la Factura</b>
+</td><td valign="top">
+<%= @factura.status %>
+</td></tr>
+
+<tr><td valign="top">
+<b>N&uacute;mero de Orden de Compra</b>
+</td><td valign="top">
+<%= @factura.numero_orden_de_compra %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Emisi&oacute;n</b>
+</td><td valign="top">
+<%= @factura.fecha_emision.strftime("%d/%m/%Y") unless @factura.fecha_emision.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Recepci&oacute;n del Cliente</b>
+</td><td valign="top">
+<%= @factura.fecha_recepcion.strftime("%d/%m/%Y") unless @factura.fecha_recepcion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Qui&eacute;n lo dej&oacute;</b>
+</td><td valign="top">
+<%= @factura.quien_lo_dejo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Monto</b>
+</td><td valign="top">
+<%
+m = currency(@factura.moneda) + " " + format_price(@factura.monto)
+
+if @factura.has_notes?
+-%>
+<strike><%= m %></strike>
+<%= currency(@factura.moneda) %> <%= format_price(@factura.monto_activo) %>
+<% else -%>
+<%= m %>
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tipo de Cambio</b>
+</td><td valign="top">
+<%= format_price(@factura.tipo_de_cambio) %>
+</td></tr>
+
+<% if @factura.canje? -%>
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+Es Canje
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>Comentarios</b>
+</td><td valign="top">
+<%= @factura.comentarios %>
+</td></tr>
+
+</table>
+
+</td><td valign="top">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Orden</b>
+</td><td valign="top" align="center">
+<b>Nombre</b>
+</td><td valign="top" align="center">
+<b>Monto</b>
+</td><td valign="top" align="center">
+<b>Monto c/IGV</b>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+<% if @of.empty? -%>
+<tr><td valign="top" colspan="5" bgcolor="#ffffff">
+<i>No hay Ordenes para mostrar</i>
+</td></tr>
+<% end -%>
+<%
+@of.each do |of|
+  # Ugly, FIXME
+  if @from == "o" && of.proyecto.orden_id == params[:id].to_i
+    bgcolor = "#e0ffe0"
+  else
+    bgcolor = "#ffffff"
+  end
+%>
+<tr bgcolor="<%= bgcolor %>"><td valign="top">
+<%= link_to of.proyecto.orden_id, :controller => "projects", :action => "show", :id => of.proyecto.orden_id, :type => "o" %>
+</td><td valign="top">
+<%= simple_format of.proyecto.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= currency(of.moneda_odt) %> <%= format_price(of.monto_odt) %>
+</td><td valign="top" align="right">
+<%= currency(of.moneda_odt) %> <%= format_price(of.monto_odt_with_igv) %>
+</td><td valign="top" align="right">
+<%=
+if @of.size > 1
+  link_to(image_tag("stock_delete-16.gif", :border => 0), { :action => "delete_of", :id => of.id }, :confirm => "Está seguro?" )
+end
+%>
+</td></tr>
+<%
+end # each of
+-%>
+</table>
+<br>
+
+<% if @factura.has_notes? -%>
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Nota de Cr&eacute;dito</b>
+</td><td valign="top" align="center">
+<b>Monto</b>
+</td></tr>
+<% @factura.notes.each do |n| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to n.formatted_number, :controller => "notes", :action => "show", :nid => n.id %>
+</td><td valign="top">
+<%= currency(n.moneda) %> <%= format_price(n.monto) %>
+<% end -%>
+</table>
+<% end -%>
+
+<h3>Cobranza</h3>
+
+<% unless @factura.cobrada? -%>
+<!-- FORM A -->
+<form method="POST">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Fecha de Recepci&oacute;n del Cliente</b>
+</td><td valign="top">
+<%=
+cals << "fecha_recepcion"
+calendar_field(@form, "fecha_recepcion")
+%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Modalidad de Pago</b>
+</td><td valign="top">
+<%= @form.to_html :modalidad_pago %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Recepci&oacute;n Confirmada</b>
+</td><td valign="top">
+<%= @form.to_html :confirmada %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" name="a" value="Guardar">
+</td></tr>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</form>
+
+<% if false -%>
+
+NO RECUERDO POR QUE ESTO ESTA ASI. LO HE COMENTADO HASTA RESOLVER ESTE ASUNTO
+YA QUE APARECE INCOMPLETO EN EL SISTEMA.
+
+<!-- FORM B -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<b>Fecha de Cobranza<b>
+</td><td valign="top">
+<% if @factura.cobrada? -%>
+
+<% end -%>
+</td></tr>
+</table>
+<% end -%>
+
+
+
+<!-- FORM C -->
+<% unless @factura.fecha_recepcion.nil? -%>
+<br>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Fecha Probable de Pago</b>
+</td><td valign="top">
+<%=
+cals << "fecha_probable"
+calendar_field(@formb, "fecha_probable", { :no_clear_button => true })
+%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= @formb.to_html :observaciones %>
+</td></tr>
+
+<tr><td valign="top">
+</td><td valign="top">
+<input type="submit" name="b" value="Guardar">
+<% unless @fechas_probables.empty? -%>
+&nbsp;
+<a href="#" onclick="$('history').toggle();">Ver Hist&oacute;rico de Fechas Probables</a>
+<% end -%>
+</td></tr>
+</table>
+
+<% unless @fechas_probables.empty? -%>
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<div id="history" style="display: none;">
+<br>
+<%= render :partial => "probable_dates_list", :locals => { :fechas_probables => @fechas_probables } %>
+</div>
+</td></tr>
+</table>
+<%
+end # unless fechas_probables empty?
+-%>
+
+</td></tr>
+</table>
+</form>
+<%
+end # unless fecha recepcion nil
+-%>
+
+<!-- FORM D -->
+<% unless @factura.account.nil? -%>
+<h3>Contacto de Tesorer&iacute;a</h3>
+
+<b><%= @factura.razon_social %></b><br>
+<br>
+
+<form method="POST">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+
+<%= render :partial => "billing_contact_form" %>
+
+</td></tr>
+</table>
+</form>
+<%
+end # unless @factura.account.nil?
+-%>
+
+</td></tr>
+</table>
+
+<%
+else # unless @factura.cobrada?
+-%>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Fecha de Recepci&oacute;n del Cliente</b>
+</td><td valign="top">
+<%= format_short_date @factura.fecha_recepcion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Modalidad de Pago</b>
+</td><td valign="top">
+<%= simple_format @factura.modalidad_pago %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Pago real</b>
+</td><td valign="top">
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+
+<% unless @fechas_probables.empty? -%>
+<br>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#aaaaaa">
+<tr bgcolor="#ffffff"><td valign="top">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<%= render :partial => "probable_dates_list", :locals => { :fechas_probables => @fechas_probables } %>
+</td></tr>
+</table>
+</td></tr>
+</table>
+<%
+end # unless fechas_probables empty?
+-%>
+
+</td></tr>
+</table>
+
+<%
+end # unless @factura.cobrada?
+
+end # if @factura.en_blanco?
+-%>
+<br>
+
+<h3>Detalles</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table border="0" cellpadding="5" cellspacing="2">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Descripci&oacute;n</b>
+</td><td valign="top" align="center">
+<b>Cantidad</b>
+</td><td valign="top" align="center">
+<b>Valor Unitario</b>
+</td><td valign="top" align="center">
+<b>Valor de Venta</b>
+</td></tr>
+
+<% @factura.details.each do |d| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= simple_format d.descripcion %>
+</td><td valign="top" align="right">
+<%= d.cantidad %>
+</td><td valign="top" align="right">
+<%= format_price(d.valor_unitario) %>
+</td><td valign="top" align="right">
+<%= format_price(d.valor_de_venta) %>
+</td></tr>
+<% end -%>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+
+<% unless @factura.anulada? || @factura.imprimida? -%>
+<%= link_to "Editar", :action => "edit_factura", :fid => @factura.id %>,
+<%= link_to "Anular", :action => "void_factura", :fid => @factura.id %>
+<%=
+  unless @factura.en_blanco?
+    ", " + link_to("Poner en blanco", :action => "blank_factura", :fid => @factura.id) + " "
+  else
+    ""
+  end
+-%>
+o
+<%
+end # @factura.anulada?
+-%>
+<%=
+if @from == "f"
+  link_to "Regresar", :action => "facturas"
+elsif @from == "b"
+  link_to "Regresar", :action => "boletas"
+elsif @from == "o"
+  link_to "Regresar", :action => "order_facturas", :id => params[:id]
+elsif @from == "c"
+  link_to "Regresar", :action => "billing", :id => params[:id]
+end
+%>
+
+<%= calendar_javascripts(cals) unless cals.empty? %>
+

@@ -1,0 +1,385 @@
+--- 
+productos_062: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Viniles para piso
+  costo_variable: 
+  id: "65"
+productos_051: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Servicio de impresion
+  costo_variable: 
+  id: "53"
+productos_040: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Podium
+  costo_variable: 
+  id: "42"
+productos_029: 
+  categoria_id: "8"
+  descripcion: ""
+  nombre: juego claro celular
+  costo_variable: 
+  id: "77"
+productos_018: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Escenario movil
+  costo_variable: 
+  id: "19"
+productos_007: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Buzon de sugerencias
+  costo_variable: 
+  id: "8"
+productos_063: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Vitrina
+  costo_variable: 
+  id: "67"
+productos_052: 
+  categoria_id: "8"
+  descripcion: ""
+  nombre: "mu\xC3\xB1eco inflable"
+  costo_variable: 
+  id: "75"
+productos_041: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Portabidones
+  costo_variable: 
+  id: "43"
+productos_030: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Memoria
+  costo_variable: 
+  id: "32"
+productos_019: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Escritorio
+  costo_variable: 
+  id: "20"
+productos_008: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Cabecera de Gondola
+  costo_variable: 
+  id: "9"
+productos_064: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: "Botiqu\xC3\xADn"
+  costo_variable: 
+  id: "73"
+productos_053: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Silla
+  costo_variable: 
+  id: "56"
+productos_042: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Portafiche
+  costo_variable: 
+  id: "44"
+productos_031: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Menu board
+  costo_variable: 
+  id: "33"
+productos_020: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Estante
+  costo_variable: 
+  id: "21"
+productos_009: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Cabezales de Gondola
+  costo_variable: 
+  id: "10"
+productos_054: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Sombrillas
+  costo_variable: 
+  id: "57"
+productos_043: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Portafolleto
+  costo_variable: 
+  id: "45"
+productos_032: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Mesas
+  costo_variable: 
+  id: "34"
+productos_021: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Exhibidor
+  costo_variable: 
+  id: "22"
+productos_010: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Cabina de Internet
+  costo_variable: 
+  id: "11"
+productos_055: 
+  categoria_id: "8"
+  descripcion: ""
+  nombre: Dado
+  costo_variable: 
+  id: "76"
+productos_044: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Portaprecios
+  costo_variable: 
+  id: "46"
+productos_033: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Modulo desmontable
+  costo_variable: 
+  id: "35"
+productos_022: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Gondola
+  costo_variable: 
+  id: "24"
+productos_011: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Cabina telefonica abierta
+  costo_variable: 
+  id: "12"
+productos_056: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Tacho
+  costo_variable: 
+  id: "59"
+productos_045: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Revistero
+  costo_variable: 
+  id: "47"
+productos_034: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Modulo semi-desmontable
+  costo_variable: 
+  id: "36"
+productos_023: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Jalavista
+  costo_variable: 
+  id: "25"
+productos_012: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Cabina telefonica cerrada
+  costo_variable: 
+  id: "13"
+productos_001: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Exhibidor Rodante
+  costo_variable: 
+  id: "74"
+productos_057: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Talimetro
+  costo_variable: 
+  id: "60"
+productos_046: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Rotulacion de Mampara
+  costo_variable: 
+  id: "48"
+productos_035: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Mostrador
+  costo_variable: 
+  id: "37"
+productos_024: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Kioskos
+  costo_variable: 
+  id: "26"
+productos_013: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Caja Backlight
+  costo_variable: 
+  id: "14"
+productos_002: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Anfora
+  costo_variable: 
+  id: "2"
+productos_058: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Toldo
+  costo_variable: 
+  id: "61"
+productos_047: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Rotulacion de vehiculo
+  costo_variable: 
+  id: "49"
+productos_036: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Panel
+  costo_variable: 
+  id: "38"
+productos_025: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Letras block
+  costo_variable: 
+  id: "27"
+productos_014: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Counter
+  costo_variable: 
+  id: "15"
+productos_003: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Anfora giratoria
+  costo_variable: 
+  id: "3"
+productos_060: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Totem
+  costo_variable: 
+  id: "63"
+productos_059: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Torre de playa
+  costo_variable: 
+  id: "62"
+productos_048: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Ruleta electronica
+  costo_variable: 
+  id: "50"
+productos_037: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Panel de techo
+  costo_variable: 
+  id: "39"
+productos_026: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Letras en Neon
+  costo_variable: 
+  id: "28"
+productos_015: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Credenza
+  costo_variable: 
+  id: "16"
+productos_004: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Atril
+  costo_variable: 
+  id: "4"
+productos_061: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Urna
+  costo_variable: 
+  id: "64"
+productos_050: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: "Se\xC3\xB1aletica"
+  costo_variable: 
+  id: "52"
+productos_049: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Ruleta simple
+  costo_variable: 
+  id: "51"
+productos_038: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Panel informativo
+  costo_variable: 
+  id: "40"
+productos_027: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Letrero luminoso
+  costo_variable: 
+  id: "29"
+productos_016: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Display Wall
+  costo_variable: 
+  id: "17"
+productos_005: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Atril informativo
+  costo_variable: 
+  id: "5"
+productos_039: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Paraderos
+  costo_variable: 
+  id: "41"
+productos_028: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Locutorios
+  costo_variable: 
+  id: "30"
+productos_017: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Dummies
+  costo_variable: 
+  id: "18"
+productos_006: 
+  categoria_id: "1"
+  descripcion: ""
+  nombre: Banderola
+  costo_variable: 
+  id: "6"

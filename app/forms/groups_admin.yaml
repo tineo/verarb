@@ -1,0 +1,6 @@
+name:
+  type:         text
+
+goal:
+  type:         text
+  function:     validate_precio

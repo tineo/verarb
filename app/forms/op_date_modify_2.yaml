@@ -1,0 +1,10 @@
+auth:
+  type:         text
+  acts_as:      password
+  function:     validate_op_date_redef_exec
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

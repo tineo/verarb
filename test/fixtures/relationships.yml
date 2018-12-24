@@ -1,0 +1,2551 @@
+--- 
+relationships_121: 
+  join_key_rhs: case_id
+  rhs_table: cases
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: many-to-many
+  id: 34b9627e-c141-c688-f8a1-448de3ab1071
+  join_key_lhs: contact_id
+  lhs_table: contacts
+  deleted: "0"
+  join_table: contacts_cases
+  rhs_key: id
+  rhs_module: Cases
+  relationship_name: contacts_cases
+  relationship_role_column_value: 
+relationships_094: 
+  join_key_rhs: 
+  rhs_table: project_task
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 95701117-86c5-dac7-6409-448de3145059
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: ProjectTask
+  relationship_name: project_task_created_by
+  relationship_role_column_value: 
+relationships_066: 
+  join_key_rhs: 
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 3f69a1f5-5cd4-339a-567b-448de30ffb5a
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: reports_to_id
+  rhs_module: Users
+  relationship_name: user_direct_reports
+  relationship_role_column_value: 
+relationships_038: 
+  join_key_rhs: 
+  rhs_table: opportunities
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 12e3b1e6-b64a-d4d6-ed8f-448de3eaa1c9
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Opportunities
+  relationship_name: opportunities_assigned_user
+  relationship_role_column_value: 
+relationships_150: 
+  join_key_rhs: document_id
+  rhs_table: documents
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: ContracTemplates
+  relationship_type: many-to-many
+  id: 1c2a43f8-0c3b-d20a-f5bb-448de3af4fd8
+  join_key_lhs: parent_id
+  lhs_table: contract_types
+  deleted: "0"
+  join_table: linked_documents
+  rhs_key: id
+  rhs_module: documents
+  relationship_name: contracttype_documents
+  relationship_role_column_value: ContracTemplates
+relationships_122: 
+  join_key_rhs: user_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: many-to-many
+  id: 4b552f37-826a-f26a-a4f0-448de3b0c13a
+  join_key_lhs: contact_id
+  lhs_table: contacts
+  deleted: "0"
+  join_table: contacts_users
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: contacts_users
+  relationship_role_column_value: 
+relationships_095: 
+  join_key_rhs: 
+  rhs_table: email_marketing
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: EmailTemplates
+  relationship_type: one-to-many
+  id: ae872824-47a3-f720-b17d-448de36bf642
+  join_key_lhs: 
+  lhs_table: email_templates
+  deleted: "0"
+  join_table: 
+  rhs_key: template_id
+  rhs_module: EmailMarketing
+  relationship_name: email_template_email_marketings
+  relationship_role_column_value: 
+relationships_067: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Bugs
+  relationship_type: one-to-many
+  id: ba7a920b-ff50-cb53-01dc-448de3be5b35
+  join_key_lhs: 
+  lhs_table: bugs
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Tasks
+  relationship_name: bug_tasks
+  relationship_role_column_value: Bugs
+relationships_039: 
+  join_key_rhs: 
+  rhs_table: opportunities
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 138c4443-0d36-460b-87db-448de3826704
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Opportunities
+  relationship_name: opportunities_modified_user
+  relationship_role_column_value: 
+relationships_123: 
+  join_key_rhs: account_id
+  rhs_table: accounts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: 6117bc67-e41f-96ea-e5d3-448de3f3cee3
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_accounts
+  rhs_key: id
+  rhs_module: Accounts
+  relationship_name: emails_accounts_rel
+  relationship_role_column_value: 
+relationships_096: 
+  join_key_rhs: 
+  rhs_table: email_marketing
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Campaigns
+  relationship_type: one-to-many
+  id: d183780f-2f5c-6886-cc6c-448de3d8155b
+  join_key_lhs: 
+  lhs_table: campaigns
+  deleted: "0"
+  join_table: 
+  rhs_key: campaign_id
+  rhs_module: EmailMarketing
+  relationship_name: campaign_email_marketing
+  relationship_role_column_value: 
+relationships_068: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Bugs
+  relationship_type: one-to-many
+  id: bb3bac7a-1094-6124-0adf-448de3e8bd92
+  join_key_lhs: 
+  lhs_table: bugs
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: bug_meetings
+  relationship_role_column_value: Bugs
+relationships_124: 
+  join_key_rhs: bug_id
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: 7fc9ac0d-1480-6a3c-cd32-448de3357398
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_bugs
+  rhs_key: id
+  rhs_module: Bugs
+  relationship_name: emails_bugs_rel
+  relationship_role_column_value: 
+relationships_097: 
+  join_key_rhs: 
+  rhs_table: emailman
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Campaigns
+  relationship_type: one-to-many
+  id: d22cb326-c5af-b662-4fad-448de3f3752e
+  join_key_lhs: 
+  lhs_table: campaigns
+  deleted: "0"
+  join_table: 
+  rhs_key: campaign_id
+  rhs_module: EmailMan
+  relationship_name: campaign_emailman
+  relationship_role_column_value: 
+relationships_010: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 87a89e59-02a7-1c81-e9af-448de33f227d
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Leads
+  relationship_name: leads_assigned_user
+  relationship_role_column_value: 
+relationships_069: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Bugs
+  relationship_type: one-to-many
+  id: bbf67c14-57fd-0b6c-6a61-448de3481352
+  join_key_lhs: 
+  lhs_table: bugs
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: bug_calls
+  relationship_role_column_value: Bugs
+relationships_125: 
+  join_key_rhs: case_id
+  rhs_table: cases
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: 8b0ffcd5-98e2-d057-1264-448de397ef48
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_cases
+  rhs_key: id
+  rhs_module: Cases
+  relationship_name: emails_cases_rel
+  relationship_role_column_value: 
+relationships_098: 
+  join_key_rhs: 
+  rhs_table: campaign_log
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Campaigns
+  relationship_type: one-to-many
+  id: d2e35668-d8a7-ca04-2d24-448de3767911
+  join_key_lhs: 
+  lhs_table: campaigns
+  deleted: "0"
+  join_table: 
+  rhs_key: campaign_id
+  rhs_module: CampaignLog
+  relationship_name: campaign_campaignlog
+  relationship_role_column_value: 
+relationships_011: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 885d1913-cc69-193e-2f39-448de3fd0994
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Leads
+  relationship_name: leads_modified_user
+  relationship_role_column_value: 
+relationships_126: 
+  join_key_rhs: contact_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: a143c2bd-10e6-6931-59b5-448de3189163
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_contacts
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: emails_contacts_rel
+  relationship_role_column_value: 
+relationships_012: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 8913f010-581f-c274-b2e5-448de3285085
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Leads
+  relationship_name: leads_created_by
+  relationship_role_column_value: 
+relationships_040: 
+  join_key_rhs: 
+  rhs_table: opportunities
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 14420260-cb9c-8caf-e18c-448de309a1b7
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Opportunities
+  relationship_name: opportunities_created_by
+  relationship_role_column_value: 
+relationships_099: 
+  join_key_rhs: 
+  rhs_table: campaign_log
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Prospects
+  relationship_type: one-to-many
+  id: a4b1026c-c21d-2959-5117-448de3a42358
+  join_key_lhs: 
+  lhs_table: prospects
+  deleted: "0"
+  join_table: 
+  rhs_key: target_id
+  rhs_module: CampaignLog
+  relationship_name: prospect_campaign_log
+  relationship_role_column_value: 
+relationships_127: 
+  join_key_rhs: lead_id
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: c51e8cec-e7ef-8326-583f-448de3955955
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_leads
+  rhs_key: id
+  rhs_module: Leads
+  relationship_name: emails_leads_rel
+  relationship_role_column_value: 
+relationships_013: 
+  join_key_rhs: 
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: one-to-many
+  id: a2f62722-e0f4-790e-5870-448de382de12
+  join_key_lhs: 
+  lhs_table: contacts
+  deleted: "0"
+  join_table: 
+  rhs_key: reports_to_id
+  rhs_module: Contacts
+  relationship_name: contact_direct_reports
+  relationship_role_column_value: 
+relationships_041: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Cases
+  relationship_type: one-to-many
+  id: 31b5576a-1e17-7cae-43b7-448de3ff69f6
+  join_key_lhs: 
+  lhs_table: cases
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: case_calls
+  relationship_role_column_value: Cases
+relationships_128: 
+  join_key_rhs: opportunity_id
+  rhs_table: opportunities
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: d65725dd-436f-70d9-0b61-448de31cd1eb
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_opportunities
+  rhs_key: id
+  rhs_module: Opportunities
+  relationship_name: emails_opportunities_rel
+  relationship_role_column_value: 
+relationships_014: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: one-to-many
+  id: a3af98a7-2fc7-ea13-b4a5-448de3a0e49f
+  join_key_lhs: 
+  lhs_table: contacts
+  deleted: "0"
+  join_table: 
+  rhs_key: contact_id
+  rhs_module: Leads
+  relationship_name: contact_leads
+  relationship_role_column_value: 
+relationships_070: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Bugs
+  relationship_type: one-to-many
+  id: bcb5c155-1f9d-b679-91d5-448de33ca49b
+  join_key_lhs: 
+  lhs_table: bugs
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: bug_emails
+  relationship_role_column_value: Bugs
+relationships_042: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Cases
+  relationship_type: one-to-many
+  id: 32756d8e-f77c-9d82-cfae-448de3425e00
+  join_key_lhs: 
+  lhs_table: cases
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Tasks
+  relationship_name: case_tasks
+  relationship_role_column_value: Cases
+relationships_129: 
+  join_key_rhs: project_task_id
+  rhs_table: project_task
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: e19a2453-7747-adeb-f0b6-448de336fa53
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_project_tasks
+  rhs_key: id
+  rhs_module: ProjectTask
+  relationship_name: emails_project_task_rel
+  relationship_role_column_value: 
+relationships_071: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Bugs
+  relationship_type: one-to-many
+  id: bd71fdbd-17dc-74ce-9c6d-448de3c96400
+  join_key_lhs: 
+  lhs_table: bugs
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: bug_notes
+  relationship_role_column_value: Bugs
+relationships_043: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Cases
+  relationship_type: one-to-many
+  id: 33146e9c-7721-d2f2-83ad-448de3adaf52
+  join_key_lhs: 
+  lhs_table: cases
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: case_notes
+  relationship_role_column_value: Cases
+relationships_015: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: one-to-many
+  id: a465e968-9bc0-76c3-2877-448de3b7642c
+  join_key_lhs: 
+  lhs_table: contacts
+  deleted: "0"
+  join_table: 
+  rhs_key: contact_id
+  rhs_module: Notes
+  relationship_name: contact_notes
+  relationship_role_column_value: 
+relationships_072: 
+  join_key_rhs: 
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: be167f61-417d-8acd-27fa-448de3973cda
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Bugs
+  relationship_name: bugs_assigned_user
+  relationship_role_column_value: 
+relationships_044: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Cases
+  relationship_type: one-to-many
+  id: 33ceda95-bba0-7e84-13de-448de3aecfe9
+  join_key_lhs: 
+  lhs_table: cases
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: case_meetings
+  relationship_role_column_value: Cases
+relationships_016: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: one-to-many
+  id: a51f3b31-95e2-68f5-94e3-448de3006e9a
+  join_key_lhs: 
+  lhs_table: contacts
+  deleted: "0"
+  join_table: 
+  rhs_key: contact_id
+  rhs_module: Tasks
+  relationship_name: contact_tasks
+  relationship_role_column_value: 
+relationships_073: 
+  join_key_rhs: 
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: bed927e7-aacc-3d8a-c150-448de3d7d145
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Bugs
+  relationship_name: bugs_modified_user
+  relationship_role_column_value: 
+relationships_045: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Cases
+  relationship_type: one-to-many
+  id: 3487b4c6-0bd3-838c-4155-448de3b7be63
+  join_key_lhs: 
+  lhs_table: cases
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: case_emails
+  relationship_role_column_value: Cases
+relationships_100: 
+  join_key_rhs: 
+  rhs_table: document_revisions
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Documents
+  relationship_type: one-to-many
+  id: 1e35840a-ebd1-7c9a-28f8-448de3bc373c
+  join_key_lhs: 
+  lhs_table: documents
+  deleted: "0"
+  join_table: 
+  rhs_key: document_id
+  rhs_module: Documents
+  relationship_name: document_revisions
+  relationship_role_column_value: 
+relationships_017: 
+  join_key_rhs: 
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: a5d85d42-dc4c-e192-1da6-448de34147dc
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Contacts
+  relationship_name: contacts_assigned_user
+  relationship_role_column_value: 
+relationships_074: 
+  join_key_rhs: 
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: bf93d84e-3bcf-cf09-d99c-448de3920f10
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Bugs
+  relationship_name: bugs_created_by
+  relationship_role_column_value: 
+relationships_046: 
+  join_key_rhs: 
+  rhs_table: cases
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 3544bb7c-da52-6785-5a80-448de3731a3e
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Cases
+  relationship_name: cases_assigned_user
+  relationship_role_column_value: 
+relationships_101: 
+  join_key_rhs: 
+  rhs_table: quotes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 1ef92635-37e5-fa80-fff7-448de32472ab
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Quotes
+  relationship_name: quotes_assigned_user
+  relationship_role_column_value: 
+relationships_018: 
+  join_key_rhs: 
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: a670d999-163f-f10b-163e-448de3b3e9ee
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Contacts
+  relationship_name: contacts_modified_user
+  relationship_role_column_value: 
+relationships_130: 
+  join_key_rhs: project_id
+  rhs_table: project
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: ece6689b-4ac4-7b5e-bd5d-448de3101b29
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_projects
+  rhs_key: id
+  rhs_module: Project
+  relationship_name: emails_projects_rel
+  relationship_role_column_value: 
+relationships_075: 
+  join_key_rhs: 
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Releases
+  relationship_type: one-to-many
+  id: c0557bab-5098-256b-4c9e-448de3bf22d4
+  join_key_lhs: 
+  lhs_table: releases
+  deleted: "0"
+  join_table: 
+  rhs_key: found_in_release
+  rhs_module: Bugs
+  relationship_name: bugs_release
+  relationship_role_column_value: 
+relationships_047: 
+  join_key_rhs: 
+  rhs_table: cases
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 35ffdba2-1984-d9bb-4eb4-448de3422513
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Cases
+  relationship_name: cases_modified_user
+  relationship_role_column_value: 
+relationships_102: 
+  join_key_rhs: 
+  rhs_table: quotes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 1fb6b9dc-06f4-141c-ce9a-448de372ec7a
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Quotes
+  relationship_name: quotes_modified_user
+  relationship_role_column_value: 
+relationships_019: 
+  join_key_rhs: 
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: a726ecb9-d3c8-c383-8d86-448de3c65fc7
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Contacts
+  relationship_name: contacts_created_by
+  relationship_role_column_value: 
+relationships_131: 
+  join_key_rhs: prospect_id
+  rhs_table: prospects
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: 13f803ec-4cc4-4998-2ce1-448de3c62e7b
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_prospects
+  rhs_key: id
+  rhs_module: Prospect
+  relationship_name: emails_prospects_rel
+  relationship_role_column_value: 
+relationships_076: 
+  join_key_rhs: 
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Releases
+  relationship_type: one-to-many
+  id: c107d376-a1ae-805a-aa75-448de39efd91
+  join_key_lhs: 
+  lhs_table: releases
+  deleted: "0"
+  join_table: 
+  rhs_key: fixed_in_release
+  rhs_module: Bugs
+  relationship_name: bugs_fixed_in_release
+  relationship_role_column_value: 
+relationships_048: 
+  join_key_rhs: 
+  rhs_table: cases
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 369b5ce6-2237-3f9d-9077-448de3220efd
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Cases
+  relationship_name: cases_created_by
+  relationship_role_column_value: 
+relationships_103: 
+  join_key_rhs: 
+  rhs_table: quotes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 20500533-063d-712b-05cc-448de37e8732
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Quotes
+  relationship_name: quotes_created_by
+  relationship_role_column_value: 
+relationships_132: 
+  join_key_rhs: task_id
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: 9dda08d7-8744-7152-0be9-448de364d835
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_tasks
+  rhs_key: id
+  rhs_module: Tasks
+  relationship_name: emails_tasks_rel
+  relationship_role_column_value: 
+relationships_077: 
+  join_key_rhs: 
+  rhs_table: feeds
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 5a558f36-d046-3ebe-b9fd-448de36a6184
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Feeds
+  relationship_name: feeds_assigned_user
+  relationship_role_column_value: 
+relationships_049: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 4c2eec7f-3cc7-674d-7b22-448de3eba10e
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Notes
+  relationship_name: notes_assigned_user
+  relationship_role_column_value: 
+relationships_104: 
+  join_key_rhs: 
+  rhs_table: document_revisions
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 35165c2b-bbfa-8b80-640e-448de35d73e9
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: DocumentRevisions
+  relationship_name: revisions_created_by
+  relationship_role_column_value: 
+relationships_133: 
+  join_key_rhs: user_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Emails
+  relationship_type: many-to-many
+  id: 1a99990e-ae79-a8f7-59a1-448de3444aa4
+  join_key_lhs: email_id
+  lhs_table: emails
+  deleted: "0"
+  join_table: emails_users
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: emails_users_rel
+  relationship_role_column_value: 
+relationships_105: 
+  join_key_rhs: 
+  rhs_table: schedulers
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-one
+  id: 4e388a1b-ed0f-8df9-7080-448de3f9cd5b
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Schedulers
+  relationship_name: schedulers_created_by_rel
+  relationship_role_column_value: 
+relationships_078: 
+  join_key_rhs: 
+  rhs_table: feeds
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 5b1b128c-5f73-78b5-942c-448de3854c0d
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Feeds
+  relationship_name: feeds_modified_user
+  relationship_role_column_value: 
+relationships_134: 
+  join_key_rhs: contact_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Meetings
+  relationship_type: many-to-many
+  id: 36392e85-4a7a-45e8-d50e-448de3fa5281
+  join_key_lhs: meeting_id
+  lhs_table: meetings
+  deleted: "0"
+  join_table: meetings_contacts
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: meetings_contacts
+  relationship_role_column_value: 
+relationships_106: 
+  join_key_rhs: 
+  rhs_table: schedulers
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-one
+  id: 4ef50b64-f29b-0004-1248-448de3cb4b14
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Schedulers
+  relationship_name: schedulers_modified_user_id_rel
+  relationship_role_column_value: 
+relationships_020: 
+  join_key_rhs: 
+  rhs_table: campaign_log
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: one-to-many
+  id: a7dcc435-01c4-00e6-7981-448de387cf6a
+  join_key_lhs: 
+  lhs_table: contacts
+  deleted: "0"
+  join_table: 
+  rhs_key: target_id
+  rhs_module: CampaignLog
+  relationship_name: contact_campaign_log
+  relationship_role_column_value: 
+relationships_079: 
+  join_key_rhs: 
+  rhs_table: feeds
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 5bc756ac-89de-a99a-3032-448de3c7ea3d
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Feeds
+  relationship_name: feeds_created_by
+  relationship_role_column_value: 
+relationships_135: 
+  join_key_rhs: user_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Meetings
+  relationship_type: many-to-many
+  id: 4c629bb1-736f-ce26-f6b8-448de34f3e6a
+  join_key_lhs: meeting_id
+  lhs_table: meetings
+  deleted: "0"
+  join_table: meetings_users
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: meetings_users
+  relationship_role_column_value: 
+relationships_107: 
+  join_key_rhs: 
+  rhs_table: schedulers_times
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Schedulers
+  relationship_type: one-to-many
+  id: 4fb1c693-1051-fb53-9cf0-448de3cbc329
+  join_key_lhs: 
+  lhs_table: schedulers
+  deleted: "0"
+  join_table: 
+  rhs_key: scheduler_id
+  rhs_module: SchedulersJobs
+  relationship_name: schedulers_jobs_rel
+  relationship_role_column_value: 
+relationships_021: 
+  join_key_rhs: 
+  rhs_table: accounts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e0d60660-a5cf-18ed-862b-448de31842bb
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Accounts
+  relationship_name: member_accounts
+  relationship_role_column_value: 
+relationships_136: 
+  join_key_rhs: contact_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Opportunities
+  relationship_type: many-to-many
+  id: 632189ba-af30-3a4d-b6a8-448de3d04215
+  join_key_lhs: opportunity_id
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: opportunities_contacts
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: opportunities_contacts
+  relationship_role_column_value: 
+relationships_108: 
+  join_key_rhs: 
+  rhs_table: inbound_email
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-one
+  id: 58a994fb-c20e-62e2-4ed2-448de360a43e
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: InboundEmail
+  relationship_name: inbound_email_created_by
+  relationship_role_column_value: 
+relationships_050: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 4ce9520e-af99-64d4-5436-448de3efe61d
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Notes
+  relationship_name: notes_modified_user
+  relationship_role_column_value: 
+relationships_022: 
+  join_key_rhs: 
+  rhs_table: cases
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e1778744-c034-a942-73be-448de396297d
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: account_id
+  rhs_module: Cases
+  relationship_name: account_cases
+  relationship_role_column_value: 
+relationships_137: 
+  join_key_rhs: campaign_id
+  rhs_table: campaigns
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: ProspectLists
+  relationship_type: many-to-many
+  id: 79eb9e26-5cac-d21d-2853-448de3f9ad87
+  join_key_lhs: prospect_list_id
+  lhs_table: prospect_lists
+  deleted: "0"
+  join_table: prospect_list_campaigns
+  rhs_key: id
+  rhs_module: Campaigns
+  relationship_name: prospect_list_campaigns
+  relationship_role_column_value: 
+relationships_109: 
+  join_key_rhs: 
+  rhs_table: inbound_email
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-one
+  id: 59683672-4ebd-15cc-bfbc-448de3e8c347
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: InboundEmail
+  relationship_name: inbound_email_modified_user_id
+  relationship_role_column_value: 
+relationships_051: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 4da998ec-0ff0-a0f9-bee1-448de3514c1a
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Notes
+  relationship_name: notes_created_by
+  relationship_role_column_value: 
+relationships_023: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e22c2fbe-fa11-88c9-1aa8-448de334f015
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Tasks
+  relationship_name: account_tasks
+  relationship_role_column_value: Accounts
+relationships_138: 
+  join_key_rhs: related_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: related_type
+  lhs_module: ProspectLists
+  relationship_type: many-to-many
+  id: 87cf9ea7-b00f-c862-801f-448de30e3009
+  join_key_lhs: prospect_list_id
+  lhs_table: prospect_lists
+  deleted: "0"
+  join_table: prospect_lists_prospects
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: prospect_list_contacts
+  relationship_role_column_value: Contacts
+relationships_052: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: a640a191-fe3e-5cb7-4b02-448de39f57fa
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Calls
+  relationship_name: calls_assigned_user
+  relationship_role_column_value: 
+relationships_024: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e2e4d1c4-68c9-03b6-5518-448de3c4a3a7
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: account_notes
+  relationship_role_column_value: Accounts
+relationships_080: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Project
+  relationship_type: one-to-many
+  id: 6a729afa-ac51-eafe-6245-448de3b1f3c9
+  join_key_lhs: 
+  lhs_table: project
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: project_notes
+  relationship_role_column_value: Project
+relationships_139: 
+  join_key_rhs: related_id
+  rhs_table: prospects
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: related_type
+  lhs_module: ProspectLists
+  relationship_type: many-to-many
+  id: 889328e3-b2b6-e878-4eb0-448de3355c1e
+  join_key_lhs: prospect_list_id
+  lhs_table: prospect_lists
+  deleted: "0"
+  join_table: prospect_lists_prospects
+  rhs_key: id
+  rhs_module: Prospects
+  relationship_name: prospect_list_prospects
+  relationship_role_column_value: Prospects
+relationships_053: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: a6f6f68c-f586-360a-0c07-448de313a61d
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Calls
+  relationship_name: calls_modified_user
+  relationship_role_column_value: 
+relationships_025: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e3a0c58b-2eb4-6f38-a085-448de34523cb
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: account_meetings
+  relationship_role_column_value: Accounts
+relationships_081: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Project
+  relationship_type: one-to-many
+  id: 6b32962b-ef36-75b4-f5f8-448de313cdda
+  join_key_lhs: 
+  lhs_table: project
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: project_meetings
+  relationship_role_column_value: Project
+relationships_054: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: a7ae6e98-b19f-dd08-ff4e-448de3d6e6b9
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Calls
+  relationship_name: calls_created_by
+  relationship_role_column_value: 
+relationships_026: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e45e6bcd-2531-977c-e7ac-448de3c0c3c5
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: account_calls
+  relationship_role_column_value: Accounts
+relationships_082: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Project
+  relationship_type: one-to-many
+  id: 6bf26dea-6994-f379-8870-448de3874f75
+  join_key_lhs: 
+  lhs_table: project
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: project_calls
+  relationship_role_column_value: Project
+relationships_055: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Calls
+  relationship_type: one-to-many
+  id: a86ab49c-718b-0083-1cde-448de34eead2
+  join_key_lhs: 
+  lhs_table: calls
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: calls_notes
+  relationship_role_column_value: 
+relationships_110: 
+  join_key_rhs: 
+  rhs_table: dashboards
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 74c95c9a-6ed3-c51d-422a-448de32b2bb8
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Dashboards
+  relationship_name: dashboards_assigned_user
+  relationship_role_column_value: 
+relationships_027: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e50439b0-7666-304b-8dfd-448de34da5ae
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: account_emails
+  relationship_role_column_value: Accounts
+relationships_083: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Project
+  relationship_type: one-to-many
+  id: 6cb4c1dc-0ecb-9da0-db23-448de3dce959
+  join_key_lhs: 
+  lhs_table: project
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: project_emails
+  relationship_role_column_value: Project
+relationships_056: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: cd3d3a2d-c9c7-91ee-ea41-448de333150d
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Emails
+  relationship_name: emails_assigned_user
+  relationship_role_column_value: 
+relationships_111: 
+  join_key_rhs: 
+  rhs_table: dashboards
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 7584e203-92e7-9c25-27af-448de36e54c4
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Dashboards
+  relationship_name: dashboards_modified_user
+  relationship_role_column_value: 
+relationships_028: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Accounts
+  relationship_type: one-to-many
+  id: e5bb582d-bf75-8547-e80a-448de328bc42
+  join_key_lhs: 
+  lhs_table: accounts
+  deleted: "0"
+  join_table: 
+  rhs_key: account_id
+  rhs_module: Leads
+  relationship_name: account_leads
+  relationship_role_column_value: 
+relationships_084: 
+  join_key_rhs: 
+  rhs_table: project_task
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Project
+  relationship_type: one-to-many
+  id: 6d5af060-cb35-27ff-ea49-448de36a1d74
+  join_key_lhs: 
+  lhs_table: project
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: ProjectTask
+  relationship_name: project_project_tasks
+  relationship_role_column_value: 
+relationships_140: 
+  join_key_rhs: related_id
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: related_type
+  lhs_module: ProspectLists
+  relationship_type: many-to-many
+  id: 8954dbbe-5f29-79b3-8b05-448de331f5c3
+  join_key_lhs: prospect_list_id
+  lhs_table: prospect_lists
+  deleted: "0"
+  join_table: prospect_lists_prospects
+  rhs_key: id
+  rhs_module: Leads
+  relationship_name: prospect_list_leads
+  relationship_role_column_value: Leads
+relationships_112: 
+  join_key_rhs: 
+  rhs_table: dashboards
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 7643cfa1-b405-a72e-4f66-448de37dfd04
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Dashboards
+  relationship_name: dashboards_created_by
+  relationship_role_column_value: 
+relationships_029: 
+  join_key_rhs: 
+  rhs_table: accounts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: e6739497-7017-15e5-536d-448de39272ec
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Accounts
+  relationship_name: accounts_assigned_user
+  relationship_role_column_value: 
+relationships_085: 
+  join_key_rhs: 
+  rhs_table: project
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 6e15dd24-5d18-f637-cb96-448de39a536c
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Project
+  relationship_name: projects_assigned_user
+  relationship_role_column_value: 
+relationships_057: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: cdfb2260-98ed-da17-b3ae-448de3b2aa28
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Emails
+  relationship_name: emails_modified_user
+  relationship_role_column_value: 
+relationships_141: 
+  join_key_rhs: related_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: related_type
+  lhs_module: ProspectLists
+  relationship_type: many-to-many
+  id: 8a20db06-b8ff-076f-c021-448de3ea904a
+  join_key_lhs: prospect_list_id
+  lhs_table: prospect_lists
+  deleted: "0"
+  join_table: prospect_lists_prospects
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: prospect_list_users
+  relationship_role_column_value: Users
+relationships_113: 
+  join_key_rhs: 
+  rhs_table: campaign_trkrs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Campaigns
+  relationship_type: one-to-many
+  id: 844b6731-2e39-ea80-e2f0-448de3bc5ead
+  join_key_lhs: 
+  lhs_table: campaigns
+  deleted: "0"
+  join_table: 
+  rhs_key: campaign_id
+  rhs_module: CampaignTrackers
+  relationship_name: campaign_campaigntrakers
+  relationship_role_column_value: 
+relationships_086: 
+  join_key_rhs: 
+  rhs_table: project
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 6ed1d7f6-6c7f-3a5f-c366-448de39188f7
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Project
+  relationship_name: projects_modified_user
+  relationship_role_column_value: 
+relationships_058: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: cebbe860-2322-27a0-47ed-448de34ae702
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Emails
+  relationship_name: emails_created_by
+  relationship_role_column_value: 
+relationships_142: 
+  join_key_rhs: user_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Roles
+  relationship_type: many-to-many
+  id: 95051a1f-0e2b-69e0-9e85-448de3563b7e
+  join_key_lhs: role_id
+  lhs_table: roles
+  deleted: "0"
+  join_table: roles_users
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: roles_users
+  relationship_role_column_value: 
+relationships_087: 
+  join_key_rhs: 
+  rhs_table: project
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 6f8f70e1-a809-0cf3-cc4e-448de3220330
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Project
+  relationship_name: projects_created_by
+  relationship_role_column_value: 
+relationships_059: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 62a805d2-c8c3-dead-daed-448de3e05eca
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Meetings
+  relationship_name: meetings_assigned_user
+  relationship_role_column_value: 
+relationships_114: 
+  join_key_rhs: bug_id
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Accounts
+  relationship_type: many-to-many
+  id: 9ec12f39-3967-04ce-2282-448de36d434d
+  join_key_lhs: account_id
+  lhs_table: accounts
+  deleted: "0"
+  join_table: accounts_bugs
+  rhs_key: id
+  rhs_module: Bugs
+  relationship_name: accounts_bugs
+  relationship_role_column_value: 
+relationships_143: 
+  join_key_rhs: project_id
+  rhs_table: project
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: relation_type
+  lhs_module: Accounts
+  relationship_type: many-to-many
+  id: a949c15a-040c-f90c-4b1f-448de3335367
+  join_key_lhs: relation_id
+  lhs_table: accounts
+  deleted: "0"
+  join_table: project_relation
+  rhs_key: id
+  rhs_module: Project
+  relationship_name: projects_accounts
+  relationship_role_column_value: Accounts
+relationships_115: 
+  join_key_rhs: contact_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Accounts
+  relationship_type: many-to-many
+  id: c819fc8f-d6e0-ff78-9d1b-448de3eb4de2
+  join_key_lhs: account_id
+  lhs_table: accounts
+  deleted: "0"
+  join_table: accounts_contacts
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: accounts_contacts
+  relationship_role_column_value: 
+relationships_088: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: ProjectTask
+  relationship_type: one-to-many
+  id: 910e28b9-c210-2209-52e3-448de3c1c862
+  join_key_lhs: 
+  lhs_table: project_task
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: project_task_notes
+  relationship_role_column_value: ProjectTask
+relationships_001: 
+  join_key_rhs: user_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: ACLRoles
+  relationship_type: many-to-many
+  id: 67d8be22-85e2-0375-be4f-448de3d65cd2
+  join_key_lhs: role_id
+  lhs_table: acl_roles
+  deleted: "0"
+  join_table: acl_roles_users
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: acl_roles_users
+  relationship_role_column_value: 
+relationships_144: 
+  join_key_rhs: relation_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: relation_type
+  lhs_module: Project
+  relationship_type: many-to-many
+  id: aa1085cf-5070-8a15-fa9b-448de3d8f8aa
+  join_key_lhs: project_id
+  lhs_table: project
+  deleted: "0"
+  join_table: project_relation
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: projects_contacts
+  relationship_role_column_value: Contacts
+relationships_116: 
+  join_key_rhs: opportunity_id
+  rhs_table: opportunities
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Accounts
+  relationship_type: many-to-many
+  id: db7d620a-52cb-bd44-eaab-448de3f2e74c
+  join_key_lhs: account_id
+  lhs_table: accounts
+  deleted: "0"
+  join_table: accounts_opportunities
+  rhs_key: id
+  rhs_module: Opportunities
+  relationship_name: accounts_opportunities
+  relationship_role_column_value: 
+relationships_030: 
+  join_key_rhs: 
+  rhs_table: accounts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: e72cb731-babf-f6ad-d0d7-448de3e62e6b
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Accounts
+  relationship_name: accounts_modified_user
+  relationship_role_column_value: 
+relationships_089: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: ProjectTask
+  relationship_type: one-to-many
+  id: 91ce1fbb-2e4e-447f-883f-448de36a05f3
+  join_key_lhs: 
+  lhs_table: project_task
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: project_task_meetings
+  relationship_role_column_value: ProjectTask
+relationships_002: 
+  join_key_rhs: action_id
+  rhs_table: acl_action
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: ACLRoles
+  relationship_type: many-to-many
+  id: 68928d1e-88dc-d97e-fff5-448de35196a9
+  join_key_lhs: role_id
+  lhs_table: acl_role
+  deleted: "0"
+  join_table: acl_roles_actions
+  rhs_key: id
+  rhs_module: ACLActions
+  relationship_name: acl_roles_actions
+  relationship_role_column_value: 
+relationships_145: 
+  join_key_rhs: relation_id
+  rhs_table: opportunities
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: relation_type
+  lhs_module: Project
+  relationship_type: many-to-many
+  id: aab3eed2-38d6-2c29-1dc6-448de3cc407c
+  join_key_lhs: project_id
+  lhs_table: project
+  deleted: "0"
+  join_table: project_relation
+  rhs_key: id
+  rhs_module: Opportunities
+  relationship_name: projects_opportunities
+  relationship_role_column_value: Opportunities
+relationships_117: 
+  join_key_rhs: contact_id
+  rhs_table: contacts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Calls
+  relationship_type: many-to-many
+  id: eec394b9-81fb-d2bc-6233-448de32758eb
+  join_key_lhs: call_id
+  lhs_table: calls
+  deleted: "0"
+  join_table: calls_contacts
+  rhs_key: id
+  rhs_module: Contacts
+  relationship_name: calls_contacts
+  relationship_role_column_value: 
+relationships_031: 
+  join_key_rhs: 
+  rhs_table: accounts
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: e7e7b8e1-6eb2-5c86-a556-448de33b4639
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Accounts
+  relationship_name: accounts_created_by
+  relationship_role_column_value: 
+relationships_003: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 82c76dbb-7466-f906-1399-448de3cdeeaf
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: reports_to_id
+  rhs_module: Leads
+  relationship_name: lead_direct_reports
+  relationship_role_column_value: 
+relationships_146: 
+  join_key_rhs: relation_id
+  rhs_table: quotes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: relation_type
+  lhs_module: Project
+  relationship_type: many-to-many
+  id: ab75e750-554c-c909-c7ae-448de355b3db
+  join_key_lhs: project_id
+  lhs_table: project
+  deleted: "0"
+  join_table: project_relation
+  rhs_key: id
+  rhs_module: Quotes
+  relationship_name: projects_quotes
+  relationship_role_column_value: Quotes
+relationships_118: 
+  join_key_rhs: user_id
+  rhs_table: users
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Calls
+  relationship_type: many-to-many
+  id: 85fb0b3e-812c-3ca4-c381-448de3b1b2f4
+  join_key_lhs: call_id
+  lhs_table: calls
+  deleted: "0"
+  join_table: calls_users
+  rhs_key: id
+  rhs_module: Users
+  relationship_name: calls_users
+  relationship_role_column_value: 
+relationships_032: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Opportunities
+  relationship_type: one-to-many
+  id: e751068f-b7e8-1302-6bde-448de3028131
+  join_key_lhs: 
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: opportunity_calls
+  relationship_role_column_value: Opportunities
+relationships_004: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 836b1af8-d590-d990-5a14-448de325708e
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Tasks
+  relationship_name: lead_tasks
+  relationship_role_column_value: Leads
+relationships_060: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 6e4905b6-697e-ff4e-651d-448de3a98ec6
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Meetings
+  relationship_name: meetings_modified_user
+  relationship_role_column_value: 
+relationships_147: 
+  join_key_rhs: prospect_list_id
+  rhs_table: prospect_lists
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: EmailMarketing
+  relationship_type: many-to-many
+  id: ebe19942-e948-2108-45d2-448de3978d1e
+  join_key_lhs: email_marketing_id
+  lhs_table: email_marketing
+  deleted: "0"
+  join_table: email_marketing_prospect_lists
+  rhs_key: id
+  rhs_module: ProspectLists
+  relationship_name: email_marketing_prospect_lists
+  relationship_role_column_value: 
+relationships_119: 
+  join_key_rhs: bug_id
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Cases
+  relationship_type: many-to-many
+  id: 16b99d73-1ead-385b-da98-448de34a0a37
+  join_key_lhs: case_id
+  lhs_table: cases
+  deleted: "0"
+  join_table: cases_bugs
+  rhs_key: id
+  rhs_module: Bugs
+  relationship_name: cases_bugs
+  relationship_role_column_value: 
+relationships_033: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Opportunities
+  relationship_type: one-to-many
+  id: f3e809a7-5511-599a-0550-448de382be63
+  join_key_lhs: 
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: opportunity_meetings
+  relationship_role_column_value: Opportunities
+relationships_005: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 8421c235-ea5b-50d5-6da1-448de3195e4c
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: lead_notes
+  relationship_role_column_value: Leads
+relationships_061: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 7ab00db9-d724-2ab3-b9d5-448de36da123
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Meetings
+  relationship_name: meetings_created_by
+  relationship_role_column_value: 
+relationships_148: 
+  join_key_rhs: document_id
+  rhs_table: documents
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: contracts
+  relationship_type: many-to-many
+  id: 1ab4d6a8-c485-56fc-15c0-448de313b8ad
+  join_key_lhs: parent_id
+  lhs_table: contracts
+  deleted: "0"
+  join_table: linked_documents
+  rhs_key: id
+  rhs_module: documents
+  relationship_name: contracts_documents
+  relationship_role_column_value: Contracts
+relationships_034: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Opportunities
+  relationship_type: one-to-many
+  id: ff4606e7-9a6e-b238-b14d-448de3518eea
+  join_key_lhs: 
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Tasks
+  relationship_name: opportunity_tasks
+  relationship_role_column_value: Opportunities
+relationships_006: 
+  join_key_rhs: 
+  rhs_table: meetings
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 84d9c938-2bcf-024a-d73f-448de3bb1022
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Meetings
+  relationship_name: lead_meetings
+  relationship_role_column_value: Leads
+relationships_090: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: ProjectTask
+  relationship_type: one-to-many
+  id: 92927f3f-5921-5eec-6faa-448de30c40d9
+  join_key_lhs: 
+  lhs_table: project_task
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: project_task_calls
+  relationship_role_column_value: ProjectTask
+relationships_062: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Meetings
+  relationship_type: one-to-many
+  id: 866b0d46-bdbd-556d-c689-448de34283cb
+  join_key_lhs: 
+  lhs_table: meetings
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: meetings_notes
+  relationship_role_column_value: Meetings
+relationships_149: 
+  join_key_rhs: document_id
+  rhs_table: documents
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: leads
+  relationship_type: many-to-many
+  id: 1b6a5bc6-8b2d-6542-f4d7-448de3d4e039
+  join_key_lhs: parent_id
+  lhs_table: leads
+  deleted: "0"
+  join_table: linked_documents
+  rhs_key: id
+  rhs_module: documents
+  relationship_name: leads_documents
+  relationship_role_column_value: Leads
+relationships_035: 
+  join_key_rhs: 
+  rhs_table: notes
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Opportunities
+  relationship_type: one-to-many
+  id: 10a5b355-4702-e8d3-1c60-448de314b2f8
+  join_key_lhs: 
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Notes
+  relationship_name: opportunity_notes
+  relationship_role_column_value: Opportunities
+relationships_007: 
+  join_key_rhs: 
+  rhs_table: calls
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 8594d8b2-cdc7-a668-8482-448de32fe50d
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Calls
+  relationship_name: lead_calls
+  relationship_role_column_value: Leads
+relationships_091: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: ProjectTask
+  relationship_type: one-to-many
+  id: 934cdbda-09d4-5af7-b4e7-448de3f68d42
+  join_key_lhs: 
+  lhs_table: project_task
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: project_task_emails
+  relationship_role_column_value: ProjectTask
+relationships_063: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 307b18f7-21b5-b384-b2af-448de3bd01e8
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: Tasks
+  relationship_name: tasks_assigned_user
+  relationship_role_column_value: 
+relationships_008: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 8654a4f5-7b38-0c94-0d47-448de30fb776
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: lead_emails
+  relationship_role_column_value: Leads
+relationships_092: 
+  join_key_rhs: 
+  rhs_table: project_task
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 93fabc5f-6bf5-7d86-fb1a-448de3ba94b0
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: assigned_user_id
+  rhs_module: ProjectTask
+  relationship_name: project_task_assigned_user
+  relationship_role_column_value: 
+relationships_064: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 313d2947-fd3c-1ae4-d1ba-448de3d37751
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: Tasks
+  relationship_name: tasks_modified_user
+  relationship_role_column_value: 
+relationships_036: 
+  join_key_rhs: 
+  rhs_table: emails
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: parent_type
+  lhs_module: Opportunities
+  relationship_type: one-to-many
+  id: 1161b988-40b8-2e79-ef08-448de3c5a8c5
+  join_key_lhs: 
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: 
+  rhs_key: parent_id
+  rhs_module: Emails
+  relationship_name: opportunity_emails
+  relationship_role_column_value: Opportunities
+relationships_120: 
+  join_key_rhs: bug_id
+  rhs_table: bugs
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Contacts
+  relationship_type: many-to-many
+  id: 246be967-a44e-33e6-e830-448de3db3ada
+  join_key_lhs: contact_id
+  lhs_table: contacts
+  deleted: "0"
+  join_table: contacts_bugs
+  rhs_key: id
+  rhs_module: Bugs
+  relationship_name: contacts_bugs
+  relationship_role_column_value: 
+relationships_009: 
+  join_key_rhs: 
+  rhs_table: campaign_log
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Leads
+  relationship_type: one-to-many
+  id: 86f2efea-0ca9-28e7-4a32-448de399b1a9
+  join_key_lhs: 
+  lhs_table: leads
+  deleted: "0"
+  join_table: 
+  rhs_key: target_id
+  rhs_module: CampaignLog
+  relationship_name: lead_campaign_log
+  relationship_role_column_value: 
+relationships_093: 
+  join_key_rhs: 
+  rhs_table: project_task
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 94b657f9-b783-9392-e717-448de30b1fc9
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: modified_user_id
+  rhs_module: ProjectTask
+  relationship_name: project_task_modified_user
+  relationship_role_column_value: 
+relationships_065: 
+  join_key_rhs: 
+  rhs_table: tasks
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Users
+  relationship_type: one-to-many
+  id: 31fad92b-305c-1f2d-5fcc-448de32f3b52
+  join_key_lhs: 
+  lhs_table: users
+  deleted: "0"
+  join_table: 
+  rhs_key: created_by
+  rhs_module: Tasks
+  relationship_name: tasks_created_by
+  relationship_role_column_value: 
+relationships_037: 
+  join_key_rhs: 
+  rhs_table: leads
+  lhs_key: id
+  reverse: "0"
+  relationship_role_column: 
+  lhs_module: Opportunities
+  relationship_type: one-to-many
+  id: 12257180-9771-d731-122f-448de39ea3b3
+  join_key_lhs: 
+  lhs_table: opportunities
+  deleted: "0"
+  join_table: 
+  rhs_key: opportunity_id
+  rhs_module: Leads
+  relationship_name: opportunity_leads
+  relationship_role_column_value: 

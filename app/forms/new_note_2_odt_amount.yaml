@@ -1,0 +1,5 @@
+monto:
+  type:         text
+  function:     validate_precio
+  mandatory:    true
+

@@ -1,0 +1,54 @@
+<h2>Costo por ODT por Fecha de Entrega</h2>
+
+<table width="100%" border="1" cellpadding="3" cellspacing="0">
+<%
+total_precio   = 0.00
+total_variable = 0.00
+total_truput   = 0.00
+avg_margen     = 0.00
+
+@projects.each do |p|
+  precio   = p.monto_de_venta_sispre
+  variable = p.variable_cost
+  truput   = precio - variable
+  if precio == 0
+    margen = 0
+  else
+    margen   = ((truput / precio) * 100.0).round2
+  end
+  
+  total_precio   += precio
+  total_variable += variable
+  total_truput   += truput
+  avg_margen     += margen
+-%>
+<tr><td valign="top">
+<%= p.orden_id %>
+</td><td valign="top">
+<%= p.account.name %>
+</td><td valign="top">
+<%= p.nombre_proyecto %>
+</td><td valign="top" align="right">
+<%= format_price precio %>
+</td><td valign="top" align="right">
+<%= format_price variable %>
+</td><td valign="top" align="right">
+<%= format_price truput %>
+</td><td valign="top" align="right">
+<%= margen %> %
+</td></tr>
+<% end -%>
+
+<tr><td valign="top" colspan="3">
+&nbsp;
+</td><td valign="top" align="right">
+<%= format_price total_precio %>
+</td><td valign="top" align="right">
+<%= format_price total_variable %>
+</td><td valign="top" align="right">
+<%= format_price total_truput %>
+</td><td valign="top">
+<%= (avg_margen / @projects.size).round2 %> %
+</td></tr>
+</table>
+

@@ -1,0 +1,32 @@
+<%
+docs = @project.get_costs_files
+
+if docs.empty?
+-%>
+<i>No hay Documentos anexados</i><br>
+<br>
+<% else -%>
+<table border="0" cellpadding="3" cellspacing="2">
+
+<!--
+<% docs.each do |f| -%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(f.date) %>
+</td><td valign="top" align="right">
+<%= size_of_file(f.size) %>
+</td><td valign="top">
+<%= link_to f.real_filename, :controller => "projects", :action => "get_costs_file", :id => @project.uid, :fid => f.filename %>
+</td></tr>
+<% end -%>
+-->
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= date_of_file(docs[docs.size-1].date) %>
+</td><td valign="top" align="right">
+<%= size_of_file(docs[docs.size-1].size) %>
+</td><td valign="top">
+<%= link_to docs[docs.size-1].real_filename, :controller => "projects", :action => "get_costs_file", :id => @project.uid, :fid => docs[docs.size-1].filename %>
+</td></tr>
+
+</table>
+<% end -%>
+

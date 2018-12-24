@@ -1,0 +1,25 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<h3>Cambio de Rol</h3>
+
+Haz click sobre el Rol con el que deseas trabajar ahora:<br>
+<br>
+
+<%
+session[:user][:roles].each do |r|
+-%>
+<li> <%=
+label = r.name
+link_to (controller.role() == r ? "<b>#{label}</b>" : label), :action => "change_role", :id => r.id
+%></li>
+<%
+end
+-%>
+<br>
+<br>
+
+O <%= link_to "cancelar", :controller => "dashboard", :action => "index" %>

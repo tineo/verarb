@@ -1,0 +1,3 @@
+mensaje:
+  type:         text
+  acts_as:      textarea

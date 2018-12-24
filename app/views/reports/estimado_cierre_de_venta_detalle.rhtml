@@ -1,0 +1,85 @@
+<% if @what == "odt" -%>
+<h2>Estimado por Cierre de Venta - <%= Date::MONTHNAMES[@month] %> <%= @year %></h2>
+<% else -%>
+<h2>Estimado por Cierre de Venta - <%= Date::MONTHNAMES[@month] %> <%= @year %> proyectado <%= TIPO_DE_VENTA[@type] %> <%= (@direction == 0 ? "&gt;=" : "&lt;") %> <%= @probability %>%</h2>
+<% end -%>
+
+<a href="javascript:history.back();">Regresar</a><br>
+<br>
+
+<%
+if @what == "odt"
+  fields = ["&nbsp;", "ODT", "Cliente", "Descripci&oacute;n", "Fecha de Creaci&oacute;n de Oportunidad", "Monto"]
+else
+  fields = ["&nbsp;", "Proyecto", "Cliente", "Descripci&oacute;n", "Fecha de Creaci&oacute;n de Oportunidad", "Fecha de Cierre", "Probabilidad", "Monto"]
+end
+
+-%>
+<table border="0" cellpadding="5" cellspacing="1">
+<%
+gran_total = 0.00
+
+@executives.each do |exec|
+  total_monto  = 0.00
+  index        = 0
+-%>
+<tr bgcolor="#eebbbb"><td valign="top" colspan="<%= fields.size + 1 %>">
+<b><%= exec %></b>
+</td></tr>
+<tr bgcolor="#eebbbb">
+<% fields.each do |h| -%>
+<td align="center">
+<%= h %>
+</td>
+<% end -%>
+
+<%
+@data[exec].each do |d|
+  total_monto  += d.monto
+  gran_total   += d.monto
+  index        += 1
+  
+  if (d.date_closed.to_time < Time.today) && !d.closed
+    rowclass = "report_estimado_cierre_highlight"
+  else
+    rowclass = ""
+  end
+-%>
+<tr bgcolor="#eeeeee"><td valign="top" align="center" class="<%= rowclass %>">
+<%= index %>
+</td><td valign="top" align="center" class="<%= rowclass %>">
+<%=
+if @what == "odt"
+  this = d.project.orden_id
+else
+  this = d.project.id
+end
+
+link_to this, :controller => "projects", :action => "show", :id => d.project.uid, :type => d.project.type
+%>
+</td><td valign="top" class="<%= rowclass %>">
+<%= d.project.account.name %>
+</td><td valign="top" class="<%= rowclass %>">
+<%= d.project.nombre_proyecto %>
+</td><td valign="top" class="<%= rowclass %>" align="center">
+<%= format_date(d.project.opportunity.date_entered) %>
+<% unless @what == "odt" -%>
+</td><td valign="top" align="center" class="<%= rowclass %>">
+<%= format_short_date d.date_closed %>
+</td><td valign="top" align="right" class="<%= rowclass %>">
+<%= format_report_price d.probabilidad %>
+<% end -%>
+</td><td valign="top" align="right" class="<%= rowclass %>">
+$&nbsp;<%= format_report_price d.monto %>
+</td></tr>
+<% end -%>
+<tr bgcolor="#eeeeee"><td colspan="<%= fields.size - 1 %>" align="right">
+<b>TOTAL</b>
+</td><td valign="top" align="right">
+$&nbsp;<%= format_report_price total_monto %>
+</td></tr>
+<% end -%>
+</table>
+
+<% format_report_price(gran_total) %>
+

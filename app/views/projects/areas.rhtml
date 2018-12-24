@@ -1,0 +1,250 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "panel" %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<form name="f" action="<%= url_for :controller => "projects", :action=>"send_to", :id => @project.uid, :type => @project.type %>" method="GET">
+<input type="hidden" name="aid" value="">
+
+<h3>Detalle por Area</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<center>
+<table width="90%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d"><td valign="top" align="center">
+<b>Area</b>
+</td><td valign="top" align="center">
+<b>Estado</b>
+</td><td valign="top" align="center">
+<b>Ingreso</b>
+</td><td valign="top" align="center">
+<b>Salida</b>
+</td><td valign="top" align="center">
+<b>No. D&iacute;as</b>
+</td><td valign="top" align="center">
+<b>Responsable</b>
+</td><td valign="top" align="center">
+<b>Enviar</b>
+</td></tr>
+
+<tr bgcolor="<%= ESTADOS[E_DISENO_APROBADO][:color_off] %>"><td valign="top">
+<b>Dise&ntilde;o</b>
+</td><td valign="top">
+<% unless @project.area.ingreso_diseno.nil? -%>
+<%= ESTADOS[@project.area.estado_diseno][:label] %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.ingreso_diseno.nil? -%>
+<%= @project.area.ingreso_diseno.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.salida_diseno.nil? -%>
+<%= @project.area.salida_diseno.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<%
+ingreso  = @project.area.ingreso_diseno
+salida   = @project.area.salida_diseno
+
+if ingreso.nil?
+  days = "&nbsp;"
+else
+  days = calculate_days (ingreso, salida)
+end
+-%>
+<%= days %>
+</td><td valign="top">
+<% unless @project.area.encargado_diseno == '' -%>
+<%= User.find(@project.area.encargado_diseno).user_name %>
+<% end -%>
+</td><td valign="top" align="center">
+<% if @project.can_be_sent_to? A_DISENO -%>
+<a href="#" onClick="if (confirm('&iquest;Esta seguro?')) { f.aid.value=<%= A_DISENO %>; f.submit(); }"><%= image_tag("folder-move-16.gif", :border => 0, :alt => "Enviar") %></a>
+
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="<%= ESTADOS[E_PLANEAMIENTO_TERMINADO][:color_off] %>"><td valign="top">
+<b>Desarrollo</b>
+</td><td valign="top">
+<% unless @project.area.ingreso_planeamiento.nil? -%>
+<%= ESTADOS[@project.area.estado_planeamiento][:label] %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.ingreso_planeamiento.nil? -%>
+<%= @project.area.ingreso_planeamiento.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.salida_planeamiento.nil? -%>
+<%= @project.area.salida_planeamiento.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<%
+ingreso  = @project.area.ingreso_planeamiento
+salida   = @project.area.salida_planeamiento
+
+if ingreso.nil?
+  days = "&nbsp;"
+else
+  days = calculate_days (ingreso, salida)
+end
+-%>
+<%= days %>
+</td><td valign="top">
+<% unless @project.area.encargado_planeamiento == '' -%>
+<%= User.find(@project.area.encargado_planeamiento).user_name %>
+<% end -%>
+</td><td valign="top" align="center">
+<% if @project.can_be_sent_to? A_PLANEAMIENTO -%>
+<a href="#" onClick="if (confirm('&iquest;Esta seguro?')) { f.aid.value=<%= A_PLANEAMIENTO %>; f.submit(); }"><%= image_tag("folder-move-16.gif", :border => 0, :alt => "Enviar") %></a>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="<%= ESTADOS[E_COSTOS_TERMINADO][:color_off] %>"><td valign="top">
+<b>Costos</b>
+</td><td valign="top">
+<% unless @project.area.ingreso_costos.nil? -%>
+<%= ESTADOS[@project.area.estado_costos][:label] %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.ingreso_costos.nil? -%>
+<%= @project.area.ingreso_costos.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.salida_costos.nil? -%>
+<%= @project.area.salida_costos.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<%
+ingreso  = @project.area.ingreso_costos
+salida   = @project.area.salida_costos
+
+if ingreso.nil?
+  days = "&nbsp;"
+else
+  days = calculate_days (ingreso, salida)
+end
+-%>
+<%= days %>
+</td><td valign="top">
+N/A
+</td><td valign="top" align="center">
+<% if @project.can_be_sent_to? A_COSTOS -%>
+<a href="#" onClick="if (confirm('&iquest;Esta seguro?')) { f.aid.value=<%= A_COSTOS %>; f.submit(); }"><%= image_tag("folder-move-16.gif", :border => 0, :alt => "Enviar") %></a>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="<%= ESTADOS[E_OPERACIONES_TERMINADO][:color_off] %>"><td valign="top">
+<b>Operaciones</b>
+</td><td valign="top">
+<% if !@project.can_be_promoted? && !@project.con_orden_de_trabajo? -%>
+<font color="#aa0000">Faltan Requisitos:<br>
+<%= @project.can_be_promoted?(:with_reason) %></font>
+<% end -%>
+<% if @project.area.en_validacion_operaciones? -%>
+Esperando validaci&oacute;n
+<% end -%>
+<% unless @project.area.ingreso_operaciones.nil? -%>
+<%= ESTADOS[@project.area.estado_operaciones][:label] %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.ingreso_operaciones.nil? -%>
+<%= @project.area.ingreso_operaciones.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.salida_operaciones.nil? -%>
+<%= @project.area.salida_operaciones.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+<%
+ingreso  = @project.area.ingreso_operaciones
+salida   = @project.area.salida_operaciones
+
+if ingreso.nil?
+  days = "&nbsp;"
+else
+  days = calculate_days (ingreso, salida)
+end
+-%>
+<%= days %>
+</td><td valign="top">
+N/A
+</td><td valign="top" align="center">
+<% if @project.can_be_sent_to? A_OPERACIONES -%>
+<a href="#" onClick="if (confirm('&iquest;Esta seguro?')) { f.aid.value=<%= A_OPERACIONES %>; f.submit(); }"><%= image_tag("folder-move-16.gif", :border => 0, :alt => "Enviar") %></a>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="<%= ESTADOS[E_INNOVACIONES_EN_PROCESO][:color_off] %>"><td valign="top">
+<b>Innovaciones</b>
+</td><td valign="top">
+<% unless @project.area.ingreso_innovaciones.nil? -%>
+<%= ESTADOS[@project.area.estado_innovaciones][:label] %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.ingreso_innovaciones.nil? -%>
+<%= @project.area.ingreso_innovaciones.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+N/A
+</td><td valign="top">
+N/A
+</td><td valign="top">
+N/A
+</td><td valign="top" align="center">
+<% if @project.can_be_sent_to? A_INNOVACIONES -%>
+<a href="#" onClick="if (confirm('&iquest;Esta seguro?')) { f.aid.value=<%= A_INNOVACIONES %>; f.submit(); }"><%= image_tag("folder-move-16.gif", :border => 0, :alt => "Enviar") %></a>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+<tr bgcolor="<%= ESTADOS[E_INSTALACIONES_EN_PROCESO][:color_off] %>"><td valign="top">
+<b>Instalaciones</b>
+</td><td valign="top">
+<% unless @project.area.ingreso_instalaciones.nil? -%>
+<%= ESTADOS[@project.area.estado_instalaciones][:label] %>
+<% end -%>
+</td><td valign="top">
+<% unless @project.area.ingreso_instalaciones.nil? -%>
+<%= @project.area.ingreso_instalaciones.strftime "%d/%m/%Y" %>
+<% end -%>
+</td><td valign="top">
+N/A
+</td><td valign="top">
+N/A
+</td><td valign="top">
+N/A
+</td><td valign="top" align="center">
+<% if @project.can_be_sent_to? A_INSTALACIONES -%>
+<a href="#" onClick="if (confirm('&iquest;Esta seguro?')) { f.aid.value=<%= A_INSTALACIONES %>; f.submit(); }"><%= image_tag("folder-move-16.gif", :border => 0, :alt => "Enviar") %></a>
+<% else -%>
+&nbsp;
+<% end -%>
+</td></tr>
+
+</table>
+<br>
+
+<input type="checkbox" name="urgent" value="1"> Notificar como Urgente
+
+</center>
+
+</td></tr>
+</table>
+<br>
+
+</form>

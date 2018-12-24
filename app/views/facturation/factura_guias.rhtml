@@ -1,0 +1,41 @@
+<%= render :partial => "menubar_factura" %>
+
+<h3>Gu&iacute;as de Remisi&oacute;n</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d">
+<% ["N&uacute;mero", "Raz&oacute;n Social", "Fecha de Emisi&oacute;n", "Fecha de Recepci&oacute;n del Cliente", "Descripci&oacute;n", "Observaciones"].each do |h| -%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<%
+@fgs.each do |fg|
+  g = fg.guia
+-%>
+<tr bgcolor="#ffffff"><td valign="top" align="center">
+<%= link_to g.formatted_number, :action => "show_guia", :id => g.id %>
+</td><td valign="top">
+<%= g.account.name %>
+</td><td valign="top" align="center">
+<%= g.fecha_emision.strftime "%d/%m/%y" unless g.fecha_emision.nil? %>
+</td><td valign="top" align="center">
+<%= g.fecha_despacho.strftime "%d/%m/%y" unless g.fecha_despacho.nil? %>
+</td><td valign="top">
+<%= g.all_descriptions %>
+</td><td valign="top" width="40%">
+<%= g.observaciones %>
+</td></tr>
+<% end -%>
+</table>
+<br>
+
+<%= link_to "Agregar o Quitar Gu&iacute;as", :action => "factura_add_guias", :fid => @factura.id, :type => @factura.tipo %>
+
+</td></tr>
+</table>
+

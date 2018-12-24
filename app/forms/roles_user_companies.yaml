@@ -1,0 +1,4 @@
+empresas:
+  type:         checkboxmulti
+  options:      empresas_checkbox_options
+

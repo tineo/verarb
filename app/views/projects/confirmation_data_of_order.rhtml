@@ -1,0 +1,321 @@
+<%= render :partial => "menubar" %>
+
+<h3>Datos de confirmaci&oacute;n de Orden</h3>
+
+<% if can_access?(:executive_tasks) && is_owner? && !@project.anulado? && @project.estado_validacion != E_VALIDACION_POR_APROBAR -%>
+<% if @project.con_orden_de_trabajo? -%>
+<%= link_to "Editar datos de confirmaci&oacute;n", :controller => "projects", :action => "promote", :id => @project.id %><br>
+<br>
+<% else -%>
+<%= link_to "Editar datos de confirmaci&oacute;n", :controller => "projects", :action => "promote", :id => @project.id, :pre_editing => 1 %><br>
+<br>
+<% end -%>
+<% end -%>
+
+<% if @project.tipo_nuevo_proyecto? -%>
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>Del Cliente</h3>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Nombre Comercial</b>
+</td><td valign="top">
+<%= @project.cliente_razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @project.cliente_ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n</b>
+</td><td valign="top">
+<%= @project.cliente_direccion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Contacto de Venta</b>
+</td><td valign="top">
+<%= @project.cliente_contacto %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono Fijo</b>
+</td><td valign="top">
+<%= @project.cliente_telefono_fijo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono M&oacute;vil</b>
+</td><td valign="top">
+<%= @project.cliente_telefono_movil %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail</b>
+</td><td valign="top">
+<%= @project.cliente_email %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+<br>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+<h3>Para Facturar</h3>
+
+<table border="0" cellpadding="5" cellspacing="0">
+
+<tr><td valign="top">
+<b>Estructura de Costos</b>
+</td><td valign="top">
+<%= render :partial => "costs_files_list" %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Documentos de conformidad de compra<br>
+(Orden de Compra)</b>
+</td><td valign="top">
+<%= render :partial => "confirmation_docs_list" %>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+Necesita Orden de Compra <%= state_image(@project.factura_necesita_odt) %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Raz&oacute;n Social a facturar</b>
+</td><td valign="top">
+<%= @project.factura_razon_social %>
+</td></tr>
+
+<tr><td valign="top">
+<b>RUC</b>
+</td><td valign="top">
+<%= @project.factura_ruc %>
+</td></tr>
+
+<tr><td valign="top">
+<b>D&iacute;a y Hora para Entrega de Factura</b>
+</td><td valign="top">
+<%= format_date(@project.factura_fecha_facturacion) unless @project.factura_fecha_facturacion.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Descripci&oacute;n que va en la Factura</b>
+</td><td valign="top">
+<%= @project.factura_descripcion %>
+</td></tr>
+
+<% if @project.tipo_proyecto == T_NUEVO_PROYECTO -%>
+<tr><td valign="top">
+<b>Precio de Venta</b>
+</td><td valign="top">
+<% if @project.has_notes? -%>
+<strike><%= verbose_odt_original_price(@project) %></strike><br>
+<% end -%>
+<%= verbose_odt_price(@project) %><br>
+</td></tr>
+<% end -%>
+
+<tr><td valign="top">
+<b>Monto de Adelanto</b>
+</td><td valign="top">
+<% if @project.monto_adelanto.nil? || @project.monto_adelanto.zero? -%>
+<i>Sin adelanto</i>
+<% else -%>
+<%= currency(@project.moneda_odt) %> <%= format_price @project.monto_adelanto %>
+<% end -%>
+</td></tr>
+
+<tr><td valign="top">
+&nbsp;
+</td><td valign="top">
+<%= @project.payment_form %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Contacto de Facturaci&oacute;n</b>
+</td><td valign="top">
+<%= @project.factura_contacto_facturacion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono Fijo</b>
+</td><td valign="top">
+<%= @project.factura_telefono_fijo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Tel&eacute;fono M&oacute;vil</b>
+</td><td valign="top">
+<%= @project.factura_telefono_movil %>
+</td></tr>
+
+<tr><td valign="top">
+<b>E-Mail</b>
+</td><td valign="top">
+<%= @project.factura_email %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Direcci&oacute;n donde se deja la Factura</b>
+</td><td valign="top">
+<%=
+d = @project.factura_direccion
+simple_format(d) unless d.nil?
+%>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= @project.factura_observaciones %>
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+
+<br>
+<% end -%>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>Para Operaciones</h3>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Fecha de Entrega al Cliente</b>
+</td><td valign="top">
+<%= format_date @project.fecha_de_entrega_odt unless @project.fecha_de_entrega_odt.nil? %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Fecha de Desmontaje</b>
+</td><td valign="top">
+<% if @project.fecha_de_desmontaje.nil? -%>
+N/A
+<% else -%>
+<%= format_date @project.fecha_de_desmontaje %>
+<% end -%>
+</td></tr>
+</table>
+
+<br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+Solo Entrega <%= state_image @project.solo_entrega %>
+</td><td valign="top">
+</td><td valign="top">
+Con Instalaci&oacute;n <%= state_image @project.con_instalacion %>
+</td><td valign="top">
+</td><td valign="top">
+Recojo de Producto <%= state_image @project.recojo_de_producto %>
+</td><td valign="top">
+</td><td valign="top">
+Se necesita Supervisor <%= state_image @project.se_necesita_supervisor %>
+</td></tr>
+</table>
+
+<br>
+
+<table border="0" cellpadding="5" cellspacing="3">
+<tr><td valign="top" bgcolor="#ffe698" align="center">
+<b>Direcci&oacute;n de Entrega</b>
+</td><td valign="top" bgcolor="#ffe698" align="center">
+<b>Contacto para solicitar permiso de entrega y/o instalaci&oacute;n</b>
+</td><td valign="top" bgcolor="#ffe698" align="center">
+<b>Tel&eacute;fonos y Correos</b>
+</td><td valign="top" bgcolor="#ffe698" align="center">
+<b>Rango de Hora de Entrega</b>
+</td><td valign="top">
+&nbsp;
+</td></tr>
+<% @puntos.each do |p| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= simple_format p.punto %>
+</td><td valign="top">
+<%= simple_format p.contacto %>
+</td><td valign="top">
+<%= simple_format p.telefono %>
+</td><td valign="top">
+<%= simple_format p.hora %>
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<b>Gr&aacute;fica</b><br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top">
+Igual a muestra f&iacute;sica proporcionada
+</td><td valign="top">
+<%= state_image @project.graf_igual_a_muestra %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Igual al c&oacute;digo de los Pantones
+</td><td valign="top">
+<%= state_image @project.graf_igual_a_pantones %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Presentar muestra de color para su aprobaci&oacute;n
+</td><td valign="top">
+<%= state_image @project.graf_presentar_muestra %>
+</td></tr>
+</table>
+<br>
+
+<b>Pintura</b><br>
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top">
+Igual a muestra f&iacute;sica proporcionada
+</td><td valign="top">
+<%= state_image @project.colores_aprobados %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Igual al c&oacute;digo de los Pantones
+</td><td valign="top">
+<%= state_image @project.igual_al_codigo_pantones %>
+</td></tr>
+<tr bgcolor="#ffe698"><td valign="top">
+Presentar muestra de color para su aprobaci&oacute;n
+</td><td valign="top">
+<%= state_image @project.presentar_muestra_de_color %>
+</td></tr>
+</table>
+<br>
+
+<table border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#ffe698"><td valign="top">
+Ir a confirmar medidas
+</td><td valign="top">
+<%= state_image @project.confirmar_medidas %>
+</td></tr>
+</table>
+
+</td><td valign="top">
+
+<b>Observaciones</b><br>
+<%= simple_format @project.observaciones %>
+
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+

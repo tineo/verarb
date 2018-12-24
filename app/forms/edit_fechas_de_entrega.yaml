@@ -1,0 +1,8 @@
+cantidad:
+  type:         text
+  function:     validate_number
+
+detalle:
+  type:         text
+  acts_as:      textarea
+

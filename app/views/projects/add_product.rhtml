@@ -1,0 +1,80 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "edit_details", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+<form name="f" method="POST">
+<%= render :partial => "menubar" %>
+
+<h3>Agregar Producto</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<h3>General</h3>
+
+<b>Categor&iacute;a</b><br>
+<select name="categoria" onChange="document.f.producto.value='-1'; document.f.producto.disabled = true; Element.hide('info')">
+<%= @form.options_for :categoria %>
+</select>
+<input type="submit" value="Seleccionar"><br>
+<%= @form.e :categoria %>
+<br>
+
+<b>Producto base</b><br>
+<select name="producto" onChange="Element.hide('info')">
+<%= @form.options_for :producto %>
+</select>
+<input type="submit" value="Seleccionar"><br>
+<%= @form.e :producto %>
+<br>
+
+<div id="info">
+<% unless @form.producto == "-1" -%>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<b>Descripci&oacute;n</b><br>
+<%= @form.to_html :descripcion, :rows => 10, :cols => 60 %>
+<br>
+
+<b>Cantidad</b><br>
+<%= @form.to_html :cantidad, :size => 5 %>
+<br>
+
+<% if @product -%>
+<b>Costo Variable</b><br>
+<%= "%.2f" % @product.costo_variable %><br>
+<br>
+<% end -%>
+
+<b>Precio</b><br>
+<%= @form.to_html :precio, :size => 16 %><br>
+<br>
+
+</td><td valign="top">
+
+<%= image_for_display_product @product %>
+
+</td></tr>
+</table>
+
+
+<h3>Atributos</h3>
+
+<%= render :partial => "attributes_table", :locals => { :attributes => @attributes, :edit => true } -%>
+<br>
+
+</td></tr>
+</table>
+
+<% end -%>
+</div>
+
+<br>
+
+<input type="submit" name="button" value="Guardar nuevo producto">
+<input type="submit" name="button" value="Guardar y agregar anexos">
+o <%= link_to "Cancelar", :action => "edit_details", :id => @project.uid, :type => @project.type %>
+
+</form>

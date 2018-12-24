@@ -1,0 +1,58 @@
+<%= render :partial => "projects/menubar" %>
+
+<h3>Gu&iacute;as de Remisi&oacute;n</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<% if @guias.empty? -%>
+<i>No hay Gu&iacute;as de Remisi&oacute;n asociadas.</i><br>
+<br>
+<% else -%>
+<table width="100%" border="0" cellpadding="5" cellspacing="1">
+<tr bgcolor="#e9bb7d">
+<%
+["N&uacute;mero", "Raz&oacute;n Social", "Fecha de Emisi&oacute;n", "Fecha de Recepci&oacute;n del Cliente", "Lugar de Entrega", "Descripci&oacute;n", "Cantidad", "Observaciones", "Facturada"].each do |h| -%>
+<td valign="top" align="center">
+<b><%= h %></b>
+</td>
+<% end -%>
+</tr>
+<%
+total = 0.00
+
+@guias.each do |g|
+-%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= link_to g.formatted_number, :action => "show_guia", :id => g.id %>
+</td><td valign="top">
+<%= g.account.name unless g.account.nil? %>
+</td><td valign="top" align="center">
+<%= g.fecha_emision.strftime "%d/%m/%y" unless g.fecha_emision.nil? %>
+</td><td valign="top" align="center">
+<%= g.fecha_despacho.strftime "%d/%m/%y" unless g.fecha_despacho.nil? %>
+</td><td valign="top">
+<%= simple_format(g.lugar_de_entrega) %>
+</td><td valign="top">
+<%= g.all_descriptions %>
+</td><td valign="top" align="right">
+<%= g.all_quantities %>
+</td><td valign="top">
+<%= g.observaciones %>
+</td><td valign="top" align="center">
+<%= guia_facturada_status(g) %>
+</td></tr>
+<% end -%>
+</table>
+<% end -%>
+
+<br>
+
+<% if @project.can_have_guias? -%>
+<%= link_to "Agregar Gu&iacute;a", :action => "new_guia_1", :order => @project.orden_id %>
+<% end -%>
+<br>
+
+</td></tr>
+</table>
+

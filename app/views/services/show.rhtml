@@ -1,0 +1,21 @@
+<h2>Categor&iacute;as y Productos</h2>
+
+<h3>Servicio "<%= @service.nombre %>"</h3>
+
+<b>Nombre</b><br>
+<%= @service.nombre %><br>
+<br>
+
+<b>Categor&iacute;a</b><br>
+<%= @service.categoria.nombre %><br>
+<br>
+
+<b>Descripci&oacute;n</b><br>
+<%= simple_format @service.descripcion %>
+
+<br>
+
+<%= link_to "Regresar", :controller => "categories", :action => "show", :id => @service.categoria_id %>
+<% if @service.activo? -%>
+o <%= link_to "Editar", :controller => "services", :action => "edit", :id => @service.id %>
+<% end -%>

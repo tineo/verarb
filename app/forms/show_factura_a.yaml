@@ -1,0 +1,14 @@
+fecha_recepcion:
+  type:         text
+  function:     validate_textdate
+  max_length:   8
+  mandatory:    false
+
+confirmada:
+  type:         checkbox
+
+modalidad_pago:
+  type:         text
+  acts_as:      textarea
+  mandatory:    false
+

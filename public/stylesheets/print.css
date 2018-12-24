@@ -1,0 +1,35 @@
+body, td {
+  font-family: Arial, Helvetica, Sans-serif;
+  font-size: 12px;
+}
+
+.weak {
+  color: #777;
+}
+
+div.intro {
+  page-break-after: always;
+}
+
+div.detail {
+  page-break-inside: avoid;
+}
+
+.project_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.project_id {
+  font-size: 14px;
+  color: #555;
+}
+
+.project_exec {
+  font-size: 14px;
+  color: #555;
+}
+
+.highlighted {
+  color: #0064b3;
+}

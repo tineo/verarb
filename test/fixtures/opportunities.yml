@@ -1,0 +1,21 @@
+--- 
+new: 
+  id: 1
+  name: Portafolleto Chco Agencia Jockey
+  amount_usdollar: "55.2"
+  currency_id: "-99"
+  created_by: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  sales_stage: Prospecting
+  date_modified: 2007-02-01 15:14:04
+  description: ODT 7657
+  next_step: 
+  amount: "55.2"
+  date_closed: "2007-01-01"
+  deleted: "0"
+  modified_user_id: a5d043fe-c787-8f06-8c0a-448ef55e7f35
+  lead_source: 
+  assigned_user_id: 19
+  amount_backup: 
+  probability: "100"
+  opportunity_type: 
+  date_entered: 2007-02-01 14:55:47

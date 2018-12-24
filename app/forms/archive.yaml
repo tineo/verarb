@@ -1,0 +1,4 @@
+executive:
+  type:         select
+  value:        "-1"
+  mandatory:    false

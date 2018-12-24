@@ -1,0 +1,73 @@
+<%
+# For this partial you should pass two local variables: attributes and edit
+# attributes is the attributes object to parse
+# edit is a boolean which, if true, shows form values. If false, shows
+# the values as printable, HTML things
+
+if attributes.size > 0
+-%>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+<%
+  i = 1
+  attributes.each_with_index do |t, j|
+    i = i + 1
+    
+    if t.tipo == 'lin'
+      # For the line separator we check if we need to close any row
+      if i % 2 == 0
+%>
+<tr><td colspan="2"><br><hr><br></hr></td></tr>
+<%
+      else
+-%>
+<td>&nbsp;</td></tr>
+<tr><td colspan="2"><br><hr><br></hr></td></tr>
+<%
+      end
+      
+      # Important! Reset the counter so next fields continue on the right
+      # places
+      i = 1
+    
+    else
+      name = t.nombre
+      
+      if edit
+        if t.id.nil?
+          index = j
+        else
+          index = t.id
+        end
+        
+        value = render_attribute(t, index)
+      else
+        value = t.valor_presentable
+        
+        # They wants us to highlight the attribs with values
+        name  = '<span class="highlighted">' + t.nombre + '</span>' unless value == ""
+      end
+-%>
+<%= (i % 2 == 0 ? "<tr>" : "") %>
+<td valign="top" width="50%">
+<% if t.tipo == "sep" -%>
+&nbsp;
+<% else -%>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#888888">
+<tr><td valign="top" bgcolor="#eaeaea">
+<b><%= name %></b><br>
+</td></tr>
+<tr><td valign="top" bgcolor="#fefefe">
+<%= value %><br>
+</td></tr>
+</table>
+<% end -%>
+</td>
+<%= (i % 2 == 1 ? "</tr>" : "") %>
+<%
+    end
+  end
+-%>
+</table>
+<% else -%>
+Este producto no tiene atributos
+<% end -%>

@@ -1,0 +1,81 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "show", :id => @project.uid, :type => @project.type %>";
+});
+</script>
+
+<form method="POST">
+
+<%= render :partial => "menubar" %>
+
+<h3>Editar Metadata</h3>
+
+<h3>General</h3>
+
+<%= form_tag %>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<b>Ejecutivo de Cuenta</b><br>
+<%= @form.to_html :ejecutivo %>
+<br>
+
+</td></tr>
+</table>
+
+<h3>Area Dise&ntilde;o</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form.to_html :enviado_diseno %> Enviado a Dise&ntilde;o<br>
+<br>
+
+<b>Estado</b><br>
+<%= @form.to_html :estado_diseno %>
+<br>
+
+</td></tr>
+</table>
+
+
+<h3>Area Planeamiento</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form.to_html :enviado_planeamiento %> Enviado a Planeamiento<br>
+<br>
+
+<b>Estado</b><br>
+<%= @form.to_html :estado_planeamiento %>
+<br>
+
+</td></tr>
+</table>
+
+
+<h3>Area Costos</h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#fff8c2">
+<tr><td valign="top">
+
+<%= @form.to_html :enviado_costos %> Enviado a Costos<br>
+<br>
+
+<b>Estado</b><br>
+<%= @form.to_html :estado_costos %>
+<br>
+
+</td></tr>
+</table>
+
+<br>
+
+<%= submit_tag "Guardar cambios" %>
+
+o <%= link_to "Cancelar", :action => "show", :id => @project.uid, :type => @project.type %><br>
+<br>
+
+<%= end_form_tag %>

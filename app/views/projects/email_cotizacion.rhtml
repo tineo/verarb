@@ -1,0 +1,32 @@
+<script type="text/javascript">
+shortcut("Esc", function () {
+  window.location = "<%= url_for :controller => "projects", :action => "cotization" %>";
+});
+</script>
+
+<%= render :partial => "menubar" %>
+
+<form method="POST">
+
+<h3>Enviar Cotizaci&oacute;n <%= @cotizacion.codigo %></h3>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="2">
+<tr bgcolor="#fff8c2"><td valign="top">
+
+<b>Remitente</b><br>
+<%= @exec.full_name %><br>
+<br>
+
+<b>E-Mail de Destinatario</b><br>
+<span class="weak">Para especificar m&aacute;s de un destinatario, sep&aacute;relos con comas</span><br>
+<%= @form.to_html :email %>
+<br>
+
+<input type="submit" value="Enviar cotizaci&oacute;n">
+o <%= link_to "Cancelar", :controller => "projects", :action => "cotization" %><br>
+<br>
+
+</td></tr>
+</table>
+
+</form>

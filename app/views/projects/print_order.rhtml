@@ -1,0 +1,424 @@
+<html>
+<head>
+<link rel="stylesheet" media="screen,print" href="/stylesheets/print.css" type="text/css" />
+<title>Orden de Trabajo <%= @project.orden_id %></title>
+</head>
+
+<body text="#000000" bgcolor="#ffffff">
+
+<div class="intro">
+
+<table width="646" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top">
+<span class="project_title">Orden de Trabajo <%= @project.orden_id %></span><br>
+<span class="project_id">Proyecto <%= @project.id %></span><br>
+<span class="project_exec">Ejecutivo: <%= @project.executive.full_name %></span>
+
+</td><td valign="top" align="right">
+<%= barcode(@project.orden_id.to_s, :width  => 200, :height => 70, :margin => 0) %>
+</td></tr>
+</table>
+<br>
+
+<center><h3>DATOS GENERALES</h3></center>
+
+<table width="100%" border="0" cellpadding="10" cellspacing="5">
+<tr bgcolor="#f5f5f5"><td valign="top" width="50%">
+
+<h3>Cliente</h3>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Cliente</b>: <%= @project.account.name %><br>
+<br>
+
+<b>RUC</b>: <%= @project.account.ruc %><br>
+<br>
+
+<b>Domicilio Fiscal</b>:<br>
+<%= @project.account.billing_address_street %><br>
+<%= @project.account.billing_address_city %><br>
+<%= @project.account.billing_address_postalcode %><br>
+<br>
+
+<% if @project.contact %>
+<b>Contacto</b>:<br>
+<%= @project.contact.full_name %><br>
+<br>
+Tel&eacute;fono: <%= @project.contact.phone_work %><br>
+E-Mail: <a href="mailto:<%= @project.contact.email1 %>"><%= @project.contact.email1 %></a><br>
+<%= @project.contact.primary_address_street %><br>
+<%= @project.contact.primary_address_city %><br>
+<br>
+<% end -%>
+
+<b>Tipo de Proyecto</b>:
+<%= TIPO_PROYECTO[@project.tipo_proyecto] %>
+<% if @project.tipo_proyecto == T_OTRO -%>
+(<%= @project.otro_tipo %>)
+<% end -%><br>
+<br>
+
+<% if @project.canje? -%>
+Este proyecto es Canje<br>
+<br>
+<% end -%>
+
+</td></tr>
+</table>
+
+</td><td valign="top" width="50%">
+
+<h3>Proyecto</h3>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<b>Proyecto</b>:
+<%= @project.nombre_proyecto %><br>
+<br>
+
+<b>Fecha de Creaci&oacute;n de Orden</b>:
+<%= @project.fecha_creacion_odt.strftime "%d/%m/%Y %I:%M %p" %><br>
+<b>Fecha de Entrega al Cliente</b>:
+<%= @project.fecha_de_entrega_odt.strftime "%d/%m/%Y %I:%M %p" %><br>
+<b>Fecha de Desmontaje</b>:
+<% if @project.fecha_de_desmontaje.nil? -%>
+N/A
+<% else -%>
+<%= format_date @project.fecha_de_desmontaje %>
+<% end -%><br>
+<br>
+
+<b>Empresa Vendedora</b>: <%= EMPRESA_VENDEDORA[@project.empresa_vendedora] %><br>
+<b>Categor&iacute;a de Venta</b>: <%= TIPO_DE_VENTA[@project.tipo_de_venta] %><br>
+<br>
+
+<% if @project.tipo_proyecto == T_NUEVO_PROYECTO -%>
+<b>Monto de Venta</b>: 
+<% if @project.has_notes? -%>
+<strike><%= verbose_odt_original_price(@project) %></strike>
+<% end -%>
+<%= verbose_odt_price(@project) %><br>
+<% end -%>
+<b>Total de Productos</b>: <%= @project.quantity_of_approved_products %><br>
+<% if @project.tipo_proyecto == T_NUEVO_PROYECTO -%>
+<b>Forma de Pago</b>: <%= @project.payment_form %><br>
+<% end -%>
+<br>
+
+
+
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="10" cellspacing="5">
+<tr bgcolor="#f5f5f5"><td valign="top">
+
+<h3>Entrega</h3>
+
+<b>Forma de Entrega</b>:
+<%=
+if @project.entrega_en_un_punto?
+  "Entrega en un punto"
+else
+  "Entrega en varios puntos"
+end %><br>
+<br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<%
+[:solo_entrega, :con_instalacion, :recojo_de_producto, :se_necesita_supervisor].each do |f|
+-%>
+<tr><td valign="top">
+<%= state_image @project.send(f) -%>
+</td><td valign="top">
+<%=
+  if f == :solo_entrega
+    "S&oacute;lo entrega"
+  elsif f == :con_instalacion
+    "Con instalaci&oacute;n"
+  elsif f == :recojo_de_producto
+    "Recojo de Producto"
+  elsif f == :se_necesita_supervisor
+    "Se necesita Supervisor"
+  end
+%>
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="2">
+<tr bgcolor="#dddddd"><td valign="top" align="center" width="25%">
+<b>Direcci&oacute;n de Entrega</b>
+</td><td valign="top" align="center" width="25%">
+<b>Contacto</b>
+</td><td valign="top" align="center" width="25%">
+<b>Tel&eacute;fonos y Correos</b>
+</td><td valign="top" align="center" width="25%">
+<b>Rango de Hora de Entrega</b>
+</td></tr>
+
+<% @project.puntos_de_entrega.each do |p| -%>
+<tr bgcolor="#ffffff"><td valign="top">
+<%= simple_format p.punto %>
+</td><td valign="top">
+<%= simple_format p.contacto %>
+</td><td valign="top">
+<%= simple_format p.telefono %>
+</td><td valign="top">
+<%= simple_format p.hora %>
+</td></tr>
+<% end -%>
+</table>
+
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="10" cellspacing="5">
+<tr bgcolor="#f5f5f5"><td valign="top">
+
+<% unless @project.tipo_de_presentacion == "-1" -%>
+<b>Tipo de Presentaci&oacute;n de Dise&ntilde;o</b>: <%= TIPO_DE_PRESENTACION[@project.tipo_de_presentacion] %><br>
+<br>
+<% end -%>
+
+<b>Gr&aacute;fica</b><br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<%
+[:graf_igual_a_muestra, :graf_igual_a_pantones, :graf_presentar_muestra].each do |f|
+-%>
+<tr><td valign="top">
+<%= state_image @project.send(f) -%>
+</td><td valign="top">
+<%=
+  if f == :graf_igual_a_muestra
+    "Igual a muestra f&iacute;sica proporcionada"
+  elsif f == :graficas_aprobadas
+    "Igual al Arte adjunto"
+  elsif f == :graf_igual_a_pantones
+    "Igual al c&oacute;digo de los Pantones"
+  elsif f == :graf_presentar_muestra
+    "Presentar muestra de color para su aprobaci&oacute;n"
+  elsif f == :confirmar_medidas
+    "Ir a confirmar medidas"
+  end
+%>
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+
+<b>Pintura</b><br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<%
+[:colores_aprobados, :igual_al_codigo_pantones, :presentar_muestra_de_color].each do |f|
+-%>
+<tr><td valign="top">
+<%= state_image @project.send(f) -%>
+</td><td valign="top">
+<%=
+  if f == :colores_aprobados
+    "Igual a muestra f&iacute;sica proporcionada"
+  elsif f == :igual_al_arte_adjuntado
+    "Colores igual al Arte adjunto"
+  elsif f == :igual_al_codigo_pantones
+    "Igual al c&oacute;digo de los Pantones"
+  elsif f == :presentar_muestra_de_color
+    "Presentar muestra de color para su aprobaci&oacute;n"
+  elsif f == :graficas_aprobadas
+    "Gr&aacute;ficas aprobadas"
+  elsif f == :confirmar_medidas
+    "Ir a confirmar medidas"
+  end
+%>
+</td></tr>
+<% end -%>
+</table>
+
+<br>
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td valign="top">
+<%= state_image @project.confirmar_medidas -%>
+</td><td valign="top">
+Ir a confirmar medidas
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="10" cellspacing="5">
+<tr bgcolor="#f5f5f5"><td valign="top">
+
+<h3>Forma</h3>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#f5f5f5">
+<tr><td valign="top" width="35%">
+<b>Caracter&iacute;sticas del Entorno</b>
+</td><td valign="top" width="65%">
+<%= @project.caracteristicas_entorno %>
+</td></tr>
+
+<tr><td valign="top">
+<b>P&uacute;blico Objetivo</b>
+</td><td valign="top">
+<%= @project.publico_objetivo %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Dimensiones del espacio</b><br>
+<span class="weak">Ancho x Alto x Profundidad, d&oacute;nde estar&aacute; el producto</span>
+</td><td valign="top">
+<%= @project.dimensiones_espacio %><br>
+</td></tr>
+
+<tr><td valign="top">
+<b>Observaciones</b>
+</td><td valign="top">
+<%= simple_format @project.observaciones %>
+</td></tr>
+
+</table>
+
+</td></tr>
+</table>
+
+<!--
+<table width="100%" border="0" cellpadding="10" cellspacing="5">
+<tr bgcolor="#f5f5f5"><td valign="top">
+
+<h3>Caracter&iacute;sticas Espec&iacute;ficas</h3>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#f5f5f5">
+
+<tr><td valign="top" width="35%">
+<b>Nivel de Seguridad del mueble</b>
+</td><td valign="top" width="65%">
+<%= NIVEL_SEGURIDAD[@project.nivel_seguridad] %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Materiales</b>
+</td><td valign="top">
+<%= @project.materiales %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Acabado</b>
+</td><td valign="top">
+<%= @project.acabado %>
+</td></tr>
+
+<tr><td valign="top">
+<b>C&oacute;mo se ver&aacute;</b>
+</td><td valign="top">
+<%= "<li> Frente</li>"    if @project.vista_frente? %>
+<%= "<li> Derecha</li>"   if @project.vista_derecha? %>
+<%= "<li> Izquierda</li>" if @project.vista_izquierda? %>
+<%= "<li> Atras</li>"     if @project.vista_atras? %>
+<%= "<li> Arriba</li>"    if @project.vista_arriba? %>
+<%= "<li> Abajo</li>"     if @project.vista_abajo? %>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+-->
+<br>
+
+</div>
+
+<center><h3>DETALLES DEL PROYECTO</h3></center>
+
+<%
+if @details
+  @details.each do |d|
+    if d.tipo == "P"
+      @obj = d.producto
+      tipo = "Producto"
+    else
+      @obj = d.servicio
+      tipo = "Servicio"
+    end
+%>
+
+<div class="detail">
+
+<center><h3><%= tipo %>: <%= @obj.nombre %></h3></center>
+
+<table width="100%" border="0" cellpadding="15" cellspacing="0" bgcolor="#f5f5f5">
+<tr><td valign="top">
+
+<h3>General</h3>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top" width="50%">
+
+<table width="100%" border="0" cellpadding="3" cellspacing="0">
+<tr><td valign="top" width="20%">
+<b>Nombre</b>
+</td><td valign="top" width="80%">
+<%= @obj.nombre %><br>
+</td></tr>
+
+<tr><td valign="top">
+<b>Descripci&oacute;n</b>
+</td><td valign="top">
+<%= simple_format d.descripcion %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Cantidad</b>
+</td><td valign="top">
+<%= d.cantidad %>
+</td></tr>
+
+<tr><td valign="top">
+<b>Categor&iacute;a</b>
+</td><td valign="top">
+<%= @obj.categoria.nombre %>
+</td></tr>
+
+</table>
+
+</td><td valign="top" width="50%">
+
+<%= image_for_detail(d) -%>
+
+</td></tr>
+</table>
+
+
+<h3>Atributos</h3>
+
+<%= render :partial => "attributes_table", :locals => { :attributes => d.atributos_detalle, :edit => false } -%>
+<br>
+
+</td></tr>
+</table>
+
+<br>
+<hr size="1">
+
+</div>
+
+<%
+  end
+end
+-%>
+
+</body>
+</html>
+

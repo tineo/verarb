@@ -1,0 +1,10 @@
+password:
+  type:         text
+  acts_as:      password
+  function:     validate_set_standby
+  empty_msg:    "Debes proveer la contrase&ntilde;a"
+
+empresa:
+  type:         text
+  function:     validate_dummy
+

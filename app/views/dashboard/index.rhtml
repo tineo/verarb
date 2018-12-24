@@ -1,0 +1,84 @@
+<h2>Hola <%= @user.first_name %></h2>
+
+<% unless @user.last_session.nil? -%>
+<b>Ultimo Inicio de Sesi&oacute;n:</b> <%= @user.last_session.created_on.long_format %> (<%= @user.last_session.remote_ip %>)<br>
+<br>
+<% end -%>
+
+<table width="100%">
+<tr>
+<td width="500" valign="top">
+<table width="500" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFE47A">
+<tr><td valign="top">
+<h3>B&uacute;squeda R&aacute;pida</h3>
+
+En la parte superior del sistema se ha implementado un formulario para hacer b&uacute;squedas r&aacute;pidas de Proyectos u Ordenes por n&uacute;mero. Para m&aacute;s detalles, <a href="quicksearch">lee los tips de uso aqu&iacute;</a>.
+</td></tr>
+</table>
+
+<br>
+
+<table width="500" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFB598">
+<tr><td valign="top">
+<h3>COMUNICADO</h3>
+
+Por Seguridad la sesión del Vera y/o CRM se cerrará después de <b>1 HORA de inactividad.</b> Tengan el cuidado de no dejar formularios a medio completar pues podría cerrarse la sesión y perder sus datos..
+</td></tr>
+</table>
+</td>
+
+
+
+<% if (@user.user_name=='equispe' || @user.user_name=='jpuppo' || @user.user_name=='dindacochea') -%>
+<td width="10"></td>
+<td valign="top">
+&raquo; <a href="javascript:Abrir_ventana('http://192.168.10.8/intranet/tisac/')"> Listado de ODT'S de Apoyo a TISAC</a>
+</td>
+<% end -%>
+<!-- dindacochea -->
+</tr>
+</table>
+<script>
+function Abrir_ventana(url) {
+var opciones="toolbar=no,location=no, directories=no, status=no, menubar=no, scrollbars=1, resizable=yes,top=85, left=140";
+window.open(url,"",opciones);
+}
+</script>
+
+
+<!--
+<br>
+
+<table width="500" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFE47A">
+<tr><td valign="top">
+<h3>Cambios en la creaci&oacute;n de Garant&iacute;as, Reclamos, Ordenes Internas y Otros</h3>
+
+Se han instalado cambios en el proceso de creación de las órdenes de tipo Garant&iacute;as, Reclamos, Internas y Otros. El nuevo proceso se describe a continuación.<br>
+<br>
+<b>Para Garantías y Reclamos</b><br>
+<br>
+1. Ingresar a la Orden relacionada a la Garantía/Reclamo.<br>
+<br>
+2. Hacer click en el enlace "Crear Garantía/Reclamo".<br>
+<br>
+<img src="/images/gr01.gif"><br>
+<br>
+3. Especificar el tipo y colocar la Clave de Autorización.<br>
+<br>
+<img src="/images/gr02.gif"><br>
+<br>
+4. Se creará la Garantía/Reclamo copiando los datos básicos de la Orden relacionada. El sistema saltará a la edición del nuevo Proyecto ya creado para que puedas realizar ajustes.<br>
+<br>
+<b>Para Ordenes Internas/Otros</b><br>
+<br>
+Para este tipo de Ordenes el proceso no ha variado mucho: se crea la Oportunidad en el SugarCRM, luego en el Vera se selecciona de la lista de Oportunidades nuevas y se elije el tipo "Orden Interna" u "Otro". <b>Mucho cuidado al elegir el tipo ya que posteriormente no es editable.</b><br>
+Se pedirá también una Clave de Autorización al elegir uno de estos dos tipos.<br>
+<br>
+El cambio importante en el proceso es el siguiente: al crear el Proyecto como Orden Interna/Otro <i>la Oportunidad en el SugarCRM desaparecerá.</i><br>
+<br>
+Esta desaparición es un comportamiento normal. Se comporta así porque queremos que los Reportes en el CRM y Vera consideren solamente las Oportunidades de Nuevos Proyectos e ignoren las de ODT Interna, Otros, Garantía y Reclamo.<br>
+<br>
+-->
+
+</td></tr>
+</table>
